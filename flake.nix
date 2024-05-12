@@ -83,7 +83,9 @@
 
       nixosConfigurations = {
         mowteng = nixpkgs.lib.nixosSystem {
-          modules = [ ./nixos/mowteng/configuration.nix ] ++ (builtins.attrValues nixosModules);
+          modules = [
+            ./nixos/mowteng/configuration.nix
+          ] ++ (builtins.attrValues nixosModules);
           specialArgs = {
             inherit inputs outputs;
           };
@@ -92,7 +94,9 @@
 
       nixosConfigurations = {
         homeassistant = nixpkgs.lib.nixosSystem {
-          modules = [ ./nixos/homeassistant/configuration.nix ] ++ (builtins.attrValues nixosModules);
+          modules = [
+            ./nixos/homeassistant/configuration.nix
+          ] ++ (builtins.attrValues nixosModules);
           specialArgs = {
             inherit inputs outputs;
           };

@@ -205,7 +205,9 @@ in
           always = true;
         }
         { command = "wl-paste --watch cliphist store"; }
-        { command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1"; }
+        {
+          command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
+        }
       ];
       terminal = "${pkgs.kitty}/bin/kitty";
       window = {

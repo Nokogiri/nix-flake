@@ -10,6 +10,8 @@ with lib;
     envFile.source = ./env.nu;
   };
   xdg.configFile = {
-    "nushell/carapace.nu".text = (concatMapStringsSep "\n" readFile [ ./carapace.nu ]);
+    "nushell/carapace.nu".text = (
+      concatMapStringsSep "\n" readFile [ ./carapace.nu ]
+    );
   };
 }

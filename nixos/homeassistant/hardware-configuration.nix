@@ -119,7 +119,9 @@
       "nofail"
     ];
   };
-  swapDevices = [ { device = "/dev/disk/by-uuid/0cd7afe0-c1e1-4d9f-8172-48f677434826"; } ];
+  swapDevices = [
+    { device = "/dev/disk/by-uuid/0cd7afe0-c1e1-4d9f-8172-48f677434826"; }
+  ];
 
   fileSystems."/boot/efi" = {
     device = "/dev/disk/by-uuid/67E3-17ED";
