@@ -6,14 +6,8 @@
     bluetooth.settings = {
       General = {
         ControllerMode = "dual";
-        #FastConnectable = true;
         Experimental = true;
       };
-      #LE = {
-      #  MinConnectionInterval=1;
-      #  MaxConnectionInterval=6;
-      #  ConnectionLatency=0;
-      #};
       Policy = {
         AutoEnable = true;
       };

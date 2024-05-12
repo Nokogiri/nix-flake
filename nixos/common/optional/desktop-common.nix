@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
 
   security.pam.services.swaylock.fprintAuth = true;

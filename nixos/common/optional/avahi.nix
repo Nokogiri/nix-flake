@@ -1,6 +1,5 @@
 { pkgs, config, ... }:
 {
-  #networking.firewall.allowedUDPPorts = [ 5353 ];
   services.avahi = {
     enable = true;
     ipv6 = true;
@@ -10,9 +9,6 @@
     extraServiceFiles = {
       ssh = "${pkgs.avahi}/etc/avahi/services/ssh.service";
     };
-    #extraConfig = ''
-    #  disallow-other-stacks=yes
-    #'';
     nssmdns4 = true;
     openFirewall = true;
     publish = {

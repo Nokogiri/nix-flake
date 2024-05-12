@@ -1,4 +1,3 @@
-{ config, ... }:
 {
   systemd.network.networks."90-wireguard" = {
     matchConfig.Name = "calvin";
