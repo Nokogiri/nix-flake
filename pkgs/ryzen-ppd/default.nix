@@ -6,15 +6,13 @@
   ryzenadj,
   wrapGAppsHook,
 }:
-#with python311Packages;
 
 python311Packages.buildPythonApplication {
-  #rec {
   pname = "ryzen-ppd";
   version = "0.5";
 
   src = fetchgit {
-    url = "https://codeberg.org/Nokogiri/ryzen-ppd.git";
+    url = "https://git.sr.ht/~nokogiri/ryzen-ppd";
     rev = "f1fe7aba834b32e117a33a33fe5b36e4192469a2";
     sha256 = "sha256-+yDdkL7DzgEFp5ncfg86h3eCtlK5mACdAW4N0rJoXyA=";
   };
