@@ -21,7 +21,7 @@
   stylix = {
     homeManagerIntegration.followSystem = true;
     image = "${pkgs.everforest-theme}/share/wallpaper/Everforest/ocean_front_1.png";
-    base16Scheme = ./everforest-dark-medium.yaml;
+    base16Scheme = ../everforest/everforest-dark-medium.yaml;
     polarity = "dark";
     cursor = {
       name = "phinger-cursors-light";
