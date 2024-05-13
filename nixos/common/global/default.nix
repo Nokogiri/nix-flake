@@ -59,7 +59,7 @@
         "@wheel"
         "nokogiri"
       ];
-      auto-optimise-store = lib.mkDefault true;
+      auto-optimise-store = lib.mkDefault false;
       experimental-features = [
         "nix-command"
         "flakes"
@@ -70,7 +70,7 @@
       keep-derivations = true;
     };
     gc = {
-      automatic = lib.mkDefault true;
+      automatic = lib.mkDefault false;
       dates = "monthly";
     };
 

@@ -32,7 +32,7 @@
     ./smb.nix
     ./auto-cpufreq.nix
 
-    ../../stylix
+    ../../stylix/mowteng/system.nix
   ];
 
   nixpkgs = {

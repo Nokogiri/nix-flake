@@ -20,8 +20,8 @@
   gtk = {
     enable = true;
     iconTheme = {
-      name = "Gruvbox-Material-Dark";
-      package = pkgs.gruvbox-material;
+      name = "Everforest-Dark";
+      package = pkgs.everforest-theme;
     };
     cursorTheme = {
       name = "phinger-cursors-light";

@@ -7,7 +7,7 @@
     ../features/games
     ../features/media
     ../features/nvim
-    ../../stylix/home.nix
+    ../../stylix/mowteng/home.nix
     ../features/sway
     inputs.nur.nixosModules.nur
   ];
