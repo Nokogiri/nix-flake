@@ -3,7 +3,7 @@
   imports = [
     ./mangohud.nix
     ./steam.nix
-    #./wine.nix
+    ./wine.nix
   ];
 
   home.sessionVariables.WINEDEBUG = "-all";

@@ -6,7 +6,8 @@
         name = "M+CodeLat60 Nerd Font";
         size = 12;
       };
-      theme = "Gruvbox Material Dark Medium";
+      #theme = "Gruvbox Material Dark Medium";
+      theme = "Everforest Dark Medium";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";

@@ -39,6 +39,7 @@
       sidebery
       sponsorblock
       surfingkeys
+      refined-github
       stylus
       iina-open-in-mpv
       enhancer-for-youtube

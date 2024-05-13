@@ -41,7 +41,10 @@
 
     stylix.url = "github:danth/stylix";
 
-    extest.url = "git+https://git.sr.ht/~nokogiri/extest";
+    extest = {
+      url = "git+https://git.sr.ht/~nokogiri/extest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     #extest.url = "github:Nokogiri/extest";
   };
 

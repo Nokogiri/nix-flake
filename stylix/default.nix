@@ -9,6 +9,7 @@
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
     qt6Packages.qtstyleplugin-kvantum
+    gruvbox-material
   ];
 
   environment.pathsToLink = [
@@ -20,7 +21,8 @@
   stylix = {
     homeManagerIntegration.followSystem = true;
     image = "${pkgs.everforest-theme}/share/wallpaper/Everforest/ocean_front_1.png";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
+    #base16Scheme = ./everforest-dark-soft.yaml;
     polarity = "dark";
     cursor = {
       name = "phinger-cursors-light";
