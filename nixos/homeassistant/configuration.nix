@@ -3,8 +3,6 @@
 {
   inputs,
   outputs,
-  lib,
-  config,
   pkgs,
   ...
 }:
@@ -28,7 +26,7 @@
     ./services
     ./local
 
-    #../../stylix
+    ../../stylix/homeassistant/system.nix
   ];
 
   nixpkgs = {
