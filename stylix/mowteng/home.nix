@@ -1,12 +1,6 @@
 { pkgs, config, ... }:
 {
-  #home.packages = with pkgs; [
-  #  everforest-theme
-  #  libsForQt5.qt5ct
-  #  qt6Packages.qt6ct
-  #  libsForQt5.qtstyleplugin-kvantum
-  #  qt6Packages.qtstyleplugin-kvantum
-  #];
+  #imports = [ ../defaults.nix ];
 
   home.file.".icons/default/index.theme".text = ''
     [Icon Theme]
