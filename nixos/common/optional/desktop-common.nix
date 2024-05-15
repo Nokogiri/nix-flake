@@ -33,11 +33,16 @@
       enable = true;
       enableRenice = true;
     };
+    sway = {
+      enable = true;
+      package = pkgs.swayfx;
+    };
   };
-
+  
+  environment.systemPackages = with pkgs; [ kitty ];
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
-
+  
   services = {
     dbus = {
       enable = true;
