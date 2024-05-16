@@ -14,6 +14,9 @@
       set-option -g set-titles-string '[#S:#I #T] #W'
       set-option -g status-position bottom
 
+      set -g default-terminal "screen-256color"
+      set -ga terminal-overrides ",xterm-256color:Tc"
+
       set-option -g repeat-time 0
     '';
     newSession = true;
