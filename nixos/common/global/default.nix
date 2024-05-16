@@ -9,7 +9,7 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-index-database.nixosModules.nix-index
-    #inputs.lix-module.nixosModules.default
+    inputs.lix-module.nixosModules.default
     ./applications.nix
     ./console.nix
     ./fish.nix
