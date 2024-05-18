@@ -3,7 +3,7 @@
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    xdgOpenUsePortal = true;
+    xdgOpenUsePortal = false;
     config = {
       common = {
         default = [ "gtk" ];

@@ -11,6 +11,7 @@ in
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
       export XDG_CURRENT_DESKTOP=sway
+      export DE=xfce
     '';
     wrapperFeatures = {
       base = true;
@@ -210,6 +211,7 @@ in
         }
       ];
       terminal = "${pkgs.kitty}/bin/kitty";
+      #terminal = "${pkgs.wezterm}/bin/wezterm-gui";
       window = {
         border = 0;
         commands = [

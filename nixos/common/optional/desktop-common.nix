@@ -39,7 +39,7 @@
     };
   };
   
-  environment.systemPackages = with pkgs; [ kitty ];
+  environment.systemPackages = with pkgs; [ wezterm ];
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
   
@@ -55,9 +55,11 @@
   };
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.xdgOpenUsePortal = false;
   xdg.portal.config = {
     common = {
       default = [ "gtk" ];
+      "org.freedesktop.impl.portal.Settings" = ["gtk"];
     };
   };
 }

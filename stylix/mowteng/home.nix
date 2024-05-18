@@ -37,5 +37,6 @@
     rofi.enable = false;
     vim.enable = false;
     waybar.enable = false;
+    wezterm.enable = false;
   };
 }
