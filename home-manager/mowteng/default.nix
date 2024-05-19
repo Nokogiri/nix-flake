@@ -17,7 +17,7 @@
     handlr-regex
 
     appimage-run
-    transmission_4-qt6
+    transmission-qt
     xournalpp
 
     gimp

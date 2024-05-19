@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   imports = [
     ./config.nix
@@ -9,7 +9,12 @@
     ./waybar
     #./wlogout.nix
   ];
-
+  
+  home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+    XCURSOR_SIZE = "24";
+    XCURSOR_THEME = "${config.gtk.cursorTheme.name}";
+  };
   home.packages = with pkgs; [ squeekboard ];
   programs = {
     fish.loginShellInit = ''

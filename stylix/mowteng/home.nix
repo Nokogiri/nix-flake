@@ -1,7 +1,5 @@
 { pkgs, config, ... }:
 {
-  #imports = [ ../defaults.nix ];
-
   home.file.".icons/default/index.theme".text = ''
     [Icon Theme]
     Name=Default
@@ -21,15 +19,11 @@
       name = "phinger-cursors-light";
       package = pkgs.phinger-cursors;
     };
-    #theme = {
-    #  name = "Gruvbox-Material-Dark";
-    #  package = pkgs.gruvbox-material;
-    #};
   };
 
   stylix.targets = {
     gtk.enable = true;
-    kde.enable = false;
+    kde.enable = true;
     kitty.enable = false;
     mangohud.enable = false;
 
