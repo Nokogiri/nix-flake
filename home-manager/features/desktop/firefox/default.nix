@@ -1,15 +1,5 @@
 { config, pkgs, ... }:
 {
-
-  #imports = [ ./psd.nix ];
-  #home.file.".mozilla/dracula" = {
-  #  recursive = true;
-  #  source = ./userChrome;
-  #};
-  home.file.".mozilla/native-messaging-hosts/tridactyl.json".source = "${pkgs.tridactyl-native}/lib/mozilla/native-messaging-hosts/tridactyl.json";
-
-  home.packages = [ pkgs.tridactyl-native ];
-
   home.file.".mozilla/firefox/nokogiri/chrome" = {
     source = pkgs.fetchFromGitHub {
       owner = "KiKaraage";
@@ -28,11 +18,11 @@
     };
     recursive = true;
   };
-
+  programs.firefox.nativeMessagingHosts = [ pkgs.ff2mpv-go ];
   programs.firefox = {
     enable = true;
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [
-      tridactyl
+      ff2mpv
       ublock-origin
       onetab
       bitwarden
@@ -41,7 +31,6 @@
       surfingkeys
       refined-github
       stylus
-      iina-open-in-mpv
       enhancer-for-youtube
     ];
 
@@ -80,10 +69,10 @@
     profiles.private.extensions = with config.nur.repos.rycee.firefox-addons; [
       ublock-origin
       onetab
-      tridactyl
+      surfingkeys
       sidebery
       sponsorblock
-      iina-open-in-mpv
+      ff2mpv
     ];
     profiles.private = {
       name = "private";
