@@ -9,7 +9,7 @@
     ./waybar
     #./wlogout.nix
   ];
-  
+
   home.sessionVariables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
     XCURSOR_SIZE = "24";

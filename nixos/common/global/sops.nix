@@ -1,8 +1,4 @@
-{
-  inputs,
-  config,
-  ...
-}:
+{ inputs, config, ... }:
 let
   key = builtins.elemAt (builtins.filter (
     k: k.type == "ed25519"

@@ -38,11 +38,11 @@
       package = pkgs.swayfx;
     };
   };
-  
+
   environment.systemPackages = with pkgs; [ wezterm ];
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
-  
+
   services = {
     dbus = {
       enable = true;
@@ -59,7 +59,7 @@
   xdg.portal.config = {
     common = {
       default = [ "gtk" ];
-      "org.freedesktop.impl.portal.Settings" = ["gtk"];
+      "org.freedesktop.impl.portal.Settings" = [ "gtk" ];
     };
   };
 }

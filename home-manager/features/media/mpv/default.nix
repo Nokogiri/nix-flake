@@ -72,5 +72,5 @@
   };
   xdg.configFile."mpv/script-opts/uosc.conf".source = ./uosc.conf;
 
-  home.packages = with pkgs; [ open-in-mpv ];
+  home.packages = with pkgs; [ open-in-mpv celluloid ];
 }

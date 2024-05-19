@@ -18,6 +18,7 @@
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
     ../common/optional/fprintd.nix
+    ../common/optional/greetd.nix
     ../common/optional/networkmanager.nix
     ../common/optional/pipewire.nix
     #../common/optional/plasma.nix
