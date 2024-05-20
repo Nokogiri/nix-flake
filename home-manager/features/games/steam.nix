@@ -1,7 +1,5 @@
 {
   pkgs,
-  lib,
-  config,
   inputs,
   ...
 }:
@@ -21,6 +19,8 @@
             fribidi
             mangohud
             libgdiplus
+            libsForQt5.full
+            brotli.lib
             zlib
             libpulseaudio
             libvorbis

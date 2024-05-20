@@ -18,9 +18,11 @@
     };
     recursive = true;
   };
-  programs.firefox.nativeMessagingHosts = [ pkgs.ff2mpv-go ];
+  
+  home.packages = [ pkgs.tor-browser ];
   programs.firefox = {
     enable = true;
+    nativeMessagingHosts = [ pkgs.ff2mpv-go ];
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [
       ff2mpv
       ublock-origin
