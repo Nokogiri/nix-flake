@@ -1,4 +1,3 @@
-{ pkgs, config, ... }:
 {
   stylix.targets = {
     nixvim.enable = false;

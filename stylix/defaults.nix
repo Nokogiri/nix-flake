@@ -10,7 +10,6 @@
 
   stylix = {
     homeManagerIntegration.followSystem = true;
-    #image = "${pkgs.everforest-theme}/share/wallpaper/Everforest/ocean_front_1.png";
     image = pkgs.fetchurl {
       url = "https://gruvbox-wallpapers.pages.dev/wallpapers/light/Kojiro.png";
       hash = "sha256-JRro+wz9NrVOeLwjWwpQYzy9wG7IyhfGa1cUxr9Wpio=";
