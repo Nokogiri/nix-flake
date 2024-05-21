@@ -29,6 +29,7 @@
       onetab
       bitwarden
       sidebery
+      newtab-adapter
       sponsorblock
       surfingkeys
       refined-github
