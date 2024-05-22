@@ -65,12 +65,9 @@
     scripts = with pkgs; [
       mpvScripts.mpris
       mpvScripts.uosc
-      #mpvScripts.thumbfast
+
       mpvScripts.sponsorblock
-      #mpvScripts.simple-mpv-webui
     ];
   };
   xdg.configFile."mpv/script-opts/uosc.conf".source = ./uosc.conf;
-
-  home.packages = with pkgs; [ open-in-mpv celluloid ];
 }

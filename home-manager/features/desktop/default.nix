@@ -14,7 +14,7 @@
     ./wezterm
     ./wofi
     ./wvkbd.nix
-    ./xdg-portal.nix
+    ./xdg
     ./ydotool.nix
     ./zathura.nix
   ];

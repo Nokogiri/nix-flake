@@ -35,7 +35,7 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [ wezterm ];
+  environment.systemPackages = with pkgs; [ wezterm xfce.thunar ];
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
 
@@ -49,11 +49,12 @@
     udisks2.enable = true;
     upower.enable = true;
   };
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  xdg.portal.xdgOpenUsePortal = false;
-  xdg.portal.config = {
-    common = {
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    xdgOpenUsePortal = true;
+    config.common = {
       default = [ "gtk" ];
       "org.freedesktop.impl.portal.Settings" = [ "gtk" ];
     };

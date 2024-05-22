@@ -18,7 +18,7 @@
     };
     recursive = true;
   };
-  
+
   home.packages = [ pkgs.tor-browser ];
   programs.firefox = {
     enable = true;

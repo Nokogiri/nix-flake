@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}:
+{ pkgs, inputs, ... }:
 {
   nixpkgs.config.packageOverrides =
     pkgs: with pkgs; {
