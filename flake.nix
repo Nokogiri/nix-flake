@@ -22,7 +22,11 @@
     };
 
     hardware.url = "github:nixos/nixos-hardware";
-
+    
+    wezterm = {
+      url = "github:wez/wezterm?dir=nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     sops-nix = {
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";

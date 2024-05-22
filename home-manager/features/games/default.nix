@@ -3,7 +3,6 @@
   imports = [
     ./mangohud.nix
     ./steam.nix
-    ./wine.nix
   ];
 
   home.sessionVariables.WINEDEBUG = "-all";
@@ -20,13 +19,13 @@
     vkbasalt
     heroic
 
-    dhewm3
-    rbdoom-3-bfg
+    #dhewm3
+    #rbdoom-3-bfg
     gzdoom
     sm64ex
-    vkquake
-    yquake2
-    yquake2-all-games
+    #vkquake
+    #yquake2
+    #yquake2-all-games
 
     # emulation
     cemu
@@ -39,7 +38,7 @@
     libretro.mupen64plus
     libretro.parallel-n64
     libretro.play
-    libretro.ppsspp
+    #libretro.ppsspp
     libretro.snes9x
     pcsx2
     ppsspp

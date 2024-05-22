@@ -3,10 +3,6 @@
 
   security.pam.services.swaylock.fprintAuth = true;
 
-  security.pam.services.hyprlock = {
-    text = "auth include login";
-  };
-
   fonts.packages = with pkgs; [
     dejavu_fonts
     noto-fonts

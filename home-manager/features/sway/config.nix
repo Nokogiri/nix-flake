@@ -210,8 +210,8 @@ in
           command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
         }
       ];
-      terminal = "${pkgs.kitty}/bin/kitty";
-      #terminal = "${pkgs.wezterm}/bin/wezterm-gui";
+      #terminal = "${pkgs.kitty}/bin/kitty";
+      terminal = "${pkgs.wezterm}/bin/wezterm-gui";
       window = {
         border = 0;
         commands = [
