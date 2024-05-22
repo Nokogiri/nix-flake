@@ -1,5 +1,3 @@
-{ pkgs, config, ... }:
-
 let
   browser = [
     "primofox.desktop" # assume firefox provides this
