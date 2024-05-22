@@ -1,7 +1,6 @@
 {
   stylix.targets = {
-    nixvim.enable = false;
+    #nixvim.enable = false;
     vim.enable = false;
-    waybar.enable = false;
   };
 }
