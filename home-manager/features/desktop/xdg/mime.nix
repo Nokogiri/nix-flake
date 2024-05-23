@@ -1,6 +1,6 @@
 let
   browser = [
-    "primofox.desktop" # assume firefox provides this
+    "firefox.desktop" # assume firefox provides this
   ];
   associations = {
     "inode/directory" = [ "thunar.desktop" ];

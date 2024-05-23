@@ -52,7 +52,7 @@
       fsType = "btrfs";
       options = [
         "subvol=nixos/root"
-        "compress-force=zstd:6"
+        "compress-force=zstd"
       ];
     };
 
@@ -61,7 +61,7 @@
       fsType = "btrfs";
       options = [
         "subvol=nixos/lib"
-        "compress=zstd:6"
+        "compress=zstd"
       ];
     };
 
@@ -70,7 +70,7 @@
       fsType = "btrfs";
       options = [
         "subvol=nixos/log"
-        "compress=zstd:6"
+        "compress=zstd"
       ];
     };
 
@@ -79,7 +79,7 @@
       fsType = "btrfs";
       options = [
         "subvol=nixos/store"
-        "compress=zstd:6"
+        "compress=zstd"
       ];
     };
 
@@ -88,7 +88,7 @@
       fsType = "btrfs";
       options = [
         "subvol=@nokogiri"
-        "compress=zstd:6"
+        "compress=zstd"
       ];
     };
 

@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=600,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,uid=1000,gid=100,forceuid,forcegid,vers=3.0";
+  automount_opts = "x-systemd.automount,noauto,uid=1000,gid=100,forceuid,forcegid,vers=3.0";
 in
 {
   environment.systemPackages = [ pkgs.cifs-utils ];
