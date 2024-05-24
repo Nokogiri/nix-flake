@@ -27,5 +27,20 @@
         WantedBy = [ "sway-session.target" ];
       };
     };
+    mako = {
+      Unit = {
+        Description = "A lightweight Wayland notification daemon";
+        Documentation = "man:mako(1)";
+        PartOf = "graphical-session.target";
+      };
+      Service = {
+        Type = "simple";
+        Restart = "always";
+        ExecStart = "${pkgs.mako}/bin/mako";
+      };
+      Install = {
+        WantedBy = [ "sway-session.target" ];
+      };
+    };
   };
 }

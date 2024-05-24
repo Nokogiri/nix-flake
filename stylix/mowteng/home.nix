@@ -25,6 +25,7 @@
     gtk.enable = true;
     kde.enable = true;
     kitty.enable = false;
+    mako.enable = false;
     mangohud.enable = false;
 
     nixvim.enable = false;

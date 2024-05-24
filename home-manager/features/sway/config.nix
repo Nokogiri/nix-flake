@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 let
   cfg = config.wayland.windowManager.sway.config;
 in
@@ -211,7 +216,7 @@ in
         }
       ];
       #terminal = "${pkgs.kitty}/bin/kitty";
-      terminal = "${pkgs.wezterm}/bin/wezterm-gui";
+      terminal = "${inputs.wezterm.packages.x86_64-linux.default}/bin/wezterm-gui";
       window = {
         border = 0;
         commands = [
@@ -242,7 +247,7 @@ in
         bindgesture swipe:3:left workspace next
         
         corner_radius 8
-        blur enable
+        blur disable
         blur_passes 3
         blur_radius 5
         blur_noise 0.2
@@ -250,7 +255,7 @@ in
         blur_contrast 1.0
         blur_saturation 1.0
         titlebar_separator disable
-        shadows enable
+        shadows disable
         #shadow_offset 4 4
         #shadow_blur_radius 4
         default_dim_inactive 0.2

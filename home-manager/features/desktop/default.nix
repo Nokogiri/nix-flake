@@ -21,6 +21,7 @@
 
   home.packages = with pkgs; [
     cliphist
+    libnotify
     swayimg
     wl-clipboard
     xdg_utils

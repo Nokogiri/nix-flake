@@ -2,8 +2,8 @@
 {
   imports = [
     ./config.nix
+    ./mako.nix
     ./swaylock.nix
-    ./swaync.nix
     ./swayosd.nix
     ./user-services.nix
     ./waybar
