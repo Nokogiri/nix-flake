@@ -3,7 +3,7 @@
   imports = [
     ./mpv
     ./pipewire.nix
-    ./spotify.nix
+    #./spotify.nix
     ./yt-dlp.nix
   ];
   home.packages = with pkgs; [

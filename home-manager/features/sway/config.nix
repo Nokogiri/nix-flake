@@ -247,10 +247,10 @@ in
         bindgesture swipe:3:left workspace next
         
         corner_radius 8
-        blur disable
-        blur_passes 3
-        blur_radius 5
-        blur_noise 0.2
+        blur enable
+        blur_passes 1
+        blur_radius 4
+        blur_noise 0.1
         blur_brightness 0.9
         blur_contrast 1.0
         blur_saturation 1.0

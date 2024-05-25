@@ -5,7 +5,6 @@
     ./firefox
     ./gammastep.nix
     ./gpg-agent.nix
-    #./kitty.nix
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix

@@ -11,9 +11,17 @@
 
   gtk = {
     enable = true;
+    theme = {
+      #name = "Everforest-Dark-BL";
+      #package = pkgs.everforest-theme;
+      #name = "adw-gtk3";
+      #package = pkgs.adw-gtk3;
+    };
     iconTheme = {
-      name = "Everforest-Dark";
-      package = pkgs.everforest-theme;
+      #name = "Everforest-Dark";
+      #package = pkgs.everforest-theme;
+      name = "Gruvbox-Plus-Dark";
+      package = pkgs.gruvbox-plus-icons;
     };
     cursorTheme = {
       name = "phinger-cursors-light";
