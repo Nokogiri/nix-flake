@@ -34,9 +34,9 @@
 
     nur.url = "github:nix-community/NUR";
 
-    spicetify-nix = {
-      url = "github:the-argus/spicetify-nix";
-    };
+    #spicetify-nix = {
+    #  url = "github:the-argus/spicetify-nix";
+    #};
 
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
@@ -45,25 +45,24 @@
 
     stylix.url = "github:danth/stylix";
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #hyprland = {
+    #  url = "github:hyprwm/Hyprland";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     hyprland-contrib.url = "github:hyprwm/contrib";
-    hyprlock = {
-      url = "github:hyprwm/hyprlock";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hypridle = {
-      url = "github:hyprwm/hypridle";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #hyprlock = {
+    #  url = "github:hyprwm/hyprlock";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
+    #hypridle = {
+    #  url = "github:hyprwm/hypridle";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     extest = {
       url = "git+https://git.sr.ht/~nokogiri/extest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #extest.url = "github:Nokogiri/extest";
   };
 
   outputs =

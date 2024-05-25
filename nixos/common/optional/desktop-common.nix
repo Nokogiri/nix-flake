@@ -29,10 +29,10 @@
       enable = true;
       enableRenice = true;
     };
-    sway = {
-      enable = true;
-      package = pkgs.swayfx;
-    };
+    #sway = {
+    #  enable = true;
+    #  package = pkgs.swayfx;
+    #};
   };
 
   environment.systemPackages = with pkgs; [
@@ -54,8 +54,8 @@
   };
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    #wlr.enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland ];
     xdgOpenUsePortal = true;
     config.common = {
       default = [ "gtk" ];

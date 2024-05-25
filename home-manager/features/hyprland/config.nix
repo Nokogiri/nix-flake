@@ -8,9 +8,7 @@
         border_size=0
         col.active_border=0xffAAAAAA
         col.inactive_border=0xff666666
-        #no_cursor_warps=true
         no_border_on_floating=true
-        #cursor_inactive_timeout=0
       }
 
       monitor=eDP-1,1920x1200@60.00,auto,1
@@ -76,7 +74,7 @@
         kb_options=grp:alt_space_toggle
         follow_mouse=1
         touchpad {
-          disable_while_typing = false
+          disable_while_typing = true
           natural_scroll = false
         }
       }
@@ -115,8 +113,8 @@
       bind=,XF86Tools,exec,pkill -USR1 waybar # profile button
 
       # Lock screen
-      bind=,XF86Launch5,exec,swaylock -S
-      bind=,XF86Launch4,exec,swaylock -S
+      #bind=,XF86Launch5,exec,swaylock -S
+      #bind=,XF86Launch4,exec,swaylock -S
 
       # Screenshots
       bind=,Print,exec,grimblast --notify copy output
@@ -246,27 +244,32 @@
 
 
       windowrule = group set,^(mFoot)$
-
+      
+      # polkit
       windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
       windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
       windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
-
+      
+      # heroic stuff
       windowrulev2 = float,class:^(electron)$,title:^(Select Executable)$
       windowrulev2 = center,class:^(electron)$,title:^(Select Executable)$
       windowrulev2 = size 60%,class:^(electron)$,title:^(Select Executable)$
 
       windowrulev2 = center,class:^(xdg-desktop-portal-gtk)$title:^(Open With…)$
       windowrulev2 = float,center,size=60%,title:^(.*Picture-in-Picture.*)$,class:^(firefox)$
-
+      
+      # mpv
       windowrulev2 = workspace 3 silent,class:^(mpv)$
-
+      
+      # steam
       windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
       windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$
       windowrulev2 = pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$
-
-      windowrulev2 = float,class:^(pavucontrol-qt)$
-      windowrulev2 = center,class:^(pavucontrol-qt)$
-      windowrulev2 = size 66%,class:^(pavucontrol-qt)$
+      
+      # pavucontrol
+      windowrulev2 = float,class:^(pavucontrol)$
+      windowrulev2 = center,class:^(pavucontrol)$
+      windowrulev2 = size 66%,class:^(pavucontrol)$
 
       windowrulev2 = float,title:^(Select EXE to Run)$
 
@@ -274,8 +277,6 @@
 
       windowrulev2 = forceinput,class:^(.gamescope-wrapped)$
 
-      windowrulev2 = workspace 7 silent,title:^(Spotify)$
-      #windowrulev2 = fullscreen,opaque,noblur,class:^(gamescope)$
       layerrule=blur, gtk-layer-shell
 
       # Center Stuff
