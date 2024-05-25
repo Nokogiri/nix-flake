@@ -13,8 +13,8 @@
         to = 1764;
       }
     ];
-    
-    allowedUDPPorts = [ 51871 ]; 
+
+    allowedUDPPorts = [ 51871 ];
     allowedTCPPorts = [
       5201
       27036

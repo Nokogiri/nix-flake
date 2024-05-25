@@ -34,6 +34,7 @@
     kernelModules = [
       "kvm-amd"
       "zenpower"
+      "wireguard"
     ];
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [

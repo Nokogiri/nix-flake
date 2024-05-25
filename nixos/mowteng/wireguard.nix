@@ -1,4 +1,5 @@
-{ config, ... }:{
+{ config, ... }:
+{
   sops.secrets = {
     "wg/mowteng" = { };
     "psk_wg/mowteng" = { };
@@ -17,7 +18,7 @@
         {
           publicKey = "IqYGE/5SPmMPEs0us6ZkH5RlePZ2KJDpGxBgjCBnQno=";
           presharedKeyFile = config.sops.secrets."psk_wg/mowteng".path;
-          allowedIPs = [ "10.200.200.0/24"];
+          allowedIPs = [ "10.200.200.0/24" ];
           endpoint = "home.fishoeder.net:51871";
         }
       ];

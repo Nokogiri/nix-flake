@@ -10,9 +10,8 @@
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
     qt6Packages.qtstyleplugin-kvantum
-   ];
+  ];
 
-  
   stylix = {
     cursor = {
       name = "phinger-cursors-light";

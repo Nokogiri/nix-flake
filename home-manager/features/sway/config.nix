@@ -16,7 +16,8 @@ in
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
       export XDG_CURRENT_DESKTOP=sway
-      export DE=xfce
+      export QT_QPA_PLATFORMTHEME=qt5ct
+
     '';
     wrapperFeatures = {
       base = true;

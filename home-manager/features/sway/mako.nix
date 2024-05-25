@@ -1,4 +1,5 @@
-{ pkgs, ...}:{
+{ pkgs, ... }:
+{
   services.mako = {
     enable = true;
     sort = "+time";
@@ -23,10 +24,10 @@
     #actions = 1;
     format = "<b>%s</b>\\n%b";
     defaultTimeout = 12000;
-    ignoreTimeout = null ;
+    ignoreTimeout = null;
     iconPath = "${pkgs.gruvbox-plus-icons}/share/icons/Gruvbox-Plus-Dark";
     extraConfig = ''
-      
+
 
       #icons = 1
       #markup = 1

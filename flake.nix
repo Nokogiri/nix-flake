@@ -45,6 +45,20 @@
 
     stylix.url = "github:danth/stylix";
 
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprland-contrib.url = "github:hyprwm/contrib";
+    hyprlock = {
+      url = "github:hyprwm/hyprlock";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hypridle = {
+      url = "github:hyprwm/hypridle";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     extest = {
       url = "git+https://git.sr.ht/~nokogiri/extest";
       inputs.nixpkgs.follows = "nixpkgs";
