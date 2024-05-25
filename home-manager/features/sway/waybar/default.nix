@@ -4,7 +4,6 @@
   home.packages = [ pkgs.wttrbar ];
   programs.waybar = {
     enable = true;
-    #package = inputs.nixpkgs-master.legacyPackages.x86_64-linux.waybar;
     style = ./style.css;
     settings = {
       mainBar = {
@@ -85,7 +84,7 @@
           format-linked = "(No IP) ";
           format-disconnected = "";
           interval = 60;
-          on-click = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor";
+          #on-click = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor";
         };
         "pulseaudio" = {
           scroll-step = 2.5;
