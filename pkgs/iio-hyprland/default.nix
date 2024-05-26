@@ -6,23 +6,22 @@
   pkg-config,
   ninja,
   dbus,
-  cmake,
   systemd,
 }:
 
 stdenv.mkDerivation rec {
   pname = "iio-hyprland";
-  version = "0.1";
+  version = "git";
 
   #src = ./src;
   src = fetchFromGitHub {
-    owner = "JeanSchoeller";
+    owner = "Nokogiri";
     repo = "iio-hyprland";
-    rev = "f31ee4109379ad7c3a82b1a0aef982769e482faf";
-    hash = "sha256-P+m2OIVS8QSQmeVYVIgt2A6Q/I3zZX3bK9UNLyQtNOg=";
+    rev = "a24989f001bc9f38267818538330cde5879105b4";
+    hash = "sha256-UcUp88TY2m5R7Qc7ynZ01I4AwQzkso6zZZ+sGU58EW8=";
   };
 
-  patches = [ ./test.patch ];
+  #patches = [ ./test.patch ];
 
   buildInputs = [
     dbus

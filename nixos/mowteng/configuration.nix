@@ -91,6 +91,10 @@
     latitude = 50.9787;
     longitude = 11.03283;
   };
+  
+  security.pam.loginLimits = [
+    { domain = "@users"; item = "rtprio"; type = "-"; value = 1; }
+  ];
 
   services.acpid.enable = true;
   services.acpid.logEvents = false;

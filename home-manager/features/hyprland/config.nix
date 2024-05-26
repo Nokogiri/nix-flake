@@ -88,7 +88,6 @@
          output=eDP-1
          enabled=true
       }
-
       # Startup
       exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
       exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
@@ -243,8 +242,6 @@
       windowrulev2 = workspace 2 silent,class:^(firefox)$
 
 
-      windowrule = group set,^(mFoot)$
-      
       # polkit
       windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
       windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
@@ -276,7 +273,8 @@
       windowrulev2 = float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$
 
       windowrulev2 = forceinput,class:^(.gamescope-wrapped)$
-
+      
+      windowrulev2 = nomaxsize,class:^(com.github.xournalpp.xournalpp)$
       layerrule=blur, gtk-layer-shell
 
       # Center Stuff
