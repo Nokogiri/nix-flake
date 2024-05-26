@@ -199,7 +199,7 @@ in
         "${cfg.modifier}+Ctrl+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock safe-mode";
         "${cfg.modifier}+Shift+Ctrl+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock lock-now";
       };
-      menu = "\${pkgs.fuzzel}/bin/fuzzel";
+      #menu = "\${pkgs.fuzzel}/bin/fuzzel";
       modifier = "Mod4";
       seat = {
         "*" = {
@@ -207,13 +207,16 @@ in
         };
       };
       startup = [
-        {
-          command = "configure-gtk";
-          always = true;
-        }
+        #{
+        #  command = "configure-gtk";
+        #  always = true;
+        #}
         { command = "wl-paste --watch cliphist store"; }
         {
           command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
+        }
+        {
+          command = "${pkgs.dbus.out}/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK";
         }
       ];
       #terminal = "${pkgs.kitty}/bin/kitty";
@@ -228,9 +231,9 @@ in
             };
           }
           {
-            command = "resize set 1200 900";
+            command = "resize set 1000 900";
             criteria = {
-              app_id = "pavucontrol-qt";
+              app_id = "pavucontrol";
             };
           }
           {
@@ -246,25 +249,23 @@ in
     extraConfig = ''
         bindgesture swipe:3:right workspace prev
         bindgesture swipe:3:left workspace next
-        
-        corner_radius 8
+       
+        ### SWAYFX 
+        corner_radius 10
         blur enable
         blur_passes 1
-        blur_radius 4
+        blur_radius 6
         blur_noise 0.1
         blur_brightness 0.9
         blur_contrast 1.0
         blur_saturation 1.0
         titlebar_separator disable
-        shadows disable
+        shadows enable
         #shadow_offset 4 4
         #shadow_blur_radius 4
         default_dim_inactive 0.2
         shadows_on_csd disable
         layer_effects "rofi" blur enable; corner_radius 8;
-
-      #  for_window [app_id="org.qutebrowser.qutebrowser"] inhibit_idle fullscreen
-
     '';
     systemd.enable = true;
   };

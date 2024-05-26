@@ -18,8 +18,6 @@
       #package = pkgs.adw-gtk3;
     };
     iconTheme = {
-      #name = "Everforest-Dark";
-      #package = pkgs.everforest-theme;
       name = "Gruvbox-Plus-Dark";
       package = pkgs.gruvbox-plus-icons;
     };
@@ -27,10 +25,18 @@
       name = "phinger-cursors-light";
       package = pkgs.phinger-cursors;
     };
+    gtk3 = {
+      extraConfig = {
+        gtk-recent-files-limit = 10;
+      };
+    };
   };
 
   stylix.targets = {
-    gtk.enable = true;
+    gtk = {
+      enable = true;
+      
+    };
     kde.enable = true;
     kitty.enable = false;
     mako.enable = false;
