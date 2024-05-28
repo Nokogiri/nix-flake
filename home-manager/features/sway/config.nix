@@ -253,21 +253,21 @@ in
       bindgesture swipe:3:left workspace next
 
       ### SWAYFX 
-      #corner_radius 10
-      #blur enable
-      #blur_passes 1
-      #blur_radius 6
-      #blur_noise 0.1
-      #blur_brightness 0.9
-      #blur_contrast 1.0
-      #blur_saturation 1.0
-      #titlebar_separator disable
+      corner_radius 10
+      blur enable
+      blur_passes 1
+      blur_radius 6
+      blur_noise 0.1
+      blur_brightness 0.9
+      blur_contrast 1.0
+      blur_saturation 1.0
+      titlebar_separator disable
       #shadows enable
       #shadow_offset 4 4
       #shadow_blur_radius 4
-      #default_dim_inactive 0.2
+      default_dim_inactive 0.2
       #shadows_on_csd disable
-      #layer_effects "rofi" blur enable; corner_radius 8;
+      layer_effects "rofi" blur enable; corner_radius 8;
     '';
     systemd.enable = true;
   };

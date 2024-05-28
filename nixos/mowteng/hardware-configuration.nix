@@ -36,7 +36,7 @@
       "zenpower"
       "wireguard"
     ];
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages;
     kernelParams = [
       "amd_pstate=passive"
       "mitigations=off"

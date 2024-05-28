@@ -18,10 +18,12 @@
     noto-fonts-cjk-sans
     weather-icons
     hack-font
+    overpass
     (nerdfonts.override {
       fonts = [
         "MPlus"
         "NerdFontsSymbolsOnly"
+        "Overpass"
       ];
     })
   ];
