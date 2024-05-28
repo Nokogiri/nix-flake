@@ -8,8 +8,8 @@
   #cemu = pkgs.callPackage ./cemu { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   everforest-theme = pkgs.callPackage ./everforest-theme { };
-  gruvbox-material = pkgs.callPackage ./gruvbox-material { };
-  iio-hyprland = pkgs.callPackage ./iio-hyprland { };
+  #gruvbox-material = pkgs.callPackage ./gruvbox-material { };
+  #iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   #Imaginarium = pkgs.callPackage ./Imaginarium { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   nwg-drawer = pkgs.callPackage ./nwg-drawer { };

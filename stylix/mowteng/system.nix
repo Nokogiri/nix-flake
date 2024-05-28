@@ -11,6 +11,30 @@
     libsForQt5.qtstyleplugin-kvantum
     qt6Packages.qtstyleplugin-kvantum
   ];
+  fonts.packages = with pkgs; [
+    dejavu_fonts
+    noto-fonts
+    noto-fonts-emoji
+    noto-fonts-cjk-sans
+    weather-icons
+    hack-font
+    (nerdfonts.override {
+      fonts = [
+        "MPlus"
+        "NerdFontsSymbolsOnly"
+      ];
+    })
+  ];
+
+  fonts = {
+    enableDefaultPackages = true;
+    fontDir.enable = true;
+    enableGhostscriptFonts = true;
+    fontconfig = {
+      enable = true;
+      antialias = true;
+    };
+  };
 
   stylix = {
     cursor = {
@@ -20,35 +44,18 @@
     };
     fonts = {
       serif = {
-        name = "M+2 Nerd Font";
-        package = (
-          pkgs.nerdfonts.override {
-            fonts = [
-              "Hack"
-              "MPlus"
-              "NerdFontsSymbolsOnly"
-            ];
-          }
-        );
+        name = "Ubuntu";
+        package = pkgs.ubuntu_font_family;
       };
       sansSerif = {
-        name = "M+2 Nerd Font";
-        package = (
-          pkgs.nerdfonts.override {
-            fonts = [
-              "Hack"
-              "MPlus"
-              "NerdFontsSymbolsOnly"
-            ];
-          }
-        );
+        name = "Ubuntu";
+        package = pkgs.ubuntu_font_family;
       };
       monospace = {
         name = "M+CodeLat60 Nerd Font Mono";
         package = (
           pkgs.nerdfonts.override {
             fonts = [
-              "Hack"
               "MPlus"
               "NerdFontsSymbolsOnly"
             ];

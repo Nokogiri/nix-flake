@@ -8,6 +8,7 @@
     ./user-services.nix
     ./waybar
     #./wlogout.nix
+    ../desktop/wayland.nix
   ];
 
   home.sessionVariables = {

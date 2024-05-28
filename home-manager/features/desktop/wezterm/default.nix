@@ -10,6 +10,7 @@
         font = wezterm.font_with_fallback {
           'M+CodeLat60 Nerd Font',
         },
+        front_end = 'WebGpu',
         color_scheme = 'Everforest Dark Medium (Gogh)',
         warn_about_missing_glyphs=false,
         animation_fps = 1,

@@ -1,9 +1,9 @@
 { pkgs, ... }:
-let 
+let
   image = pkgs.fetchurl {
-      url = "https://gruvbox-wallpapers.pages.dev/wallpapers/light/Kojiro.png";
-      hash = "sha256-JRro+wz9NrVOeLwjWwpQYzy9wG7IyhfGa1cUxr9Wpio=";
-    };
+    url = "https://gruvbox-wallpapers.pages.dev/wallpapers/light/Kojiro.png";
+    hash = "sha256-JRro+wz9NrVOeLwjWwpQYzy9wG7IyhfGa1cUxr9Wpio=";
+  };
 in
 {
 

@@ -35,7 +35,6 @@
   stylix.targets = {
     gtk = {
       enable = true;
-      
     };
     kde.enable = true;
     kitty.enable = false;

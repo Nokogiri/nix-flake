@@ -32,7 +32,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nur.url = "github:nix-community/NUR";
+    nur = {
+      url = "github:nix-community/NUR";
+    };
 
     #spicetify-nix = {
     #  url = "github:the-argus/spicetify-nix";
@@ -47,8 +49,8 @@
 
     #hyprland = {
     #  url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-      #url = "github:hyprwm/Hyprland?submodules=1";
-      #inputs.nixpkgs.follows = "nixpkgs";
+    #url = "github:hyprwm/Hyprland?submodules=1";
+    #inputs.nixpkgs.follows = "nixpkgs";
     #};
     hyprland-contrib.url = "github:hyprwm/contrib";
     #hyprlock = {

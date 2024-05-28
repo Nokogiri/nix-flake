@@ -60,8 +60,6 @@
   environment.systemPackages = with pkgs; [
     amdctl
     exfatprogs
-    iwd
-    iwgtk
   ];
 
   hardware = {
@@ -73,7 +71,6 @@
       driSupport32Bit = true;
     };
   };
-
   powerManagement = {
     cpuFreqGovernor = "powersave";
     cpufreq = {
@@ -91,9 +88,14 @@
     latitude = 50.9787;
     longitude = 11.03283;
   };
-  
+
   security.pam.loginLimits = [
-    { domain = "@users"; item = "rtprio"; type = "-"; value = 1; }
+    {
+      domain = "@users";
+      item = "rtprio";
+      type = "-";
+      value = 1;
+    }
   ];
 
   services.acpid.enable = true;
