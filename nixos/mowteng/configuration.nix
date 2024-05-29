@@ -109,7 +109,16 @@
     powerKeyLongPress = "poweroff";
     lidSwitchDocked = "suspend";
   };
-  #services.power-profiles-daemon.enable = true;
+
+  services.xserver = {
+    enable = true;
+    windowManager.bspwm.enable = true;
+    displayManager = {
+        defaultSession = "none+bspwm";
+    };
+  };
+  environment.pathsToLink = [ "/libexec" ];
+    #services.power-profiles-daemon.enable = true;
   services.udev.extraRules = ''
     ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
   '';

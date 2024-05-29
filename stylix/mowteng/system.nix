@@ -17,13 +17,11 @@
     noto-fonts-emoji
     noto-fonts-cjk-sans
     weather-icons
-    hack-font
-    overpass
     (nerdfonts.override {
       fonts = [
-        "MPlus"
+        "GeistMono"
+        "IntelOneMono"
         "NerdFontsSymbolsOnly"
-        "Overpass"
       ];
     })
   ];
@@ -46,23 +44,16 @@
     };
     fonts = {
       serif = {
-        name = "Ubuntu";
-        package = pkgs.ubuntu_font_family;
+        name = "Overpass";
+        package = pkgs.overpass;
       };
       sansSerif = {
-        name = "Ubuntu";
-        package = pkgs.ubuntu_font_family;
+        name = "Overpass";
+        package = pkgs.overpass;
       };
       monospace = {
-        name = "M+CodeLat60 Nerd Font Mono";
-        package = (
-          pkgs.nerdfonts.override {
-            fonts = [
-              "MPlus"
-              "NerdFontsSymbolsOnly"
-            ];
-          }
-        );
+        name = "Overpass Mono";
+        package = pkgs.overpass;
       };
       emoji = {
         package = pkgs.noto-fonts-emoji;
