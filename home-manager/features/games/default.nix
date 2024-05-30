@@ -9,7 +9,7 @@
   home.sessionVariables.WINEDEBUG = "-all";
 
   home.packages = with pkgs; [
-    
+
     inputs.umu.packages.${pkgs.system}.umu
 
     dwarfs

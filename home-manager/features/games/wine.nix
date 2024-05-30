@@ -2,7 +2,6 @@
 {
   home.packages = with pkgs; [
     wineWowPackages.stableFull
-    #winetricks
     bottles
     attr
     gst_all_1.gst-vaapi
@@ -37,8 +36,6 @@
     gst_all_1.gst-plugins-ugly
     gst_all_1.gst-plugins-bad
     xdg-user-dirs
-    #inputs.extest.packages.x86_64-linux.default
-    #STL
     unixtools.xxd
     wget
     winetricks

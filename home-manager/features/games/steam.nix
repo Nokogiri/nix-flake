@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   nixpkgs.config.packageOverrides =
     pkgs: with pkgs; {
@@ -24,7 +24,6 @@
             libkrb5
             keyutils
             xdg-user-dirs
-            #inputs.extest.packages.x86_64-linux.default
             wget
             yad
           ];
@@ -38,17 +37,5 @@
     steam
     steam-run
     steam-rom-manager
-    (writeShellScriptBin "steam-extest" ''
-      LD_PRELOAD=${inputs.extest.packages.x86_64-linux.default}/lib/libextest.so steam
-    '')
   ];
-
-  #xdg.desktopEntries = {
-  #  "steam-extest" = {
-  #    exec = "steam-extest";
-  #    name = "Steam Extest";
-  #    icon = "steam";
-  #    type = "Application";
-  #  };
-  #};
 }

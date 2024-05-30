@@ -8,7 +8,9 @@
     ../features/media
     ../features/nvim
     ../../stylix/mowteng/home.nix
-    ../features/sway
+    #../features/sway
+    ../features/awesome
+    ../features/bspwm
     #../features/hyprland
     inputs.nur.nixosModules.nur
   ];

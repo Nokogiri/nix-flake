@@ -11,7 +11,7 @@
           'GeistMono Nerd Font Propo',
           --'IntoneMono Nerd Font Propo',
         },
-        front_end = 'WebGpu',
+        --front_end = 'WebGpu',
         color_scheme = 'Everforest Dark Medium (Gogh)',
         warn_about_missing_glyphs=false,
         animation_fps = 1,

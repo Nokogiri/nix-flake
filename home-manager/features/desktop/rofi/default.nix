@@ -4,7 +4,7 @@
   home.packages = with pkgs; [ rofimoji ];
   programs.rofi = {
     #package = pkgs.rofi-wayland.override { plugins = [ pkgs.rofi-emoji ]; };
-    package = pkgs.rofi-wayland;
+    #package = pkgs.rofi-wayland;
     plugins = [ pkgs.rofi-emoji ];
     enable = true;
     extraConfig = {

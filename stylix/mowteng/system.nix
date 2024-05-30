@@ -20,7 +20,6 @@
     (nerdfonts.override {
       fonts = [
         "GeistMono"
-        "IntelOneMono"
         "NerdFontsSymbolsOnly"
       ];
     })
