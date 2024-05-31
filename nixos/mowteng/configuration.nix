@@ -23,7 +23,7 @@
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
     ../common/optional/systemd-boot.nix
-    ../common/optional/x11.nix
+    #../common/optional/x11.nix
     ../common/optional/zramswap.nix
 
     ../common/users/nokogiri.nix

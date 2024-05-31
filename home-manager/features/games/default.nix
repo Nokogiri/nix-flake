@@ -35,6 +35,7 @@
     dolphinEmuMaster
     retroarch
     libretro.beetle-psx-hw
+    libretro.citra
     libretro.dolphin
     libretro.flycast
     libretro.mgba

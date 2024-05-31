@@ -3,7 +3,7 @@
   services.xserver = {
     enable = true;
     windowManager.bspwm.enable = true;
-    windowManager.awesome = { 
+    windowManager.awesome = {
       enable = true;
       luaModules = with pkgs.luaPackages; [
         luarocks # is the package manager for Lua modules
@@ -11,11 +11,12 @@
       ];
     };
   };
+  programs.sway.enable = true;
   services.displayManager = {
-        defaultSession = "none+awesome";
+    defaultSession = "none+awesome";
   };
   environment.pathsToLink = [ "/libexec" ];
-  
+
   environment.sessionVariables = {
     BROWSER = "${pkgs.firefox}/bin/firefox";
     DISABLE_QT5_COMPAT = "0";

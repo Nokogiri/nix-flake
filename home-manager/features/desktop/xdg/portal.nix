@@ -3,14 +3,15 @@
   xdg.portal = {
     enable = true;
     extraPortals = [
+      pkgs.xdg-desktop-portal-wlr
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-xapp
     ];
-    xdgOpenUsePortal = true;
+    xdgOpenUsePortal = false;
     config = {
       common = {
         default = [
           "gtk"
+          "wlr"
         ];
       };
     };
