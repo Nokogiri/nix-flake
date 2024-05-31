@@ -3,6 +3,6 @@
     #nixvim.enable = false;
     vim.enable = false;
     tmux.enable = false;
-    fish.enable = false;
+    fish.enable = true;
   };
 }
