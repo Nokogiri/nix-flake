@@ -1,12 +1,15 @@
 {
+  #xdg.configFile."kitty/theme.conf".source  = ./kitty_theme.conf;
   programs = {
     kitty = {
       enable = true;
+      #extraConfig = ''
+      #  include = /home/nokogiri/.config/kitty/theme.conf
+      #'';
       font = {
-        name = "M+CodeLat60 Nerd Font";
+        name = "IntoneMono Nerd Font";
         size = 12;
       };
-      #theme = "Gruvbox Material Dark Medium";
       theme = "Everforest Dark Medium";
       settings = {
         # General settings
@@ -70,7 +73,8 @@
         #  "{f'{title[:30]}…' if title.rindex(title[-1]) + 1 > 30 else (title.center(6) if (title.rindex(title[-1]) + 1) % 2 == 0 else title.center(5))}"'';
 
         # Misc settings
-        disable_ligatures = "cursor";
+        disable_ligatures = "always";
+        font_feature = "none";
         backgrund_blur = 16;
         #symbol_map = "U+F000-U+F0FF Weather Icons";
         adjust_line_height = 0;
@@ -107,7 +111,7 @@
         resize_draw_strategy = "scale";
 
         # Opacity settings
-        background_opacity = "0.85";
+        background_opacity = "0.9";
         dim_opacity = "0.4";
       };
       keybindings = {

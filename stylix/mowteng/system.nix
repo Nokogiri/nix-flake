@@ -13,6 +13,7 @@
   ];
   fonts.packages = with pkgs; [
     dejavu_fonts
+    intel-one-mono
     noto-fonts
     noto-fonts-emoji
     noto-fonts-cjk-sans
@@ -20,6 +21,7 @@
     (nerdfonts.override {
       fonts = [
         "GeistMono"
+        "IntelOneMono"
         "NerdFontsSymbolsOnly"
       ];
     })
@@ -51,7 +53,7 @@
         package = pkgs.overpass;
       };
       monospace = {
-        name = "Overpass Mono";
+        name = "IntoneMono Nerd Font";
         package = pkgs.overpass;
       };
       emoji = {

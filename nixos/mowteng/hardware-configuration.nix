@@ -12,7 +12,8 @@
       options hid_xpadneo ff_connect_notify=0 quirks=e4:17:d8:45:f4:77:7,16
       blacklist pcspkr
       options usb-storage quirks=090c:1000:,152d:0578:,0bc2:2322:u
-      options iwlwifi 11n_disable=8 
+      options cfg80211 ieee80211_regdom="DE"
+      #options iwlwifi 11n_disable=8 
       #power_save=0
     '';
     extraModulePackages = with config.boot.kernelPackages; [
@@ -36,7 +37,7 @@
       "zenpower"
       "wireguard"
     ];
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages;
     kernelParams = [
       "amd_pstate=passive"
       "mitigations=off"
@@ -120,6 +121,7 @@
     steam-hardware.enable = true;
     uinput.enable = true;
     xpadneo.enable = true;
+    wirelessRegulatoryDatabase = true;
   };
 
   sound.enable = true;

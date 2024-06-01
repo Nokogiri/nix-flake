@@ -4,12 +4,13 @@
   imports = [
     ./firefox
     ./gpg-agent.nix
+    ./kitty.nix
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix
     ./rofi
     ./udisks.nix
-    ./wezterm
+    #./wezterm
     ./wofi
     ./xdg
     ./ydotool.nix

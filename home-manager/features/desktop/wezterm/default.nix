@@ -8,8 +8,10 @@
         -- color_scheme = "Dracula",
         font_size = 12.5 ,
         font = wezterm.font_with_fallback {
-          'GeistMono Nerd Font Propo',
-          --'IntoneMono Nerd Font Propo',
+          --'GeistMono Nerd Font Propo',
+          --'Overpass Mono',
+          'IntoneMono Nerd Font',
+          --'Intel One Mono',
         },
         front_end = 'WebGpu',
         color_scheme = 'Everforest Dark Medium (Gogh)',

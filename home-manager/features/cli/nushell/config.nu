@@ -473,4 +473,4 @@ $env.config = {
     ]
 }
 
-source ~/.config/nushell/carapace.nu
+#source ~/.config/nushell/carapace.nu

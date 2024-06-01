@@ -11,12 +11,6 @@
 
   gtk = {
     enable = true;
-    theme = {
-      #name = "Everforest-Dark-BL";
-      #package = pkgs.everforest-theme;
-      #name = "adw-gtk3";
-      #package = pkgs.adw-gtk3;
-    };
     iconTheme = {
       name = "Gruvbox-Plus-Dark";
       package = pkgs.gruvbox-plus-icons;
@@ -48,9 +42,11 @@
         }
       '';
     };
-    kde.enable = true;
-    kitty.enable = false;
-    mako.enable = false;
+    
+    kitty = {
+      enable = false; 
+      variant256Colors = true;
+    };
     mangohud.enable = false;
 
     nixvim.enable = false;
