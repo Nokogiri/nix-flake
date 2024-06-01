@@ -23,7 +23,6 @@
       #hash = "sha256-fa1K47o1nBCHApVYj12SGnRym7JpnkU1nvLqA7OyslM=";
       #hash = "sha256-3GZFl8QnxAUJlI5B5taGVFKGp6Asn7UGKXxtDi3lhiQ=";
       hash = "sha256-RqzCCnn4b5kU7EYgaPF19Gr9I5cZrkEdsTu+wGaaMFI=";
-
     };
     base16Scheme = ./everforest/everforest-dark-medium.yaml;
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
