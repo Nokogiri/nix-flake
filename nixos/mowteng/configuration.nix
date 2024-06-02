@@ -18,6 +18,7 @@
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
     ../common/optional/greetd.nix
+    ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
@@ -33,7 +34,7 @@
     ./smb.nix
     ./auto-cpufreq.nix
     ./network.nix
-
+    #../common/global/catppuccin.nix
     ../../stylix/mowteng/system.nix
   ];
 

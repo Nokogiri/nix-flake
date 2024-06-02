@@ -21,7 +21,7 @@
           battery = {
             disabled = true;
           };
-          palette = "catppuccin_${flavour}";
+          #palette = "catppuccin_${flavour}";
         }
         // builtins.fromTOML (
           builtins.readFile (

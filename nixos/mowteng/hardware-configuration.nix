@@ -19,6 +19,7 @@
     extraModulePackages = with config.boot.kernelPackages; [
       cpupower
       ryzen-smu
+      zenpower
     ];
     initrd = {
       availableKernelModules = [

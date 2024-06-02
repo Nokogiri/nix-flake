@@ -10,9 +10,11 @@
 {
   imports = [
     ./sops.nix
+    #./catppuccin.nix
     ../features/cli
     inputs.sops-nix.homeManagerModules.sops
     inputs.nix-index-database.hmModules.nix-index
+    #inputs.catppuccin.homeManagerModules.catppuccin
   ];
   nixpkgs = {
     overlays = [

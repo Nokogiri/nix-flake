@@ -10,7 +10,7 @@
         name = "IntoneMono Nerd Font";
         size = 12;
       };
-      theme = "Everforest Dark Medium";
+      theme = "Catppuccin-Frappe";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";

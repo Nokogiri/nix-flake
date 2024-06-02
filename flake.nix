@@ -46,6 +46,7 @@
     };
 
     stylix.url = "github:danth/stylix";
+    catppuccin.url = "github:catppuccin/nix";
 
     umu = {
       url = "git+https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging\/nix&submodules=1";
