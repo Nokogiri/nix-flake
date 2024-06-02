@@ -19,6 +19,7 @@
     ./please.nix
     ./sops.nix
     ./sudo.nix
+    ./zsh.nix
   ];
 
   home-manager = {
@@ -40,6 +41,7 @@
     pathsToLink = [
       "/share/nix-direnv"
       "/share/bash-completion"
+      "/share/zsh"
     ];
   };
 

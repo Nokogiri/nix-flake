@@ -15,7 +15,7 @@ in
   users.mutableUsers = true;
   users.users.nokogiri = {
     isNormalUser = true;
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     #shell = pkgs.nushell;
     extraGroups =
       [
