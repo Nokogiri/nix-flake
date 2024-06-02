@@ -18,7 +18,7 @@
     '';
     extraModulePackages = with config.boot.kernelPackages; [
       cpupower
-      zenpower
+      ryzen-smu
     ];
     initrd = {
       availableKernelModules = [
@@ -37,7 +37,7 @@
       "zenpower"
       "wireguard"
     ];
-    kernelPackages = pkgs.linuxPackages;
+    kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "amd_pstate=passive"
       "mitigations=off"

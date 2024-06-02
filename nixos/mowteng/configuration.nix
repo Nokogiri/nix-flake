@@ -62,6 +62,7 @@
   environment.systemPackages = with pkgs; [
     amdctl
     exfatprogs
+    ryzen-monitor-ng
   ];
 
   hardware = {

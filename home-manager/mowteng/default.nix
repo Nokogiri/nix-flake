@@ -9,8 +9,8 @@
     ../features/nvim
     ../../stylix/mowteng/home.nix
     ../features/sway
-    ../features/awesome
-    ../features/bspwm
+    #../features/awesome
+    #../features/bspwm
     #../features/hyprland
     inputs.nur.nixosModules.nur
   ];
