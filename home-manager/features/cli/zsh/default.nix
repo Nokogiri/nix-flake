@@ -8,13 +8,13 @@
     antidote = {
       enable = true;
       plugins = [
-        #"Aloxaf/fzf-tab"
+        "Aloxaf/fzf-tab"
         "hlissner/zsh-autopair"
-        "marlonrichert/zsh-autocomplete"
-        "wfxr/forgit"
+        #"marlonrichert/zsh-autocomplete"
+        #"wfxr/forgit"
         "zsh-users/zsh-autosuggestions"
         "zsh-users/zsh-syntax-highlighting"
-        "zsh-users/zsh-history-substring-search"
+        #"zsh-users/zsh-history-substring-search"
       ];
     };
     dotDir = ".config/zsh";
