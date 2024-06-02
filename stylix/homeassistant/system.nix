@@ -3,6 +3,6 @@
 
   imports = [ ../defaults.nix ];
   stylix.targets = {
-    fish.enable = true;
+    fish.enable = false;
   };
 }
