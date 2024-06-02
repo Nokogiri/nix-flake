@@ -15,8 +15,8 @@ in
   users.mutableUsers = true;
   users.users.nokogiri = {
     isNormalUser = true;
-    #shell = pkgs.fish;
-    shell = pkgs.nushell;
+    shell = pkgs.fish;
+    #shell = pkgs.nushell;
     extraGroups =
       [
         "wheel"

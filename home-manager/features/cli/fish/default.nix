@@ -59,7 +59,6 @@
       clear = "printf '\\033[2J\\033[3J\\033[1;1H'";
     };
     interactiveShellInit = ''
-      fish_config theme choose Dracula
       any-nix-shell fish --info-right | source
       fzf_configure_bindings --history=\cr
     '';
