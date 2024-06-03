@@ -6,7 +6,7 @@
       hash = "sha256-s4N1loCHPc+8aYzXb7o4bDAAnv1ucku3k03H0Hu+VyA=";
     }
   );
-  #xdg.configFile."fish/themes/Dracula.theme".source = ./Dracula.theme;
+  xdg.configFile."fish/themes/Everforest-Medium-Dark.theme".source = ./Everforest-Medium-Dark.theme;
   programs.carapace.enableFishIntegration = true;
   programs.atuin.enableFishIntegration = true;
   programs.zoxide.enableFishIntegration = true;
@@ -65,9 +65,10 @@
       clear = "printf '\\033[2J\\033[3J\\033[1;1H'";
     };
     interactiveShellInit = ''
-      fish_config theme choose Catppuccin\ Frappe 
-      #any-nix-shell fish --info-right | source
-      #fzf_configure_bindings --history=\cr
+      #fish_config theme choose Catppuccin\ Frappe 
+      fish_config theme choose Everforest-Medium-Dark
+      any-nix-shell fish --info-right | source
+      fzf_configure_bindings --history=\cr
     '';
   };
 }

@@ -48,7 +48,7 @@
       variant256Colors = true;
     };
     mangohud.enable = false;
-    fish.enable = false;
+    fish.enable = true;
     nixvim.enable = false;
     rofi.enable = false;
     vim.enable = false;
