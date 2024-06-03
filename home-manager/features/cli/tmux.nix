@@ -32,11 +32,11 @@
           set -g @dracula-show-powerline true
           set -g @dracula-refresh-rate 10
           set -g @dracula-plugins "ssh-session time"
-          set -g allow-passthrough on#
+          set -g allow-passthrough on
 
-     #     set -ga update-environment TERM
-     #     set -ga update-environment TERM_PROGRAM
-     #   '';
+          set -ga update-environment TERM
+          set -ga update-environment TERM_PROGRAM
+        '';
       }
     ];
     shortcut = "a";
