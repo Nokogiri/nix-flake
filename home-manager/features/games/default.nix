@@ -31,7 +31,7 @@
     #yquake2-all-games
 
     # emulation
-    cemu
+    #cemu
     dolphinEmuMaster
     retroarch
     libretro.beetle-psx-hw

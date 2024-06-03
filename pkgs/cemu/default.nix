@@ -1,61 +1,59 @@
-{
-  lib,
-  stdenv,
-  fetchFromGitHub,
-  fetchpatch,
-  addOpenGLRunpath,
-  wrapGAppsHook,
-  cmake,
-  glslang,
-  nasm,
-  pkg-config,
+{ lib, stdenv, fetchFromGitHub
+, addOpenGLRunpath
+, wrapGAppsHook3
+, cmake
+, glslang
+, nasm
+, pkg-config
 
-  SDL2,
-  boost,
-  cubeb,
-  curl,
-  fmt_9,
-  glm,
-  gtk3,
-  hidapi,
-  imgui,
-  libpng,
-  libusb1,
-  libzip,
-  libXrender,
-  pugixml,
-  rapidjson,
-  vulkan-headers,
-  wayland,
-  wxGTK32,
-  zarchive,
-  gamemode,
-  vulkan-loader,
+, SDL2
+, boost
+, cubeb
+, curl
+, fmt_9
+, glm
+, gtk3
+, hidapi
+, imgui
+, libpng
+, libusb1
+, libzip
+, libXrender
+, pugixml
+, rapidjson
+, vulkan-headers
+, wayland
+, wxGTK32
+, zarchive
+, gamemode
+, vulkan-loader
 
-  nix-update-script,
+, nix-update-script
 }:
 
 let
-  #cemu 2.0-65 doesn't build with imgui 1.90.2 or newer
-  imgui' = imgui.overrideAttrs {
+  # cemu doesn't build with imgui 1.90.2 or newer:
+  # error: 'struct ImGuiIO' has no member named 'ImeWindowHandle'
+  imgui' = imgui.overrideAttrs rec {
     version = "1.90.1";
     src = fetchFromGitHub {
       owner = "ocornut";
       repo = "imgui";
-      rev = "v1.90.1";
+      rev = "v${version}";
       sha256 = "sha256-gf47uLeNiXQic43buB5ZnMqiotlUfIyAsP+3H7yJuFg=";
     };
   };
-in
-stdenv.mkDerivation rec {
+
+in stdenv.mkDerivation rec {
   pname = "cemu";
-  version = "2.0-65";
+  version = "2.0-82";
 
   src = fetchFromGitHub {
     owner = "cemu-project";
     repo = "Cemu";
     rev = "v${version}";
-    hash = "sha256-jsDmxol3zZMmpo4whDeUXTzfO+QVK/h6lItXTyJyoak=";
+    hash = "sha256-rmlkit7ZNUM0ErqoclivfBHolV0tRWyToLmsvoTslbI=";
+    #fetchSubmodules = true;
   };
 
   patches = [
@@ -63,17 +61,11 @@ stdenv.mkDerivation rec {
     # > The following imported targets are referenced, but are missing:
     # > SPIRV-Tools-opt
     ./cmakelists.patch
-    # Remove on next release
-    # https://github.com/cemu-project/Cemu/pull/1076
-    (fetchpatch {
-      url = "https://github.com/cemu-project/Cemu/commit/72aacbdcecc064ea7c3b158c433e4803496ac296.patch";
-      hash = "sha256-x+ZVqXgGRSv0VYwJAX35C1p7PnmCHS7iEO+4k8j0/ug=";
-    })
   ];
 
   nativeBuildInputs = [
     addOpenGLRunpath
-    wrapGAppsHook
+    wrapGAppsHook3
     cmake
     glslang
     nasm
@@ -113,17 +105,14 @@ stdenv.mkDerivation rec {
     "-DPORTABLE=OFF"
   ];
 
-  preConfigure =
-    with lib;
-    let
-      tag = last (splitString "-" version);
-    in
-    ''
-      rm -rf dependencies/imgui
-      ln -s ${imgui'}/include/imgui dependencies/imgui
-      substituteInPlace src/Common/version.h --replace " (experimental)" "-${tag} (experimental)"
-      substituteInPlace dependencies/gamemode/lib/gamemode_client.h --replace "libgamemode.so.0" "${gamemode.lib}/lib/libgamemode.so.0"
-    '';
+  preConfigure = with lib; let
+    tag = last (splitString "-" version);
+  in ''
+    rm -rf dependencies/imgui
+    ln -s ${imgui'} dependencies/imgui
+    substituteInPlace src/Common/version.h --replace " (experimental)" "-${tag} (experimental)"
+    substituteInPlace dependencies/gamemode/lib/gamemode_client.h --replace "libgamemode.so.0" "${gamemode.lib}/lib/libgamemode.so.0"
+  '';
 
   installPhase = ''
     runHook preInstall
@@ -141,15 +130,13 @@ stdenv.mkDerivation rec {
     runHook postInstall
   '';
 
-  preFixup =
-    let
-      libs = [ vulkan-loader ] ++ cubeb.passthru.backendLibs;
-    in
-    ''
-      gappsWrapperArgs+=(
-        --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath libs}"
-      )
-    '';
+  preFixup = let
+    libs = [ vulkan-loader ] ++ cubeb.passthru.backendLibs;
+  in ''
+    gappsWrapperArgs+=(
+      --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath libs}"
+    )
+  '';
 
   passthru.updateScript = nix-update-script { };
 
@@ -158,10 +145,7 @@ stdenv.mkDerivation rec {
     homepage = "https://cemu.info";
     license = licenses.mpl20;
     platforms = [ "x86_64-linux" ];
-    maintainers = with maintainers; [
-      zhaofengli
-      baduhai
-    ];
+    maintainers = with maintainers; [ zhaofengli baduhai ];
     mainProgram = "cemu";
   };
 }
