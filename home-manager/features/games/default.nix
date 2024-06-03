@@ -31,7 +31,7 @@
     #yquake2-all-games
 
     # emulation
-    #cemu
+    inputs.stable.legacyPackages.${pkgs.system}.cemu
     dolphinEmuMaster
     retroarch
     libretro.beetle-psx-hw

@@ -5,7 +5,7 @@
 }:
 {
   amdctl = pkgs.callPackage ./amdctl { };
-  cemu = pkgs.callPackage ./cemu { };
+  #cemu = pkgs.callPackage ./cemu { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   everforest-theme = pkgs.callPackage ./everforest-theme { };
   #gruvbox-material = pkgs.callPackage ./gruvbox-material { };

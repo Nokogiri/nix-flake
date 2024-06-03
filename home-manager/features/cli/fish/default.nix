@@ -1,9 +1,11 @@
 { pkgs, ... }:
 {
-  xdg.configFile."fish/themes/Catppuccin Frappe.theme".source = (pkgs.fetchurl {
-    url = "https://raw.githubusercontent.com/catppuccin/fish/main/themes/Catppuccin%20Frappe.theme";
-    hash = "sha256-s4N1loCHPc+8aYzXb7o4bDAAnv1ucku3k03H0Hu+VyA=";
-    });
+  xdg.configFile."fish/themes/Catppuccin Frappe.theme".source = (
+    pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/catppuccin/fish/main/themes/Catppuccin%20Frappe.theme";
+      hash = "sha256-s4N1loCHPc+8aYzXb7o4bDAAnv1ucku3k03H0Hu+VyA=";
+    }
+  );
   #xdg.configFile."fish/themes/Dracula.theme".source = ./Dracula.theme;
   programs.carapace.enableFishIntegration = true;
   programs.atuin.enableFishIntegration = true;
