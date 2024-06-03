@@ -14,7 +14,7 @@
           --'Intel One Mono',
         },
         -- front_end = 'WebGpu',
-        color_scheme = 'Catppuccin Frappé (Gogh)',
+        color_scheme = 'Catppuccin Frappe',
         warn_about_missing_glyphs=false,
         animation_fps = 1,
         enable_kitty_graphics=true,

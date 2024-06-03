@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
 
   security.pam.services.swaylock.fprintAuth = true;
@@ -14,7 +14,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    wezterm
+    inputs.wezterm.packages.x86_64-linux.default
     xfce.thunar
   ];
   # better for steam proton games

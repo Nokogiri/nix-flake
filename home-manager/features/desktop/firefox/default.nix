@@ -25,6 +25,7 @@
     nativeMessagingHosts = [ pkgs.ff2mpv-go ];
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [
       ff2mpv
+      firefox-color
       ublock-origin
       onetab
       bitwarden
@@ -71,6 +72,7 @@
 
     profiles.private.extensions = with config.nur.repos.rycee.firefox-addons; [
       ublock-origin
+      firefox-color
       onetab
       surfingkeys
       sidebery
