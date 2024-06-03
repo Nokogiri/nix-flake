@@ -10,7 +10,7 @@
     ./rbw.nix
     ./rofi
     ./udisks.nix
-    #./wezterm
+    ./wezterm
     ./wofi
     ./xdg
     ./ydotool.nix

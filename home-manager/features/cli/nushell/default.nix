@@ -3,7 +3,7 @@
 {
   programs.starship.enableNushellIntegration = true;
   programs.atuin.enableNushellIntegration = true;
-  
+
   programs.carapace = {
     enable = true;
     enableFishIntegration = true;

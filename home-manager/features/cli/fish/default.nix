@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  xdg.configFile."fish/themes/Catppuccin Frappe.theme".source = (pkgs.fetchurl {
+    url = "https://raw.githubusercontent.com/catppuccin/fish/main/themes/Catppuccin%20Frappe.theme";
+    hash = "sha256-s4N1loCHPc+8aYzXb7o4bDAAnv1ucku3k03H0Hu+VyA=";
+    });
   #xdg.configFile."fish/themes/Dracula.theme".source = ./Dracula.theme;
   programs.carapace.enableFishIntegration = true;
   programs.atuin.enableFishIntegration = true;
@@ -59,8 +63,9 @@
       clear = "printf '\\033[2J\\033[3J\\033[1;1H'";
     };
     interactiveShellInit = ''
-      any-nix-shell fish --info-right | source
-      fzf_configure_bindings --history=\cr
+      fish_config theme choose Catppuccin\ Frappe 
+      #any-nix-shell fish --info-right | source
+      #fzf_configure_bindings --history=\cr
     '';
   };
 }

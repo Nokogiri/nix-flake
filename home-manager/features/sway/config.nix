@@ -204,12 +204,14 @@ in
       #menu = "\${pkgs.fuzzel}/bin/fuzzel";
       modifier = "Mod4";
       output = {
-      	eDP-1 = {
-		bg = "${(pkgs.fetchurl {
-			url = "https://gruvbox-wallpapers.pages.dev/wallpapers/irl/forest-2.jpg";
-			hash = "sha256-RqzCCnn4b5kU7EYgaPF19Gr9I5cZrkEdsTu+wGaaMFI=";
-		})} fill";
-	};
+        eDP-1 = {
+          bg = "${
+            (pkgs.fetchurl {
+              url = "https://gruvbox-wallpapers.pages.dev/wallpapers/irl/forest-2.jpg";
+              hash = "sha256-RqzCCnn4b5kU7EYgaPF19Gr9I5cZrkEdsTu+wGaaMFI=";
+            })
+          } fill";
+        };
       };
       seat = {
         "*" = {

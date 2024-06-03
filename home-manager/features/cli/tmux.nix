@@ -40,6 +40,6 @@
      # }
     #::w];
     shortcut = "a";
-    terminal = "tmux-256color";
+    #terminal = "tmux-256color";
   };
 }
