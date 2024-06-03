@@ -16,7 +16,7 @@ in
   users.users.nokogiri = {
     isNormalUser = true;
     shell = pkgs.fish;
-    #shell = pkgs.nushell;
+
     extraGroups =
       [
         "wheel"
