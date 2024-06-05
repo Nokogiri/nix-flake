@@ -13,9 +13,7 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    xfce.thunar
-  ];
+  environment.systemPackages = with pkgs; [ xfce.thunar ];
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
 

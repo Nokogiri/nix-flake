@@ -4,7 +4,7 @@
 
 fish_color_normal D3C6AA
 fish_color_command 7FBBB3
-fish_color_param 83C092
+fish_color_param E69875
 fish_color_keyword E67E80
 fish_color_quote A7C080
 fish_color_redirection 9DA9A0
@@ -12,8 +12,8 @@ fish_color_end DBBC7F
 fish_color_comment 3D484D
 fish_color_error D699B6
 fish_color_gray 859289
-fish_color_selection --background=859289
-fish_color_search_match --background=859289
+fish_color_selection --background=3D484D
+fish_color_search_match --background=3D484D
 fish_color_option DBBC7F
 fish_color_operator D699B6
 fish_color_escape ea999c

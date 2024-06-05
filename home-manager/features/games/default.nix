@@ -10,8 +10,6 @@
 
   home.packages = with pkgs; [
 
-    inputs.umu.packages.${pkgs.system}.umu
-
     dwarfs
     fuse-overlayfs
     psmisc
@@ -22,13 +20,8 @@
     vkbasalt
     heroic
 
-    #dhewm3
-    #rbdoom-3-bfg
     gzdoom
     sm64ex
-    #vkquake
-    #yquake2
-    #yquake2-all-games
 
     # emulation
     inputs.stable.legacyPackages.${pkgs.system}.cemu

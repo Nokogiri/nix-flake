@@ -1,4 +1,5 @@
-{ config, ... }:{
+{ config, ... }:
+{
   sops.secrets.mealieCredentials = {
     sopsFile = ../../common/secrets.yaml;
   };
