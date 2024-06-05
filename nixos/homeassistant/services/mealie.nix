@@ -10,7 +10,7 @@
       ALLOW_SIGNUP = "false";
       BASE_URL = "https://mealie.fishoeder.net";
       DB_ENGINE = "sqlite";
-      THEME_DARK_PRIMARY = "#ff0081";
+      THEME_DARK_PRIMARY = "#A92B53";
     };
   };
 }
