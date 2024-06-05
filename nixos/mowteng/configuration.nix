@@ -34,7 +34,6 @@
     ./smb.nix
     ./auto-cpufreq.nix
     ./network.nix
-    #../common/global/catppuccin.nix
     ../../stylix/mowteng/system.nix
   ];
 

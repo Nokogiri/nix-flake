@@ -14,7 +14,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    inputs.wezterm.packages.x86_64-linux.default
     xfce.thunar
   ];
   # better for steam proton games

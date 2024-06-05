@@ -24,10 +24,6 @@
 
     hardware.url = "github:nixos/nixos-hardware";
 
-    wezterm = {
-      url = "github:wez/wezterm?dir=nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     sops-nix = {
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,17 +33,12 @@
       url = "github:nix-community/NUR";
     };
 
-    #spicetify-nix = {
-    #  url = "github:the-argus/spicetify-nix";
-    #};
-
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     stylix.url = "github:danth/stylix";
-    catppuccin.url = "github:catppuccin/nix";
 
     umu = {
       url = "git+https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging\/nix&submodules=1";

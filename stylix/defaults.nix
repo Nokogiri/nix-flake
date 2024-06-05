@@ -25,7 +25,6 @@
       hash = "sha256-RqzCCnn4b5kU7EYgaPF19Gr9I5cZrkEdsTu+wGaaMFI=";
     };
     base16Scheme = ./everforest/everforest-dark-medium.yaml;
-    #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
     polarity = "dark";
   };
 }

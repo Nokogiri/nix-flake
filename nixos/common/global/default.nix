@@ -10,7 +10,6 @@
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-index-database.nixosModules.nix-index
     inputs.lix-module.nixosModules.default
-    #inputs.catppuccin.nixosModules.catppuccin
     ./applications.nix
     ./console.nix
     ./fish.nix
@@ -19,7 +18,6 @@
     ./please.nix
     ./sops.nix
     ./sudo.nix
-    ./zsh.nix
   ];
 
   home-manager = {

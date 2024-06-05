@@ -39,7 +39,7 @@
       osd-font = "sans";
       osd-font-size = 28;
       osd-level = 1;
-      border = false;
+      border = true;
       force-window = "immediate";
       save-position-on-quit = true;
 
