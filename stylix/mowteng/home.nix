@@ -31,7 +31,7 @@
       enable = true;
       extraCss = ''
         .window-frame, .window-frame:backdrop {
-          box-shadow: 0 0 0 black;
+          box-shadow: none;
           border-style: none;
           margin: 0;
           border-radius: 0;

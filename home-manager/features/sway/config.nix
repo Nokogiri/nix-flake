@@ -277,7 +277,7 @@ in
       shadow_offset 4 4
       shadow_blur_radius 4
       default_dim_inactive 0.2
-      #shadows_on_csd disable
+      shadows_on_csd disable
       layer_effects "rofi" blur enable; corner_radius 8;
     '';
     systemd.enable = true;
