@@ -19,7 +19,7 @@
     extraModulePackages = with config.boot.kernelPackages; [
       cpupower
       ryzen-smu
-      #xpadneo
+      xpadneo
       zenpower
     ];
     initrd = {

@@ -1,6 +1,6 @@
 {
   programs.mangohud = {
-    enable = true;
+    enable = false;
     settings = {
       fps_limit = "40,30,60";
       toggle_fps_limit = "F1";

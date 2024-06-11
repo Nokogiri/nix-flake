@@ -62,12 +62,19 @@
         ytdl_path = "${pkgs.yt-dlp}/bin/yt-dlp";
       };
     };
-    scripts = with pkgs; [
-      mpvScripts.mpris
-      mpvScripts.uosc
+    #scripts = with pkgs; [
+    #  mpvScripts.mpris
+    #  mpvScripts.uosc
 
-      mpvScripts.sponsorblock
-    ];
+    #  mpvScripts.sponsorblock
+    #];
   };
-  xdg.configFile."mpv/script-opts/uosc.conf".source = ./uosc.conf;
+  #xdg.configFile."mpv/script-opts/uosc.conf".source = ./uosc.conf;
+  nixpkgs.overlays = [
+    (self: super: {
+      mpv = super.mpv.override {
+        scripts = [ self.mpvScripts.uosc self.mpvScripts.sponsorblock ];
+      };
+    })
+  ];
 }
