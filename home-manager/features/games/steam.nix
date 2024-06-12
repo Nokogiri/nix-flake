@@ -20,7 +20,7 @@
             libpulseaudio
             libvorbis
             stdenv.cc.cc.lib
-            SDL2
+            #SDL2
             libkrb5
             keyutils
             xdg-user-dirs

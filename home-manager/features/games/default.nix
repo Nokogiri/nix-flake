@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./mangohud.nix
@@ -24,7 +24,7 @@
     sm64ex
 
     # emulation
-    inputs.stable.legacyPackages.${pkgs.system}.cemu
+    cemu
     dolphinEmuMaster
     retroarch
     libretro.beetle-psx-hw
