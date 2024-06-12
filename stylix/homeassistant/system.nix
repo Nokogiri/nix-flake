@@ -1,8 +1,10 @@
-{ pkgs, inputs, ... }:
 {
 
   imports = [ ../defaults.nix ];
-  stylix.targets = {
-    fish.enable = false;
+  stylix = {
+    enable = true;
+    targets = {
+      fish.enable = false;
+    };
   };
 }
