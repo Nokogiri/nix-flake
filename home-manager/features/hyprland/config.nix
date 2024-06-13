@@ -97,7 +97,7 @@
       bindm=SUPER,mouse:273,resizewindow
 
       # Program bindings
-      bind=SUPER,Return,exec,${inputs.wezterm.packages.x86_64-linux.default}/bin/wezterm-gui
+      bind=SUPER,Return,exec,${pkgs.kitty}/bin/kitty
       bind=SUPER,w,exec,swaync-client -t
       #bind=SUPER,v,exec,$TERMINAL $SHELL -ic nvim
       #bind=SUPER,m,exec,$TERMINAL $SHELL -ic neomutt

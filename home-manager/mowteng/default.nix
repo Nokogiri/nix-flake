@@ -8,10 +8,10 @@
     ../features/media
     ../features/nvim
     ../../stylix/mowteng/home.nix
-    ../features/sway
+    #../features/sway
     #../features/awesome
     #../features/bspwm
-    #../features/hyprland
+    ../features/hyprland
     inputs.nur.nixosModules.nur
   ];
 
@@ -21,6 +21,7 @@
   home.packages = with pkgs; [
     handlr-regex
 
+    distrobox
     appimage-run
     transmission-qt
     xournalpp

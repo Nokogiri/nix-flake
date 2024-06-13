@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ./mangohud.nix
@@ -24,6 +24,7 @@
     sm64ex
 
     # emulation
+    inputs.umu.packages.${pkgs.system}.umu
     cemu
     dolphinEmuMaster
     retroarch
