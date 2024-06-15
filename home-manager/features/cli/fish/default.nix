@@ -7,7 +7,7 @@
     }
   );
   xdg.configFile."fish/themes/Everforest-Medium-Dark.theme".source = ./Everforest-Medium-Dark.theme;
-  programs.carapace.enableFishIntegration = true;
+  programs.carapace.enableFishIntegration = false;
   programs.atuin.enableFishIntegration = true;
   programs.zoxide.enableFishIntegration = true;
   home.packages = [ pkgs.any-nix-shell ];

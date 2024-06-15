@@ -1,19 +1,19 @@
 { pkgs, ... }:
 {
   systemd.user.services = {
-    iio-hyprland = {
-      Unit = {
-        Description = "Rotate My Hyprland!";
-      };
-      Service = {
-        Type = "simple";
-        ExecStart = "${pkgs.iio-hyprland}/bin/iio-hyprland";
-        Restart = "on-failure";
-      };
-      Install = {
-        WantedBy = [ "hyprland-session.target" ];
-      };
-    };
+    #iio-hyprland = {
+    #  Unit = {
+    #    Description = "Rotate My Hyprland!";
+    #  };
+    #  Service = {
+    #    Type = "simple";
+    #    ExecStart = "${pkgs.iio-hyprland}/bin/iio-hyprland";
+    #    Restart = "on-failure";
+    #  };
+    #  Install = {
+    #    WantedBy = [ "hyprland-session.target" ];
+    #  };
+    #};
     polkit-kde-authentication-agent-1 = {
       Unit = {
         Description = "Auth Agent";

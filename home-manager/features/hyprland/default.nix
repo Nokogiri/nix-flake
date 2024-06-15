@@ -12,7 +12,7 @@
     ./swayosd.nix
     ./user-services.nix
     ./waybar
-    #./wlogout.nix
+    ../desktop/wayland.nix
     #inputs.hyprland.homeManagerModules.default
   ];
 
@@ -22,11 +22,13 @@
   ];
 
   home.packages = with pkgs; [
+    inputs.iio-hyprland.packages.${pkgs.system}.default
     hyprpicker
     hyprpaper
     grimblast
+    cliphist
     hyprprop
-    iio-hyprland
+    #iio-hyprland
     scratchpad
   ];
 

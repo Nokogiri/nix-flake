@@ -9,7 +9,7 @@
   systemd,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "iio-hyprland";
   version = "git";
 

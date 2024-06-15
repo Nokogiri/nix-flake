@@ -2,6 +2,10 @@
 {
   wayland.windowManager.hyprland = {
     extraConfig = ''
+      env = NIXOS_OZONE_WL,1
+      env = XDG_CURRENT_DESKTOP,hyprland
+      env = XDG_SESSION_TYPE,rofi-wayland
+      env = XDG_SESSION_DESKTOP,Hyprland
       general {
         gaps_in=7
         gaps_out=10
@@ -26,7 +30,7 @@
          active_opacity=1.0
          inactive_opacity=0.8
          fullscreen_opacity=1.0
-         rounding=6
+         rounding=12
          drop_shadow=true
          shadow_range=24
          shadow_offset=3 3
@@ -78,16 +82,16 @@
           natural_scroll = false
         }
       }
-      device {
-        name = wacom-hid-49c8-finger
-        output = eDP-1
-        enabled = true
-      }
-      device {
-         name = wacom-hid-49c8-pen
-         output=eDP-1
-         enabled=true
-      }
+      #device {
+      #  name = wacom-hid-49c8-finger
+      #  output = eDP-1
+      # enabled = true
+      #}
+      #device {
+      #   name = wacom-hid-49c8-pen
+      #   output=eDP-1
+      #   enabled=true
+      #}
       # Startup
       exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
       exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
@@ -104,7 +108,7 @@
       #bind=SUPER,b,exec,firefox
 
       bind=SUPER,p,exec,pkill -9 rofi || ${pkgs.rofi-wayland}/bin/rofi -show drun
-      bind=SUPER,i,exec,cliphist list | ${pkgs.rofi-wayland}/bin/rofi -dmenu | cliphist decode | wl-copy
+      bind=SUPER,i,exec,${pkgs.cliphist}/bin/cliphist list | ${pkgs.rofi-wayland}/bin/rofi -dmenu | ${pkgs.cliphist}/bin/cliphist decode | ${pkgs.wl-clipboard}/bin/wl-copy
       #bind=,Scroll_Lock,exec,pass-wofi # fn+k
       #bind=,XF86Calculator,exec,pass-wofi # fn+f12
 
@@ -270,7 +274,8 @@
 
       windowrulev2 = float,title:^(Select EXE to Run)$
 
-      windowrulev2 = float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$
+      windowrule = float,^(Xdg-desktop-portal-gtk)$
+      windowrule = float,^(xdg-desktop-portal-gtk)$
 
       windowrulev2 = forceinput,class:^(.gamescope-wrapped)$
 

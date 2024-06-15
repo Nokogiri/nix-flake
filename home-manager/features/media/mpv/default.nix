@@ -73,7 +73,10 @@
   nixpkgs.overlays = [
     (self: super: {
       mpv = super.mpv.override {
-        scripts = [ self.mpvScripts.uosc self.mpvScripts.sponsorblock ];
+        scripts = [
+          self.mpvScripts.uosc
+          self.mpvScripts.sponsorblock
+        ];
       };
     })
   ];

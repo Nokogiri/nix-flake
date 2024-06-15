@@ -24,7 +24,7 @@
     sm64ex
 
     # emulation
-    inputs.umu.packages.${pkgs.system}.umu
+    #inputs.umu.packages.${pkgs.system}.umu
     cemu
     dolphinEmuMaster
     retroarch
@@ -40,7 +40,7 @@
     libretro.snes9x
     pcsx2
     ppsspp
-    rpcs3
+    #rpcs3
     ryujinx
   ];
 }
