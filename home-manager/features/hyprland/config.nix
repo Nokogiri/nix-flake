@@ -247,25 +247,22 @@
 
 
       # polkit
-      windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
-      windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
-      windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
+      windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$
+      windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$
+      windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$
 
-      # heroic stuff
-      windowrulev2 = float,class:^(electron)$,title:^(Select Executable)$
-      windowrulev2 = center,class:^(electron)$,title:^(Select Executable)$
-      windowrulev2 = size 60%,class:^(electron)$,title:^(Select Executable)$
-
-      windowrulev2 = center,class:^(xdg-desktop-portal-gtk)$title:^(Open With…)$
+      windowrulev2 = center,class:^(xdg-desktop-portal-gtk),$title:^(Open With…)$
       windowrulev2 = float,center,size=60%,title:^(.*Picture-in-Picture.*)$,class:^(firefox)$
 
       # mpv
       windowrulev2 = workspace 3 silent,class:^(mpv)$
 
       # steam
-      windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
-      windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$
+      windowrulev2 = workspace 6 silent,class:^(steam)$
       windowrulev2 = pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$
+      
+      # heroic
+      windowrulev2 = workspace 6 silent,class:^(heroic)$
 
       # pavucontrol
       windowrulev2 = float,class:^(pavucontrol)$

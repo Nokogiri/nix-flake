@@ -121,7 +121,7 @@
     sensor.iio.enable = true;
     steam-hardware.enable = true;
     uinput.enable = true;
-    xpadneo.enable = true;
+    xpadneo.enable = false;
     wirelessRegulatoryDatabase = true;
   };
 

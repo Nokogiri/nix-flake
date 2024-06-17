@@ -17,7 +17,7 @@
 
   #nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay ];
 
-  services.mpris-proxy.enable = true;
+  #services.mpris-proxy.enable = true;
   home.packages = with pkgs; [
     handlr-regex
 

@@ -12,6 +12,7 @@
         AutoEnable = true;
       };
     };
+    bluetooth.powerOnBoot = true;
   };
   systemd.services.bluetooth.serviceConfig.ExecStart = [
     ""
