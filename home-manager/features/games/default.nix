@@ -40,7 +40,7 @@
     libretro.snes9x
     pcsx2
     ppsspp
-    #rpcs3
-    ryujinx
+    rpcs3
+    #ryujinx
   ];
 }

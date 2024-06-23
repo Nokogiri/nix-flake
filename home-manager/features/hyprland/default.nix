@@ -13,22 +13,18 @@
     ./user-services.nix
     ./waybar
     ../desktop/wayland.nix
-    #inputs.hyprland.homeManagerModules.default
   ];
 
   nixpkgs.overlays = [
     inputs.hyprland-contrib.overlays.default
-    #inputs.hyprlock.overlays.default
   ];
 
   home.packages = with pkgs; [
     inputs.iio-hyprland.packages.${pkgs.system}.default
     hyprpicker
-    hyprpaper
     grimblast
     cliphist
     hyprprop
-    #iio-hyprland
     scratchpad
   ];
 

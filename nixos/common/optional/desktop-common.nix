@@ -7,6 +7,7 @@
 
   programs = {
     dconf.enable = true;
+    steam.enable = true;
     gamemode = {
       enable = true;
       enableRenice = true;

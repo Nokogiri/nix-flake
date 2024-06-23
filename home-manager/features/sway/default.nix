@@ -14,6 +14,7 @@
   home.sessionVariables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
     XCURSOR_SIZE = "24";
+    NIXOS_OZONE_WL = "1";
     #XCURSOR_THEME = "${config.gtk.cursorTheme.name}";
   };
   home.packages = with pkgs; [ squeekboard ];

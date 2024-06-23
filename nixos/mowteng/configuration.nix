@@ -20,13 +20,14 @@
     ../common/optional/greetd.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
+    ../common/optional/libvirt.nix
+    ../common/optional/waydroid.nix
     ../common/optional/pipewire.nix
     ../common/optional/podman.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
     ../common/optional/systemd-boot.nix
-    #../common/optional/x11.nix
     ../common/optional/zramswap.nix
 
     ../common/users/nokogiri.nix
@@ -66,15 +67,8 @@
     ryzen-monitor-ng
   ];
 
-  hardware = {
-    opengl = {
-      enable = true;
-      extraPackages = with pkgs; [ mangohud ];
-      extraPackages32 = with pkgs; [ mangohud ];
-      driSupport = true;
-      driSupport32Bit = true;
-    };
-  };
+  hardware.graphics.enable32Bit = true;
+  
   powerManagement = {
     cpuFreqGovernor = "powersave";
     cpufreq = {
@@ -106,6 +100,7 @@
   services.acpid.enable = true;
   services.acpid.logEvents = false;
 
+  services.fwupd.enable = true;
   services.logind = {
     extraConfig = ''
       RuntimeDirectorySize=8G
