@@ -15,9 +15,7 @@
     ../desktop/wayland.nix
   ];
 
-  nixpkgs.overlays = [
-    inputs.hyprland-contrib.overlays.default
-  ];
+  nixpkgs.overlays = [ inputs.hyprland-contrib.overlays.default ];
 
   home.packages = with pkgs; [
     inputs.iio-hyprland.packages.${pkgs.system}.default

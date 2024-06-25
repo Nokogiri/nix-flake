@@ -2,7 +2,6 @@
 {
   imports = [
     ./mangohud.nix
-    ./steam.nix
     ./wine.nix
   ];
 
@@ -20,11 +19,12 @@
     vkbasalt
     heroic
 
+    dhewm3
+    rbdoom-3-bfg
     gzdoom
     sm64ex
 
     # emulation
-    #inputs.umu.packages.${pkgs.system}.umu
     cemu
     dolphinEmuMaster
     retroarch
@@ -41,6 +41,6 @@
     pcsx2
     ppsspp
     rpcs3
-    #ryujinx
+    ryujinx
   ];
 }

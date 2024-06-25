@@ -28,7 +28,7 @@ stdenvNoCC.mkDerivation {
       rev = "cb2e4d61573358b829c35131f7e70df145e27a72";
       hash = "sha256-pQ+XQjzpoOWmWDPMpiyzS7oXgU0qxRNWYk1SrRF3xec=";
       name = "Everforest-Cursors";
-     })
+    })
   ];
   sourceRoot = ".";
 

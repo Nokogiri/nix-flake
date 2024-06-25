@@ -259,8 +259,9 @@
 
       # steam
       windowrulev2 = workspace 6 silent,class:^(steam)$
-      windowrulev2 = pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$
-      
+      windowrulev2 = fullscreen,class:^(steam)$,title:^(Steam Big Picture Mode)$
+
+
       # heroic
       windowrulev2 = workspace 6 silent,class:^(heroic)$
 

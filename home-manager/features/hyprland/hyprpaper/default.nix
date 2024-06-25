@@ -25,9 +25,7 @@ in
         "${image2}"
         "${image3}"
       ];
-      wallpaper = [
-        "eDP-1,${image3}"
-      ];
+      wallpaper = [ "eDP-1,${image3}" ];
     };
   };
 }

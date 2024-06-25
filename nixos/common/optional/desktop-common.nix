@@ -7,11 +7,6 @@
 
   programs = {
     dconf.enable = true;
-    steam.enable = true;
-    gamemode = {
-      enable = true;
-      enableRenice = true;
-    };
   };
 
   environment.systemPackages = with pkgs; [ xfce.thunar ];

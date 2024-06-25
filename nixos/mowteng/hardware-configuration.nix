@@ -122,6 +122,7 @@
     steam-hardware.enable = true;
     uinput.enable = true;
     xpadneo.enable = false;
+    xone.enable = true;
     wirelessRegulatoryDatabase = true;
   };
 
