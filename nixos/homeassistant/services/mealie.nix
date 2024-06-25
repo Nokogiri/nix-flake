@@ -2,6 +2,9 @@
 {
   sops.secrets.mealieCredentials = {
     sopsFile = ../../common/secrets.yaml;
+    owner = config.services.mealie.user;
+    group = config.services.mealie.group;
+
   };
   services.mealie = {
     enable = true;
