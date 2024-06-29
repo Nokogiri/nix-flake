@@ -9,12 +9,9 @@
 
   boot = {
     extraModprobeConfig = ''
-      #options hid_xpadneo ff_connect_notify=0
       blacklist pcspkr
-      options usb-storage quirks=090c:1000:,152d:0578:,0bc2:2322:u
       options cfg80211 ieee80211_regdom="DE"
       options iwlwifi 11n_disable=8 bt_coex_active=0
-      #power_save=0
     '';
     extraModulePackages = with config.boot.kernelPackages; [
       cpupower
@@ -122,7 +119,7 @@
     steam-hardware.enable = true;
     uinput.enable = true;
     xpadneo.enable = false;
-    xone.enable = true;
+    xone.enable = false;
     wirelessRegulatoryDatabase = true;
   };
 

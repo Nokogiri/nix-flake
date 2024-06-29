@@ -42,6 +42,8 @@ in
         "vboxusers"
         "input"
         "webdav"
+        "usb"
+        "qemu-libvirtd"
       ];
 
     openssh.authorizedKeys.keys = [

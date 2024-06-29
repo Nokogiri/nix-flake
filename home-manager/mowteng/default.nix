@@ -9,21 +9,14 @@
     ../features/nvim
     ../../stylix/mowteng/home.nix
     ../features/sway
-    #../features/awesome
-    #../features/bspwm
-    #../features/hyprland
     inputs.nur.nixosModules.nur
   ];
 
-  #nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay ];
-
-  #services.mpris-proxy.enable = true;
   home.packages = with pkgs; [
     handlr-regex
 
-    distrobox
     appimage-run
-    transmission-qt
+    transmission_4-qt
     xournalpp
 
     gimp

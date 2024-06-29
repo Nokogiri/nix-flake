@@ -20,10 +20,8 @@
     ../common/optional/greetd.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
-    ../common/optional/libvirt.nix
-    ../common/optional/waydroid.nix
+    #../common/optional/libvirt.nix
     ../common/optional/pipewire.nix
-    ../common/optional/podman.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
@@ -104,7 +102,7 @@
   services.acpid.enable = true;
   services.acpid.logEvents = false;
 
-  services.fwupd.enable = true;
+  #services.fwupd.enable = true;
   services.logind = {
     extraConfig = ''
       RuntimeDirectorySize=8G

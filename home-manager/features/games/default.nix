@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./mangohud.nix
@@ -19,8 +19,6 @@
     vkbasalt
     heroic
 
-    dhewm3
-    rbdoom-3-bfg
     gzdoom
     sm64ex
 
