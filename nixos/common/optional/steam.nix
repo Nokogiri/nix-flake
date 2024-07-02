@@ -36,10 +36,8 @@
     ];
     protontricks.enable = true;
     remotePlay.openFirewall = true;
-    
-    extraCompatPackages = with pkgs; [
-      proton-ge-bin
-    ];
+
+    extraCompatPackages = with pkgs; [ proton-ge-bin ];
   };
 
   programs.gamescope.enable = true;

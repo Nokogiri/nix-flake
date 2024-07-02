@@ -43,7 +43,51 @@
       "/share/zsh"
     ];
   };
+  systemd.coredump = {
+    enable = false;
+    extraConfig = ''
+      Storage=none
+      ProcessSizeMax=0
+    '';
+  };
 
+  security.pam.loginLimits = [
+    {
+      domain = "*";
+      item = "core";
+      type = "hard";
+      value = "0";
+    }
+    {
+      domain = "*";
+      item = "core";
+      type = "soft";
+      value = "0";
+    }
+    {
+      domain = "@users";
+      item = "rtprio";
+      type = "-";
+      value = 1;
+    }
+    {
+      domain = "@wheel";
+      item = "nofile";
+      type = "soft";
+      value = "524288";
+    }
+    {
+      domain = "@wheel";
+      item = "nofile";
+      type = "hard";
+      value = "1048576";
+    }
+  ];
+
+  boot.kernel.sysctl = {
+    "fs.suid_dumpable" = 0;
+    "kernel.core_pattern" = "|/bin/false";
+  };
   nix = {
     settings = {
       substituters = [
@@ -100,18 +144,4 @@
   hardware.enableRedistributableFirmware = true;
 
   # Increase open file limit for sudoers
-  security.pam.loginLimits = [
-    {
-      domain = "@wheel";
-      item = "nofile";
-      type = "soft";
-      value = "524288";
-    }
-    {
-      domain = "@wheel";
-      item = "nofile";
-      type = "hard";
-      value = "1048576";
-    }
-  ];
 }
