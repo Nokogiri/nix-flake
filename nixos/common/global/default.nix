@@ -3,6 +3,7 @@
   lib,
   inputs,
   config,
+  pkgs,
   ...
 }:
 {
@@ -86,7 +87,7 @@
 
   boot.kernel.sysctl = {
     "fs.suid_dumpable" = 0;
-    "kernel.core_pattern" = "|/bin/false";
+    "kernel.core_pattern" = "|${pkgs.busybox}/bin/false";
   };
   nix = {
     settings = {

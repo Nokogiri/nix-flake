@@ -9,12 +9,14 @@
     ../features/nvim
     ../../stylix/mowteng/home.nix
     ../features/sway
+    #../features/hyprland
     inputs.nur.nixosModules.nur
   ];
 
   home.packages = with pkgs; [
     handlr-regex
 
+    libsoundio
     appimage-run
     transmission_4-qt
     xournalpp

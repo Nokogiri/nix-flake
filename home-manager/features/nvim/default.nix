@@ -18,9 +18,9 @@
     enable = true;
     plugins = with pkgs.vimPlugins; [
       mason-nvim
-      nvchad
+      #nvchad
       #nvim-treesitter
-      nvchad-ui
+      #nvchad-ui
       lazy-nvim
       LazyVim
     ];

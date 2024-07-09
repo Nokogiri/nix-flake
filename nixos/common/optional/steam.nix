@@ -30,7 +30,7 @@
       xdg-user-dirs
       wget
       yad
-
+      libsoundio
       steam-rom-manager
       steamtinkerlaunch
     ];

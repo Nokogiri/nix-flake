@@ -29,7 +29,6 @@
   home.packages = with pkgs; [
     aria2
     comma # Install and run programs by sticking a , before them
-    #distrobox # Nice escape hatch, integrates docker images with my environment
     glow
 
     # archive stuff

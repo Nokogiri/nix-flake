@@ -20,7 +20,6 @@
     ../common/optional/greetd.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
-    #../common/optional/libvirt.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
@@ -72,7 +71,7 @@
   };
 
   powerManagement = {
-    cpuFreqGovernor = "powersave";
+    cpuFreqGovernor = "ondemand";
     cpufreq = {
       max = 2500000;
     };

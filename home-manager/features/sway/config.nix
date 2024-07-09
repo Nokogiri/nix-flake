@@ -49,6 +49,7 @@ in
         "6" = [
           { class = "steam"; }
           { app_id = "heroic"; }
+          { app_id = "com.usebottles.bottles"; }
         ];
         "7" = [
           { class = "Spotify"; }
@@ -57,7 +58,7 @@ in
         ];
         "8" = [
           { app_id = "transmission-qt"; }
-          { app_id = "com.usebottles.bottles"; }
+          
         ];
         "9" = [ { class = "Com.github.johnfactotum.Foliate"; } ];
       };
@@ -72,6 +73,7 @@ in
           { app_id = "org.kde.polkit-kde-authentication-agent-1"; }
           { app_id = "org.kde.kdeconnect-indicator"; }
           { title = "File Operation Progress"; }
+          { class = "Ryujinx"; }
         ];
         modifier = "Mod4";
       };
@@ -255,6 +257,12 @@ in
               app_id = "firefox";
             };
           }
+          #{
+          #  command = "fullscreen enable";
+          #  criteria = {
+          #    class = "steam";
+          #  };
+          #}
         ];
       };
       workspaceAutoBackAndForth = true;
