@@ -3,6 +3,7 @@
     ../../../common/optional/podman.nix
     ./esphome.nix
     ./homeassistant.nix
+    ./mealie.nix
     ./pihole.nix
     #./uptime-kuma.nix
   ];
