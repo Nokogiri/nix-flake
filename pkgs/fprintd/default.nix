@@ -81,14 +81,14 @@ stdenv.mkDerivation rec {
   # FIXME: Ugly hack for tests to find libpam_wrapper.so
   LIBRARY_PATH = lib.makeLibraryPath [ python3.pkgs.pypamtest ];
 
-  doCheck = true;
+  doCheck = false;
   doInstallCheck = false;
 
-  mesonCheckFlags = [
+  #mesonCheckFlags = [
     # PAM related checks are timing out
-    "--no-suite" "fprintd:TestPamFprintd"
-    "--no-suite" "fprintd:PAM"
-  ];
+  #  "--no-suite" "fprintd:TestPamFprintd"
+  #  "--no-suite" "fprintd:PAM"
+  #];
 
   postPatch = ''
     patchShebangs \

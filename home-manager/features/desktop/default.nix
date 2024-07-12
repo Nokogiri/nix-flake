@@ -20,6 +20,7 @@
     libnotify
     xdg_utils
     xfce.thunar
+    zed-editor
   ];
 
   home.sessionVariables = {

@@ -8,7 +8,7 @@
   #cemu = pkgs.callPackage ./cemu { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   everforest-theme = pkgs.callPackage ./everforest-theme { };
-  fprintd = pkgs.callPackage ./fprintd { };
+  #fprintd = pkgs.callPackage ./fprintd { };
   #gruvbox-material = pkgs.callPackage ./gruvbox-material { };
   iio-hyprland = pkgs.callPackage ./iio-hyprland { };
   #Imaginarium = pkgs.callPackage ./Imaginarium { };

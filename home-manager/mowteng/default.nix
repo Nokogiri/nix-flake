@@ -8,8 +8,8 @@
     ../features/media
     ../features/nvim
     ../../stylix/mowteng/home.nix
-    ../features/sway
-    #../features/hyprland
+    #../features/sway
+    ../features/hyprland
     inputs.nur.nixosModules.nur
   ];
 
@@ -18,7 +18,7 @@
 
     libsoundio
     appimage-run
-    transmission_4-qt
+    #transmission-qt
     xournalpp
 
     gimp

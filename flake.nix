@@ -12,8 +12,9 @@
     };
 
     lix = {
-      url = "git+https://git@git.lix.systems/lix-project/lix?ref=refs/tags/2.90-beta.1";
-      flake = false;
+      url = "git+https://git@git.lix.systems/lix-project/lix?ref=refs/tags/2.90.0";
+      #inputs.nixpkgs.follows = "nixpkgs";
+      #flake = false;
     };
 
     lix-module = {
@@ -40,18 +41,18 @@
 
     stylix.url = "github:danth/stylix";
 
-    #hyprland = {
-    #  url = "github:hyprwm/hyprland/v0.41.2";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #hyprland-contrib = {
-    #  url = "github:hyprwm/contrib";
-    #};
-    #iio-hyprland.url = "github:Nokogiri/iio-hyprland";
-    #umu = {
-    #  url = "git+https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging\/nix&submodules=1";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    hyprland = {
+      url = "github:hyprwm/hyprland/v0.41.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprland-contrib = {
+      url = "github:hyprwm/contrib";
+    };
+    iio-hyprland.url = "github:Nokogiri/iio-hyprland";
+    umu = {
+      url = "git+https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging\/nix&submodules=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     #extest = {
     #  url = "git+https://git.sr.ht/~nokogiri/extest";
     #  inputs.nixpkgs.follows = "nixpkgs";
