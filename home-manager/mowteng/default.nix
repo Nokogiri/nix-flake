@@ -18,7 +18,7 @@
 
     libsoundio
     appimage-run
-    #transmission-qt
+    transmission_4-qt
     xournalpp
 
     gimp
