@@ -2,6 +2,7 @@
   imports = [
     ./dave.nix
     ./fail2ban.nix
+    ./flood.nix
     #./forgejo.nix
     #./nfs-server.nix
     #./mealie.nix
@@ -11,7 +12,7 @@
     ./podman
     ./postgresql.nix
     ./jellyfin.nix
-    #./transmission.nix
+    ./transmission.nix
     ./vaultwarden.nix
   ];
 }
