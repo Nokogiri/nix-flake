@@ -3,8 +3,10 @@
 
   imports = [
     ./firefox
+    ./foot.nix
+    ./fuzzel.nix
     ./gpg-agent.nix
-    ./kitty.nix
+    #./kitty.nix
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix
@@ -20,7 +22,6 @@
     libnotify
     xdg_utils
     xfce.thunar
-    zed-editor
   ];
 
   home.sessionVariables = {

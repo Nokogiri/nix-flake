@@ -2,6 +2,7 @@
 {
   programs.foot = {
     enable = true;
+    server.enable = true;
     settings = {
       cursor = {
         style = "beam";
@@ -11,7 +12,7 @@
       };
       main = {
         #font = "CaskaydiaCove Nerd Font:size=12";
-        dpi-aware = "no";
+        #dpi-aware = "yes";
         pad = "10x10";
       };
       scrollback = {

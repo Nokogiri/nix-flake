@@ -3,7 +3,7 @@
     "secundofox" = {
       exec = "firefox -P private %u";
       name = "Secundofox";
-      icon = "chrome";
+      icon = "firefox";
       terminal = false;
       type = "Application";
     };

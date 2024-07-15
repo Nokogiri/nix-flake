@@ -16,7 +16,6 @@
   home.packages = with pkgs; [
     handlr-regex
 
-    libsoundio
     appimage-run
     transmission_4-qt
     xournalpp

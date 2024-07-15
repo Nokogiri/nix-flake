@@ -19,7 +19,6 @@
     recursive = true;
   };
 
-  home.packages = [ pkgs.tor-browser ];
   programs.firefox = {
     enable = true;
     nativeMessagingHosts = [ pkgs.ff2mpv-go ];

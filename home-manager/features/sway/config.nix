@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  inputs,
   ...
 }:
 let
@@ -108,7 +107,7 @@ in
       keybindings = {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
-        "${cfg.modifier}+p" = "exec pkill -9 rofi || rofi -show drun";
+        "${cfg.modifier}+p" = "exec pkill -9 fuzzel || fuzzel";
         "${cfg.modifier}+i" = "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
         # basic internals
@@ -233,7 +232,7 @@ in
           command = "${pkgs.dbus.out}/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK";
         }
       ];
-      terminal = "${pkgs.kitty}/bin/kitty";
+      terminal = "${pkgs.foot}/bin/footclient";
       #terminal = "${inputs.wezterm.packages.x86_64-linux.default}/bin/wezterm-gui";
 
       window = {
