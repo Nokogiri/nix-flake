@@ -9,15 +9,13 @@
     ../features/nvim
     ../../stylix/mowteng/home.nix
     ../features/sway
-    #../features/hyprland
-    inputs.nur.nixosModules.nur
+        inputs.nur.nixosModules.nur
   ];
 
   home.packages = with pkgs; [
     handlr-regex
-
+    
     appimage-run
-    transmission_4-qt
     xournalpp
 
     gimp

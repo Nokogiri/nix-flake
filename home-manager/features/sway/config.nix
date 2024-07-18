@@ -232,8 +232,8 @@ in
           command = "${pkgs.dbus.out}/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK";
         }
       ];
-      terminal = "${pkgs.foot}/bin/footclient";
-      #terminal = "${inputs.wezterm.packages.x86_64-linux.default}/bin/wezterm-gui";
+      #terminal = "${pkgs.foot}/bin/footclient";
+      terminal = "${pkgs.wezterm}/bin/wezterm-gui";
 
       window = {
         border = 0;

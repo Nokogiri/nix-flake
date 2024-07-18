@@ -32,8 +32,7 @@
       newtab-adapter
       sponsorblock
       surfingkeys
-      refined-github
-      stylus
+      torrent-control
       enhancer-for-youtube
     ];
 

@@ -12,7 +12,7 @@
       blacklist pcspkr
       options cfg80211 ieee80211_regdom="DE"
       options iwlwifi 11n_disable=8 bt_coex_active=0
-    '';
+          '';
     extraModulePackages = with config.boot.kernelPackages; [
       cpupower
       ryzen-smu
@@ -40,7 +40,7 @@
       "amd_pstate=passive"
       "mitigations=off"
       "cpufreq.default_governor=onedmand"
-    ];
+          ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "btrfs" ];
     tmp.cleanOnBoot = true;

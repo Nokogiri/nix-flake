@@ -6,7 +6,7 @@
     ./foot.nix
     ./fuzzel.nix
     ./gpg-agent.nix
-    #./kitty.nix
+    ./kitty.nix
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix
@@ -15,6 +15,7 @@
     ./wofi
     ./xdg
     ./ydotool.nix
+    ./wezterm
     ./zathura.nix
   ];
 
