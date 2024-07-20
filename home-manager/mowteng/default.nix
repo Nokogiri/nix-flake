@@ -15,7 +15,7 @@
   home.packages = with pkgs; [
     handlr-regex
     
-    appimage-run
+    #appimage-run
     xournalpp
 
     gimp

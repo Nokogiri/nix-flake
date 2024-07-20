@@ -35,6 +35,7 @@
     p7zip
     unzip
     unrar
+    ouch
     # misc
     pamixer
     ponymix
@@ -51,7 +52,6 @@
     file
     jq # JSON pretty printer and manipulator
     tealdeer
-    patool
     ps_mem
     yazi
     nix-stray-roots

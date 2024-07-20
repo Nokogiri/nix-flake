@@ -64,6 +64,7 @@
     };
     mangohud.enable = false;
     fish.enable = true;
+    kde.enable = false;
     nixvim.enable = false;
     rofi.enable = false;
     vim.enable = false;

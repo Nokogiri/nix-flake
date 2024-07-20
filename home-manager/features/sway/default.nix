@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
 {
   imports = [
     ./config.nix
@@ -12,11 +12,12 @@
   ];
 
   home.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qt5ct";
+    QT_QPA_PLATFORMTHEME = lib.mkForce "qt5ct";
+    QT_STYLE_OVERRIDE = lib.mkForce "Kvantum-Dark";
     XCURSOR_SIZE = "24";
     NIXOS_OZONE_WL = "1";
   };
-  home.packages = with pkgs; [ squeekboard ];
+  #home.packages = with pkgs; [ squeekboard ];
   programs = {
     fish.loginShellInit = ''
       if test (tty) = "/dev/tty1"

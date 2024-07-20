@@ -13,8 +13,6 @@
 
     lix = {
       url = "git+https://git@git.lix.systems/lix-project/lix?ref=refs/tags/2.90.0";
-      #inputs.nixpkgs.follows = "nixpkgs";
-      #flake = false;
     };
 
     lix-module = {
