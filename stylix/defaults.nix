@@ -10,7 +10,7 @@
 
   stylix = {
     homeManagerIntegration.followSystem = true;
-    image = ./wallpaper/cat.jpeg;
+    image = ./wallpaper/clouds.jpeg;
     #pkgs.fetchurl {
       #url = "https://gruvbox-wallpapers.pages.dev/wallpapers/light/Kojiro.png";
       #url = "https://raw.githubusercontent.com/Apeiros-46B/everforest-walls/0ae7c31e34385b9af33a74a707b9c4acbfef4d8c/close_up/flowers.png";

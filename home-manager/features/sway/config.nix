@@ -202,29 +202,13 @@ in
         "${cfg.modifier}+Ctrl+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock safe-mode";
         "${cfg.modifier}+Shift+Ctrl+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock lock-now";
       };
-      #menu = "\${pkgs.fuzzel}/bin/fuzzel";
       modifier = "Mod4";
-      output = {
-        eDP-1 = {
-          bg = "${
-            (pkgs.fetchurl {
-              #url = "https://gruvbox-wallpapers.pages.dev/wallpapers/irl/forest-2.jpg";
-              url = "file://${../../../stylix/wallpaper/cat.jpeg}";
-              hash = "sha256-vKI29QjK+GFLqwuoOQ7VrLABN6OrDeQ6ZQ+5QTO5O10=";
-            })
-          } fill";
-        };
-      };
       seat = {
         "*" = {
           hide_cursor = "when-typing 10";
         };
       };
       startup = [
-        #{
-        #  command = "configure-gtk";
-        #  always = true;
-        #}
         { command = "wl-paste --watch cliphist store"; }
         {
           command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
@@ -233,7 +217,6 @@ in
           command = "${pkgs.dbus.out}/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK";
         }
       ];
-      #terminal = "${pkgs.foot}/bin/footclient";
       terminal = "${pkgs.wezterm}/bin/wezterm-gui";
 
       window = {
