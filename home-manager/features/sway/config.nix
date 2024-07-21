@@ -209,8 +209,8 @@ in
           bg = "${
             (pkgs.fetchurl {
               #url = "https://gruvbox-wallpapers.pages.dev/wallpapers/irl/forest-2.jpg";
-              url = "file://${../../../stylix/wallpaper/cat.png}";
-              sha256 = "09b5749nv3saqg17q63n01fz4s7fy3h91qj200xxh8hlamys0lk2";
+              url = "file://${../../../stylix/wallpaper/cat.jpeg}";
+              hash = "sha256-vKI29QjK+GFLqwuoOQ7VrLABN6OrDeQ6ZQ+5QTO5O10=";
             })
           } fill";
         };
