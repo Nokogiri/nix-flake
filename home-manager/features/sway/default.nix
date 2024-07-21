@@ -18,7 +18,7 @@
     XCURSOR_SIZE = "24";
     NIXOS_OZONE_WL = "1";
   };
-  #home.packages = with pkgs; [ squeekboard ];
+  home.packages = with pkgs; [ gdk-pixbuf ];
   programs = {
     fish.loginShellInit = ''
       if test (tty) = "/dev/tty1"

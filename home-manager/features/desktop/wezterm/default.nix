@@ -8,14 +8,11 @@
         -- color_scheme = "Dracula",
         font_size = 12.5 ,
         font = wezterm.font_with_fallback {
-          --'GeistMono Nerd Font Propo',
-          --'Overpass Mono',
-          'IntoneMono Nerd Font',
-          --'Intel One Mono',
+          'IntoneMono Nerd Font'
         },
         -- front_end = 'WebGpu',
-        --color_scheme = 'Everforest Dark Medium (Gogh)',
-        color_scheme = 'Catppuccin Frappé (Gogh)',
+        color_scheme = 'Everforest Dark Medium (Gogh)',
+        -- color_scheme = 'Catppuccin Frappé (Gogh)',
         warn_about_missing_glyphs=false,
         animation_fps = 1,
         enable_kitty_graphics=true,

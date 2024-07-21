@@ -10,7 +10,7 @@
 
   stylix = {
     homeManagerIntegration.followSystem = true;
-    image = ./wallpaper/clouds.jpeg;
+    image = ./wallpaper/japanese.jpeg;
     #pkgs.fetchurl {
       #url = "https://gruvbox-wallpapers.pages.dev/wallpapers/light/Kojiro.png";
       #url = "https://raw.githubusercontent.com/Apeiros-46B/everforest-walls/0ae7c31e34385b9af33a74a707b9c4acbfef4d8c/close_up/flowers.png";
@@ -25,7 +25,7 @@
       #hash = "sha256-3GZFl8QnxAUJlI5B5taGVFKGp6Asn7UGKXxtDi3lhiQ=";
      # hash = "sha256-RqzCCnn4b5kU7EYgaPF19Gr9I5cZrkEdsTu+wGaaMFI=";
     #};
-    base16Scheme = ./catppuccin/catppuccin-frappe.yaml;
+    base16Scheme = ./everforest/everforest-dark-medium.yaml;
     polarity = "dark";
   };
 }
