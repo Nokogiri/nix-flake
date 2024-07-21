@@ -208,8 +208,9 @@ in
         eDP-1 = {
           bg = "${
             (pkgs.fetchurl {
-              url = "https://gruvbox-wallpapers.pages.dev/wallpapers/irl/forest-2.jpg";
-              hash = "sha256-RqzCCnn4b5kU7EYgaPF19Gr9I5cZrkEdsTu+wGaaMFI=";
+              #url = "https://gruvbox-wallpapers.pages.dev/wallpapers/irl/forest-2.jpg";
+              url = "file://${../../../stylix/wallpaper/cat.png}";
+              sha256 = "09b5749nv3saqg17q63n01fz4s7fy3h91qj200xxh8hlamys0lk2";
             })
           } fill";
         };

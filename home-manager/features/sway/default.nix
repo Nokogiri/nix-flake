@@ -2,12 +2,13 @@
 {
   imports = [
     ./config.nix
-    ./swaync.nix
+    #./swaync.nix
     ./swaylock.nix
     ./swayosd.nix
     ./user-services.nix
     ./waybar
     #./wlogout.nix
+    ./utils
     ../desktop/wayland.nix
   ];
 
