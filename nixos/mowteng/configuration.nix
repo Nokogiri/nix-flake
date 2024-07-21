@@ -32,7 +32,8 @@
 
     ./firewall.nix
     ./smb.nix
-    ./auto-cpufreq.nix
+    #./auto-cpufreq.nix
+    ./tlp.nix
     ./network.nix
     ../../stylix/mowteng/system.nix
   ];
