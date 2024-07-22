@@ -38,7 +38,7 @@
     #kernelPackages = pkgs.linuxPackages_latest;
     kernelPackages = pkgs.linuxKernel.packages.linux_zen;
     kernelParams = [
-      "amd_pstate=active"
+      "amd_pstate=passive"
       "mitigations=off"
       "cpufreq.default_governor=onedmand"
           ];

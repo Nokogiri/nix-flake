@@ -1,5 +1,6 @@
 {
   imports = [
-   ./fnott.nix
+   #./fnott.nix
+   ./mako.nix
   ];
 }

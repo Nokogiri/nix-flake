@@ -63,6 +63,7 @@
       variant256Colors = true;
     };
     mangohud.enable = false;
+    mako.enable = false;
     fish.enable = true;
     kde.enable = false;
     nixvim.enable = false;

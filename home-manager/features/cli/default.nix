@@ -39,6 +39,7 @@
     # misc
     pamixer
     ponymix
+    pulsemixer
     sshfs-fuse
 
     trash-cli

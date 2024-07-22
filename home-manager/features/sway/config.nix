@@ -63,7 +63,7 @@ in
       };
       bars = [ ];
       floating = {
-        border = 0;
+        border = 1;
         criteria = [
           { app_id = "pavucontrol"; }
           { app_id = "retroarch"; }
@@ -220,7 +220,7 @@ in
       terminal = "${pkgs.wezterm}/bin/wezterm-gui";
 
       window = {
-        border = 0;
+        border = 1;
         commands = [
           {
             command = "layout tabbed";
