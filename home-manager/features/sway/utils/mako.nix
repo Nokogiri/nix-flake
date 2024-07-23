@@ -5,14 +5,14 @@
     sort = "+time";
     layer = "overlay";
     borderRadius = 10;
-    maxVisible = 10;
+    maxVisible = 3;
     anchor = "top-right";
     font = "Overpass 13";
     backgroundColor = "#2d353bD8";
     textColor = "#d3c6aa";
     width = 400;
     height = 200;
-    margin = "10";
+    margin = "20";
     padding = "5";
     borderSize = 1;
     borderColor = "#a7c080";

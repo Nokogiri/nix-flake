@@ -2,7 +2,7 @@
   programs.mangohud = {
     enable = false;
     settings = {
-      fps_limit = "30,48,60";
+      fps_limit = "40,30,60";
       toggle_fps_limit = "F1";
       gpu_stats = true;
       gpu_temp = true;
