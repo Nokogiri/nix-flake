@@ -2,7 +2,7 @@
 {
   imports = [
     ./mangohud.nix
-    #./wine.nix
+    ./wine.nix
   ];
 
   home.sessionVariables.WINEDEBUG = "-all";
@@ -22,6 +22,7 @@
     gzdoom
     sm64ex
 
+    steamtinkerlaunch
     # emulation
     cemu
     dolphinEmuMaster

@@ -35,10 +35,10 @@
       "zenpower"
       "wireguard"
     ];
-    kernelPackages = pkgs.linuxPackages_latest;
-    #kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+    #kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxKernel.packages.linux_zen;
     kernelParams = [
-      "amd_pstate=passive"
+      "amd_pstate=active"
       "mitigations=off"
       "cpufreq.default_governor=onedmand"
           ];

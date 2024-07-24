@@ -33,12 +33,16 @@
       libsoundio
       steam-rom-manager
       steamtinkerlaunch
+      xdotool
+      xorg.xprop
+      xorg.xwininfo
+      unixtools.xxd
+
     ];
     protontricks.enable = true;
     remotePlay.openFirewall = true;
 
-    extraCompatPackages = with pkgs; [ proton-ge-bin ];
+    extraCompatPackages = with pkgs; [ proton-ge-bin steamtinkerlaunch ];
   };
-
   programs.gamescope.enable = true;
 }
