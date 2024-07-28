@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+  home.packages = [ pkgs.zsh-fzf-tab ];
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -19,6 +20,11 @@
     # ];
     #};
     plugins = [
+      {
+        name = "fzf-tab";
+        file = "share/fzf-tab/fzf-tab.zsh";
+        src = pkgs.zsh-fzf-tab;
+      }
       {
         # will source zsh-autosuggestions.plugin.zsh
         name = "zsh-autosuggestions";
@@ -45,12 +51,23 @@
       ignoreSpace = true;
       path = "${config.xdg.dataHome}/zsh/zsh_history";
     };
+    initExtra = ''
+          bindkey -e
+
+      bindkey "^[[3~" delete-char                     # Key Del
+      bindkey "^[[5~" beginning-of-buffer-or-history  # Key Page Up
+      bindkey "^[[6~" end-of-buffer-or-history        # Key Page Down
+      bindkey "^[[H" beginning-of-line                # Key Home
+      bindkey "^[[F" end-of-line                      # Key End
+      bindkey "^[[1;3C" forward-word                  # Key Alt + Right
+      bindkey "^[[1;3D" backward-word                 # Key Alt + Left
+
+    '';
   };
 
   programs.fzf.enableZshIntegration = true;
   programs.atuin.enableZshIntegration = true;
-  programs.carapace.enableZshIntegration = true;
   programs.starship.enableZshIntegration = true;
   programs.eza.enableZshIntegration = true;
-  #programs.zoxide.enableZshIntegration = true;
+  programs.zoxide.enableZshIntegration = true;
 }

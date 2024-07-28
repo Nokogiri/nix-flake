@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}:
+{ config, pkgs, ... }:
 let
   cfg = config.wayland.windowManager.sway.config;
 in
@@ -57,7 +53,7 @@ in
         ];
         "8" = [
           { app_id = "transmission-qt"; }
-          
+
         ];
         "9" = [ { class = "Com.github.johnfactotum.Foliate"; } ];
       };

@@ -1,30 +1,35 @@
-{ lib, stdenv
-, fetchFromGitLab
-, pkg-config
-, gobject-introspection
-, meson
-, ninja
-, perl
-, gettext
-, gtk-doc
-, libxslt
-, docbook-xsl-nons
-, docbook_xml_dtd_412
-, glib
-, gusb
-, dbus
-, polkit
-, nss
-, pam
-, systemd
-, libfprint
-, python3
+{
+  lib,
+  stdenv,
+  fetchFromGitLab,
+  pkg-config,
+  gobject-introspection,
+  meson,
+  ninja,
+  perl,
+  gettext,
+  gtk-doc,
+  libxslt,
+  docbook-xsl-nons,
+  docbook_xml_dtd_412,
+  glib,
+  gusb,
+  dbus,
+  polkit,
+  nss,
+  pam,
+  systemd,
+  libfprint,
+  python3,
 }:
 
 stdenv.mkDerivation rec {
   pname = "fprintd";
   version = "1.94.3";
-  outputs = [ "out" "devdoc" ];
+  outputs = [
+    "out"
+    "devdoc"
+  ];
 
   src = fetchFromGitLab {
     domain = "gitlab.freedesktop.org";
@@ -85,7 +90,7 @@ stdenv.mkDerivation rec {
   doInstallCheck = false;
 
   #mesonCheckFlags = [
-    # PAM related checks are timing out
+  # PAM related checks are timing out
   #  "--no-suite" "fprintd:TestPamFprintd"
   #  "--no-suite" "fprintd:PAM"
   #];

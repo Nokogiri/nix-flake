@@ -16,7 +16,7 @@
       sops
       gnupg
       nixpkgs-fmt
-     # nix-universal-prefetch
+      # nix-universal-prefetch
     ];
   };
 }

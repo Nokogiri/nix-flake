@@ -9,12 +9,12 @@
     ../features/nvim
     ../../stylix/mowteng/home.nix
     ../features/sway
-        inputs.nur.nixosModules.nur
+    inputs.nur.nixosModules.nur
   ];
 
   home.packages = with pkgs; [
     handlr-regex
-    
+
     #appimage-run
     xournalpp
 
