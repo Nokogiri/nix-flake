@@ -37,7 +37,7 @@
       xorg.xprop
       xorg.xwininfo
       unixtools.xxd
-
+      pev
     ];
     protontricks.enable = true;
     remotePlay.openFirewall = true;
