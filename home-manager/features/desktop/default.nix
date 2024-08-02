@@ -3,8 +3,8 @@
 
   imports = [
     ./firefox
-    #./foot.nix
-    #./fuzzel.nix
+    ./foot.nix
+    ./fuzzel.nix
     ./gpg-agent.nix
     #./kitty.nix
     ./pavucontrol.nix

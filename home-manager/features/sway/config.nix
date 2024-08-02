@@ -1,6 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 let
   cfg = config.wayland.windowManager.sway.config;
+  wezterm = inputs.wezterm.packages.x86_64-linux.default;
 in
 {
   wayland.windowManager.sway = {
@@ -213,7 +214,7 @@ in
           command = "${pkgs.dbus.out}/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK";
         }
       ];
-      terminal = "${pkgs.wezterm}/bin/wezterm-gui";
+      terminal = "${wezterm}/bin/wezterm";
 
       window = {
         border = 1;

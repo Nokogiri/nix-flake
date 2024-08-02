@@ -141,6 +141,7 @@
     nix-index-database.comma.enable = true;
     nix-index.enableZshIntegration = false;
     nix-index.enableBashIntegration = false;
+    zsh.enable = true;
   };
   hardware.enableRedistributableFirmware = true;
 

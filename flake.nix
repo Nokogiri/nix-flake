@@ -16,7 +16,7 @@
     };
 
     lix-module = {
-      url = "git+https://git.lix.systems/lix-project/nixos-module";
+      url = "git+https://git.lix.systems/lix-project/nixos-module?ref=refs/tags/2.90.0";
       inputs.lix.follows = "lix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -38,6 +38,11 @@
     };
 
     stylix.url = "github:danth/stylix";
+
+    wezterm = {
+      url = "github:wez/wezterm?dir=nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

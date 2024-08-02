@@ -30,6 +30,11 @@
         exec systemd-cat --identifier=sway sway &> /dev/null
       end
     '';
+    zsh.profileExtra = ''
+      if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+        exec systemd-cat --identifier=sway sway &> /dev/null
+      fi
+    '';
   };
 
   programs.waybar.systemd = {

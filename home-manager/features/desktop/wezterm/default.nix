@@ -2,7 +2,7 @@
 {
   programs.wezterm = {
     enable = true;
-    #package = inputs.wezterm.packages.x86_64-linux.default;
+    package = inputs.wezterm.packages.x86_64-linux.default;
     extraConfig = ''
       return {
         -- color_scheme = "Dracula",
@@ -14,7 +14,7 @@
         color_scheme = 'Everforest Dark Medium (Gogh)',
         -- color_scheme = 'Catppuccin Frappé (Gogh)',
         warn_about_missing_glyphs=false,
-        animation_fps = 1,
+        --animation_fps = 1,
         enable_kitty_graphics=true,
         enable_wayland = true,
         default_cursor_style = "BlinkingUnderline",
