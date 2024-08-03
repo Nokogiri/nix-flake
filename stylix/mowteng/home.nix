@@ -1,5 +1,8 @@
 { pkgs, config, ... }:
 {
+  imports = [
+  ../home_defaults.nix
+  ];
   home.file.".icons/default/index.theme".text = ''
     [Icon Theme]
     Name=Default
@@ -57,21 +60,10 @@
         }*/
       '';
     };
-
-    kitty = {
-      enable = false;
-      variant256Colors = true;
-    };
-    mangohud.enable = false;
-    mako.enable = false;
-    fish.enable = true;
-    kde.enable = false;
-    hyprland.enable = false;
-    hyprpaper.enable = false;
-    nixvim.enable = false;
-    rofi.enable = false;
-    vim.enable = false;
-    waybar.enable = false;
-    wezterm.enable = false;
+  
+  sway.enable = true;
+  swaylock.enable = true;
+  xresources.enable = true;
+  zathura.enable = true;
   };
 }

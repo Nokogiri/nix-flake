@@ -1,7 +1,5 @@
-{ pkgs, inputs, ... }:
+{ pkgs,  ... }:
 {
-
-  #imports = [ inputs.stylix.nixosModules.stylix ];
   imports = [ ../defaults.nix ];
 
   environment.systemPackages = with pkgs; [
@@ -66,9 +64,6 @@
       desktop = 0.85;
       popups = 0.85;
       terminal = 0.9;
-    };
-    targets = {
-      plymouth.logoAnimated = false;
     };
   };
 }

@@ -1,7 +1,7 @@
 { inputs, pkgs, ... }:
 {
   imports = [ inputs.stylix.nixosModules.stylix ];
-
+  
   environment.pathsToLink = [
     "/share/Kvantum"
     "/share/themes"
@@ -9,8 +9,9 @@
   ];
 
   stylix = {
+    autoEnable = false;
     homeManagerIntegration.followSystem = true;
-    image = ./wallpaper/japanese.jpeg;
+    image = ./images/japanese.jpeg;
     #pkgs.fetchurl {
     #url = "https://gruvbox-wallpapers.pages.dev/wallpapers/light/Kojiro.png";
     #url = "https://raw.githubusercontent.com/Apeiros-46B/everforest-walls/0ae7c31e34385b9af33a74a707b9c4acbfef4d8c/close_up/flowers.png";
@@ -27,5 +28,14 @@
     #};
     base16Scheme = ./everforest/everforest-dark-medium.yaml;
     polarity = "dark";
+    targets = {
+      console.enable = true;
+      fish.enable = true;
+      gtk.enable = true;
+      nixos-icons.enable = true;
+      plymouth.enable = true;
+      plymouth.logo = ./images/logo.png;
+
+    };
   };
 }
