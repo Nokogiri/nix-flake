@@ -66,6 +66,8 @@
     mako.enable = false;
     fish.enable = true;
     kde.enable = false;
+    hyprland.enable = false;
+    hyprpaper.enable = false;
     nixvim.enable = false;
     rofi.enable = false;
     vim.enable = false;
