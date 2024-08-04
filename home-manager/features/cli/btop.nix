@@ -2,9 +2,8 @@
   programs.btop = {
     enable = true;
     settings = {
-      # color_theme = "dracula";
       theme_background = false;
-      swap_disk = false;
+      swap_disk = true;
       use_fstab = false;
       only_physical = true;
       proc_per_core = true;

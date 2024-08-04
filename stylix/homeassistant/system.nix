@@ -3,8 +3,10 @@
   imports = [ ../defaults.nix ];
   stylix = {
     enable = true;
-    targets = {
-      fish.enable = false;
+    opacity = {
+      desktop = 0.85;
+      popups = 0.85;
+      terminal = 0.9;
     };
   };
 }
