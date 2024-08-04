@@ -1,7 +1,6 @@
 {
   pkgs,
   config,
-  lib,
   inputs,
   outputs,
   ...
@@ -15,7 +14,7 @@ in
   users.mutableUsers = true;
   users.users.nokogiri = {
     isNormalUser = true;
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
 
     extraGroups =
       [

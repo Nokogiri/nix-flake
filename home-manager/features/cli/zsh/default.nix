@@ -52,7 +52,7 @@
       path = "${config.xdg.dataHome}/zsh/zsh_history";
     };
     initExtra = ''
-          bindkey -e
+      bindkey -e
 
       bindkey "^[[3~" delete-char                     # Key Del
       bindkey "^[[5~" beginning-of-buffer-or-history  # Key Page Up
@@ -63,6 +63,9 @@
       bindkey "^[[1;3D" backward-word                 # Key Alt + Left
 
     '';
+    localVariables = {
+      WORDCHARS = "";
+    };
   };
 
   programs.fzf.enableZshIntegration = true;

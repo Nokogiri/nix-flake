@@ -8,7 +8,7 @@
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
-    #foot = prev.foot.overrideAttrs (old: { patches = (old.patches or []) ++ [ ./foot-fs-transparency.patch ]; })
+    foot = prev.foot.overrideAttrs (old: { patches = (old.patches or []) ++ [ ./foot-fs-transparency.patch ]; });
     #fprintd = prev.fprintd.overrideAttrs (_: {
     #  mesonCheckFlags = [
     #    "--no-suite"
