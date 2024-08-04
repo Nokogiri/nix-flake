@@ -7,18 +7,6 @@
     enableVteIntegration = true;
     autocd = true;
     autosuggestion.enable = true;
-    #antidote = {
-    #  enable = true;
-    #  plugins = [
-    #    "Aloxaf/fzf-tab"
-    #    "hlissner/zsh-autopair"
-    #"marlonrichert/zsh-autocomplete"
-    #"wfxr/forgit"
-    #   "zsh-users/zsh-autosuggestions"
-    #   "zsh-users/zsh-syntax-highlighting"
-    #"zsh-users/zsh-history-substring-search"
-    # ];
-    #};
     plugins = [
       {
         name = "fzf-tab";
