@@ -7,6 +7,10 @@
     enableVteIntegration = true;
     autocd = true;
     autosuggestion.enable = true;
+    #syntaxHighlighting = {
+    #  enable = true;
+    #  package = pkgs.zsh-f-sy-h;
+    #};
     plugins = [
       {
         name = "fzf-tab";
@@ -16,21 +20,19 @@
       {
         # will source zsh-autosuggestions.plugin.zsh
         name = "zsh-autosuggestions";
-        src = pkgs.fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "zsh-autosuggestions";
-          rev = "v0.7.0";
-          sha256 = "sha256-KLUYpUu4DHRumQZ3w59m9aTW6TBKMCXl2UcKi4uMd7w=";
-        };
+        file = "share/zsh-autosuggestions/zsh-autosuggestions.zsh";
+        src = pkgs.zsh-autosuggestions;
       }
       {
         name = "zsh-syntax-highlighting";
-        src = pkgs.fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "zsh-syntax-highlighting";
-          rev = "0.8.0";
-          sha256 = "sha256-iJdWopZwHpSyYl5/FQXEW7gl/SrKaYDEtTH9cGP7iPo=";
-        };
+        file = "share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh";
+        src = pkgs.zsh-fast-syntax-highlighting;
+        
+      #    owner = "zsh-users";
+      #    repo = "zsh-syntax-highlighting";
+      #    rev = "0.8.0";
+      #    sha256 = "sha256-iJdWopZwHpSyYl5/FQXEW7gl/SrKaYDEtTH9cGP7iPo=";
+      #  };
       }
     ];
     dotDir = ".config/zsh";
