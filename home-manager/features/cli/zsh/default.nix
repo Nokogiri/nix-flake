@@ -27,6 +27,11 @@
         name = "zsh-syntax-highlighting";
         file = "share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh";
         src = pkgs.zsh-fast-syntax-highlighting;
+      }
+      {
+        name = "forgit";
+        file = "/share/zsh/zsh-forgit/forgit.plugin.zsh";
+        src = pkgs.zsh-forgit;
         
       #    owner = "zsh-users";
       #    repo = "zsh-syntax-highlighting";
