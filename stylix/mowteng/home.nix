@@ -1,8 +1,6 @@
 { pkgs, config, ... }:
 {
-  imports = [
-  ../home_defaults.nix
-  ];
+  imports = [ ../home_defaults.nix ];
   home.file.".icons/default/index.theme".text = ''
     [Icon Theme]
     Name=Default
@@ -60,10 +58,12 @@
         }*/
       '';
     };
-  
-  sway.enable = true;
-  swaylock.enable = true;
-  xresources.enable = true;
-  zathura.enable = true;
+
+    hyprland.enable = true;
+    hyprpaper.enable = true;
+    sway.enable = true;
+    swaylock.enable = true;
+    xresources.enable = true;
+    zathura.enable = true;
   };
 }

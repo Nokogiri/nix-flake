@@ -14,7 +14,7 @@
 
     #vkbasalt
     heroic
-    google-chrome #GFN
+    google-chrome # GFN
 
     gzdoom
     #sm64ex

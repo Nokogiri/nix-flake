@@ -1,8 +1,6 @@
 {
-  imports = [
-    ../home_defaults.nix
-  ];
+  imports = [ ../home_defaults.nix ];
   stylix.targets = {
-  	btop.enable = true;
+    btop.enable = true;
   };
 }

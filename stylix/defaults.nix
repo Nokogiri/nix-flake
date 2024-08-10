@@ -1,7 +1,7 @@
 { inputs, pkgs, ... }:
 {
   imports = [ inputs.stylix.nixosModules.stylix ];
-  
+
   environment.pathsToLink = [
     "/share/Kvantum"
     "/share/themes"
@@ -30,7 +30,7 @@
     polarity = "dark";
     targets = {
       console.enable = true;
-      fish.enable = true;
+      fish.enable = false;
       gtk.enable = true;
       nixos-icons.enable = true;
       plymouth.enable = true;

@@ -1,16 +1,16 @@
 { config, pkgs, ... }:
 {
-  home.packages = [ pkgs.zsh-fzf-tab ];
+  home.packages = [
+    pkgs.zsh-fzf-tab
+    pkgs.nix-zsh-completions
+    pkgs.any-nix-shell
+  ];
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     enableVteIntegration = true;
     autocd = true;
     autosuggestion.enable = true;
-    #syntaxHighlighting = {
-    #  enable = true;
-    #  package = pkgs.zsh-f-sy-h;
-    #};
     plugins = [
       {
         name = "fzf-tab";
@@ -32,12 +32,15 @@
         name = "forgit";
         file = "/share/zsh/zsh-forgit/forgit.plugin.zsh";
         src = pkgs.zsh-forgit;
-        
-      #    owner = "zsh-users";
-      #    repo = "zsh-syntax-highlighting";
-      #    rev = "0.8.0";
-      #    sha256 = "sha256-iJdWopZwHpSyYl5/FQXEW7gl/SrKaYDEtTH9cGP7iPo=";
-      #  };
+      }
+      {
+        name = "zsh-tab-title";
+        src = pkgs.fetchFromGitHub {
+          owner = "trystan2k";
+          repo = "zsh-tab-title";
+          rev = "v3.1.0";
+          hash = "sha256-YvAN8c2++WRJYGblstZKWCWrCl0byXQqFryTA35/Ao0=";
+        };
       }
     ];
     dotDir = ".config/zsh";
@@ -47,6 +50,7 @@
       path = "${config.xdg.dataHome}/zsh/zsh_history";
     };
     initExtra = ''
+      ${pkgs.any-nix-shell}/bin/any-nix-shell zsh --info-right | source /dev/stdin
       bindkey -e
 
       bindkey "^[[3~" delete-char                     # Key Del
@@ -60,6 +64,28 @@
     '';
     localVariables = {
       WORDCHARS = "";
+      ZSH_TAB_TITLE_ADDITIONAL_TERMS = "alacritty|kitty|foot";
+    };
+    zsh-abbr = {
+      enable = true;
+      abbreviations = {
+        ipa = "ip -color -brief a";
+        ls = "eza";
+        n = "nix";
+        nd = "nix develop -c $SHELL";
+        ns = "nix shell";
+        nsn = "nix shell nixpkgs#";
+        nb = "nix build";
+        nbn = "nix build nixpkgs#";
+        nf = "nix flake";
+
+        nr = "nixos-rebuild --flake .";
+        nrs = "nixos-rebuild --flake . switch";
+        snr = "doas nixos-rebuild --flake .";
+        snrs = "doas nixos-rebuild --flake . switch";
+        hm = "home-manager --flake .";
+        hms = "home-manager --flake . switch";
+      };
     };
   };
 

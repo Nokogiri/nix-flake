@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 let
   cfg = config.wayland.windowManager.sway.config;
   wezterm = inputs.wezterm.packages.x86_64-linux.default;

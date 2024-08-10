@@ -12,6 +12,7 @@
       blacklist pcspkr
       options cfg80211 ieee80211_regdom="DE"
       options iwlwifi 11n_disable=8 bt_coex_active=0
+      options usb-storage quirks=090c:1000:,152d:0578:u,0bc2:2322:u
     '';
     extraModulePackages = with config.boot.kernelPackages; [
       cpupower
@@ -34,13 +35,15 @@
       "kvm-amd"
       "zenpower"
       "wireguard"
+      "ntsync"
     ];
-    kernelPackages = pkgs.linuxPackages_latest;
+    #kernelPackages = pkgs.linuxPackages_latest;
     #kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+    kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
     kernelParams = [
-      "amd_pstate=passive"
+      "amd_pstate=active"
       "mitigations=off"
-      "cpufreq.default_governor=onedmand"
+      "cpufreq.default_governor=powersave"
     ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = [ "btrfs" ];
