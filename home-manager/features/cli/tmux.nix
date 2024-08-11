@@ -20,8 +20,8 @@
       set-option -g repeat-time 0
       set -g allow-passthrough on
 
-          set -ga update-environment TERM
-          set -ga update-environment TERM_PROGRAM
+      set -ga update-environment TERM
+      set -ga update-environment TERM_PROGRAM
 
       source ${pkgs.fetchFromGitHub {
         owner = "TanglingTreats";
@@ -51,6 +51,6 @@
     #  }
     #];
     shortcut = "a";
-    #terminal = "tmux-256color";
+    terminal = "xterm-256color";
   };
 }
