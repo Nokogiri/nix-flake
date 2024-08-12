@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     ./mangohud.nix
@@ -14,6 +14,7 @@
 
     #vkbasalt
     heroic
+    inputs.umu.packages.${pkgs.system}.umu
     google-chrome # GFN
 
     gzdoom

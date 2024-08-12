@@ -11,16 +11,14 @@
   ];
   fonts.packages = with pkgs; [
     dejavu_fonts
-    intel-one-mono
     noto-fonts
     noto-fonts-emoji
     noto-fonts-cjk-sans
     weather-icons
     (nerdfonts.override {
       fonts = [
-        "GeistMono"
-        "IntelOneMono"
         "NerdFontsSymbolsOnly"
+        "Hack"
       ];
     })
   ];
@@ -44,16 +42,16 @@
     };
     fonts = {
       serif = {
-        name = "Overpass";
-        package = pkgs.overpass;
+        name = "Hack";
+        package = pkgs.hack-font;
       };
       sansSerif = {
-        name = "Overpass";
-        package = pkgs.overpass;
+        name = "Hack";
+        package = pkgs.hack-font;
       };
       monospace = {
-        name = "IntoneMono Nerd Font";
-        package = pkgs.overpass;
+        name = "Hack";
+        package = pkgs.hack-font;
       };
       emoji = {
         package = pkgs.noto-fonts-emoji;
