@@ -3,14 +3,11 @@
   programs = {
     kitty = {
       enable = true;
-      #extraConfig = ''
-      #  include = /home/nokogiri/.config/kitty/theme.conf
-      #'';
-      font = {
-        name = "IntoneMono Nerd Font";
-        size = 12;
-      };
-      theme = "Everforest Dark Medium";
+      #font = {
+      #  name = "Hack Nerd Font";
+      #  size = 12;
+      #};
+      #theme = "Everforest Dark Medium";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";
@@ -111,8 +108,8 @@
         resize_draw_strategy = "scale";
 
         # Opacity settings
-        background_opacity = "0.85";
-        dim_opacity = "0.4";
+        #background_opacity = "0.85";
+        #dim_opacity = "0.4";
       };
       keybindings = {
         "kitty_mod+c" = "copy_to_clipboard";

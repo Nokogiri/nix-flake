@@ -21,7 +21,7 @@
     #sm64ex
 
     # emulation
-    cemu
+    #cemu
     dolphinEmuMaster
     #retroarch
     #libretro.beetle-psx-hw

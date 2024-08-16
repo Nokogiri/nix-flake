@@ -7,8 +7,6 @@
   amdctl = pkgs.callPackage ./amdctl { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   everforest-theme = pkgs.callPackage ./everforest-theme { };
-  #iio-hyprland = pkgs.callPackage ./iio-hyprland { };
-
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   rofi-emoji = pkgs.callPackage ./rofi-emoji { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };

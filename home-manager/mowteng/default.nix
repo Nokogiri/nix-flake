@@ -21,6 +21,6 @@
 
     gimp
     krita
-    mypaint
+    #mypaint
   ];
 }
