@@ -38,6 +38,7 @@
       xorg.xwininfo
       unixtools.xxd
       pev
+      zenity
     ];
     protontricks.enable = true;
     remotePlay.openFirewall = true;

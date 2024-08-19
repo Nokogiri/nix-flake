@@ -3,16 +3,18 @@
   programs = {
     kitty = {
       enable = true;
-      #font = {
-      #  name = "Hack Nerd Font";
-      #  size = 12;
-      #};
-      #theme = "Everforest Dark Medium";
+      extraConfig = ''
+        include everforest-dark.conf
+      '';
+      font = {
+        name = "Hack";
+        size = 12;
+      };
+      theme = "Everforest Dark Medium";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";
         linux_display_server = "auto";
-        touch_scroll_multiplier = "6.0";
         wayland_titlebar_color = "system";
         hide_window_decorations = false;
         scrollback_lines = 9000;
@@ -72,7 +74,7 @@
         # Misc settings
         disable_ligatures = "always";
         font_feature = "none";
-        backgrund_blur = 16;
+        #backgrund_blur = 16;
         #symbol_map = "U+F000-U+F0FF Weather Icons";
         adjust_line_height = 0;
         adjust_column_width = 0;
@@ -108,7 +110,7 @@
         resize_draw_strategy = "scale";
 
         # Opacity settings
-        #background_opacity = "0.85";
+        background_opacity = "0.85";
         #dim_opacity = "0.4";
       };
       keybindings = {

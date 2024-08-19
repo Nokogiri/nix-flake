@@ -37,7 +37,7 @@
       "wireguard"
       "ntsync"
     ];
-    #kernelPackages = pkgs.linuxPackages_latest;
+    #kernelPackages = pkgs.linuxPackages_6_1;
     #kernelPackages = pkgs.linuxKernel.packages.linux_zen;
     kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
     kernelParams = [
