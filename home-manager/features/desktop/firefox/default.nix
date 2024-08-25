@@ -23,6 +23,7 @@
     enable = true;
     nativeMessagingHosts = [ pkgs.ff2mpv-go ];
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [
+      faststream
       ff2mpv
       firefox-color
       ublock-origin
@@ -33,7 +34,7 @@
       sponsorblock
       surfingkeys
       torrent-control
-      enhancer-for-youtube
+      #enhancer-for-youtube
     ];
 
     profiles.nokogiri = {
