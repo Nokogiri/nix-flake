@@ -33,8 +33,9 @@
       fish.enable = false;
       gtk.enable = true;
       nixos-icons.enable = true;
-      plymouth.enable = true;
-      plymouth.logo = ./images/logo.png;
+      #plymouth.enable = true;
+
+      #plymouth.logo = ./images/logo.png;
 
     };
   };

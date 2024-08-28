@@ -1,7 +1,7 @@
 {
   boot = {
     plymouth = {
-      enable = true;
+      enable = false;
     };
     loader.timeout = 0;
     kernelParams = [
