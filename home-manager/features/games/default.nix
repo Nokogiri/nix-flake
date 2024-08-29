@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./mangohud.nix
@@ -13,31 +13,24 @@
     gamescope
     mangohud
 
-    #vkbasalt
+    vkbasalt
     heroic
-    inputs.umu.packages.${pkgs.system}.umu
     google-chrome # GFN
 
     gzdoom
-    #sm64ex
+    sm64ex
 
     # emulation
     #cemu
     dolphinEmuMaster
-    #retroarch
-    #libretro.beetle-psx-hw
     libretro.citra
-    #libretro.dolphin
-    #libretro.flycast
     libretro.mgba
     libretro.mupen64plus
     libretro.parallel-n64
     libretro.play
-    #libretro.ppsspp
     libretro.snes9x
     pcsx2
     ppsspp
-    #rpcs3
     ryujinx
   ];
 }
