@@ -20,7 +20,6 @@
     ../common/optional/greetd.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
-    ../common/optional/libvirt.nix   
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
@@ -33,7 +32,6 @@
 
     ./firewall.nix
     ./smb.nix
-    #./auto-cpufreq.nix
     ./tlp.nix
     ./network.nix
     ../../stylix/mowteng/system.nix
