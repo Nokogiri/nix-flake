@@ -25,16 +25,6 @@
       map to guest = bad user
     '';
     shares = {
-      Vault11 = {
-        path = "/media/Vault1.1";
-        browseable = "yes";
-        "read only" = "no";
-        "guest ok" = "yes";
-        "create mask" = "0644";
-        "directory mask" = "0755";
-        "force user" = "nokogiri";
-        "force group" = "users";
-      };
       Vault31 = {
         path = "/media/Vault3.1";
         browseable = "yes";
