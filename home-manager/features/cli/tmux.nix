@@ -23,11 +23,12 @@
       set -ga update-environment TERM
       set -ga update-environment TERM_PROGRAM
 
-      source ${pkgs.fetchFromGitHub {
-        owner = "TanglingTreats";
-        repo = "tmux-everforest";
-        rev = "8fdb56daf523b84c51efeca1a16d3d6e44c31fdc";
-        hash = "sha256-0LUiYXPWzWgH72ORkR9b+SRHxryZdNgmZGu9VzjbDX8=";
+      source ${
+        pkgs.fetchFromGitHub {
+          owner = "TanglingTreats";
+          repo = "tmux-everforest";
+          rev = "8fdb56daf523b84c51efeca1a16d3d6e44c31fdc";
+          hash = "sha256-0LUiYXPWzWgH72ORkR9b+SRHxryZdNgmZGu9VzjbDX8=";
         }
       }/tmux-everforest-dark-medium.conf
     '';

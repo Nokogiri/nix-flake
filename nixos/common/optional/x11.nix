@@ -11,7 +11,7 @@
       ];
     };
   };
-  programs.sway.enable = true;
+  programs.sway.enable = false;
   services.displayManager = {
     defaultSession = "none+awesome";
   };

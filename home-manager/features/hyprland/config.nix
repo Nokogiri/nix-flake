@@ -1,93 +1,94 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   wayland.windowManager.hyprland = {
+    settings = {
+      animations = {
+        enabled = true;
+        bezier = [
+          "easein,0.11, 0, 0.5, 0"
+          "easeout,0.5, 1, 0.89, 1"
+          "easeinout,0.45, 0, 0.55, 1"
+          "myBezier, 0.05, 0.9, 0.1, 1.05"
+        ];
+        animation = [
+          "windows, 1, 3, myBezier"
+          "windowsOut, 1, 3, default, popin 10%"
+          "border, 1, 5, default"
+          "borderangle, 1, 4, default"
+          "fade, 1, 3, default"
+          "workspaces, 1, 2, default"
+        ];
+      };
+      binds = {
+        workspace_back_and_forth = true;
+      };
+      decoration = {
+        active_opacity = "1.0";
+        inactive_opacity = "0.8";
+        fullscreen_opacity = "1.0";
+        rounding = "6";
+        drop_shadow = true;
+        shadow_range = "24";
+        shadow_offset = "3 3";
+        blur = {
+          size = "3";
+          passes = "1";
+        };
+      };
+      device = [
+        {
+          name = "wacom-hid-49c8-finger";
+          output = "eDP-1";
+          enabled = true;
+        }
+        {
+          name = "wacom-hid-49c8-pen";
+          output = "eDP-1";
+          enabled = true;
+        }
+      ];
+
+      env = [
+        "NIXOS_OZONE_WL,1"
+        "XCURSOR_SIZE,24"
+        "XCURSOR_THEME,phinger-cursors-light"
+        "GTK_THEME,adw-gtk3"
+        "XDG_CURRENT_DESKTOP,Hyprland"
+        "XDG_SESSION_TYPE,wayland"
+        "XDG_SESSION_DESKTOP,Hyprland"
+      ];
+      general = {
+        gaps_in = "7";
+        gaps_out = "10";
+        border_size = "1";
+      };
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_fingers = "3";
+        workspace_swipe_distance = "130";
+        workspace_swipe_cancel_ratio = "0.5";
+        workspace_swipe_min_speed_to_force = "20";
+        workspace_swipe_create_new = false;
+      };
+      input = {
+        kb_layout = "us,de";
+        kb_variant = "altgr-intl,";
+        kb_options = "grp:alt_space_toggle";
+        follow_mouse = "1";
+        touchpad = {
+          disable_while_typing = true;
+          natural_scroll = false;
+        };
+      };
+
+      misc = {
+        disable_hyprland_logo = true;
+        disable_splash_rendering = true;
+        vfr = true;
+      };
+      monitor = "eDP-1,1920x1200@60.00,auto,1";
+    };
     extraConfig = ''
-      general {
-        gaps_in=7
-        gaps_out=10
-        border_size=0
-        col.active_border=0xffAAAAAA
-        col.inactive_border=0xff666666
-        no_border_on_floating=true
-      }
-
-      monitor=eDP-1,1920x1200@60.00,auto,1
-
-      gestures {
-        workspace_swipe = true
-        workspace_swipe_fingers = 3
-        workspace_swipe_distance = 130
-        workspace_swipe_cancel_ratio = 0.5
-        workspace_swipe_min_speed_to_force = 20
-        workspace_swipe_create_new = false 
-      }
-
-      decoration {
-         active_opacity=1.0
-         inactive_opacity=0.8
-         fullscreen_opacity=1.0
-         rounding=6
-         drop_shadow=true
-         shadow_range=24
-         shadow_offset=3 3
-         col.shadow=0x44000000
-         col.shadow_inactive=0x66000000
-         blur {
-           size = 3
-           passes = 1
-        }
-      }
-
-      animations {
-        enabled=true
-
-        bezier=easein,0.11, 0, 0.5, 0
-        bezier=easeout,0.5, 1, 0.89, 1
-        bezier=easeinout,0.45, 0, 0.55, 1
-
-        bezier = myBezier, 0.05, 0.9, 0.1, 1.05
-        animation = windows, 1, 3, myBezier
-        animation = windowsOut, 1, 3, default, popin 10%
-        animation = border, 1, 5, default
-        animation = borderangle, 1, 4, default
-        animation = fade, 1, 3, default
-        animation = workspaces, 1, 2, default
-      }
-
-      misc {
-        disable_hyprland_logo=true
-        disable_splash_rendering=true
-        vfr=true
-      }
-
-      debug {
-        overlay=false
-        disable_logs=false
-        enable_stdout_logs=false
-      }
-      binds {
-        workspace_back_and_forth = true
-      }
-      input {
-        kb_layout=us,de
-        kb_variant=altgr-intl,
-        kb_options=grp:alt_space_toggle
-        follow_mouse=1
-        touchpad {
-          disable_while_typing = true
-          natural_scroll = false
-        }
-      }
-      device {
-        name = wacom-hid-49c8-finger
-        output = eDP-1
-        enabled = true
-      }
-      device {
-         name = wacom-hid-49c8-pen
-         output=eDP-1
-         enabled=true
-      }
       # Startup
       exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
       exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store

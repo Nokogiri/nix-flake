@@ -1,7 +1,12 @@
 { pkgs, inputs, ... }:
 {
 
+  imports = [
+    inputs.hyprland.nixosModules.default
+  ];
   security.pam.services.swaylock.fprintAuth = true;
+  security.pam.services.hyprlock = { };
+  #security.pam.services.hyprlock.fprint = {};
 
   gtk.iconCache.enable = true;
 
@@ -9,7 +14,10 @@
     dconf.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [ xfce.thunar ];
+  environment.systemPackages = with pkgs; [
+    xfce.thunar
+    distrobox
+  ];
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
 
@@ -27,12 +35,12 @@
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-wlr
     ];
     xdgOpenUsePortal = false;
     config.common = {
       default = [
-        "hyprland"
+        "wlr"
         "gtk"
       ];
       "org.freedesktop.impl.portal.Settings" = [ "gtk" ];

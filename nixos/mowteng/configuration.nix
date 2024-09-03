@@ -17,6 +17,7 @@
     ../common/global
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
+    ../common/optional/podman.nix
     ../common/optional/greetd.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
@@ -61,6 +62,7 @@
 
   environment.systemPackages = with pkgs; [
     amdctl
+    compsize
     exfatprogs
     ryzen-monitor-ng
   ];
@@ -89,19 +91,9 @@
     longitude = 11.03283;
   };
 
-  #security.pam.loginLimits = [
-  #  {
-  #    domain = "@users";
-  #    item = "rtprio";
-  #    type = "-";
-  #    value = 1;
-  #  }
-  #];
-
   services.acpid.enable = true;
   services.acpid.logEvents = false;
 
-  #services.fwupd.enable = true;
   services.logind = {
     extraConfig = ''
       RuntimeDirectorySize=8G

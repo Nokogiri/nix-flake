@@ -8,7 +8,9 @@
       Service = {
         Type = "simple";
         #ExecStart = "${pkgs.iio-hyprland}/bin/iio-hyprland";
-        ExecStart = "${inputs.iio-hyprland.packages.${pkgs.system}.default}/bin/iio-hyprland";
+        ExecStart = "${
+          inputs.iio-hyprland.packages.${pkgs.system}.default
+        }/bin/iio-hyprland";
         Restart = "on-failure";
       };
       Install = {
@@ -25,7 +27,7 @@
         Restart = "on-failure";
       };
       Install = {
-        WantedBy = [ "sway-session.target" ];
+        WantedBy = [ "hyprland-session.target" ];
       };
     };
     wvkbd = {

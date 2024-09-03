@@ -61,6 +61,7 @@
 
     hyprland.enable = true;
     hyprpaper.enable = true;
+
     #kitty.enable = true;
     #sway.enable = true;
     #swaylock.enable = true;

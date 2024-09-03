@@ -31,6 +31,7 @@
     aria2
     comma # Install and run programs by sticking a , before them
     glow
+    fastfetch
 
     # archive stuff
     p7zip

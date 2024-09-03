@@ -2,7 +2,6 @@
 {
   imports = [
     ./config.nix
-    #./hy3land.nix
     ./environment.nix
     ./hyprlock.nix
     ./hypridle.nix
@@ -25,7 +24,7 @@
     hyprpaper
     grimblast
     hyprprop
-    inputs.iio-hyprland.packages.${pkgs.system}.default
+    iio-hyprland
     scratchpad
   ];
 
@@ -37,8 +36,7 @@
   };
 
   wayland.windowManager.hyprland = {
-    #package = inputs.hyprland.packages.x86_64-linux.hyprland;
-    #package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     enable = true;
     xwayland = {
       enable = true;
