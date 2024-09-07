@@ -11,7 +11,6 @@
     ./user-services.nix
     ./waybar
     ../desktop/wayland.nix
-    #./wlogout.nix
     inputs.hyprland.homeManagerModules.default
   ];
 
@@ -22,10 +21,12 @@
   home.packages = with pkgs; [
     hyprpicker
     hyprpaper
+    hyprshade
     grimblast
     hyprprop
     iio-hyprland
     scratchpad
+    wayfreeze
   ];
 
   programs.waybar = {

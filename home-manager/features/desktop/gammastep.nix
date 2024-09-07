@@ -6,7 +6,7 @@
     provider = "geoclue2";
     settings = {
       general = {
-        #adjustment-method = "wayland";
+        adjustment-method = "wayland";
         fade = "0";
       };
     };

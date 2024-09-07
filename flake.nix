@@ -56,14 +56,6 @@
       url = "github:hyprwm/hypridle";
     };
     iio-hyprland.url = "github:JeanSchoeller/iio-hyprland";
-    umu = {
-      url = "git+https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging\/nix&submodules=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    #wezterm = {
-    #  url = "github:wez/wezterm?dir=nix";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
   };
 
   outputs =

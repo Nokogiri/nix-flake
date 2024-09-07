@@ -14,6 +14,8 @@
     noto-fonts
     noto-fonts-emoji
     noto-fonts-cjk-sans
+    material-symbols
+    rubik
     weather-icons
     (nerdfonts.override {
       fonts = [

@@ -4,7 +4,11 @@
     enable = true;
     settings = {
       opener.extract = [
-        { run = "ouch d -y \"$@\""; desc = "Extract here with ouch"; for = "unix"; }
+        {
+          run = "ouch d -y $@";
+          desc = "Extract here with ouch";
+          for = "unix";
+        }
 
       ];
       plugin.prepend_previewers = [

@@ -2,7 +2,7 @@
 {
 
   imports = [
-    ./gammastep.nix
+    #./gammastep.nix
     ./wvkbd.nix
   ];
   home.packages = with pkgs; [

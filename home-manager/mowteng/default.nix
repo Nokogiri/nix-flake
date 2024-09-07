@@ -15,12 +15,8 @@
 
   home.packages = with pkgs; [
     handlr-regex
-
-    #appimage-run
     xournalpp
-
     gimp
     krita
-    #mypaint
   ];
 }
