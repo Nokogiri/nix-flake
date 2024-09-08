@@ -5,11 +5,11 @@ in
 {
   environment.systemPackages = [ pkgs.cifs-utils ];
 
-  #fileSystems."/media/Vault11" = {
-  #  device = "//192.168.178.57/Vault11";
-  #  fsType = "cifs";
-  #  options = [ "${automount_opts}" ];
-  #};
+  fileSystems."/media/Vault11" = {
+    device = "//192.168.178.57/Vault11";
+    fsType = "cifs";
+    options = [ "${automount_opts}" ];
+  };
   fileSystems."/media/Vault31" = {
     device = "//192.168.178.57/Vault31";
     fsType = "cifs";

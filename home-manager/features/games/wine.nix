@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     wineWowPackages.stableFull
-    #bottles
+    bottles
     attr
     gst_all_1.gst-vaapi
     gst_all_1.gst-plugins-good

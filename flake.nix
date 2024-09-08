@@ -10,35 +10,29 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     lix = {
       url = "git+https://git@git.lix.systems/lix-project/lix?ref=refs/tags/2.91.0";
     };
-
     lix-module = {
       url = "git+https://git.lix.systems/lix-project/nixos-module?ref=refs/tags/2.91.0";
       inputs.lix.follows = "lix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    hardware.url = "github:nixos/nixos-hardware";
-
+    hardware = {
+      url = "github:nixos/nixos-hardware";
+    };
     sops-nix = {
       url = "github:mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
-
     nur = {
       url = "github:nix-community/NUR";
     };
-
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    stylix.url = "github:danth/stylix";
-
+    stylix = {
+      url = "github:danth/stylix";
+    };
     hyprland = {
       #url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.42.0";
       url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
@@ -55,7 +49,12 @@
     hypridle = {
       url = "github:hyprwm/hypridle";
     };
-    iio-hyprland.url = "github:JeanSchoeller/iio-hyprland";
+    iio-hyprland = {
+      url = "github:JeanSchoeller/iio-hyprland";
+    };
+    hyprpanel = {
+      url = "github:Jas-SinghFSU/HyprPanel";
+    };
   };
 
   outputs =

@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, outputs, pkgs, ... }:
 {
   imports = [
     ../global
@@ -12,11 +12,17 @@
     ../features/hyprland
     inputs.nur.nixosModules.nur
   ];
-
+  
+  nixpkgs = {
+    overlays = [
+      inputs.hyprpanel.overlay
+    ];
+  };
   home.packages = with pkgs; [
     handlr-regex
     xournalpp
     gimp
     krita
+    hyprpanel
   ];
 }
