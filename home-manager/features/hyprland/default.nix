@@ -21,7 +21,7 @@
   home.packages = with pkgs; [
     hyprpicker
     hyprpaper
-    hyprshade
+    #hyprshade
     grimblast
     hyprprop
     iio-hyprland

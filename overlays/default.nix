@@ -14,6 +14,7 @@
     hyprpaper = inputs.hyprpaper.packages.x86_64-linux.hyprpaper;
     hyprlock = inputs.hyprlock.packages.x86_64-linux.hyprlock;
     hypridle = inputs.hypridle.packages.x86_64-linux.hypridle;
+    hyprland = inputs.hyprland.packages.x86_64-linux.default;
     iio-hyprland = inputs.iio-hyprland.packages.x86_64-linux.default;
     #fprintd = prev.fprintd.overrideAttrs (_: {
     #  mesonCheckFlags = [
