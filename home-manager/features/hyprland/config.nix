@@ -192,7 +192,7 @@
         disable_splash_rendering = true;
         vfr = true;
       };
-      monitor = "eDP-1,1920x1200@60.00,auto,1";
+      monitor = "eDP-1,1920x1200@47.999001,auto,1";
     };
     extraConfig = ''
       # Startup
