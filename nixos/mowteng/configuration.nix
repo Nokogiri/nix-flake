@@ -21,6 +21,7 @@
     ../common/optional/greetd.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
+    ../common/optional/mullvad.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
@@ -94,9 +95,6 @@
   services.acpid.enable = true;
   services.acpid.logEvents = false;
   
-  services.mullvad-vpn = {
-    enable = true;
-  };
   services.logind = {
     extraConfig = ''
       RuntimeDirectorySize=8G
