@@ -2,9 +2,9 @@
   imports = [
     ./dave.nix
     ./fail2ban.nix
-    #./flood.nix
+    ./flood.nix
     #./forgejo.nix
-    #./nfs-server.nix
+    ./nfs-server.nix
     #./mealie.nix
     ./nix-serve.nix
     ./nginx
