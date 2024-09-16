@@ -93,7 +93,10 @@
 
   services.acpid.enable = true;
   services.acpid.logEvents = false;
-
+  
+  services.mullvad-vpn = {
+    enable = true;
+  };
   services.logind = {
     extraConfig = ''
       RuntimeDirectorySize=8G

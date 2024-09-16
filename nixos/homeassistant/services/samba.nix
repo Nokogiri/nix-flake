@@ -10,7 +10,7 @@
   services.samba = {
     enable = true;
     securityType = "user";
-    extraConfig = ''
+    settings.global = { 
       workgroup = WORKGROUP
       multicast dns register = yes
       server string = smbnix
