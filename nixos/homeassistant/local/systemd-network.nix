@@ -1,6 +1,9 @@
 { config, ... }:{
   imports = [ ../../common/optional/systemd-network.nix ];
-  sops.secrets."mullvad/sacred_turkey" = {};
+  sops.secrets."mullvad/sacred_turkey" = {
+  	owner = "systemd-network";
+  	mode = "0660";
+  };
   networking.useDHCP = false;
   systemd.network = {
     netdevs = {
@@ -8,7 +11,7 @@
         netdevConfig = {
           Kind = "wireguard";
           Name = "mullvad0";
-          MTUBytes = "1300";
+          #MTUBytes = "1300";
         };
         # See also man systemd.netdev (also contains info on the permissions of the key files)
         wireguardConfig = {
@@ -38,7 +41,7 @@
           MulticastDNS = true;
         };
       };
-      mullvad0 = {
+      "mullvad0" = {
         # See also man systemd.network
         matchConfig.Name = "mullvad0";
         # IP addresses the client interface will have
