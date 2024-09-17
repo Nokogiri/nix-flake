@@ -9,7 +9,7 @@
   };
   virtualisation.oci-containers.containers = {
     mealie = {
-      image = "ghcr.io/mealie-recipes/mealie:v1.10.2";
+      image = "ghcr.io/mealie-recipes/mealie"; #:v1.10.2";
       autoStart = true;
       volumes = [ "/var/lib/pods/mealie/data:/app/data" ];
       environmentFiles = [
@@ -22,7 +22,8 @@
         PGID = "1000";
         ALLOW_SIGNUP = "false";
         #DB_ENGINE = "sqlite";
-        THEME_DARK_PRIMARY = "A92B53";
+        THEME_DARK_PRIMARY = "#A92B53";
+        THEME_LIGHT_PRIMARY = "#A92B53";
         BASE_URL = "https://mealie.fishoeder.net";
         MAX_WORKERS = "3";
         WEB_CONCURRENCY = "1";
