@@ -1,4 +1,9 @@
-{ inputs, outputs, pkgs, ... }:
+{
+  inputs,
+  outputs,
+  pkgs,
+  ...
+}:
 {
   imports = [
     ../global
@@ -12,7 +17,7 @@
     ../features/hyprland
     inputs.nur.nixosModules.nur
   ];
-  
+
   nixpkgs = {
     overlays = [
       inputs.hyprpanel.overlay

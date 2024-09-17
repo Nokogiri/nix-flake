@@ -11,7 +11,7 @@
     enable = true;
     #securityType = "user";
     settings = {
-      global = { 
+      global = {
         workgroup = "WORKGROUP";
         "multicast dns register" = "yes";
         "server string" = "smbnix";
@@ -21,7 +21,7 @@
         "hosts deny" = "0.0.0.0/0";
         "guest account" = "nokogiri";
         "map to guest" = "bad user";
-      };  
+      };
       Vault11 = {
         path = "/media/Vault1.1";
         browseable = "yes";

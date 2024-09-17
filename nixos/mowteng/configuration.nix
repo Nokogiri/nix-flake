@@ -94,7 +94,7 @@
 
   services.acpid.enable = true;
   services.acpid.logEvents = false;
-  
+
   services.logind = {
     extraConfig = ''
       RuntimeDirectorySize=8G

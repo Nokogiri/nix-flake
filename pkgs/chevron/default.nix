@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   python,
-  fetchPypi
+  fetchPypi,
 }:
 
 buildPythonPackage {

@@ -1,4 +1,5 @@
-{ config, ... }:{
+{ config, ... }:
+{
   sops.secrets.davuser = {
     sopsFile = ../../../../common/secrets.yaml;
     owner = config.services.nginx.user;

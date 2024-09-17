@@ -10,4 +10,4 @@
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   rofi-emoji = pkgs.callPackage ./rofi-emoji { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
- }
+}
