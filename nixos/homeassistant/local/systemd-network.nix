@@ -1,5 +1,6 @@
 { config, ... }:{
   imports = [ ../../common/optional/systemd-network.nix ];
+  sops.secrets."mullvad/sacred_turkey" = {};
   networking.useDHCP = false;
   systemd.network = {
     netdevs = {
@@ -12,14 +13,15 @@
         # See also man systemd.netdev (also contains info on the permissions of the key files)
         wireguardConfig = {
           # Don't use a file from the Nix store as these are world readable. Must be readable by the systemd.network user
-          PrivateKeyFile = "/run/keys/wireguard-privkey";
+          PrivateKeyFile = config.sops.secrets."mullvad/sacred_turkey".path;
           ListenPort = 9918;
         };
         wireguardPeers = [
           {
-            PublicKey = "OhApdFoOYnKesRVpnYRqwk3pdM247j8PPVH5K7aIKX0=";
-            AllowedIPs = ["fc00::1/64" "10.100.0.1"];
-            Endpoint = "{set this to the server ip}:51820";
+            # se-got-wg-002
+            PublicKey = "AtvE5KdPeQtOcE2QyXaPt9eQoBV3GBxzimQ2FIuGQ2U=";
+            AllowedIPs = [ "0.0.0.0/0" "::0/0" ];
+            Endpoint = "185.213.154.67:51820";
           }
         ];
       };
@@ -35,6 +37,21 @@
           IPv6AcceptRA = "no";
           MulticastDNS = true;
         };
+      };
+      mullvad0 = {
+        # See also man systemd.network
+        matchConfig.Name = "mullvad0";
+        # IP addresses the client interface will have
+        address = [
+          "fc00:bbbb:bbbb:bb01::9:6e9/128"
+          "10.72.6.234/32"
+        ];
+        DHCP = "no";
+        dns = ["10.64.0.1"];
+        gateway = [
+          "fc00::1"
+          "10.64.0.1"
+        ];
       };
     };
   };
