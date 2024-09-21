@@ -10,7 +10,7 @@
 
   home.packages = with pkgs; [
 
-    gamescope
+    #gamescope
     mangohud
 
     vkbasalt
@@ -19,6 +19,8 @@
 
     gzdoom
     sm64ex
+    minetest 
+
 
     # emulation
     #cemu

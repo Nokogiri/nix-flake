@@ -18,17 +18,12 @@
     inputs.nur.nixosModules.nur
   ];
 
-  nixpkgs = {
-    overlays = [
-      inputs.hyprpanel.overlay
-    ];
-  };
   home.packages = with pkgs; [
     handlr-regex
     xournalpp
     gimp
     krita
-    hyprpanel
+    mullvad
   ];
   programs.emacs = {
     enable = true;

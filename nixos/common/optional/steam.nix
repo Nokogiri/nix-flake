@@ -48,5 +48,8 @@
       steamtinkerlaunch
     ];
   };
-  programs.gamescope.enable = true;
+  programs.gamescope = {
+    enable = true;
+    capSysNice = false;
+  };
 }
