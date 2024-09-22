@@ -11,6 +11,7 @@
         "veth1"
         "podman0"
         "veth0@if2"
+        "mullvad0"
       ];
     };
   };

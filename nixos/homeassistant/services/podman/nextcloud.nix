@@ -8,10 +8,10 @@
 
   };
   virtualisation.oci-containers.containers = {
-    nextcloudAIO = {
+    nextcloud-aio-mastercontainer = {
       image = "nextcloud/all-in-one:latest";
       autoStart = true;
-      volumes = [ "nextcloud_aio_mastercontainer:/var/lib/pods/netcloud" ];
+      volumes = [ "/var/lib/pods/nextcloud:/mnt/docker-aio-config" "/var/run/docker.sock:/var/run/docker.sock:ro" ];
       environment = {
         TZ = "Europe/Berlin";
         NEXTCLOUD_MOUNT =  "/media/";

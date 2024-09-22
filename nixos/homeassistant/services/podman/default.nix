@@ -4,6 +4,7 @@
     ./esphome.nix
     ./homeassistant.nix
     ./mealie.nix
+    #./nextcloud.nix
     ./pihole.nix
     #./uptime-kuma.nix
   ];
