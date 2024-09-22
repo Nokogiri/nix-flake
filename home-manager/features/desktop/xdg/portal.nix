@@ -3,7 +3,7 @@
   xdg.portal = {
     enable = true;
     extraPortals = [
-      pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
     ];
     xdgOpenUsePortal = false;
@@ -11,7 +11,7 @@
       common = {
         default = [
           "gtk"
-          "wlr"
+          "hyprland"
         ];
       };
     };

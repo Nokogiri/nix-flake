@@ -23,7 +23,7 @@
     xournalpp
     gimp
     krita
-    mullvad
+    mullvad-vpn
   ];
   programs.emacs = {
     enable = true;
