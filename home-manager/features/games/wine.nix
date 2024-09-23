@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     wineWowPackages.stableFull
-    bottles
+    #bottles
     attr
     gst_all_1.gst-vaapi
     gst_all_1.gst-plugins-good
@@ -20,6 +20,7 @@
     xorg.libXScrnSaver
     xorg.libXdmcp
     xorg.libXau
+    xorg.libX11
     libpng
     gtk3
     gtk3-x11

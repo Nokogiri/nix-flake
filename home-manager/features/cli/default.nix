@@ -5,7 +5,7 @@
     ./bat
     ./btop.nix
     ./eza.nix
-    #./fish
+    ./fish
     ./fzf.nix
     ./git.nix
     ./gpg-agent.nix
