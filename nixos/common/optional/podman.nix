@@ -1,8 +1,12 @@
 { lib, ... }:
 {
-  virtualisation.oci-containers.backend = "podman";
-  virtualisation.podman = {
+  virtualisation.oci-containers.backend = "docker";
+  virtualisation.docker = {
     enable = true;
+    autoPrune.enable = true;
+  };
+  virtualisation.podman = {
+    enable = false;
     autoPrune.enable = true;
     dockerSocket.enable = true;
   };
