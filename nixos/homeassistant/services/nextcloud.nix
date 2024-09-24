@@ -1,4 +1,10 @@
 { pkgs, config, ... }:{
+  sops.secrets.nextadmin = {
+    sopsFile = ../../common/secrets.yaml;
+    owner = config.users.users.nobody.name; # config.services.mealie.user;
+    group = config.users.users.nobody.group;
+    mode = "0666";
+  };
   services.nextcloud = {
     enable = true;
     hostName = "next.fishoeder.net";
