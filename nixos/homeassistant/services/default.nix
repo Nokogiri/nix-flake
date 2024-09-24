@@ -3,7 +3,7 @@
     ./dave.nix
     ./fail2ban.nix
     ./flood.nix
-    #./forgejo.nix
+    ./nextcloud.nix
     ./nfs-server.nix
     ./nix-serve.nix
     ./nginx
@@ -11,7 +11,6 @@
     ./podman
     ./postgresql.nix
     ./jellyfin.nix
-    #./transmission.nix
     ./vaultwarden.nix
   ];
 }
