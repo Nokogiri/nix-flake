@@ -11,5 +11,6 @@
     package = pkgs.nextcloud29;
     configureRedis = true;
     maxUploadSize = "10G";
+    config.adminpassFile = config.sops.secrets.nextadmin.path;
   };
 }
