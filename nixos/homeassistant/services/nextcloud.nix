@@ -24,7 +24,21 @@
     package = pkgs.nextcloud29;
     configureRedis = true;
     maxUploadSize = "10G";
-    config.adminpassFile = config.sops.secrets.nextadmin.path;
+    config = {
+      adminpassFile = config.sops.secrets.nextadmin.path;
+      objectstore.s3 = {
+        enable = true;
+        bucket = "nextcloud";
+        autocreate = true;
+        key = "nextcloud";
+        secretFile = config.sops.secrets.minio_nc;
+        hostname = "localhost";
+        useSsl = false;
+        port = 9000;
+        usePathStyle = true;
+        region = "us-east-1";
+      };
+    };
   };
   services.nginx.virtualHosts.${config.services.nextcloud.hostName} = {
     forceSSL = true;
