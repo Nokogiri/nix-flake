@@ -7,6 +7,16 @@
     ensureDatabases = [
       "nextcloud"
     ];
+    ensureUsers = [
+      {
+        name = "nextcloud";
+      }
+      {
+        name = "superuser";
+        ensureDBOwnership = true;
+      }
+    ]
+    ;
     authentication = pkgs.lib.mkOverride 10 ''
       #type database  DBuser  auth-method
       local all       all     trust

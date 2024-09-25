@@ -46,7 +46,9 @@
 
     };
     config = {
+      adminuser = "nokogiri";
       adminpassFile = config.sops.secrets.nextadmin.path;
+      dbtype = "pgsql";
       objectstore.s3 = {
         enable = true;
         bucket = "nextcloud";
