@@ -35,5 +35,6 @@
     listenAddress = "127.0.0.1:9000";
     consoleAddress = "127.0.0.1:9001";
     rootCredentialsFile = config.sops.secrets.minio.path;
+    dataDir = [ "/media/Vault1.1/MinIO" ];
   };
 }
