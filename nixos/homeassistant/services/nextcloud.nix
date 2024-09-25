@@ -24,6 +24,10 @@
     package = pkgs.nextcloud29;
     configureRedis = true;
     maxUploadSize = "10G";
+    phpOptions = {
+    	"opcache.interned_strings_buffer" = "23";
+    	"log_type" = "file";
+    };
     config = {
       adminpassFile = config.sops.secrets.nextadmin.path;
       objectstore.s3 = {
@@ -31,7 +35,7 @@
         bucket = "nextcloud";
         autocreate = true;
         key = "nextcloud";
-        secretFile = config.sops.secrets.minio_nc;
+        secretFile = config.sops.secrets.minio_nc.path;
         hostname = "localhost";
         useSsl = false;
         port = 9000;
