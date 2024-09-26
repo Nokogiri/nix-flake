@@ -58,7 +58,7 @@
         autocreate = true;
         key = "nextcloud";
         secretFile = config.sops.secrets.minio_nc.path;
-        hostname = "localhost";
+        hostname = "127.0.0.1";
         useSsl = false;
         port = 9000;
         usePathStyle = true;
@@ -75,7 +75,7 @@
     collabora = {
       image = "collabora/code";
       autoStart = true;
-      ports = [ "9980:9980" ];
+      ports = [ "127.0.0.1:9980:9980" ];
       environment = {
         domain = "paper.fishoeder.net";
         server_name = "paper.fishoeder.net";
@@ -93,14 +93,14 @@
     locations = {
       # static files
       "^~ /loleaflet" = {
-        proxyPass = "http://localhost:9980";
+        proxyPass = "http://127.0.0.1:9980";
         extraConfig = ''
           proxy_set_header Host $host;
         '';
       };
       # WOPI discovery URL
       "^~ /hosting/discovery" = {
-        proxyPass = "http://localhost:9980";
+        proxyPass = "http://127.0.0.1:9980";
         extraConfig = ''
           proxy_set_header Host $host;
         '';
@@ -108,7 +108,7 @@
 
       # Capabilities
       "^~ /hosting/capabilities" = {
-        proxyPass = "http://localhost:9980";
+        proxyPass = "http://127.0.0.1:9980";
         extraConfig = ''
           proxy_set_header Host $host;
         '';
@@ -116,7 +116,7 @@
 
       # download, presentation, image upload and websocket
       "~ ^/lool" = {
-        proxyPass = "http://localhost:9980";
+        proxyPass = "http://127.0.0.1:9980";
         extraConfig = ''
           proxy_set_header Upgrade $http_upgrade;
           proxy_set_header Connection "Upgrade";
@@ -127,7 +127,7 @@
 
       # Admin Console websocket
       "^~ /lool/adminws" = {
-        proxyPass = "http://localhost:9980";
+        proxyPass = "http://127.0.0.1:9980";
         extraConfig = ''
           proxy_set_header Upgrade $http_upgrade;
           proxy_set_header Connection "Upgrade";
