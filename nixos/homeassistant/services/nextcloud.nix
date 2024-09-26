@@ -77,7 +77,7 @@
       autoStart = true;
       ports = [ "9980:9980" ];
       environment = {
-        domain = "cloud.my-nextcloud.domain";
+        domain = "paper.fishoeder.net";
         extra_params = "--o:ssl.enable=false --o:ssl.termination=true";
       };
       extraOptions = ["--cap-add" "MKNOD"];
@@ -87,6 +87,7 @@
    services.nginx.virtualHosts."paper.fishoeder.net" = {
     forceSSL = true;
     enableACME = true;
+    useACMEHost = "fishoeder.net";
     locations = {
       # static files
       "^~ /loleaflet" = {
