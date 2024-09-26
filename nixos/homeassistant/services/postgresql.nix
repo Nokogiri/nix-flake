@@ -11,10 +11,6 @@
       {
         name = "nextcloud";
       }
-      {
-        name = "superuser";
-        ensureDBOwnership = true;
-      }
     ]
     ;
     authentication = pkgs.lib.mkOverride 10 ''

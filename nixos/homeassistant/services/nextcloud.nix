@@ -22,6 +22,7 @@
     hostName = "next.fishoeder.net";
     https = true;
     package = pkgs.nextcloud29;
+    database.createLocally = true;
     configureRedis = true;
     maxUploadSize = "10G";
     phpOptions = {
@@ -49,6 +50,8 @@
       adminuser = "nokogiri";
       adminpassFile = config.sops.secrets.nextadmin.path;
       dbtype = "pgsql";
+      dbname = "nextcloud";
+      dbuser = "nextcloud";
       objectstore.s3 = {
         enable = true;
         bucket = "nextcloud";
