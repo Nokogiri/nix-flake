@@ -78,6 +78,9 @@
       ports = [ "9980:9980" ];
       environment = {
         domain = "paper.fishoeder.net";
+        server_name = "paper.fishoeder.net";
+        dictionaries = "en_US";
+        aliasgroup1 = "https://next.fishoeder.net:443";
         extra_params = "--o:ssl.enable=false --o:ssl.termination=true";
       };
       extraOptions = ["--cap-add" "MKNOD"];
@@ -86,7 +89,6 @@
 
    services.nginx.virtualHosts."paper.fishoeder.net" = {
     forceSSL = true;
-    enableACME = true;
     useACMEHost = "fishoeder.net";
     locations = {
       # static files
