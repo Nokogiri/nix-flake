@@ -91,6 +91,12 @@
     forceSSL = true;
     useACMEHost = "fishoeder.net";
     locations = {
+      "^~ /browser" = {
+      	proxyPass = "http://127.0.0.1:9980";
+      	extraConfig = ''
+      	proxy_set_header Host $host;
+      	'';
+      };
       # static files
       "^~ /loleaflet" = {
         proxyPass = "http://127.0.0.1:9980";
@@ -114,8 +120,17 @@
         '';
       };
 
+	  "~ ^/cool/(.*)/ws$" = {
+	       proxyPass = "http://127.0.0.1:9980";
+	       extraConfig = ''
+	           proxy_set_header Upgrade $http_upgrade;
+	           proxy_set_header Connection "Upgrade";
+	           proxy_set_header Host $host;
+	       	   proxy_read_timeout 36000s;
+	       '';
+	  };
       # download, presentation, image upload and websocket
-      "~ ^/lool" = {
+      "~ ^/(c|l)ool" = {
         proxyPass = "http://127.0.0.1:9980";
         extraConfig = ''
           proxy_set_header Upgrade $http_upgrade;
@@ -126,7 +141,7 @@
       };
 
       # Admin Console websocket
-      "^~ /lool/adminws" = {
+      "^~ /cool/adminws" = {
         proxyPass = "http://127.0.0.1:9980";
         extraConfig = ''
           proxy_set_header Upgrade $http_upgrade;
