@@ -15,7 +15,7 @@
     ./wofi
     ./xdg
     ./ydotool.nix
-    #./wezterm
+    ./wezterm
     ./zathura.nix
   ];
 
