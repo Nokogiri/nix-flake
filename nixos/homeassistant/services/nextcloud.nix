@@ -29,6 +29,11 @@
     	"opcache.interned_strings_buffer" = "23";
     	"log_type" = "file";
     };
+    caching = {
+    	redis = true;
+    	apcu = true;
+    	memcached = true;
+    };
     settings = {
     	log_type = "file";
       enabledPreviewProviders = [
