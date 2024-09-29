@@ -18,7 +18,7 @@
     mode = "0666";
   };
   services.nextcloud = {
-    enable = false;
+    enable = true;
     hostName = "next.fishoeder.net";
     https = true;
     package = pkgs.nextcloud29;
