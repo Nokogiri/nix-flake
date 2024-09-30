@@ -101,15 +101,15 @@
     ];
   };
 
-  #fileSystems."/media/Vault1.1" = {
-  #  device = "/dev/disk/by-uuid/10a2e8f7-656f-414a-bddf-e3d5e6a6d7a0";
-  #  fsType = "btrfs";
-  #  options = [
-  #    "compress=zstd:6"
-  #    "noatime"
-  #    "nofail"
-  #  ];
-  #};
+  fileSystems."/media/Vault0.1" = {
+    device = "/dev/disk/by-uuid/4f25bd60-fc40-4f2f-87fd-199034bf066c";
+    fsType = "btrfs";
+    options = [
+      "compress=zstd:6"
+      "noatime"
+      "nofail"
+    ];
+  };
   fileSystems."/media/Vault3.1" = {
     device = "/dev/disk/by-uuid/aee8a1c9-f265-4103-ba79-869773e4e99c";
     fsType = "btrfs";

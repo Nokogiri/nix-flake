@@ -23,6 +23,7 @@
     https = true;
     package = pkgs.nextcloud29;
     database.createLocally = true;
+    #datadir = "/media/Vault0.1/nextcloud-store";
     configureRedis = true;
     maxUploadSize = "10G";
     phpOptions = {
@@ -163,6 +164,6 @@
     listenAddress = "127.0.0.1:9000";
     consoleAddress = "127.0.0.1:9001";
     rootCredentialsFile = config.sops.secrets.minio.path;
-    dataDir = [ "/media/Vault3.1/MinIO" ];
+    dataDir = [ "/media/Vault0.1/MinIO" ];
   };
 }
