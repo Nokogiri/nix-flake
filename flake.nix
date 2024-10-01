@@ -55,9 +55,9 @@
     #hyprpanel = {
     #  url = "github:Jas-SinghFSU/HyprPanel";
     #};
-    wezterm = {
-      url = "github:wez/wezterm?dir=nix";
-    };
+    #wezterm = {
+    #  url = "github:wez/wezterm?dir=nix";
+    #};
   };
 
   outputs =

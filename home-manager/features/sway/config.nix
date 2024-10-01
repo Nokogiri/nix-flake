@@ -63,9 +63,10 @@ let
       };
       bars = [ ];
       floating = {
-        border = 1;
+        border = 3;
         criteria = [
-          { app_id = "pavucontrol"; }
+          { app_id = "pavucontrol-qt"; }
+          { app_id = "mpv"; }
           { app_id = "retroarch"; }
           { app_id = ".blueman-manager-wrapped"; }
           { app_id = "nm-connection-editor"; }
@@ -220,7 +221,7 @@ let
       terminal = "${pkgs.foot}/bin/foot";
 
       window = {
-        border = 1;
+        border = 3;
         commands = [
           {
             command = "layout tabbed";
