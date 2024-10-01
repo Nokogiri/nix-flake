@@ -27,8 +27,8 @@
       AHCI_RUNTIME_PM_ON_BAT = "auto";
       RADEON_DPM_PERF_LEVEL_ON_AC = "auto";
       RADEON_DPM_PERF_LEVEL_ON_BAT = "low";
-      RADEON_DPM_STATE_ON_AC = "performance";
-      RADEON_DPM_STATE_ON_BAT = "battery";
+      #RADEON_DPM_STATE_ON_AC = "balanced";
+      #RADEON_DPM_STATE_ON_BAT = "battery";
       WIFI_PWR_ON_AC = "off";
       WIFI_PWR_ON_BAT = "on";
       WOL_DISABLE = "Y";

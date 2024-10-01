@@ -105,7 +105,7 @@
             car = "  ";
             default = " 󰕾 ";
           };
-          on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
+          on-click = "${pkgs.lxqt.pavucontrol-qt}/bin/pavucontrol-qt";
           tooltip = true;
         };
         "tray" = {

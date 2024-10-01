@@ -33,7 +33,7 @@
       vulkan-async-transfer = true;
       vulkan-queue-count = 1;
       deband = false;
-      ytdl-format = "bestvideo[vcodec^=avc1][height<=?1080]+bestaudio/best";
+      ytdl-format = "bestvideo[vcodec^=avc1][height<=?720]+bestaudio/best";
       osc = false;
       osd-bar = false;
       osd-font = "sans";
@@ -74,8 +74,10 @@
     (self: super: {
       mpv = super.mpv.override {
         scripts = [
-          self.mpvScripts.uosc
+          self.mpvScripts.modernx-zydezu
           self.mpvScripts.sponsorblock
+          self.mpvScripts.thumbfast
+          self.mpvScripts.mpv-playlistmanager
         ];
       };
     })
