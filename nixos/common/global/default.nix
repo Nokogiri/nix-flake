@@ -37,7 +37,7 @@
   };
 
   environment = {
-    enableAllTerminfo = true;
+    enableAllTerminfo = false;
     pathsToLink = [
       "/share/nix-direnv"
       "/share/bash-completion"

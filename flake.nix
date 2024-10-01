@@ -33,28 +33,28 @@
     stylix = {
       url = "github:danth/stylix";
     };
-    hyprland = {
+    #hyprland = {
       #url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.42.0";
-      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    };
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
-    };
-    hyprpaper = {
-      url = "github:hyprwm/hyprpaper";
-    };
+    #  url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    #};
+    #hyprland-contrib = {
+    #  url = "github:hyprwm/contrib";
+    #};
+    #hyprpaper = {
+    #  url = "github:hyprwm/hyprpaper";
+    #};
     hyprlock = {
       url = "github:hyprwm/hyprlock";
     };
     hypridle = {
       url = "github:hyprwm/hypridle";
     };
-    iio-hyprland = {
-      url = "github:JeanSchoeller/iio-hyprland";
-    };
-    hyprpanel = {
-      url = "github:Jas-SinghFSU/HyprPanel";
-    };
+    #iio-hyprland = {
+    #  url = "github:JeanSchoeller/iio-hyprland";
+    #};
+    #hyprpanel = {
+    #  url = "github:Jas-SinghFSU/HyprPanel";
+    #};
     wezterm = {
       url = "github:wez/wezterm?dir=nix";
     };

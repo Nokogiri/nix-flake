@@ -1,12 +1,11 @@
 { pkgs, inputs, ... }:
 {
 
-  imports = [
-    inputs.hyprland.nixosModules.default
-  ];
+  #imports = [
+  #  inputs.hyprland.nixosModules.default
+  #];
   security.pam.services.swaylock.fprintAuth = true;
   security.pam.services.hyprlock = { };
-  #security.pam.services.hyprlock.fprint = {};
 
   gtk.iconCache.enable = true;
 
@@ -35,12 +34,12 @@
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-wlr
     ];
     xdgOpenUsePortal = false;
     config.common = {
       default = [
-        "hyprland"
+        "wlr"
         "gtk"
       ];
       "org.freedesktop.impl.portal.Settings" = [ "gtk" ];

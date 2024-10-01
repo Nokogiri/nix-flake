@@ -7,9 +7,9 @@
     ./yt-dlp.nix
   ];
   home.packages = with pkgs; [
-    ani-cli
+    #ani-cli
     jellyfin-media-player
-    spotify-player
+    #spotify-player
     youtube-tui
   ];
 
