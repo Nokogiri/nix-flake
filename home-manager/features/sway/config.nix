@@ -219,7 +219,6 @@ let
         }
       ];
       terminal = "${pkgs.foot}/bin/foot";
-
       window = {
         border = 3;
         commands = [
@@ -254,6 +253,8 @@ let
     extraConfig = ''
       bindgesture swipe:3:right workspace prev
       bindgesture swipe:3:left workspace next
+
+      titlebar_border_thickness 2
 
       ### SWAYFX 
       corner_radius 10
