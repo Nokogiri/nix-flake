@@ -46,15 +46,15 @@
     };
     fonts = {
       serif = {
-        name = "Hack";
+        name = "JetBrainsMono Nerd Font Propo";
         package = pkgs.hack-font;
       };
       sansSerif = {
-        name = "Hack";
+        name = "JetBrainsMono Nerd Font Propo";
         package = pkgs.hack-font;
       };
       monospace = {
-        name = "Hack";
+        name = "JetBrainsMono Nerd Font Propo";
         package = pkgs.hack-font;
       };
       emoji = {
