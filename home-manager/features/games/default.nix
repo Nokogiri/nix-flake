@@ -3,7 +3,7 @@
   imports = [
     ./mangohud.nix
     ./stl.nix
-    ./wine.nix
+    #./wine.nix
   ];
 
   home.sessionVariables.WINEDEBUG = "-all";
@@ -27,8 +27,9 @@
     # emulation
     cemu
     ares
+    melonDS
+    lime3ds
     dolphinEmuMaster
-    libretro.citra
     pcsx2
     ppsspp
   ];
