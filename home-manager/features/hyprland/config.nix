@@ -23,7 +23,7 @@
         workspace_back_and_forth = true;
       };
       bind = [
-        "SUPER,Return,exec,${pkgs.kitty}/bin/kitty"
+        "SUPER,Return,exec,${pkgs.foot}/bin/foot"
         "SUPER,w,exec,swaync-client -t"
         "SUPER,p,exec,pkill -9 rofi || ${pkgs.rofi-wayland}/bin/rofi -show drun"
         "SUPER,i,exec,cliphist list | ${pkgs.rofi-wayland}/bin/rofi -dmenu | cliphist decode | wl-copy"
@@ -133,11 +133,12 @@
         inactive_opacity = "0.8";
         fullscreen_opacity = "1.0";
         rounding = "6";
-        drop_shadow = true;
+        drop_shadow = false;
         shadow_range = "24";
         shadow_offset = "3 3";
         blur = {
-          size = "3";
+          enabled = true;
+          size = "8";
           passes = "1";
         };
       };
@@ -166,7 +167,7 @@
       general = {
         gaps_in = "7";
         gaps_out = "10";
-        border_size = "1";
+        border_size = "2";
       };
       gestures = {
         workspace_swipe = true;

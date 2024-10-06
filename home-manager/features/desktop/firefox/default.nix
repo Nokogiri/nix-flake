@@ -34,7 +34,7 @@
       sponsorblock
       surfingkeys
       torrent-control
-      #enhancer-for-youtube
+      enhancer-for-youtube
     ];
 
     profiles.nokogiri = {

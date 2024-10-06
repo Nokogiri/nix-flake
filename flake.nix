@@ -34,7 +34,7 @@
       url = "github:danth/stylix";
     };
     #hyprland = {
-      #url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.42.0";
+    #url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.42.0";
     #  url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     #};
     #hyprland-contrib = {

@@ -1,8 +1,9 @@
-{ config, ... }:{
+{ config, ... }:
+{
   imports = [ ../../common/optional/systemd-network.nix ];
   sops.secrets."mullvad/sacred_turkey" = {
-  	owner = "systemd-network";
-  	mode = "0660";
+    owner = "systemd-network";
+    mode = "0660";
   };
   networking.useDHCP = false;
   systemd.network = {
@@ -23,7 +24,10 @@
           {
             # se-got-wg-002
             PublicKey = "AtvE5KdPeQtOcE2QyXaPt9eQoBV3GBxzimQ2FIuGQ2U=";
-            AllowedIPs = [ "0.0.0.0/0" "::0/0" ];
+            AllowedIPs = [
+              "0.0.0.0/0"
+              "::0/0"
+            ];
             Endpoint = "185.213.154.67:51820";
           }
         ];
@@ -50,7 +54,7 @@
           "10.72.6.234/32"
         ];
         DHCP = "no";
-        dns = ["10.64.0.1"];
+        dns = [ "10.64.0.1" ];
         gateway = [
           "fc00::1"
           "10.64.0.1"

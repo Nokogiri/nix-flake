@@ -1,4 +1,5 @@
-{ pkgs, config, ... }:{
+{ pkgs, config, ... }:
+{
   sops.secrets.nextadmin = {
     sopsFile = ../../common/secrets.yaml;
     owner = config.users.users.nobody.name; # config.services.mealie.user;
@@ -27,16 +28,16 @@
     configureRedis = true;
     maxUploadSize = "10G";
     phpOptions = {
-    	"opcache.interned_strings_buffer" = "23";
-    	"log_type" = "file";
+      "opcache.interned_strings_buffer" = "23";
+      "log_type" = "file";
     };
     caching = {
-    	redis = true;
-    	apcu = true;
-    	memcached = true;
+      redis = true;
+      apcu = true;
+      memcached = true;
     };
     settings = {
-    	log_type = "file";
+      log_type = "file";
       enabledPreviewProviders = [
         "OC\\Preview\\BMP"
         "OC\\Preview\\GIF"
@@ -49,7 +50,7 @@
         "OC\\Preview\\TXT"
         "OC\\Preview\\XBitmap"
         "OC\\Preview\\HEIC"
-    ];
+      ];
 
     };
     config = {
@@ -89,19 +90,22 @@
         aliasgroup1 = "https://next.fishoeder.net:443";
         extra_params = "--o:ssl.enable=false --o:ssl.termination=true";
       };
-      extraOptions = ["--cap-add" "MKNOD"];
+      extraOptions = [
+        "--cap-add"
+        "MKNOD"
+      ];
     };
   };
 
-   services.nginx.virtualHosts."paper.fishoeder.net" = {
+  services.nginx.virtualHosts."paper.fishoeder.net" = {
     forceSSL = true;
     useACMEHost = "fishoeder.net";
     locations = {
       "^~ /browser" = {
-      	proxyPass = "http://127.0.0.1:9980";
-      	extraConfig = ''
-      	proxy_set_header Host $host;
-      	'';
+        proxyPass = "http://127.0.0.1:9980";
+        extraConfig = ''
+          proxy_set_header Host $host;
+        '';
       };
       # static files
       "^~ /loleaflet" = {
@@ -126,15 +130,15 @@
         '';
       };
 
-	  "~ ^/cool/(.*)/ws$" = {
-	       proxyPass = "http://127.0.0.1:9980";
-	       extraConfig = ''
-	           proxy_set_header Upgrade $http_upgrade;
-	           proxy_set_header Connection "Upgrade";
-	           proxy_set_header Host $host;
-	       	   proxy_read_timeout 36000s;
-	       '';
-	  };
+      "~ ^/cool/(.*)/ws$" = {
+        proxyPass = "http://127.0.0.1:9980";
+        extraConfig = ''
+              proxy_set_header Upgrade $http_upgrade;
+              proxy_set_header Connection "Upgrade";
+              proxy_set_header Host $host;
+          	   proxy_read_timeout 36000s;
+        '';
+      };
       # download, presentation, image upload and websocket
       "~ ^/(c|l)ool" = {
         proxyPass = "http://127.0.0.1:9980";

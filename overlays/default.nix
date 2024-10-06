@@ -8,9 +8,9 @@
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
-    foot = prev.foot.overrideAttrs (old: {
-      patches = (old.patches or [ ]) ++ [ ./foot-fs-transparency.patch ];
-    });
+    #foot = prev.foot.overrideAttrs (old: {
+    #  patches = (old.patches or [ ]) ++ [ ./foot-fs-transparency.patch ];
+    #});
     #hyprpaper = inputs.hyprpaper.packages.x86_64-linux.hyprpaper;
     hyprlock = inputs.hyprlock.packages.x86_64-linux.hyprlock;
     hypridle = inputs.hypridle.packages.x86_64-linux.hypridle;

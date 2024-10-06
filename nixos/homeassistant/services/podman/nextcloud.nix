@@ -11,14 +11,20 @@
     nextcloud-aio-mastercontainer = {
       image = "nextcloud/all-in-one:latest";
       autoStart = true;
-      volumes = [ "/var/lib/pods/nextcloud:/mnt/docker-aio-config" "/var/run/docker.sock:/var/run/docker.sock:ro" ];
+      volumes = [
+        "/var/lib/pods/nextcloud:/mnt/docker-aio-config"
+        "/var/run/docker.sock:/var/run/docker.sock:ro"
+      ];
       environment = {
         TZ = "Europe/Berlin";
-        NEXTCLOUD_MOUNT =  "/media/";
+        NEXTCLOUD_MOUNT = "/media/";
         NEXTCLOUD_UPLOAD_LIMIT = "10G";
         NEXTCLOUD_ENABLE_DRI_DEVICE = "true";
       };
-      ports = [ "9898:8080" "12443:8443" ];
+      ports = [
+        "9898:8080"
+        "12443:8443"
+      ];
     };
   };
 }

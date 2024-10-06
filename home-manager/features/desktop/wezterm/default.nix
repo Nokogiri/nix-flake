@@ -9,7 +9,7 @@
         font = wezterm.font_with_fallback {
           'JetBrainsMono Nerd Font'
         },
-        color_scheme = 'Everforest Dark Medium (Gogh)',
+        color_scheme = 'Dracula (Official)',
         warn_about_missing_glyphs=false,
         animation_fps = 1,
         enable_kitty_graphics=true,

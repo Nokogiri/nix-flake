@@ -5,8 +5,8 @@
   };
 
   fileSystems."/export/Vault0.1" = {
-  	device = "/media/Vault0.1";
-  	options = [ "bind" ];
+    device = "/media/Vault0.1";
+    options = [ "bind" ];
   };
   #fileSystems."/export/Vault1.1" = {
   #  device = "/media/Vault1.1";

@@ -5,7 +5,7 @@
 }:
 let
   cfg = config.wayland.windowManager.sway.config;
- in
+in
 {
   wayland.windowManager.sway = {
     enable = true;
@@ -266,7 +266,7 @@ let
       blur_contrast 1.0
       blur_saturation 1.0
       titlebar_separator disable
-      shadows disable
+      shadows enable
       shadow_offset 4 4
       shadow_blur_radius 4
       default_dim_inactive 0.2

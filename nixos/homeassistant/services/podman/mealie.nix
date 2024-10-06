@@ -9,7 +9,7 @@
   };
   virtualisation.oci-containers.containers = {
     mealie = {
-      image = "ghcr.io/mealie-recipes/mealie"; #:v1.10.2";
+      image = "ghcr.io/mealie-recipes/mealie"; # :v1.10.2";
       autoStart = true;
       volumes = [ "/var/lib/pods/mealie/data:/app/data" ];
       environmentFiles = [

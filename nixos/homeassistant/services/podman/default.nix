@@ -9,5 +9,5 @@
   virtualisation.podman.networkSocket = {
     enable = false;
     server = "ghostunnel";
-     };
+  };
 }

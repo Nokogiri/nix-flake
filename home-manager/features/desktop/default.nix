@@ -21,7 +21,7 @@
 
   home.packages = with pkgs; [
     libnotify
-    ueberzugpp
+    #ueberzugpp
     xdg_utils
     xfce.thunar
   ];

@@ -19,11 +19,11 @@
 
     gzdoom
     sm64ex
-    minetest 
+    minetest
 
     #openmw
     inputs.stable.legacyPackages.x86_64-linux.portmod
-    
+
     # emulation
     cemu
     ares
