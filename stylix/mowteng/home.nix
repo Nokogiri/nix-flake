@@ -13,8 +13,8 @@
   gtk = {
     enable = true;
     iconTheme = {
-      name = "Gruvbox-Plus-Dark";
-      package = pkgs.gruvbox-plus-icons;
+      name = "Dracula";
+      package = pkgs.dracula-icon-theme;
     };
     cursorTheme = {
       name = "phinger-cursors-light";
@@ -31,8 +31,7 @@
     gtk = {
       enable = true;
       extraCss = ''
-
-                .window-frame, .window-frame:backdrop {
+        .window-frame, .window-frame:backdrop {
          box-shadow: 0 0 0 black;
          border-style: none;
          margin: 0;

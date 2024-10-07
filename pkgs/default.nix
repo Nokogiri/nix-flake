@@ -5,6 +5,7 @@
 }:
 {
   amdctl = pkgs.callPackage ./amdctl { };
+  dracula-icon-theme = pkgs.callPackage ./dracula-icon-theme { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   everforest-theme = pkgs.callPackage ./everforest-theme { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };

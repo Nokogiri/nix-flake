@@ -4,12 +4,12 @@
     settings = {
       #MAX_LOST_WORK_SECS_ON_AC = "15";
       #MAX_LOST_WORK_SECS_ON_BAT = "60";
-      CPU_SCALING_GOVERNOR_ON_AC = "ondemand";
-      CPU_SCALING_GOVERNOR_ON_BAT = "ondemand";
+      CPU_SCALING_GOVERNOR_ON_AC = "powersave";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
       CPU_SCALING_MIN_FREQ_ON_AC = "400000";
-      CPU_SCALING_MAX_FREQ_ON_AC = "3000000";
+      CPU_SCALING_MAX_FREQ_ON_AC = "2400000";
       CPU_SCALING_MIN_FREQ_ON_BAT = "400000";
-      CPU_SCALING_MAX_FREQ_ON_BAT = "2000000";
+      CPU_SCALING_MAX_FREQ_ON_BAT = "1600000";
       CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
       CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
       CPU_BOOST_ON_AC = "1";

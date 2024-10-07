@@ -40,7 +40,7 @@
     config.common = {
       default = [
         "wlr"
-        "wlr"
+        "gtk"
       ];
       "org.freedesktop.impl.portal.Settings" = [ "gtk" ];
     };
