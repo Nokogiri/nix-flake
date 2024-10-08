@@ -8,15 +8,15 @@
     maxVisible = 3;
     anchor = "top-right";
     font = "Overpass 13";
-    backgroundColor = "#2d353bD8";
-    textColor = "#d3c6aa";
+    backgroundColor = "#282a36D8";
+    textColor = "#f8f8f2";
     width = 400;
     height = 200;
     margin = "20";
     padding = "5";
     borderSize = 1;
-    borderColor = "#a7c080";
-    progressColor = "over #3d484d";
+    borderColor = "#282a36D8";
+    progressColor = "over #bd93f9D8";
     icons = true;
     maxIconSize = 48;
 
@@ -25,17 +25,16 @@
     format = "<b>%s</b>\\n%b";
     defaultTimeout = 0;
     ignoreTimeout = null;
-    iconPath = "${pkgs.gruvbox-plus-icons}/share/icons/Gruvbox-Plus-Dark";
+    iconPath = "${pkgs.dracula-icon-theme}/share/icons/Dracula/";
     extraConfig = ''
       [urgency=low]
-      background-color=#56635fD8
-      border-color=#a7c080
-      text-color=#d3c6aa
+      border-color=#282a36D8
+      
+      [urgency=normal]
+      border-color=#8be9fdD8
 
       [urgency=high]
-      background-color=#543a48D8
-      border-color=#a7c080
-      text-color=#d3c6aa
+      border-color=#ff5555D8
     '';
   };
 }

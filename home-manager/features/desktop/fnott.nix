@@ -4,6 +4,7 @@
     settings = {
       main = {
         notification-margin = 5;
+        border-radius = 6;
       };
 
       low = {
