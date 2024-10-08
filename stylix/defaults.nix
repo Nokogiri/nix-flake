@@ -28,7 +28,7 @@
     #};
     #base16Scheme = ./everforest/everforest-dark-medium.yaml;
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/dracula.yaml";
-    base16Scheme = ./dracula/dracula.nix;
+    base16Scheme = ./dracula/dracula.yaml;
     polarity = "dark";
     targets = {
       console.enable = false;
