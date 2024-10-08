@@ -32,13 +32,8 @@
     polarity = "dark";
     targets = {
       console.enable = true;
-      fish.enable = false;
       gtk.enable = true;
       nixos-icons.enable = true;
-      #plymouth.enable = true;
-
-      #plymouth.logo = ./images/logo.png;
-
     };
   };
 }

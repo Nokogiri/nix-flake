@@ -4,6 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     everforest-theme
+    dracula-theme
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
@@ -16,12 +17,10 @@
     noto-fonts-emoji
     noto-fonts-cjk-sans
     material-symbols
-    rubik
     weather-icons
     (nerdfonts.override {
       fonts = [
         "NerdFontsSymbolsOnly"
-        "Hack"
         "JetBrainsMono"
       ];
     })
@@ -47,15 +46,15 @@
     fonts = {
       serif = {
         name = "JetBrainsMono Nerd Font Propo";
-        package = pkgs.hack-font;
+        package = pkgs.jetbrains-mono;
       };
       sansSerif = {
         name = "JetBrainsMono Nerd Font Propo";
-        package = pkgs.hack-font;
+        package = pkgs.jetbrains-mono;
       };
       monospace = {
         name = "JetBrainsMono Nerd Font Propo";
-        package = pkgs.hack-font;
+        package = pkgs.jetbrains-mono;
       };
       emoji = {
         package = pkgs.noto-fonts-emoji;
