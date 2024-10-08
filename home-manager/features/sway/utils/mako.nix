@@ -29,7 +29,7 @@
     extraConfig = ''
       [urgency=low]
       border-color=#282a36D8
-      
+
       [urgency=normal]
       border-color=#8be9fdD8
 

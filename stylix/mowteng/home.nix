@@ -88,7 +88,7 @@
       '';
     };
 
-    sway.enable = true;
+    sway.enable = false;
     swaylock.enable = true;
     xresources.enable = true;
     zathura.enable = true;

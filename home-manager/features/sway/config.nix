@@ -204,6 +204,17 @@ in
         "${cfg.modifier}+Shift+Ctrl+l" = "exec ${config.home.homeDirectory}/.local/bin/mylock lock-now";
       };
       modifier = "Mod4";
+      output = {
+        eDP-1 = {
+          bg = "${
+            (pkgs.fetchurl {
+              url = "https://lemmy.ca/pictrs/image/b82e2b77-3910-4d7c-8df8-d2c486db1669.jpeg";
+              hash = "sha256-zLrWrMi3NSGLc686u8cDiJpJKIukBwA6pWygAT0NZmQ=";
+            })
+          } fill";
+          resolution = "1920x1200@47.999001hz";
+        };
+      };
       seat = {
         "*" = {
           hide_cursor = "when-typing 10";

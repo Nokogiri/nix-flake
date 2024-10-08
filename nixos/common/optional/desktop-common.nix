@@ -1,9 +1,6 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
 
-  #imports = [
-  #  inputs.hyprland.nixosModules.default
-  #];
   security.pam.services.swaylock.fprintAuth = true;
   security.pam.services.hyprlock = { };
 
@@ -16,7 +13,38 @@
   environment.systemPackages = with pkgs; [
     xfce.thunar
     distrobox
+    dracula-theme
+    libsForQt5.qt5ct
+    qt6Packages.qt6ct
+    libsForQt5.qtstyleplugin-kvantum
+    qt6Packages.qtstyleplugin-kvantum
   ];
+
+  fonts = {
+    packages = with pkgs; [
+      dejavu_fonts
+      jetbrains-mono
+      noto-fonts
+      noto-fonts-emoji
+      noto-fonts-cjk-sans
+      material-symbols
+      weather-icons
+      (nerdfonts.override {
+        fonts = [
+          "NerdFontsSymbolsOnly"
+          "JetBrainsMono"
+        ];
+      })
+    ];
+    enableDefaultPackages = true;
+    fontDir.enable = true;
+    enableGhostscriptFonts = true;
+    fontconfig = {
+      enable = true;
+      antialias = true;
+    };
+  };
+
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
 
@@ -45,7 +73,12 @@
       "org.freedesktop.impl.portal.Settings" = [ "gtk" ];
     };
   };
-  environment.pathsToLink = [ "/libexec" ];
+  environment.pathsToLink = [ 
+    "/libexec"
+    "/share/Kvantum"
+    "/share/themes"
+    "/share/icons"
+  ];
 
   environment.sessionVariables = {
     BROWSER = "${pkgs.firefox}/bin/firefox";

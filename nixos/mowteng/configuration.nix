@@ -37,7 +37,7 @@
     ./tlp.nix
     ./nfs.nix
     ./network.nix
-    ../../stylix/mowteng/system.nix
+    #../../stylix/mowteng/system.nix
   ];
 
   nixpkgs = {
