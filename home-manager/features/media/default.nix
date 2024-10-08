@@ -10,7 +10,7 @@
     #ani-cli
     jellyfin-media-player
     #spotify-player
-    youtube-tui
+    #youtube-tui
   ];
 
   xdg.desktopEntries."umpv" = {

@@ -74,7 +74,9 @@
     (self: super: {
       mpv = super.mpv.override {
         scripts = [
-          self.mpvScripts.modernx-zydezu
+          #self.mpvScripts.modernx-zydezu
+          self.mpvScripts.uosc
+          self.mpvScripts.quality-menu
           self.mpvScripts.sponsorblock
           self.mpvScripts.thumbfast
           self.mpvScripts.mpv-playlistmanager

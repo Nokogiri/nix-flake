@@ -31,9 +31,9 @@
     base16Scheme = ./dracula/dracula.nix;
     polarity = "dark";
     targets = {
-      console.enable = true;
-      gtk.enable = true;
-      nixos-icons.enable = true;
+      console.enable = false;
+      gtk.enable = false;
+      nixos-icons.enable = false;
     };
   };
 }

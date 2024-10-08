@@ -3,7 +3,7 @@
   imports = [ ../defaults.nix ];
 
   environment.systemPackages = with pkgs; [
-    everforest-theme
+    #everforest-theme
     dracula-theme
     libsForQt5.qt5ct
     qt6Packages.qt6ct
@@ -39,8 +39,8 @@
   stylix = {
     enable = true;
     cursor = {
-      name = "phinger-cursors-light";
-      package = pkgs.phinger-cursors;
+      name = "Dracula-cursors";
+      package = pkgs.dracula-theme;
       size = 24;
     };
     fonts = {
