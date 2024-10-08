@@ -56,9 +56,9 @@
 
   hardware.graphics = {
     enable = true;
-    extraPackages = with pkgs; [
-      vaapiIntel # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
-    ];
+    #extraPackages = with pkgs; [
+    #  vaapiIntel # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+    #];
   };
   powerManagement = {
     cpuFreqGovernor = "schedutil";
