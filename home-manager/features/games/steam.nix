@@ -18,6 +18,7 @@
             zlib
             libpulseaudio
             libvorbis
+            dracula-theme
             stdenv.cc.cc.lib
             libkrb5
             keyutils
