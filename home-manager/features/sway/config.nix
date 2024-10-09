@@ -15,6 +15,8 @@ in
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
       export XDG_CURRENT_DESKTOP=sway
+      export XCURSOR_SIZE=24
+      export XCURSOR_THEME=Dracula-cursors
       export QT_QPA_PLATFORM=wayland,xcb
       export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
       export NIXOS_OZONE_WL=1 
@@ -217,6 +219,7 @@ in
       };
       seat = {
         "*" = {
+          xcursor_theme = "Dracula-cursors 24";
           hide_cursor = "when-typing 10";
         };
       };
@@ -226,7 +229,7 @@ in
           command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
         }
         {
-          command = "${pkgs.dbus.out}/bin/dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK";
+          command = "${pkgs.dbus.out}/bin/dbus-update-activation-environment --systemd --all";
         }
       ];
       terminal = "${pkgs.foot}/bin/foot";
