@@ -12,6 +12,7 @@
     ./rbw.nix
     ./rofi
     ./udisks.nix
+    ./wezterm
     ./wofi
     ./xdg
     ./ydotool.nix
@@ -32,7 +33,15 @@ home.file.".icons/default/index.theme".text = ''
   '';
 
   qt.style.name = "Kvantum-Dark";
-
+  
+  home.pointerCursor = {
+    package = pkgs.dracula-theme;
+    gtk.enable = true;
+    name = "Dracula-cursors";
+    size = 24;
+    x11.enable = true;
+  };
+  home.preferXdgDirectories = true;
   gtk = {
     enable = true;
     iconTheme = {

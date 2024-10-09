@@ -30,34 +30,15 @@
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
     };
-    stylix = {
-      url = "github:danth/stylix";
-    };
-    #hyprland = {
-    #url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.44.0";
-    #  url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    #};
-    #hyprland-contrib = {
-    #  url = "github:hyprwm/contrib";
-    #};
-    #hyprpaper = {
-    #  url = "github:hyprwm/hyprpaper";
-    #};
-    hyprlock = {
+        hyprlock = {
       url = "github:hyprwm/hyprlock";
     };
     hypridle = {
       url = "github:hyprwm/hypridle";
     };
-    #iio-hyprland = {
-    #  url = "github:JeanSchoeller/iio-hyprland";
-    #};
-    #hyprpanel = {
-    #  url = "github:Jas-SinghFSU/HyprPanel";
-    #};
-    #wezterm = {
-    #  url = "github:wez/wezterm?dir=nix";
-    #};
+    wezterm = {
+      url = "github:wez/wezterm?dir=nix";
+    };
   };
 
   outputs =

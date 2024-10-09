@@ -33,11 +33,9 @@
     ../common/users/nokogiri.nix
 
     ./firewall.nix
-    #./smb.nix
     ./tlp.nix
     ./nfs.nix
     ./network.nix
-    #../../stylix/mowteng/system.nix
   ];
 
   nixpkgs = {

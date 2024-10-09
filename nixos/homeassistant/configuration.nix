@@ -27,7 +27,6 @@
     ./services
     ./local
 
-    #../../stylix/homeassistant/system.nix
   ];
 
   nixpkgs = {
