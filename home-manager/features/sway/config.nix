@@ -64,8 +64,17 @@ in
         "9" = [ { class = "Com.github.johnfactotum.Foliate"; } ];
       };
       bars = [ ];
+      colors = {
+        focused = {
+          background = "#bd93f9";
+          border = "#bd93f9";
+          childBorder = "#bd93f9";
+          indicator = "#bd93f9";
+          text = "#44475a";
+        };
+      };
       floating = {
-        border = 3;
+        border = 2;
         criteria = [
           { app_id = "pavucontrol-qt"; }
           { app_id = "mpv"; }
@@ -81,6 +90,10 @@ in
       };
       focus = {
         followMouse = true;
+      };
+      fonts = {
+        names = [ " JetBrainsMono Nerd Font Propo" ];
+        size = 11.0;
       };
       gaps = {
         inner = 3;
@@ -234,7 +247,7 @@ in
       ];
       terminal = "${pkgs.foot}/bin/foot";
       window = {
-        border = 3;
+        border = 0;
         commands = [
           {
             command = "layout tabbed";
@@ -268,12 +281,12 @@ in
       bindgesture swipe:3:right workspace prev
       bindgesture swipe:3:left workspace next
 
-      titlebar_border_thickness 2
+      titlebar_border_thickness 0
 
       ### SWAYFX 
-      corner_radius 10
+      corner_radius 8
       blur enable
-      blur_passes 1
+      blur_passes 2
       blur_radius 6
       blur_noise 0.1
       blur_brightness 0.9
@@ -281,9 +294,10 @@ in
       blur_saturation 1.0
       titlebar_separator disable
       shadows enable
-      shadow_offset 4 4
-      shadow_blur_radius 4
-      default_dim_inactive 0.2
+      shadow_offset 9 10
+      shadow_blur_radius 6
+      default_dim_inactive 0.5
+      dim_inactive_colors.unfocused #000000CC
       shadows_on_csd disable
       layer_effects "rofi" blur enable; corner_radius 8;
     '';

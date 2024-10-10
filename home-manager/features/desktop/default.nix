@@ -6,13 +6,14 @@
     ./fnott.nix
     ./foot.nix
     ./fuzzel.nix
+    #./gammastep.nix
     ./gpg-agent.nix
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix
     ./rofi
     ./udisks.nix
-    ./wezterm
+    #./wezterm
     ./wofi
     ./xdg
     ./ydotool.nix
@@ -51,6 +52,10 @@ home.file.".icons/default/index.theme".text = ''
     cursorTheme = {
       name = "Dracula-cursors";
       package = pkgs.dracula-theme;
+    };
+    font = {
+      name = "JetBrainsMono Nerd Font Propo";
+      size = 11;
     };
     theme = {
       name = "Dracula";

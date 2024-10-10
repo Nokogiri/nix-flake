@@ -3,7 +3,7 @@
     enable = true;
     latitude = "50.9787";
     longitude = "11.03283";
-    provider = "geoclue2";
+    provider = "manual";
     settings = {
       general = {
         adjustment-method = "wayland";
