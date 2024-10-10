@@ -129,13 +129,16 @@
         "SUPERSHIFT,9,movetoworkspacesilent,09"
       ];
       decoration = {
+        "col.shadow" = "rgba(1E202911)";
         active_opacity = "1.0";
         inactive_opacity = "0.8";
         fullscreen_opacity = "1.0";
-        rounding = "6";
+        rounding = "10";
         drop_shadow = false;
-        shadow_range = "24";
-        shadow_offset = "3 3";
+        shadow_range = "8";
+        shadow_offset = "4 6";
+        shadow_render_power = "1";
+        shadow_scale = "0.97";
         blur = {
           enabled = true;
           size = "8";
@@ -158,16 +161,33 @@
       env = [
         "NIXOS_OZONE_WL,1"
         "XCURSOR_SIZE,24"
-        "XCURSOR_THEME,phinger-cursors-light"
-        "GTK_THEME,adw-gtk3"
+        "XCURSOR_THEME,Dracula-cursors"
+        "GTK_THEME,Dracula"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
       ];
       general = {
-        gaps_in = "7";
-        gaps_out = "10";
+        gaps_in = "12";
+        gaps_out = "16";
         border_size = "2";
+        "col.active_border" = "rgb(44475a) rgb(bd93f9) 90deg";
+        "col.inactive_border" = "rgba(44475aaa)";
+        "col.nogroup_border" = "rgba(282a36dd)";
+        "col.nogroup_border_active" = "rgb(bd93f9) rgb(44475a) 90deg";
+        no_border_on_floating = false;
+
+        # non-gradient alternative
+        #col.active_border = rgb(bd93f9)
+        #col.inactive_border = rgba(44475aaa)
+        #col.group_border = rgba(282a36dd)
+        #col.group_border_active = rgb(bd93f9)
+
+        # darker alternative
+        #col.active_border = rgb(44475a) # or rgb(6272a4)
+        #col.inactive_border = rgb(282a36)
+        #col.group_border = rgb(282a36)
+        #col.group_border_active = rgb(44475a) # or rgb(6272a4)
       };
       gestures = {
         workspace_swipe = true;
@@ -191,6 +211,8 @@
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
+        font_family = " JetBrainsMono Nerd Font Propo";
+        render_unfocused_fps = "5";
         vfr = true;
       };
       monitor = "eDP-1,1920x1200@47.999001,auto,1";

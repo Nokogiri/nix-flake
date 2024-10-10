@@ -1,9 +1,9 @@
 { inputs, pkgs, ... }:
 {
 
-  #imports = [
-  #  inputs.hyprland.nixosModules.default
-  #];
+  imports = [
+    inputs.hyprland.nixosModules.default
+  ];
 
   security.pam.services.swaylock.fprintAuth = true;
   security.pam.services.hyprlock = { };
@@ -51,7 +51,6 @@
 
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
-  
 
   services = {
     dbus = {
@@ -62,6 +61,15 @@
     printing.enable = true;
     udisks2.enable = true;
     upower.enable = true;
+  };
+
+  programs.hyprland = {
+    enable = true;
+    # set the flake package
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    # make sure to also set the portal package, so that they are in sync
+    portalPackage =
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
   xdg.portal = {
     enable = true;
@@ -78,7 +86,7 @@
       "org.freedesktop.impl.portal.Settings" = [ "gtk" ];
     };
   };
-  environment.pathsToLink = [ 
+  environment.pathsToLink = [
     "/libexec"
     "/share/Kvantum"
     "/share/themes"

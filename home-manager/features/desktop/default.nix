@@ -13,7 +13,7 @@
     ./rbw.nix
     ./rofi
     ./udisks.nix
-    #./wezterm
+    ./wezterm
     ./wofi
     ./xdg
     ./ydotool.nix
@@ -26,7 +26,7 @@
     xfce.thunar
   ];
 
-home.file.".icons/default/index.theme".text = ''
+  home.file.".icons/default/index.theme".text = ''
     [Icon Theme]
     Name=Default
     Comment=Default Cursor Theme
@@ -34,7 +34,7 @@ home.file.".icons/default/index.theme".text = ''
   '';
 
   qt.style.name = "Kvantum-Dark";
-  
+
   home.pointerCursor = {
     package = pkgs.dracula-theme;
     gtk.enable = true;

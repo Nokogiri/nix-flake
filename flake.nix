@@ -27,17 +27,30 @@
     nur = {
       url = "github:nix-community/NUR";
     };
+    wezterm = {
+      url = "github:wez/wezterm?dir=nix";
+    };
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
     };
-        hyprlock = {
+    hyprland = {
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.44.1";
+    };
+    hyprland-contrib = {
+      url = "github:hyprwm/contrib";
+    };
+    hyprpaper = {
+      url = "github:hyprwm/hyprpaper";
+    };
+
+    hyprlock = {
       url = "github:hyprwm/hyprlock";
     };
     hypridle = {
       url = "github:hyprwm/hypridle";
     };
-    wezterm = {
-      url = "github:wez/wezterm?dir=nix";
+    iio-hyprland = {
+      url = "github:JeanSchoeller/iio-hyprland";
     };
   };
 
