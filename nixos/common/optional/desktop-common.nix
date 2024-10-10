@@ -1,5 +1,9 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
+
+  #imports = [
+  #  inputs.hyprland.nixosModules.default
+  #];
 
   security.pam.services.swaylock.fprintAuth = true;
   security.pam.services.hyprlock = { };
@@ -47,6 +51,7 @@
 
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
+  
 
   services = {
     dbus = {
@@ -62,7 +67,7 @@
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-wlr
+      #pkgs.xdg-desktop-portal-hyprland
     ];
     xdgOpenUsePortal = false;
     config.common = {
