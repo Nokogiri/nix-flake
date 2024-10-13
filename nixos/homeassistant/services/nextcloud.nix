@@ -22,7 +22,7 @@
     enable = true;
     hostName = "next.fishoeder.net";
     https = true;
-    package = pkgs.nextcloud29;
+    package = pkgs.nextcloud30;
     database.createLocally = true;
     #datadir = "/media/Vault0.1/nextcloud-store";
     configureRedis = true;
