@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   wayland.windowManager.hyprland = {
     settings = {
@@ -217,8 +217,11 @@
         vfr = true;
       };
       monitor = "eDP-1,1920x1200@47.999001,auto,1";
+      exec-once = [
+        "${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all"
+      ];
     };
-    extraConfig = ''
+        extraConfig = ''
       # Startup
       exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
       exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store

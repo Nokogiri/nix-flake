@@ -3,6 +3,7 @@
     enable = true;
     settings = {
       theme_background = false;
+      color_theme = "dracula";
       swap_disk = true;
       use_fstab = false;
       only_physical = true;

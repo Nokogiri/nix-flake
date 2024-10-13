@@ -15,8 +15,8 @@ in
       ipc = "on";
       splash = false;
       preload = [ "${image}" ];
-      wallpaper = [ 
-      ",${image}"
+      wallpaper = [
+        ",${image}"
       ];
     };
   };
