@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   wayland.windowManager.hyprland = {
     settings = {
@@ -24,6 +24,7 @@
       };
       bind = [
         "SUPER,Return,exec,${pkgs.foot}/bin/foot"
+        #"SUPER,Return,exec,${inputs.wezterm.packages.x86_64-linux.default}/bin/wezterm-gui"
         "SUPER,w,exec,swaync-client -t"
         "SUPER,p,exec,pkill -9 rofi || ${pkgs.rofi-wayland}/bin/rofi -show drun"
         "SUPER,i,exec,cliphist list | ${pkgs.rofi-wayland}/bin/rofi -dmenu | cliphist decode | wl-copy"

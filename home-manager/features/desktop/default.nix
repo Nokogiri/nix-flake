@@ -6,14 +6,13 @@
     ./fnott.nix
     ./foot.nix
     ./fuzzel.nix
-    #./gammastep.nix
     ./gpg-agent.nix
+    ./joplin-d.nix
     ./pavucontrol.nix
     ./playerctl.nix
     ./rbw.nix
     ./rofi
     ./udisks.nix
-    ./wezterm
     ./wofi
     ./xdg
     ./ydotool.nix

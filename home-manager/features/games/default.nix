@@ -17,6 +17,8 @@
     heroic
     google-chrome # GFN
 
+    airshipper
+    #veloren
     gzdoom
     sm64ex
     minetest

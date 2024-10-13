@@ -5,7 +5,7 @@
     package = inputs.wezterm.packages.x86_64-linux.default;
     extraConfig = ''
       return {
-        font_size = 12.5 ,
+        font_size = 12.0 ,
         font = wezterm.font_with_fallback {
           'JetBrainsMono Nerd Font'
         },

@@ -27,9 +27,9 @@
     nur = {
       url = "github:nix-community/NUR";
     };
-    wezterm = {
-      url = "github:wez/wezterm?dir=nix";
-    };
+    #wezterm = {
+    #  url = "github:wez/wezterm?dir=nix";
+    #};
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
     };
