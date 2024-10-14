@@ -8,8 +8,6 @@
     ./fuzzel.nix
     ./gpg-agent.nix
     ./joplin-d.nix
-    ./pavucontrol.nix
-    ./playerctl.nix
     ./rbw.nix
     ./rofi
     ./udisks.nix

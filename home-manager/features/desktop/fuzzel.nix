@@ -2,6 +2,9 @@
   programs.fuzzel = {
     enable = true;
     settings = {
+      main = {
+        font = "JetBrainsMono Nerd Font Propo:size=10";
+      };
       colors = {
         background = "282a36dd";
         text = "f8f8f2ff";

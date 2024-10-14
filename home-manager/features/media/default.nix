@@ -3,16 +3,17 @@
   imports = [
     ./mpv
     ./pipewire.nix
-    #./spotify.nix
+    ./spotify.nix
     ./yt-dlp.nix
   ];
   home.packages = with pkgs; [
-    #ani-cli
     jellyfin-media-player
-    #spotify-player
-    #youtube-tui
+    pavucontrol
+    playerctl
   ];
-
+  services = {
+    playerctld.enable = true;
+  };
   xdg.desktopEntries."umpv" = {
     exec = "";
     name = "umpv";

@@ -1,14 +1,13 @@
 {
   pkgs,
-  lib,
   inputs,
   ...
 }:
 let
-  spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in
 {
-  imports = [ inputs.spicetify-nix.homeManagerModule ];
+  imports = [ inputs.spicetify-nix.homeManagerModules.default ];
 
   xdg.desktopEntries = {
     spotify = {
@@ -22,13 +21,19 @@ in
   programs.spicetify = {
     windowManagerPatch = false;
     enable = true;
-    theme = spicePkgs.themes.Dracula;
-    enabledCustomApps = with spicePkgs.apps; [ lyrics-plus ];
+    theme = spicePkgs.themes.dracula;
+    enabledCustomApps = with spicePkgs.apps; [
+      lyricsPlus
+      betterLibrary
+    ];
     enabledExtensions = with spicePkgs.extensions; [
       shuffle
       popupLyrics
+      fullScreen
+      powerBar
       hidePodcasts
-      fullAppDisplayMod
+      volumePercentage
+      #fullAppDisplayMod
     ];
   };
 }

@@ -25,7 +25,7 @@
       bind = [
         "SUPER,Return,exec,${pkgs.foot}/bin/foot"
         #"SUPER,Return,exec,${inputs.wezterm.packages.x86_64-linux.default}/bin/wezterm-gui"
-        "SUPER,w,exec,swaync-client -t"
+        "SUPER,w,exec,fnottctl dismiss"
         "SUPER,p,exec,pkill -9 rofi || ${pkgs.rofi-wayland}/bin/rofi -show drun"
         "SUPER,i,exec,cliphist list | ${pkgs.rofi-wayland}/bin/rofi -dmenu | cliphist decode | wl-copy"
         ",XF86Tools,exec,pkill -USR1 waybar # profile button"
@@ -221,7 +221,7 @@
         "${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all"
       ];
     };
-        extraConfig = ''
+    extraConfig = ''
       # Startup
       exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
       exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
