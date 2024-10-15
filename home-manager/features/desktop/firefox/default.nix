@@ -32,7 +32,8 @@
       sidebery
       newtab-adapter
       sponsorblock
-      surfingkeys
+      #surfingkeys
+      tridactyl
       torrent-control
       enhancer-for-youtube
     ];
@@ -73,7 +74,8 @@
       ublock-origin
       firefox-color
       onetab
-      surfingkeys
+      #surfingkeys
+      tridactyl
       sidebery
       sponsorblock
       ff2mpv

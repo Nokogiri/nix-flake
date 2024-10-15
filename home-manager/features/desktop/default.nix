@@ -11,6 +11,7 @@
     ./rbw.nix
     ./rofi
     ./udisks.nix
+    ./vscode.nix
     ./wofi
     ./xdg
     ./ydotool.nix
@@ -19,6 +20,7 @@
 
   home.packages = with pkgs; [
     libnotify
+    nextcloud-client
     xdg_utils
     xfce.thunar
   ];

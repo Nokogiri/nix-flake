@@ -1,6 +1,7 @@
 {
   imports = [
     ../../../common/optional/podman.nix
+    ./calibre-web.nix
     ./esphome.nix
     #./gamevault.nix
     ./homeassistant.nix
