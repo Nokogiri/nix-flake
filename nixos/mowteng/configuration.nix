@@ -17,18 +17,15 @@
     ../common/global
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
-    ../common/optional/podman.nix
     ../common/optional/greetd.nix
     ../common/optional/fonts.nix
     ../common/optional/fprintd.nix
     ../common/optional/mullvad.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
-    #../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
-    #../common/optional/waydroid.nix
     ../common/optional/zramswap.nix
 
     ../common/users/nokogiri.nix
