@@ -5,7 +5,7 @@
     ./environment.nix
     ./hyprlock.nix
     ./hypridle.nix
-    ./hyprpaper
+    #./hyprpaper
     #./mako.nix
     ./plugins
     ./swayosd.nix

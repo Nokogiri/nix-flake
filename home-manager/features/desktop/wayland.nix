@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
 
   imports = [
@@ -6,7 +6,7 @@
     ./wvkbd.nix
   ];
   home.packages = with pkgs; [
-    cliphist
+    inputs.stable.legacyPackages.x86_64-linux.cliphist
     swayimg
     wl-clipboard
   ];

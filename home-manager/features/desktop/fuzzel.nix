@@ -4,6 +4,7 @@
     settings = {
       main = {
         font = "JetBrainsMono Nerd Font Propo:size=10";
+        icon-theme = "Dracula";
       };
       colors = {
         background = "282a36dd";

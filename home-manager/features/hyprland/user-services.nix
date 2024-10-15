@@ -1,4 +1,10 @@
 { pkgs, inputs, ... }:
+let 
+  image = "${(pkgs.fetchurl {
+              url = "https://files.fishoeder.net/walls/dusk/DUSKAsAbove.png";
+              hash = "sha256-IQKk6kwqfzgMkT6bt4/kXen3ft/Is7QyuOBDxlMPYhk=";
+            })}";
+in
 {
   systemd.user.services = {
     iio-hyprland = {
@@ -7,11 +13,23 @@
       };
       Service = {
         Type = "simple";
-        #ExecStart = "${pkgs.iio-hyprland}/bin/iio-hyprland";
         ExecStart = "${
           inputs.iio-hyprland.packages.${pkgs.system}.default
         }/bin/iio-hyprland";
         Restart = "on-failure";
+      };
+      Install = {
+        WantedBy = [ "hyprland-session.target" ];
+      };
+    };
+    swaybg = {
+      Unit = {
+        Description = "swaybg?";
+      };
+      Service = {
+        Type = "simple";
+        ExecStart = "${pkgs.swaybg}/bin/swaybg -i ${image} -m fill";
+        Restart = "on-failure"; 
       };
       Install = {
         WantedBy = [ "hyprland-session.target" ];
@@ -35,15 +53,5 @@
         WantedBy = [ "hyprland-session.target" ];
       };
     };
-    #swaynotificationcenter = {
-    #  Install = {
-    #    WantedBy = [ "hyprland-session.target" ];
-    #  };
-    #};
-    #hyprpaper = {
-    #  Install = {
-    #    WantedBy = [ "hyprland-session.target" ];
-    #  };
-    #};
   };
 }

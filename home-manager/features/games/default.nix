@@ -17,8 +17,6 @@
     heroic
     google-chrome # GFN
 
-    airshipper
-    #veloren
     gzdoom
     sm64ex
     minetest
@@ -30,7 +28,7 @@
     cemu
     ares
     melonDS
-    lime3ds
+    #lime3ds
     dolphinEmuMaster
     pcsx2
     ppsspp
