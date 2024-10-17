@@ -9,8 +9,6 @@
   home.sessionVariables.WINEDEBUG = "-all";
 
   home.packages = with pkgs; [
-
-    #gamescope
     mangohud
 
     #vkbasalt

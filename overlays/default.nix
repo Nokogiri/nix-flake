@@ -8,6 +8,19 @@
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
+    rofi-rbw-wayland = prev.rofi-rbw-wayland.overrideAttrs (oldAttrs: {
+      patches = (oldAttrs.patches or [ ]) ++ [
+        (prev.fetchpatch {
+          name = "fuzzel-support.patch";
+          url = "https://github.com/natsukium/rofi-rbw/commit/12d53a06c8963b01f7f2b8b7728f514525050bc9.patch";
+          includes = [
+            "src/rofi_rbw/selector/fuzzel.py"
+            "src/rofi_rbw/selector/selector.py"
+          ];
+          hash = "sha256-tb+lgsv5BRrh3tnHayKxzVASLcc4I+IaCaywMe9U5qk=";
+        })
+      ];
+    });
     #foot = prev.foot.overrideAttrs (old: {
     #  patches = (old.patches or [ ]) ++ [ ./foot-fs-transparency.patch ];
     #});

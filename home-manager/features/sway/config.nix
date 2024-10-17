@@ -123,7 +123,7 @@ in
       keybindings = {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
-        "${cfg.modifier}+p" = "exec pkill -9 rofi || rofi -show drun";
+        "${cfg.modifier}+p" = "exec pkill -9 fuzzel || fuzzel";
         "${cfg.modifier}+i" = "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
         # basic internals

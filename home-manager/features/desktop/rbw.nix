@@ -1,7 +1,7 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [
-    rofi-rbw
+    rofi-rbw-wayland
     pinentry
   ];
   programs.rbw = {

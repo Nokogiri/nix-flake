@@ -125,6 +125,8 @@
     xpadneo.enable = false;
     xone.enable = false;
     wirelessRegulatoryDatabase = true;
+    graphics.enable32Bit = true;
+    graphics.enable = true;
   };
 
   #sound.enable = true;

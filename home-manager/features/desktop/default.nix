@@ -9,7 +9,6 @@
     ./gpg-agent.nix
     ./joplin-d.nix
     ./rbw.nix
-    ./rofi
     ./udisks.nix
     ./vscode.nix
     ./wofi

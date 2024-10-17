@@ -74,12 +74,12 @@
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      #pkgs.xdg-desktop-portal-hyprland
+      #pkgs.xdg-desktop-portal-wlr
     ];
     xdgOpenUsePortal = false;
     config.common = {
       default = [
-        "wlr"
+        "hyprland"
         "gtk"
       ];
       "org.freedesktop.impl.portal.Settings" = [ "gtk" ];
