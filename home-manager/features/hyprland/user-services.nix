@@ -1,9 +1,11 @@
 { pkgs, inputs, ... }:
-let 
-  image = "${(pkgs.fetchurl {
-              url = "https://files.fishoeder.net/walls/dusk/DUSKAsAbove.png";
-              hash = "sha256-IQKk6kwqfzgMkT6bt4/kXen3ft/Is7QyuOBDxlMPYhk=";
-            })}";
+let
+  image = "${
+    (pkgs.fetchurl {
+      url = "https://files.fishoeder.net/walls/dusk/DUSKAsAbove.png";
+      hash = "sha256-IQKk6kwqfzgMkT6bt4/kXen3ft/Is7QyuOBDxlMPYhk=";
+    })
+  }";
 in
 {
   systemd.user.services = {
@@ -29,7 +31,7 @@ in
       Service = {
         Type = "simple";
         ExecStart = "${pkgs.swaybg}/bin/swaybg -i ${image} -m fill";
-        Restart = "on-failure"; 
+        Restart = "on-failure";
       };
       Install = {
         WantedBy = [ "hyprland-session.target" ];

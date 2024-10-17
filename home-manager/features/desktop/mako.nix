@@ -25,7 +25,7 @@
     format = "<b>%s</b>\\n%b";
     defaultTimeout = 0;
     ignoreTimeout = null;
-    iconPath = "${pkgs.dracula-icon-theme}/share/icons/Dracula/";
+    iconPath = "${pkgs.dracula-icon-theme}/share/icons/Dracula/scalable";
     extraConfig = ''
       [urgency=low]
       border-color=#282a36D8

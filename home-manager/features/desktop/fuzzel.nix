@@ -1,10 +1,15 @@
+{ pkgs, ... }:
 {
   programs.fuzzel = {
     enable = true;
     settings = {
       main = {
-        font = "JetBrainsMono Nerd Font Propo:size=10";
+        font = "JetBrainsMono Nerd Font Propo:size=12";
         icon-theme = "Dracula";
+        dpi-aware = "no";
+        lines = "20";
+        width = "45";
+        terminal = "${pkgs.foot}/bin/footclient";
       };
       colors = {
         background = "282a36dd";
