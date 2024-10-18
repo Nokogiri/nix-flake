@@ -40,7 +40,6 @@
     pathsToLink = [
       "/share/nix-direnv"
       "/share/bash-completion"
-      "/share/zsh"
     ];
   };
   systemd.coredump = {
@@ -139,7 +138,6 @@
     nix-index-database.comma.enable = true;
     nix-index.enableZshIntegration = false;
     nix-index.enableBashIntegration = false;
-    zsh.enable = true;
   };
   hardware.enableRedistributableFirmware = true;
 

@@ -122,14 +122,11 @@
     sensor.iio.enable = true;
     steam-hardware.enable = true;
     uinput.enable = true;
-    xpadneo.enable = false;
-    xone.enable = false;
     wirelessRegulatoryDatabase = true;
-    graphics.enable32Bit = true;
-    graphics.enable = true;
+    graphics = { 
+      enable = true;
+      enable32Bit = true;
+    };
   };
-
-  #sound.enable = true;
-
   nixpkgs.hostPlatform = "x86_64-linux";
 }
