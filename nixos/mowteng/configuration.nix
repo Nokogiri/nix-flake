@@ -34,6 +34,7 @@
     ./tlp.nix
     ./nfs.nix
     ./network.nix
+    ./smb.nix
   ];
 
   nixpkgs = {
