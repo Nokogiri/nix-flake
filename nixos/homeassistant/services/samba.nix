@@ -22,8 +22,18 @@
         "guest account" = "nokogiri";
         "map to guest" = "bad user";
       };
-      Vault31 = {
+      Vault3 = {
         path = "/media/Vault3.1";
+        browseable = "yes";
+        "read only" = "no";
+        "guest ok" = "yes";
+        "create mask" = "0644";
+        "directory mask" = "0755";
+        "force user" = "nokogiri";
+        "force group" = "users";
+      };
+      Vault1 = {
+        path = "/media/Vault1.1";
         browseable = "yes";
         "read only" = "no";
         "guest ok" = "yes";

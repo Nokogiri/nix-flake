@@ -18,7 +18,7 @@
         commonMountOptions
         // {
           what = "10.200.200.1:/Vault0.1";
-          where = "/media/Vault0.1";
+          where = "/media/nfs/Vault0.1";
         }
       )
 
@@ -26,7 +26,7 @@
         commonMountOptions
         // {
           what = "10.200.200.1:/Vault3.1";
-          where = "/media/Vault3.1";
+          where = "/media/nfs/Vault3.1";
         }
       )
     ];
