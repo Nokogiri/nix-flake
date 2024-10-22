@@ -10,7 +10,6 @@
   imports = [
     inputs.hardware.nixosModules.common-cpu-intel
     inputs.hardware.nixosModules.common-pc-ssd
-
     ./hardware-configuration.nix
 
     ../common/global
@@ -30,7 +29,7 @@
   ];
 
   nixpkgs = {
-    overlays = [ outputs.overlays.additions ];
+    overlays = [ outputs.overlays.additions outputs.overlays.modifications ];
     config = {
       allowUnfree = true;
     };
