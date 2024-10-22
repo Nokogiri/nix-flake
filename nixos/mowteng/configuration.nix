@@ -31,7 +31,7 @@
     ../common/users/nokogiri.nix
 
     ./firewall.nix
-    ./tlp.nix
+    #./tlp.nix
     #./nfs.nix
     ./network.nix
     ./smb.nix
@@ -72,8 +72,9 @@
   };
 
   powerManagement = {
-    cpuFreqGovernor = "ondemand";
+    cpuFreqGovernor = "powersave";
     cpufreq = {
+      min = 400000;
       max = 2500000;
     };
     powertop.enable = false;
@@ -101,7 +102,7 @@
     powerKeyLongPress = "poweroff";
     lidSwitchDocked = "suspend";
   };
-
+  services.power-profiles-daemon.enable = true;
   services.udev.extraRules = ''
     ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
   '';

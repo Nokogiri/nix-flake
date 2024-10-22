@@ -20,7 +20,8 @@
     minetest
 
     #openmw
-    inputs.stable.legacyPackages.x86_64-linux.portmod
+    #inputs.stable.legacyPackages.x86_64-linux.portmod
+    
 
     # emulation
     dotnet-runtime_7

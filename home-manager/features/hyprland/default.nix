@@ -5,10 +5,6 @@
     ./environment.nix
     ./hyprlock.nix
     ./hypridle.nix
-    #./hyprpaper
-    #./mako.nix
-    ./plugins
-    ./swayosd.nix
     ./user-services.nix
     ./waybar
     ../desktop/wayland.nix
@@ -38,7 +34,6 @@
   };
 
   wayland.windowManager.hyprland = {
-    #package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     enable = true;
     xwayland = {
       enable = true;

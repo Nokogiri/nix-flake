@@ -3,13 +3,13 @@
 
   imports = [
     ./firefox
-    #./fnott.nix
     ./foot.nix
     ./fuzzel.nix
     ./gpg-agent.nix
     ./joplin-d.nix
     ./rbw.nix
     ./swaync.nix
+    ./swayosd.nix
     ./udisks.nix
     ./vscode.nix
     ./wofi

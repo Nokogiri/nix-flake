@@ -30,8 +30,8 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = [ "Overpass" ];
-        sansSerif = [ "Overpass" ];
+        serif = [ "IntoneMono Nerd Font Propo" ];
+        sansSerif = [ "IntoneMono Nerd Font Propo" ];
         monospace = [ "IntoneMono Nerd Font" ];
         emoji = [ "Noto Color Emoji" ];
       };

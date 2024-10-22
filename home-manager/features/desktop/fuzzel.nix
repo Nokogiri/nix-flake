@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       main = {
-        font = "JetBrainsMono Nerd Font Propo:size=12";
+        font = "IntoneMono Nerd Font Propo:size=12";
         icon-theme = "Dracula";
         dpi-aware = "no";
         lines = "20";
