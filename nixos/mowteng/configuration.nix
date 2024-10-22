@@ -32,7 +32,7 @@
 
     ./firewall.nix
     ./tlp.nix
-    ./nfs.nix
+    #./nfs.nix
     ./network.nix
     ./smb.nix
   ];

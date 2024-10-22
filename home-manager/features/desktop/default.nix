@@ -3,12 +3,13 @@
 
   imports = [
     ./firefox
-    ./fnott.nix
+    #./fnott.nix
     ./foot.nix
     ./fuzzel.nix
     ./gpg-agent.nix
     ./joplin-d.nix
     ./rbw.nix
+    ./swaync.nix
     ./udisks.nix
     ./vscode.nix
     ./wofi
@@ -19,8 +20,7 @@
 
   home.packages = with pkgs; [
     libnotify
-    nextcloud-client
-    xdg_utils
+    xdg-utils
     xfce.thunar
   ];
 

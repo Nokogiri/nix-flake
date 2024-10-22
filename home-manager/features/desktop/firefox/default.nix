@@ -32,7 +32,7 @@
       sidebery
       newtab-adapter
       sponsorblock
-      #surfingkeys
+      surfingkeys
       tridactyl
       torrent-control
       enhancer-for-youtube

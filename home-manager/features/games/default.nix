@@ -28,7 +28,7 @@
     ares
     melonDS
     #lime3ds
-    dolphinEmuMaster
+    dolphin-emu-beta
     pcsx2
     ppsspp
   ];

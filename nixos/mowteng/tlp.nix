@@ -10,7 +10,7 @@
       CPU_SCALING_MAX_FREQ_ON_AC = "2400000";
       CPU_SCALING_MIN_FREQ_ON_BAT = "400000";
       CPU_SCALING_MAX_FREQ_ON_BAT = "1600000";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
       CPU_ENERGY_PERF_POLICY_ON_BAT = "balance_power";
       CPU_BOOST_ON_AC = "1";
       CPU_BOOST_ON_BAT = "0";

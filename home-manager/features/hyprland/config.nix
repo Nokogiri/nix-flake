@@ -24,7 +24,7 @@
       };
       bind = [
         "SUPER,Return,exec,${pkgs.foot}/bin/footclient"
-        "SUPER,w,exec,fnottctl dismiss"
+        "SUPER,w,exec,${pkgs.swaynotificationcenter}/bin/swaync-client -t"
         "SUPER,p,exec,pkill -9 fuzzel || ${pkgs.fuzzel}/bin/fuzzel"
         "SUPER,i,exec,cliphist list | ${pkgs.fuzzel}/bin/fuzzel --dmenu | cliphist decode | wl-copy"
         ",XF86Tools,exec,pkill -USR1 waybar # profile button"

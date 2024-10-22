@@ -2,8 +2,9 @@
 let
   image = "${
     (pkgs.fetchurl {
-      url = "https://files.fishoeder.net/walls/dusk/DUSKAsAbove.png";
-      hash = "sha256-IQKk6kwqfzgMkT6bt4/kXen3ft/Is7QyuOBDxlMPYhk=";
+      #url = "https://files.fishoeder.net/walls/dusk/DUSKAsAbove.png";
+      url = "https://next.fishoeder.net/s/BJyXtyinBnDoJwT/download/DUSK%20So%20Below%201440p.png";
+      hash = "sha256-yIHe+i7+rUYwJipXV9hAXsyFdPsO8FAIQ0cnAQbbRGA=";
     })
   }";
 in
