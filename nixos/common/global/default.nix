@@ -26,7 +26,7 @@
     extraSpecialArgs = {
       inherit inputs;
     };
-    backupFileExtension = "rebuild";
+    backupFileExtension = "rebuilds";
   };
 
   documentation = {

@@ -14,6 +14,12 @@
     dconf.enable = true;
   };
 
+environment.profileRelativeSessionVariables = let
+      qtVersions = with pkgs; [ qt5 qt6 ];
+    in {
+      QT_PLUGIN_PATH = map (qt: "/${qt.qtbase.qtPluginPrefix}") qtVersions;
+      QML2_IMPORT_PATH = map (qt: "/${qt.qtbase.qtQmlPrefix}") qtVersions;
+    };
   environment.systemPackages = with pkgs; [
     xfce.thunar
     dracula-theme
@@ -21,6 +27,7 @@
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
     qt6Packages.qtstyleplugin-kvantum
+    kdePackages.qtstyleplugin-kvantum
   ];
 
   fonts = {
@@ -47,7 +54,12 @@
       antialias = true;
     };
   };
-
+  
+  qt = {
+    enable = true;
+    style = "kvantum";
+    platformTheme = "qt5ct";
+  };
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
 
@@ -96,13 +108,13 @@
     "/share/Kvantum"
     "/share/themes"
     "/share/icons"
+    "/share/sddm"
   ];
 
   environment.sessionVariables = {
     BROWSER = "${pkgs.firefox}/bin/firefox";
     DISABLE_QT5_COMPAT = "0";
     NO_AT_BRIDGE = "1";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     MOZ_USE_XINPUT2 = "1";
   };

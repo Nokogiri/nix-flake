@@ -11,8 +11,7 @@
     extraModprobeConfig = ''
       blacklist pcspkr
       options cfg80211 ieee80211_regdom="DE"
-      options iwlwifi 11n_disable=8 bt_coex_active=0
-      options usb-storage quirks=090c:1000:
+      options iwlwifi 11n_disable=8
     '';
     extraModulePackages = with config.boot.kernelPackages; [
       cpupower
@@ -37,12 +36,12 @@
       "wireguard"
       "ntsync"
     ];
-    kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
-    #kernelPackages = pkgs.linuxKernel.packages.linux_lqx;
+    #kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
+    kernelPackages = pkgs.linuxKernel.packages.linux_lqx;
     #kernelPackages = pkgs.linuxKernel.packages.linux_latest;
     kernelParams = [
       "amd_pstate=active"
-      "mitigations=off"
+     "mitigations=off"
       "cpufreq.default_governor=powersave"
     ];
     loader.efi.efiSysMountPoint = "/boot";
@@ -123,7 +122,7 @@
     steam-hardware.enable = true;
     uinput.enable = true;
     wirelessRegulatoryDatabase = true;
-    graphics = { 
+    graphics = {
       enable = true;
       enable32Bit = true;
     };

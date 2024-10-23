@@ -10,18 +10,13 @@
 
   home.packages = with pkgs; [
     mangohud
-
-    #vkbasalt
+    vkbasalt
     heroic
     google-chrome # GFN
 
     gzdoom
     sm64ex
     minetest
-
-    #openmw
-    #inputs.stable.legacyPackages.x86_64-linux.portmod
-    
 
     # emulation
     dotnet-runtime_7
