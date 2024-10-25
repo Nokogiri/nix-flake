@@ -2,13 +2,16 @@
 {
 
   imports = [
+    ./colors.nix
     ./firefox
     ./foot.nix
     ./fuzzel.nix
     ./gpg-agent.nix
     ./joplin-d.nix
+    ./kitty.nix
     ./rbw.nix
-    ./swaync.nix
+    ./rofi
+    ./swaync
     ./swayosd.nix
     ./udisks.nix
     ./vscode.nix

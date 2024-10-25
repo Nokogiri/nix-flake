@@ -7,6 +7,7 @@
   amdctl = pkgs.callPackage ./amdctl { };
   dracula-icon-theme = pkgs.callPackage ./dracula-icon-theme { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
+  lime3ds = pkgs.callPackage ./lime3ds { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd { };
 }

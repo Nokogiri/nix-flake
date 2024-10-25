@@ -25,8 +25,8 @@
       bind = [
         "SUPER,Return,exec,${pkgs.foot}/bin/footclient"
         "SUPER,w,exec,${pkgs.swaynotificationcenter}/bin/swaync-client -t"
-        "SUPER,p,exec,pkill -9 fuzzel || ${pkgs.fuzzel}/bin/fuzzel"
-        "SUPER,i,exec,cliphist list | ${pkgs.fuzzel}/bin/fuzzel --dmenu | cliphist decode | wl-copy"
+        "SUPER,p,exec,pkill -9 rofi || ${pkgs.rofi}/bin/rofi -show drun"
+        "SUPER,i,exec,cliphist list | ${pkgs.rofi}/bin/rofi -dmenu | cliphist decode | wl-copy"
         ",XF86Tools,exec,pkill -USR1 waybar # profile button"
         ",Print,exec,grimblast --notify copy output"
         "SHIFT,Print,exec,grimblast --notify copy active"

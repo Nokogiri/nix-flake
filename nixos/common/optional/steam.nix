@@ -16,10 +16,12 @@
       };
 
       custom = {
-        start = ''${pkgs.libnotify}/bin/notify-send 'GameMode started' 
-                ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance'';
-        end = ''${pkgs.libnotify}/bin/notify-send 'GameMode ended' 
-                ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced'';
+        start = ''
+          ${pkgs.libnotify}/bin/notify-send 'GameMode started' 
+                          ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance'';
+        end = ''
+          ${pkgs.libnotify}/bin/notify-send 'GameMode ended' 
+                          ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced'';
       };
     };
   };
@@ -36,6 +38,6 @@
   };
   programs.gamescope = {
     enable = true;
-    capSysNice = true;
+    capSysNice = false;
   };
 }

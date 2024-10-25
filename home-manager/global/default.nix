@@ -9,9 +9,9 @@
 }:
 {
   imports = [
-    ./sops.nix
+    #./sops.nix
     ../features/cli
-    inputs.sops-nix.homeManagerModules.sops
+    #inputs.sops-nix.homeManagerModules.sops
     inputs.nix-index-database.hmModules.nix-index
   ];
   nixpkgs = {

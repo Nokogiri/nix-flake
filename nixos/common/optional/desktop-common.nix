@@ -14,9 +14,14 @@
     dconf.enable = true;
   };
 
-environment.profileRelativeSessionVariables = let
-      qtVersions = with pkgs; [ qt5 qt6 ];
-    in {
+  environment.profileRelativeSessionVariables =
+    let
+      qtVersions = with pkgs; [
+        qt5
+        qt6
+      ];
+    in
+    {
       QT_PLUGIN_PATH = map (qt: "/${qt.qtbase.qtPluginPrefix}") qtVersions;
       QML2_IMPORT_PATH = map (qt: "/${qt.qtbase.qtQmlPrefix}") qtVersions;
     };
@@ -54,7 +59,7 @@ environment.profileRelativeSessionVariables = let
       antialias = true;
     };
   };
-  
+
   qt = {
     enable = true;
     style = "kvantum";

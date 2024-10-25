@@ -36,12 +36,12 @@
       "wireguard"
       "ntsync"
     ];
-    #kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
-    kernelPackages = pkgs.linuxKernel.packages.linux_lqx;
+    kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
+    #kernelPackages = pkgs.linuxKernel.packages.linux_lqx;
     #kernelPackages = pkgs.linuxKernel.packages.linux_latest;
     kernelParams = [
       "amd_pstate=active"
-     "mitigations=off"
+      "mitigations=off"
       "cpufreq.default_governor=powersave"
     ];
     loader.efi.efiSysMountPoint = "/boot";

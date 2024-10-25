@@ -5,6 +5,12 @@
 }:
 let
   cfg = config.wayland.windowManager.sway.config;
+  image = "${
+    (pkgs.fetchurl {
+      url = "https://next.fishoeder.net/s/BJyXtyinBnDoJwT/download/DUSK%20So%20Below%201440p.png";
+      hash = "sha256-yIHe+i7+rUYwJipXV9hAXsyFdPsO8FAIQ0cnAQbbRGA=";
+    })
+  }";
 in
 {
   wayland.windowManager.sway = {
@@ -193,7 +199,7 @@ in
         # sway-prop
         "${cfg.modifier}+Shift+i" = "exec /home/nokogiri/.local/bin/sway-prop";
 
-        "${cfg.modifier}+w" = "exec makoctl dismiss";
+        "${cfg.modifier}+w" = "exec ${pkgs.swaynotificationcenter}/bin/swaync-client -t";
         # Apps
         ###
         # brightness
@@ -221,12 +227,7 @@ in
       modifier = "Mod4";
       output = {
         eDP-1 = {
-          bg = "${
-            (pkgs.fetchurl {
-              url = "https://lemmy.ca/pictrs/image/b82e2b77-3910-4d7c-8df8-d2c486db1669.jpeg";
-              hash = "sha256-zLrWrMi3NSGLc686u8cDiJpJKIukBwA6pWygAT0NZmQ=";
-            })
-          } fill";
+          bg = "${image} fill";
           resolution = "1920x1200@47.999001hz";
         };
       };
@@ -245,7 +246,7 @@ in
           command = "${pkgs.dbus.out}/bin/dbus-update-activation-environment --systemd --all";
         }
       ];
-      terminal = "${pkgs.foot}/bin/foot";
+      terminal = "${pkgs.kitty}/bin/kitty";
       window = {
         border = 0;
         commands = [

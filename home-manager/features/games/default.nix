@@ -16,10 +16,9 @@
 
     gzdoom
     sm64ex
-    minetest
-
+    #minetest
+    vintagestory
     # emulation
-    dotnet-runtime_7
     cemu
     ares
     melonDS
