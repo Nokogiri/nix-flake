@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-    ./mangohud.nix
+    ./mangohud
     ./stl.nix
     #./wine.nix
   ];
@@ -13,8 +13,7 @@
     vkbasalt
     heroic
     google-chrome # GFN
-    inputs.stable.legacyPackages.x86_64-linux.portmod
-
+    #inputs.stable.legacyPackages.x86_64-linux.portmod
 
     gzdoom
     sm64ex

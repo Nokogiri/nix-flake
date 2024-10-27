@@ -18,7 +18,7 @@
         indicator-format = "percentage";
       };
       colors = {
-        alpha = "0.8";
+        alpha = "0.6";
         background = "282a36";
         foreground = "f8f8f2";
 

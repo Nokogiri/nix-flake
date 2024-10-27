@@ -39,5 +39,14 @@
   programs.gamescope = {
     enable = true;
     capSysNice = false;
+    args = [
+      "-W 1920"
+      "-H 1200"
+      "-w 1280"
+      "-h 800"
+      "-F fsr"
+      "--fsr-sharpness 10"
+      "-f"
+    ];
   };
 }

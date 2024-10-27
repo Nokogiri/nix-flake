@@ -8,14 +8,14 @@
     ./fuzzel.nix
     ./gpg-agent.nix
     ./joplin-d.nix
-    ./kitty.nix
+    #./kitty.nix
     ./rbw.nix
     ./rofi
     ./swaync
     ./swayosd.nix
     ./udisks.nix
     ./vscode.nix
-    ./wofi
+    #./wofi
     ./xdg
     ./ydotool.nix
     ./zathura.nix
