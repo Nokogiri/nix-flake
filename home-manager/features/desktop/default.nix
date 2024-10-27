@@ -5,17 +5,14 @@
     ./colors.nix
     ./firefox
     ./foot.nix
-    ./fuzzel.nix
     ./gpg-agent.nix
     ./joplin-d.nix
-    #./kitty.nix
     ./rbw.nix
     ./rofi
-    ./swaync
+    ./swaync.nix
     ./swayosd.nix
     ./udisks.nix
     ./vscode.nix
-    #./wofi
     ./xdg
     ./ydotool.nix
     ./zathura.nix

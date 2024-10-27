@@ -6,7 +6,7 @@
     ./wvkbd.nix
   ];
   home.packages = with pkgs; [
-    inputs.stable.legacyPackages.x86_64-linux.cliphist
+    cliphist
     swayimg
     wl-clipboard
   ];
