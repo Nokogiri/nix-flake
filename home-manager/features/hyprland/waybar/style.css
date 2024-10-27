@@ -50,7 +50,7 @@ tooltip * {
 }
 
 window#waybar {
-    background: linear-gradient(0deg, @background 20%, @background-darker 100%);
+    background: @background-alt; /*linear-gradient(0deg, @background 20%, @background-darker 100%);*/
     transition-duration: 1.5s;
     transition-property: color;
 }

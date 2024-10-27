@@ -23,7 +23,7 @@
     hyprprop
     iio-hyprland
     scratchpad
-    wayfreeze
+    #wayfreeze
   ];
 
   programs.waybar = {

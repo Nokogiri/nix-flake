@@ -25,8 +25,8 @@
       bind = [
         "SUPER,Return,exec,${pkgs.foot}/bin/footclient"
         "SUPER,w,exec,${pkgs.swaynotificationcenter}/bin/swaync-client -t"
-        "SUPER,p,exec,pkill -9 rofi || ${pkgs.rofi}/bin/rofi -show drun"
-        "SUPER,i,exec,cliphist list | ${pkgs.rofi}/bin/rofi -dmenu | cliphist decode | wl-copy"
+        "SUPER,p,exec,pkill -9 rofi || ${pkgs.rofi-wayland}/bin/rofi -show drun -modes drun,filebrowser,keys,window"
+        "SUPER,i,exec,cliphist list | ${pkgs.rofi-wayland}/bin/rofi -dmenu | cliphist decode | wl-copy"
         ",XF86Tools,exec,pkill -USR1 waybar # profile button"
         ",Print,exec,grimblast --notify copy output"
         "SHIFT,Print,exec,grimblast --notify copy active"
@@ -129,20 +129,22 @@
         "SUPERSHIFT,9,movetoworkspacesilent,09"
       ];
       decoration = {
-        "col.shadow" = "rgba(1E202911)";
+        "col.shadow" = "rgba(0C0E13A6)";
         active_opacity = "1.0";
         inactive_opacity = "0.8";
         fullscreen_opacity = "1.0";
         rounding = "10";
-        drop_shadow = false;
-        shadow_range = "8";
-        shadow_offset = "4 6";
-        shadow_render_power = "1";
+        drop_shadow = true;
+        shadow_range = "16";
+        shadow_offset = "2 2";
+        shadow_render_power = "2";
         shadow_scale = "0.97";
         blur = {
           enabled = true;
-          size = "8";
-          passes = "1";
+          size = "5";
+          passes = "2";
+          ignore_opacity = true;
+          new_optimizations = true;
         };
       };
       device = [
@@ -271,6 +273,25 @@
 
       windowrulev2 = nomaxsize,class:^(com.github.xournalpp.xournalpp)$
       layerrule=blur, gtk-layer-shell
+      layerrule = blur, logout_dialog
+
+    layerrule = blur, class:^(swww)$
+    layerrule = blur, (rofi)
+    layerrule = blur, (waybar)
+
+    layerrule = blur, swaync-control-center
+    layerrule = blur, swaync-notification-window
+
+    # Tweaks to work with blur -----------------------------------
+
+    layerrule = unset, rofi
+    layerrule = ignorezero, rofi
+
+    layerrule = ignorezero, swaync-control-center
+    layerrule = ignorezero, swaync-notification-window
+
+    layerrule = ignorealpha 0.5, swaync-control-center
+    layerrule = ignorealpha 0.5, swaync-notification-window
 
       # Center Stuff
       windowrulev2 = center,class:^(heroic)$,title:^(Exit)$

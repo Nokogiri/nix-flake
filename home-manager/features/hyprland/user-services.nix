@@ -3,8 +3,10 @@ let
   image = "${
     (pkgs.fetchurl {
       #url = "https://files.fishoeder.net/walls/dusk/DUSKAsAbove.png";
-      url = "https://next.fishoeder.net/s/BJyXtyinBnDoJwT/download/DUSK%20So%20Below%201440p.png";
-      hash = "sha256-yIHe+i7+rUYwJipXV9hAXsyFdPsO8FAIQ0cnAQbbRGA=";
+      #url = "https://next.fishoeder.net/s/BJyXtyinBnDoJwT/download/DUSK%20So%20Below%201440p.png";
+      url = "https://next.fishoeder.net/s/EB6D8Czb7E23QpQ/download/DUSK%20As%20Above%201440p.png";
+      #hash = "sha256-yIHe+i7+rUYwJipXV9hAXsyFdPsO8FAIQ0cnAQbbRGA=";
+      hash = "sha256-IQKk6kwqfzgMkT6bt4/kXen3ft/Is7QyuOBDxlMPYhk=";
     })
   }";
 in
