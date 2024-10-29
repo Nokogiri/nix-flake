@@ -1,11 +1,11 @@
 {
-  fileSystems."/export/Vault3.1" = {
-    device = "/media/Vault3.1";
+  fileSystems."/export/Vault0.1" = {
+    device = "/media/Vault0.1";
     options = [ "bind" ];
   };
 
-  fileSystems."/export/Vault0.1" = {
-    device = "/media/Vault0.1";
+  fileSystems."/export/Vault3.1" = {
+    device = "/media/Vault3.1";
     options = [ "bind" ];
   };
   #fileSystems."/export/Vault1.1" = {
@@ -41,8 +41,8 @@
     ];
   };
   services.nfs.server.exports = ''
-    /export            10.200.200.0/24(rw,fsid=0,no_subtree_check) 192.168.178.0/24(rw,fsid=0,no_subtree_check)
-    /export/Vault0.1   10.200.200.0/24(rw,nohide,insecure,no_subtree_check) 192.168.178.0/24(rw,nohide,insecure,no_subtree_check)
-    /export/Vault3.1   10.200.200.0/24(rw,nohide,insecure,no_subtree_check) 192.168.178.0/24(rw,nohide,insecure,no_subtree_check)
+    /export          10.200.200.0/24(rw,fsid=0,no_subtree_check) 192.168.178.0/24(rw,fsid=0,no_subtree_check)
+    /export/Vault1   10.200.200.0/24(rw,nohide,insecure,no_subtree_check) 192.168.178.0/24(rw,nohide,insecure,no_subtree_check)
+    /export/Vault3   10.200.200.0/24(rw,nohide,insecure,no_subtree_check) 192.168.178.0/24(rw,nohide,insecure,no_subtree_check)
   '';
 }

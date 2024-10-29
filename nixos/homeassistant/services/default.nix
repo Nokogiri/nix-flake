@@ -3,7 +3,7 @@
     ./fail2ban.nix
     ./flood.nix
     ./nextcloud.nix
-    ./nfs-server.nix
+    #./nfs-server.nix
     ./nginx
     ./samba.nix
     ./podman

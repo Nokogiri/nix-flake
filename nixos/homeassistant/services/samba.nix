@@ -33,7 +33,7 @@
         "force group" = "users";
       };
       Vault1 = {
-        path = "/media/Vault1.1";
+        path = "/media/Vault0.1";
         browseable = "yes";
         "read only" = "no";
         "guest ok" = "yes";
