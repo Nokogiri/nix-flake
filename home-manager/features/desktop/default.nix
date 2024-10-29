@@ -56,7 +56,7 @@
       package = pkgs.dracula-theme;
     };
     font = {
-      name = "JetBrainsMono Nerd Font Propo";
+      name = "IntoneMono Nerd Font Propo";
       size = 11;
     };
     theme = {

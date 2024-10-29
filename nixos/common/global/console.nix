@@ -6,7 +6,6 @@
     font = "${pkgs.terminus_font}/share/consolefonts/ter-v20b.psf.gz";
     packages = [ pkgs.terminus_font ];
     colors = [
-      #"282a36"
       "000000"
       "ff5555"
       "50fa7b"

@@ -14,17 +14,6 @@
     dconf.enable = true;
   };
 
-  environment.profileRelativeSessionVariables =
-    let
-      qtVersions = with pkgs; [
-        qt5
-        qt6
-      ];
-    in
-    {
-      QT_PLUGIN_PATH = map (qt: "/${qt.qtbase.qtPluginPrefix}") qtVersions;
-      QML2_IMPORT_PATH = map (qt: "/${qt.qtbase.qtQmlPrefix}") qtVersions;
-    };
   environment.systemPackages = with pkgs; [
     xfce.thunar
     dracula-theme
@@ -47,6 +36,7 @@
       (nerdfonts.override {
         fonts = [
           "NerdFontsSymbolsOnly"
+          "IntelOneMono"
           "JetBrainsMono"
         ];
       })
@@ -57,6 +47,12 @@
     fontconfig = {
       enable = true;
       antialias = true;
+      defaultFonts = {
+        serif = [ "IntoneMono Nerd Font Propo" ];
+        sansSerif = [ "IntoneMono Nerd Font Propo" ];
+        monospace = [ "IntoneMono Nerd Font" ];
+        emoji = [ "Noto Color Emoji" ];
+      };
     };
   };
 
@@ -73,7 +69,7 @@
       enable = true;
       packages = [ pkgs.gcr ];
     };
-    flatpak.enable = true;
+    flatpak.enable = false;
     printing.enable = true;
     udisks2.enable = true;
     upower.enable = true;

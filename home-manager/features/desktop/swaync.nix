@@ -15,7 +15,7 @@
 
         all: unset;
         font-size: 14px;
-        font-family: "JetBrains Mono Nerd Font 10";
+        font-family: "IntoneMono Nerd Font 11";
         transition: 200ms;
 
       }
@@ -373,7 +373,7 @@
       "positionX" = "right";
       "positionY" = "top";
       "cssPriority" = "user";
-      "control-center-width" = 380;
+      "control-center-width" = 480;
       "control-center-height" = 860;
       "control-center-margin-top" = 1;
       "control-center-margin-bottom" = 1;
