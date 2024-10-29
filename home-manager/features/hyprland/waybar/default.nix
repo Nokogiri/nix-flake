@@ -1,10 +1,8 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
-  xdg.configFile."waybar/colors.css".source = ./colors.css;
   home.packages = [ pkgs.wttrbar ];
   programs.waybar = {
     enable = true;
-    package = inputs.nixpkgs-master.legacyPackages.x86_64-linux.waybar;
     style = ./style.css;
     settings = {
       mainBar = {
@@ -15,12 +13,24 @@
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "clock" ];
         modules-right = [
-          "tray"
+          #"tray"
+          "group/misc"
           "battery"
           "network"
           "pulseaudio"
         ];
-
+        "group/misc" = {
+          orientation = "inherit";
+          drawer = {
+            transition-duration = 500;
+            children-class = "not-power";
+            transition-left-to-right = false;
+          };
+          modules = [
+            "network"
+            "tray"
+          ];
+        };
         "hyprland/workspaces" = {
           format = "{icon}";
           on-click = "activate";

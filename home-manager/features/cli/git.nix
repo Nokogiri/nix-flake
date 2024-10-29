@@ -27,7 +27,6 @@
       };
       delta = {
         enable = true;
-        package = inputs.nixpkgs-master.legacyPackages.x86_64-linux.delta;
       };
     };
     gitui = {

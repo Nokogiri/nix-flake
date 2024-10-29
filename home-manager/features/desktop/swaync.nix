@@ -373,7 +373,7 @@
       "positionX" = "right";
       "positionY" = "top";
       "cssPriority" = "user";
-      "control-center-width" = 480;
+      "control-center-width" = 380;
       "control-center-height" = 860;
       "control-center-margin-top" = 1;
       "control-center-margin-bottom" = 1;

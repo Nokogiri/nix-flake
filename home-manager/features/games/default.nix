@@ -13,11 +13,9 @@
     vkbasalt
     heroic
     google-chrome # GFN
-    #inputs.stable.legacyPackages.x86_64-linux.portmod
 
     gzdoom
     sm64ex
-    #minetest
     vintagestory
     # emulation
     cemu
