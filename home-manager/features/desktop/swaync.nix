@@ -29,6 +29,7 @@
 
       .control-center {
         background: alpha(@background, .55);
+        /*background: @background-alt;*/
         border-radius: 10px;
         border: 1px solid @selected;
         box-shadow: 0 0 10px 0 rgba(0,0,0,.6);

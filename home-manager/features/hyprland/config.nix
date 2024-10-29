@@ -284,9 +284,10 @@
 
       # Tweaks to work with blur -----------------------------------
 
-      layerrule = unset, rofi
-      layerrule = ignorezero, rofi
-
+      #layerrule = unset, (rofi)
+      #layerrule = ignorezero, (rofi)
+      
+      #layerrule = unset, (swaync-control-center)
       layerrule = ignorezero, swaync-control-center
       layerrule = ignorezero, swaync-notification-window
 
