@@ -52,8 +52,12 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    #wezterm = {
+    #  url = "git+https://github.com/wez/wezterm?dir=nix&submodules=1";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     wezterm = {
-      url = "git+https://github.com/wez/wezterm?dir=nix&submodules=1";
+      url = "github:wez/wezterm/main?dir=nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
