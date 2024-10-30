@@ -780,11 +780,11 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1730240096,
-        "narHash": "sha256-DOO0JWUCfHvomz/90VT1VCtT8cjyTj0d9qxllHdei6U=",
+        "lastModified": 1730263663,
+        "narHash": "sha256-6qkh67ScZi1Twp8s1e6df2TinQb0QQGwkDZBQZhSKW8=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "2fcea20ca076cf1b28cf96c8f8ad2056b1c3221f",
+        "rev": "bc6857069763f5721a53462eaf72016fafe002ff",
         "type": "github"
       },
       "original": {
@@ -972,11 +972,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1730240607,
-        "narHash": "sha256-DGDI+iQlPZKfocBab9BY4R/pN2PGIOvHgEEwfxQsh6M=",
+        "lastModified": 1730271065,
+        "narHash": "sha256-EJJhMuTrkAv+cMmHo7fDyNrj5NCB0k/IhV14U2aJTX4=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "142092eb842a145ed21ea07425d52e73d72fe856",
+        "rev": "4f51380b183157a611b7e87d1286cca0930c850f",
         "type": "github"
       },
       "original": {
@@ -1071,11 +1071,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1730175473,
-        "narHash": "sha256-JASnF3cFrQ1k6KsitR2yylpeWdPNb2xJeIaMeipe3BA=",
+        "lastModified": 1730261837,
+        "narHash": "sha256-syeN2dLFxJ9bhsG1YnwWpwMgCttBY1S60KUrqLIrmMo=",
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "rev": "446351c37e053a0098aa19d8c61448bbcfd8f0cc",
+        "rev": "1c482c8baffd494119b7f61735d35c62a0a22244",
         "type": "github"
       },
       "original": {
@@ -1220,17 +1220,19 @@
       "locked": {
         "dir": "nix",
         "lastModified": 1729006311,
-        "narHash": "sha256-1xtKJHu6CFnOhp4snof+WSTwcdPgwIaD6mBODP/cv3w=",
-        "owner": "wez",
-        "repo": "wezterm",
+        "narHash": "sha256-BC+qJ54hF+iFtq15/ygQNHjLUkncWmM2ueIMDwjGmiE=",
+        "ref": "refs/heads/main",
         "rev": "9ddca7bde92090792dbcdc65c1e9897c362196d7",
-        "type": "github"
+        "revCount": 8158,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/wez/wezterm"
       },
       "original": {
         "dir": "nix",
-        "owner": "wez",
-        "repo": "wezterm",
-        "type": "github"
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/wez/wezterm"
       }
     },
     "xdph": {
