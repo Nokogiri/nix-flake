@@ -95,7 +95,6 @@
         remember_window_size = true;
         initial_window_width = 800;
         initial_window_height = 900;
-        #enabled_layouts = "tall:bias=50;full_size=1;mirrored=false";
         window_resize_step_cells = 2;
         window_resize_step_lines = 2;
         window_border_width = 1;
@@ -110,8 +109,7 @@
         resize_draw_strategy = "scale";
 
         # Opacity settings
-        background_opacity = "0.85";
-        #dim_opacity = "0.4";
+        background_opacity = "0.55";
       };
       keybindings = {
         "kitty_mod+c" = "copy_to_clipboard";

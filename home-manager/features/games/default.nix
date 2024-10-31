@@ -2,7 +2,7 @@
 {
   imports = [
     ./mangohud
-    ./stl.nix
+    #./stl.nix
     #./wine.nix
   ];
 
@@ -21,7 +21,7 @@
     cemu
     ares
     melonDS
-    #lime3ds
+    lime3ds
     dolphin-emu-beta
     pcsx2
     ppsspp

@@ -13,7 +13,7 @@
     ./swayosd.nix
     ./udisks.nix
     ./vscode.nix
-    ./wezterm.nix
+    ./kitty.nix
     ./xdg
     ./ydotool.nix
     ./zathura.nix

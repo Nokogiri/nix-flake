@@ -36,15 +36,15 @@
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
     };
-    hyprpaper = {
-      url = "github:hyprwm/hyprpaper";
-    };
-    hyprlock = {
-      url = "github:hyprwm/hyprlock";
-    };
-    hypridle = {
-      url = "github:hyprwm/hypridle";
-    };
+    #hyprpaper = {
+    #  url = "github:hyprwm/hyprpaper";
+    #};
+    #hyprlock = {
+    #  url = "github:hyprwm/hyprlock";
+    #};
+    #hypridle = {
+    #  url = "github:hyprwm/hypridle";
+    #};
     iio-hyprland = {
       url = "github:JeanSchoeller/iio-hyprland";
     };
@@ -56,10 +56,10 @@
     #  url = "git+https://github.com/wez/wezterm?dir=nix&submodules=1";
     #  inputs.nixpkgs.follows = "nixpkgs";
     #};
-    wezterm = {
-      url = "github:wez/wezterm/main?dir=nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #wezterm = {
+    #  url = "github:wez/wezterm/main?dir=nix";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
   };
 
   outputs =
