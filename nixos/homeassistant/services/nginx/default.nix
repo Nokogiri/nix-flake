@@ -1,9 +1,9 @@
 { config, ... }:
 {
   imports = [
-    ./sites/cache.fishoeder.net.nix
+    #./sites/cache.fishoeder.net.nix
     ./sites/files.fishoeder.net.nix
-    ./sites/food.fishoeder.net.nix
+    #./sites/food.fishoeder.net.nix
     ./sites/home.fishoeder.net.nix
     ./sites/mealie.fishoeder.net.nix
     #./sites/git.fishoeder.net.nix
