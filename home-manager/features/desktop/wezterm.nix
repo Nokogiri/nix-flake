@@ -1,8 +1,10 @@
-{ inputs, pkgs, ... }:{
+{ inputs, pkgs, ... }:
+{
   programs.wezterm = {
     enable = true;
     #package = inputs.stable.legacyPackages.x86_64-linux.wezterm;
     #package = inputs.wezterm.packages.x86_64-linux.default;
+    package = inputs.nixpkgs-master.legacyPackages.x86_64-linux.wezterm;
     extraConfig = ''
       return {
         -- color_scheme = "Dracula",

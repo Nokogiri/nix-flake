@@ -23,6 +23,7 @@
     ../common/optional/mullvad.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
+    #../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix

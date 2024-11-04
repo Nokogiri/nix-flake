@@ -32,9 +32,12 @@
     protontricks.enable = true;
     remotePlay.openFirewall = true;
     extraCompatPackages = with pkgs; [
-      #proton-ge-bin
-      steamtinkerlaunch
+      proton-ge-bin
+      #steamtinkerlaunch
     ];
+    #extraPackages = with pkgs; [
+    #  gamemode
+    #];
   };
   programs.gamescope = {
     enable = true;

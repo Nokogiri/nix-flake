@@ -1,16 +1,14 @@
-{ pkgs, inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     ./mangohud
-    #./stl.nix
-    #./wine.nix
   ];
 
   home.sessionVariables.WINEDEBUG = "-all";
 
   home.packages = with pkgs; [
     mangohud
-    vkbasalt
+    #vkbasalt
     heroic
     google-chrome # GFN
 
@@ -18,7 +16,8 @@
     sm64ex
     vintagestory
     # emulation
-    cemu
+    #cemu
+    #inputs.nixpkgs-master.legacyPackages.x86_64-linux.cemu
     ares
     melonDS
     lime3ds

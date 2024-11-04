@@ -11,10 +11,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     lix = {
-      url = "git+https://git@git.lix.systems/lix-project/lix?ref=refs/tags/2.91.0";
+      url = "git+https://git@git.lix.systems/lix-project/lix?ref=refs/tags/2.91.1";
     };
     lix-module = {
-      url = "git+https://git.lix.systems/lix-project/nixos-module?ref=refs/tags/2.91.0";
+      url = "git+https://git.lix.systems/lix-project/nixos-module?ref=refs/tags/2.91.1";
       inputs.lix.follows = "lix";
       inputs.nixpkgs.follows = "nixpkgs";
     };

@@ -172,12 +172,12 @@
       general = {
         gaps_in = "12";
         gaps_out = "16";
-        border_size = "2";
+        border_size = "1";
         "col.active_border" = "rgb(44475a) rgb(bd93f9) 90deg";
         "col.inactive_border" = "rgba(44475aaa)";
         "col.nogroup_border" = "rgba(282a36dd)";
         "col.nogroup_border_active" = "rgb(bd93f9) rgb(44475a) 90deg";
-        no_border_on_floating = false;
+        no_border_on_floating = true;
 
         # non-gradient alternative
         #col.active_border = rgb(bd93f9)
@@ -286,7 +286,7 @@
 
       #layerrule = unset, (rofi)
       #layerrule = ignorezero, (rofi)
-      
+
       #layerrule = unset, (swaync-control-center)
       layerrule = ignorezero, swaync-control-center
       layerrule = ignorezero, swaync-notification-window

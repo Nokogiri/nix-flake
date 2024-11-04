@@ -14,6 +14,7 @@
     ./udisks.nix
     ./vscode.nix
     ./kitty.nix
+    ./wezterm.nix
     ./xdg
     ./ydotool.nix
     ./zathura.nix
@@ -22,7 +23,6 @@
   home.packages = with pkgs; [
     libnotify
     xdg-utils
-    xfce.thunar
   ];
 
   home.file.".icons/default/index.theme".text = ''

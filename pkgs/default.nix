@@ -4,7 +4,9 @@
   pkgs ? (import ../nixpkgs.nix) { },
 }:
 {
+  #_7zz = pkgs.callPackage ./7zz { };
   amdctl = pkgs.callPackage ./amdctl { };
+  #asmc = pkgs.callPackage ./asmc { };
   dracula-icon-theme = pkgs.callPackage ./dracula-icon-theme { };
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth { };
   nix-stray-roots = pkgs.callPackage ./nix-stray-roots { };

@@ -20,10 +20,6 @@
       "bluetooth.autoswitch-to-headset-profile" = false;
     };
     bluez_monitor.properties = {
-      #"bluez5.enable-sbc-xq" = true;
-      #"bluez5.enable-msbc" = false;
-      #"bluez5.enable-cvsd" = false;
-      #"bluez5.enable-hw-volume" = true;
       "bluez5.roles" = [
         "a2dp_sink"
         "a2dp_source"
