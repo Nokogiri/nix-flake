@@ -3,7 +3,7 @@
   home.packages = [ pkgs.wttrbar ];
   programs.waybar = {
     enable = true;
-    style = ./style.css;
+    style = ./style_nd.css;
     settings = {
       mainBar = {
         layer = "top";

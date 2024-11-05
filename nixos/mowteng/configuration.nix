@@ -63,8 +63,6 @@
   environment.systemPackages = with pkgs; [
     amdctl
     compsize
-    exfatprogs
-    ryzen-monitor-ng
   ];
 
   hardware.graphics = {
