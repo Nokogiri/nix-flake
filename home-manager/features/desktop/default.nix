@@ -14,7 +14,6 @@
     ./udisks.nix
     ./vscode.nix
     ./kitty.nix
-    ./wezterm.nix
     ./xdg
     ./ydotool.nix
     ./zathura.nix

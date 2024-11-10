@@ -10,12 +10,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lix = {
-      url = "git+https://git@git.lix.systems/lix-project/lix?ref=refs/tags/2.91.1";
-    };
     lix-module = {
-      url = "git+https://git.lix.systems/lix-project/nixos-module?ref=refs/tags/2.91.1";
-      inputs.lix.follows = "lix";
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.1-1.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hardware = {
@@ -31,20 +27,11 @@
       url = "github:Mic92/nix-index-database";
     };
     hyprland = {
-      url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.44.1";
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.45.0";
     };
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
     };
-    #hyprpaper = {
-    #  url = "github:hyprwm/hyprpaper";
-    #};
-    #hyprlock = {
-    #  url = "github:hyprwm/hyprlock";
-    #};
-    #hypridle = {
-    #  url = "github:hyprwm/hypridle";
-    #};
     iio-hyprland = {
       url = "github:JeanSchoeller/iio-hyprland";
     };
@@ -52,14 +39,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #wezterm = {
-    #  url = "git+https://github.com/wez/wezterm?dir=nix&submodules=1";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #wezterm = {
-    #  url = "github:wez/wezterm/main?dir=nix";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
   };
 
   outputs =

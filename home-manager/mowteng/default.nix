@@ -19,7 +19,6 @@
 
   home.packages = with pkgs; [
     handlr-regex
-    xournalpp
     gimp
     krita
     mullvad-vpn

@@ -10,11 +10,10 @@
         position = "top";
         height = 42;
 
-        modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "clock" ];
+        modules-left = [ "clock" ];
+        modules-center = [ "hyprland/workspaces" ];
         modules-right = [
-          #"tray"
-          "group/misc"
+          "tray"
           "battery"
           "network"
           "pulseaudio"

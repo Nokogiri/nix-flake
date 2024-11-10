@@ -11,7 +11,6 @@
     extraModprobeConfig = ''
       blacklist pcspkr
       options cfg80211 ieee80211_regdom="DE"
-      options iwlwifi 11n_disable=8
     '';
     extraModulePackages = with config.boot.kernelPackages; [
       cpupower
@@ -34,11 +33,12 @@
       "kvm-amd"
       "zenpower"
       "wireguard"
-      "ntsync"
     ];
-    kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
-    #kernelPackages = pkgs.linuxKernel.packages.linux_lqx;
-    #kernelPackages = pkgs.linuxKernel.packages.linux_latest;
+    #kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
+    kernelPackages = pkgs.linuxKernel.packages.linux_lqx;
+    #kernelPackages = pkgs.linuxKernel.packages.linux_latest_libre;
+
+
     kernelParams = [
       "amd_pstate=active"
       "mitigations=off"

@@ -3,9 +3,10 @@
 * {
   font-family: "IntoneMono Nerd Font Propo";
   font-weight: bold;
+  font-size: 18px;
   min-height: 0;
   /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-  font-size: 100%;
+  /*font-size: 100%;*/
   font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
   padding: 1px;
 
@@ -43,7 +44,7 @@ window#waybar.hidden {
 .modules-left, .modules-right {
 	padding-top: 2px;
 	padding-bottom: 2px;
-	padding-right: 4px;
+  padding-right: 4px;
 	padding-left: 4px;
 } 
 
@@ -168,18 +169,18 @@ window#waybar.hidden {
 	  text-shadow: none;
     padding: 0px;
     border-radius: 9px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.6s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button:hover {
-	border-radius: 10px;
+	border-radius: 9px;
 	/* color: @overlay0; */
 	background-color: rgba(255,255,255,0.2);
- 	padding-left: 2px;
-    padding-right: 2px;
+ 	padding-left: 8px;
+  padding-right: 8px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -190,12 +191,12 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-	color: @color6;
-  	border-radius: 10px;
-    padding-left: 8px;
-    padding-right: 8px;
-    /*animation: gradient_f 20s ease-in infinite;*/
-    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+	color: @purple;
+ 	border-radius: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button.urgent {

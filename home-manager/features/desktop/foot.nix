@@ -11,7 +11,7 @@
       };
       main = {
         pad = "10x10";
-        font = "monospace:size=12";
+        font = "monospace:size=12.5";
       };
       scrollback = {
         indicator-position = "fixed";

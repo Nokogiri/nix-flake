@@ -24,6 +24,7 @@
       };
       bind = [
         "SUPER,Return,exec,${pkgs.foot}/bin/footclient"
+        #"SUPER,Return,exec,wezterm-gui start"
         "SUPER,w,exec,${pkgs.swaynotificationcenter}/bin/swaync-client -t"
         "SUPER,p,exec,pkill -9 rofi || ${pkgs.rofi-wayland}/bin/rofi -show drun -modes drun,filebrowser,keys,window"
         "SUPER,i,exec,cliphist list | ${pkgs.rofi-wayland}/bin/rofi -dmenu | cliphist decode | wl-copy"
@@ -129,16 +130,18 @@
         "SUPERSHIFT,9,movetoworkspacesilent,09"
       ];
       decoration = {
-        "col.shadow" = "rgba(0C0E13A6)";
-        active_opacity = "1.0";
-        inactive_opacity = "0.8";
-        fullscreen_opacity = "1.0";
-        rounding = "10";
-        drop_shadow = true;
-        shadow_range = "16";
-        shadow_offset = "2 2";
-        shadow_render_power = "2";
-        shadow_scale = "0.97";
+          active_opacity = "1.0";
+          inactive_opacity = "0.8";
+          fullscreen_opacity = "1.0";
+          rounding = "10";
+        shadow = {
+          color = "rgba(0C0E13A6)";
+          enabled = true;
+          range = "16";
+          offset = "2 2";
+          render_power = "2";
+          scale = "0.97";
+        };
         blur = {
           enabled = true;
           size = "5";

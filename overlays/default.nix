@@ -10,6 +10,6 @@
   modifications = final: prev: {
     #hyprlock = inputs.hyprlock.packages.x86_64-linux.hyprlock;
     #hypridle = inputs.hypridle.packages.x86_64-linux.hypridle;
-    _7zz = inputs.stable.legacyPackages.x86_64-linux._7zz;
+    # _7zz = inputs.stable.legacyPackages.x86_64-linux._7zz;
   };
 }
