@@ -15,10 +15,11 @@
     vintagestory
 
     # emulation
-    ares
-    lime3ds
+    cemu
     dolphin-emu-beta
+    lime3ds
     pcsx2
     ppsspp
+    retroarchFull
   ];
 }

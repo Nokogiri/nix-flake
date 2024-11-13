@@ -7,6 +7,7 @@
     foreground: #f8f8f2;
     /*background-color: rgba(40, 42, 54, 90%);*/
     /*background-color: #282a36;*/
+    background-color: transparent;
     active-background: #6272a4;
     urgent-background: #ff5555;
     urgent-foreground: #282a36;
@@ -44,6 +45,7 @@
 }
 #textbox {
     text-color: @foreground;
+    background-color: transparent;
 }
 #listview {
     fixed-height: 0;
@@ -124,6 +126,7 @@
 #prompt {
     spacing:    0;
     text-color: @foreground;
+    background-color: transparent;
 }
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
@@ -138,3 +141,5 @@ element-text, element-icon {
     background-color: inherit;
     text-color: inherit;
 }
+
+/* vim:ft=css

@@ -7,13 +7,13 @@
     ./foot.nix
     ./gpg-agent.nix
     ./joplin-d.nix
+    ./obs-studio.nix
     ./rbw.nix
     ./rofi
     ./swaync.nix
     ./swayosd.nix
     ./udisks.nix
     ./vscode.nix
-    ./kitty.nix
     ./xdg
     ./ydotool.nix
     ./zathura.nix
@@ -48,8 +48,8 @@
   gtk = {
     enable = true;
     iconTheme = {
-      name = "Dracula";
-      package = pkgs.dracula-icon-theme;
+      name = "Papirus-Dark";
+      package = (pkgs.papirus-icon-theme.override { color = "black"; });
     };
     cursorTheme = {
       name = "Dracula-cursors";

@@ -16,6 +16,7 @@
 
   environment.systemPackages = with pkgs; [
     dracula-theme
+    (papirus-icon-theme.override { color = "black"; })
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
@@ -91,12 +92,9 @@
   xdg.portal = {
     enable = true;
     extraPortals = [
-      #pkgs.kdePackages.xdg-desktop-portal-kde
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-wlr
     ];
     xdgOpenUsePortal = false;
-    #configPackages = [ pkgs.kdePackages.plasma-workspace ];
     config.common = {
       default = [
         "hyprland"

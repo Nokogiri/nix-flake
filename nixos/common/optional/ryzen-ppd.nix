@@ -2,15 +2,15 @@
 {
   environment.systemPackages = with pkgs; [ ryzen-ppd ];
 
-  systemd.services.ryzen-ppd = {
-    after = [ "dbus.service" ];
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = ":${pkgs.ryzen-ppd}/bin/ryzen-ppd";
-      Environment = "PYTHONUNBUFFERED=1";
-    };
-  };
+  #systemd.services.ryzen-ppd = {
+  #  after = [ "dbus.service" ];
+  #  wantedBy = [ "multi-user.target" ];
+  #  serviceConfig = {
+  #    Type = "simple";
+  #    ExecStart = ":${pkgs.ryzen-ppd}/bin/ryzen-ppd";
+  #    Environment = "PYTHONUNBUFFERED=1";
+  #  };
+  #};
 
   environment.etc."ryzen-ppd.ini".text = ''
     [ryzenadj]

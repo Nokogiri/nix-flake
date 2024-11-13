@@ -22,7 +22,7 @@
     ../common/optional/mullvad.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
-    #../common/optional/ryzen-ppd.nix
+    ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
@@ -99,6 +99,7 @@
     lidSwitchDocked = "suspend";
   };
   services.power-profiles-daemon.enable = true;
+  services.speechd.enable = false;
   services.udev.extraRules = ''
     ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
   '';
