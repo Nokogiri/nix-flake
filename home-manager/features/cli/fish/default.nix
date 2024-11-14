@@ -7,7 +7,7 @@
     }
   );
   programs.atuin.enableFishIntegration = true;
-  programs.zoxide.enableFishIntegration = true;
+  programs.zoxide.enableFishIntegration = false;
   home.packages = [ pkgs.any-nix-shell ];
   programs.fish = {
     enable = true;

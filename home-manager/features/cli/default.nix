@@ -14,7 +14,6 @@
     ./starship.nix
     ./tmux.nix
     ./yazi
-    ./zoxide.nix
   ];
 
   home.sessionVariables = {
