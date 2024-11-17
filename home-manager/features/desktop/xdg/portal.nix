@@ -4,7 +4,7 @@
     enable = true;
     extraPortals = [
       #pkgs.kdePackages.xdg-desktop-portal-kde
-      pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-wlr
       pkgs.xdg-desktop-portal-gtk
     ];
     xdgOpenUsePortal = false;
@@ -13,7 +13,7 @@
       common = {
         default = [
           "gtk"
-          "hyprland"
+          "wlr"
         ];
       };
     };

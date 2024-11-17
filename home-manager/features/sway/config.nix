@@ -16,7 +16,7 @@ in
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
-    package = pkgs.swayfx;
+    #package = pkgs.swayfx;
     extraSessionCommands = ''
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
@@ -129,7 +129,7 @@ in
       keybindings = {
         # Basics apps
         "${cfg.modifier}+Return" = "exec ${cfg.terminal}";
-        "${cfg.modifier}+p" = "exec pkill -9 fuzzel || fuzzel";
+        "${cfg.modifier}+p" = "exec pkill -9 rofi || rofi -show drun";
         "${cfg.modifier}+i" = "exec pkill -9 rofi || cliphist list | rofi -dmenu | cliphist decode | wl-copy";
 
         # basic internals
@@ -246,7 +246,7 @@ in
           command = "${pkgs.dbus.out}/bin/dbus-update-activation-environment --systemd --all";
         }
       ];
-      terminal = "${pkgs.kitty}/bin/kitty";
+      terminal = "${pkgs.foot}/bin/footclient";
       window = {
         border = 0;
         commands = [
@@ -282,25 +282,25 @@ in
       bindgesture swipe:3:right workspace prev
       bindgesture swipe:3:left workspace next
 
-      titlebar_border_thickness 0
+      #titlebar_border_thickness 0
 
       ### SWAYFX 
-      corner_radius 8
-      blur enable
-      blur_passes 2
-      blur_radius 6
-      blur_noise 0.1
-      blur_brightness 0.9
-      blur_contrast 1.0
-      blur_saturation 1.0
-      titlebar_separator disable
-      shadows enable
-      shadow_offset 9 10
-      shadow_blur_radius 6
-      default_dim_inactive 0.5
-      dim_inactive_colors.unfocused #000000CC
-      shadows_on_csd disable
-      layer_effects "rofi" blur enable; corner_radius 8;
+      #corner_radius 8
+      #blur enable
+      #blur_passes 2
+      #blur_radius 6
+      #blur_noise 0.1
+      #blur_brightness 0.9
+      #blur_contrast 1.0
+      #blur_saturation 1.0
+      #titlebar_separator disable
+      #shadows enable
+      #shadow_offset 9 10
+      #shadow_blur_radius 6
+      #default_dim_inactive 0.5
+      #dim_inactive_colors.unfocused #000000CC
+      #shadows_on_csd disable
+      #layer_effects "rofi" blur enable; corner_radius 8;
     '';
     systemd.enable = true;
   };

@@ -18,12 +18,12 @@
       custom = {
         start = ''
           ${pkgs.libnotify}/bin/notify-send 'GameMode started' 
-          ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance
-          ${pkgs.ryzen-ppd}/bin/ryzen-ppd'';
+                          ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance
+        '';
         end = ''
           ${pkgs.libnotify}/bin/notify-send 'GameMode ended' 
-          ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced
-          ${pkgs.procps}/bin/pkill -9 ryzen-ppd'';
+                          ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced
+        '';
       };
     };
   };

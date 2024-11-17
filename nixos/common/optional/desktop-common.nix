@@ -1,10 +1,6 @@
 { inputs, pkgs, ... }:
 {
 
-  imports = [
-    inputs.hyprland.nixosModules.default
-  ];
-
   security.pam.services.swaylock.fprintAuth = true;
   security.pam.services.hyprlock = { };
 
@@ -75,29 +71,16 @@
     upower.enable = true;
   };
 
-  programs = {
-    hyprland = {
-      enable = true;
-      # set the flake package
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-      # make sure to also set the portal package, so that they are in sync
-      portalPackage =
-        inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-    };
-    iio-hyprland = {
-      enable = true;
-      package = inputs.iio-hyprland.packages.${pkgs.system}.default;
-    };
-  };
   xdg.portal = {
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-wlr
     ];
     xdgOpenUsePortal = false;
     config.common = {
       default = [
-        "hyprland"
+        "wlr"
         "gtk"
       ];
       "org.freedesktop.impl.portal.Settings" = [ "gtk" ];
@@ -108,7 +91,6 @@
     "/share/Kvantum"
     "/share/themes"
     "/share/icons"
-    "/share/sddm"
   ];
 
   environment.sessionVariables = {

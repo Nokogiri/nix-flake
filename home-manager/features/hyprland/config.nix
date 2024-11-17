@@ -130,10 +130,10 @@
         "SUPERSHIFT,9,movetoworkspacesilent,09"
       ];
       decoration = {
-          active_opacity = "1.0";
-          inactive_opacity = "0.8";
-          fullscreen_opacity = "1.0";
-          rounding = "10";
+        active_opacity = "1.0";
+        inactive_opacity = "0.8";
+        fullscreen_opacity = "1.0";
+        rounding = "10";
         shadow = {
           color = "rgba(0C0E13A6)";
           enabled = true;

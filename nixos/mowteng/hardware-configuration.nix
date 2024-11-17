@@ -34,10 +34,9 @@
       "zenpower"
       "wireguard"
     ];
-    #kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
-    kernelPackages = pkgs.linuxKernel.packages.linux_lqx;
-    #kernelPackages = pkgs.linuxKernel.packages.linux_latest_libre;
-
+    kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
+    #kernelPackages = pkgs.linuxKernel.packages.linux_lqx;
+    #kernelPackages = pkgs.linuxKernel.packages.linux_latest;
 
     kernelParams = [
       "amd_pstate=active"

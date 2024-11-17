@@ -1,7 +1,7 @@
 { inputs, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    neovide
+    #neovide
     lua-language-server
     nixd
   ];
