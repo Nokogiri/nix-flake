@@ -278,24 +278,24 @@
         layerrule=blur, gtk-layer-shell
         layerrule = blur, logout_dialog
 
-      layerrule = blur, class:^(swww)$
-      layerrule = blur, (rofi)
-      layerrule = blur, (waybar)
+        layerrule = blur, class:^(swww)$
+        layerrule = blur, (rofi)
+        layerrule = blur, (waybar)
 
-      layerrule = blur, swaync-control-center
-      layerrule = blur, swaync-notification-window
+        layerrule = blur, swaync-control-center
+        layerrule = blur, swaync-notification-window
 
-      # Tweaks to work with blur -----------------------------------
+        # Tweaks to work with blur -----------------------------------
 
-      #layerrule = unset, (rofi)
-      #layerrule = ignorezero, (rofi)
+        #layerrule = unset, (rofi)
+        #layerrule = ignorezero, (rofi)
 
-      #layerrule = unset, (swaync-control-center)
-      layerrule = ignorezero, swaync-control-center
-      layerrule = ignorezero, swaync-notification-window
+        #layerrule = unset, (swaync-control-center)
+        layerrule = ignorezero, swaync-control-center
+        layerrule = ignorezero, swaync-notification-window
 
-      layerrule = ignorealpha 0.5, swaync-control-center
-      layerrule = ignorealpha 0.5, swaync-notification-window
+        layerrule = ignorealpha 0.5, swaync-control-center
+        layerrule = ignorealpha 0.5, swaync-notification-window
 
         # Center Stuff
         windowrulev2 = center,class:^(heroic)$,title:^(Exit)$

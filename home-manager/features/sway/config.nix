@@ -16,7 +16,7 @@ in
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
-    #package = pkgs.swayfx;
+    package = pkgs.swayfx;
     extraSessionCommands = ''
       export XDG_SESSION_TYPE=wayland
       export XDG_SESSION_DESKTOP=sway
@@ -285,22 +285,22 @@ in
       #titlebar_border_thickness 0
 
       ### SWAYFX 
-      #corner_radius 8
-      #blur enable
-      #blur_passes 2
-      #blur_radius 6
-      #blur_noise 0.1
-      #blur_brightness 0.9
-      #blur_contrast 1.0
-      #blur_saturation 1.0
-      #titlebar_separator disable
-      #shadows enable
-      #shadow_offset 9 10
-      #shadow_blur_radius 6
-      #default_dim_inactive 0.5
-      #dim_inactive_colors.unfocused #000000CC
-      #shadows_on_csd disable
-      #layer_effects "rofi" blur enable; corner_radius 8;
+      corner_radius 10
+      blur enable
+      blur_passes 2
+      blur_radius 6
+      blur_noise 0.1
+      blur_brightness 0.9
+      blur_contrast 1.0
+      blur_saturation 1.0
+      titlebar_separator disable
+      shadows enable
+      shadow_offset 9 10
+      shadow_blur_radius 6
+      default_dim_inactive 0.5
+      dim_inactive_colors.unfocused #000000CC
+      shadows_on_csd disable
+      layer_effects "rofi" blur enable; corner_radius 8;
     '';
     systemd.enable = true;
   };
