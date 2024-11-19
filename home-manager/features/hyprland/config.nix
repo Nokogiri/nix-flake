@@ -230,81 +230,81 @@
       ];
     };
     extraConfig = ''
-        # Startup
-        exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
-        exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
+      # Startup
+      exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
+      exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
 
-        # Mouse binding
-        bindm=SUPER,mouse:272,movewindow
-        bindm=SUPER,mouse:273,resizewindow
-
-
-        windowrulev2 = workspace 2 silent,class:^(firefox)$
+      # Mouse binding
+      bindm=SUPER,mouse:272,movewindow
+      bindm=SUPER,mouse:273,resizewindow
 
 
-        # polkit
-        windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
-        windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
-        windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
+      windowrulev2 = workspace 2 silent,class:^(firefox)$
 
-        # heroic stuff
-        windowrulev2 = float,class:^(electron)$,title:^(Select Executable)$
-        windowrulev2 = center,class:^(electron)$,title:^(Select Executable)$
-        windowrulev2 = size 60%,class:^(electron)$,title:^(Select Executable)$
 
-        windowrulev2 = center,class:^(xdg-desktop-portal-gtk)$title:^(Open With…)$
-        windowrulev2 = float,center,size=60%,title:^(.*Picture-in-Picture.*)$,class:^(firefox)$
+      # polkit
+      windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
+      windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
+      windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
 
-        # mpv
-        windowrulev2 = workspace 3 silent,class:^(mpv)$
+      # heroic stuff
+      windowrulev2 = float,class:^(electron)$,title:^(Select Executable)$
+      windowrulev2 = center,class:^(electron)$,title:^(Select Executable)$
+      windowrulev2 = size 60%,class:^(electron)$,title:^(Select Executable)$
 
-        # steam
-        windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
-        windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$
-        windowrulev2 = pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$
+      windowrulev2 = center,class:^(xdg-desktop-portal-gtk)$title:^(Open With…)$
+      windowrulev2 = float,center,size=60%,title:^(.*Picture-in-Picture.*)$,class:^(firefox)$
 
-        # pavucontrol
-        windowrulev2 = float,class:^(pavucontrol)$
-        windowrulev2 = center,class:^(pavucontrol)$
-        windowrulev2 = size 66%,class:^(pavucontrol)$
+      # mpv
+      windowrulev2 = workspace 3 silent,class:^(mpv)$
 
-        windowrulev2 = float,title:^(Select EXE to Run)$
+      # steam
+      windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
+      windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$
+      windowrulev2 = pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$
 
-        windowrulev2 = float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$
+      # pavucontrol
+      windowrulev2 = float,class:^(pavucontrol)$
+      windowrulev2 = center,class:^(pavucontrol)$
+      windowrulev2 = size 66%,class:^(pavucontrol)$
 
-        #windowrulev2 = forceinput,class:^(.gamescope-wrapped)$
+      windowrulev2 = float,title:^(Select EXE to Run)$
 
-        windowrulev2 = nomaxsize,class:^(com.github.xournalpp.xournalpp)$
-        layerrule=blur, gtk-layer-shell
-        layerrule = blur, logout_dialog
+      windowrulev2 = float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$
 
-        layerrule = blur, class:^(swww)$
-        layerrule = blur, (rofi)
-        layerrule = blur, (waybar)
+      #windowrulev2 = forceinput,class:^(.gamescope-wrapped)$
 
-        layerrule = blur, swaync-control-center
-        layerrule = blur, swaync-notification-window
+      windowrulev2 = nomaxsize,class:^(com.github.xournalpp.xournalpp)$
+      layerrule=blur, gtk-layer-shell
+      layerrule = blur, logout_dialog
 
-        # Tweaks to work with blur -----------------------------------
+      layerrule = blur, class:^(swww)$
+      layerrule = blur, (rofi)
+      layerrule = blur, (waybar)
 
-        #layerrule = unset, (rofi)
-        #layerrule = ignorezero, (rofi)
+      layerrule = blur, swaync-control-center
+      layerrule = blur, swaync-notification-window
 
-        #layerrule = unset, (swaync-control-center)
-        layerrule = ignorezero, swaync-control-center
-        layerrule = ignorezero, swaync-notification-window
+      # Tweaks to work with blur -----------------------------------
 
-        layerrule = ignorealpha 0.5, swaync-control-center
-        layerrule = ignorealpha 0.5, swaync-notification-window
+      #layerrule = unset, (rofi)
+      #layerrule = ignorezero, (rofi)
 
-        # Center Stuff
-        windowrulev2 = center,class:^(heroic)$,title:^(Exit)$
-        windowrulev2 = center,class:^(gimp-2.99)$,floating:1
-        windowrulev2 = center,class:^(file-*),title:^(Export Image as*),floating:1
-        windowrulev2 = center,title:^(Really Quit*),floating:1
+      #layerrule = unset, (swaync-control-center)
+      layerrule = ignorezero, swaync-control-center
+      layerrule = ignorezero, swaync-notification-window
 
-        # misc
-        #windowrulev2 = stayfocused, title:^(Steam)$, class:^(steam)$
+      layerrule = ignorealpha 0.5, swaync-control-center
+      layerrule = ignorealpha 0.5, swaync-notification-window
+
+      # Center Stuff
+      windowrulev2 = center,class:^(heroic)$,title:^(Exit)$
+      windowrulev2 = center,class:^(gimp-2.99)$,floating:1
+      windowrulev2 = center,class:^(file-*),title:^(Export Image as*),floating:1
+      windowrulev2 = center,title:^(Really Quit*),floating:1
+
+      # misc
+      #windowrulev2 = stayfocused, title:^(Steam)$, class:^(steam)$
 
     '';
   };
