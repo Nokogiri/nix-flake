@@ -12,8 +12,6 @@
     ../features/media
     ../features/nvim
     ../features/sway
-    #../features/hyprland
-
     inputs.nur.nixosModules.nur
   ];
 

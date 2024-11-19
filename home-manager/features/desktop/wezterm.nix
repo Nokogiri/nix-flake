@@ -12,7 +12,7 @@
         front_end = "WebGpu",
         color_scheme = 'Dracula',
         warn_about_missing_glyphs=false,
-        animation_fps = 48,
+        animation_fps = 6,
         enable_kitty_graphics=true,
         enable_wayland = true,
         default_cursor_style = "BlinkingUnderline",
