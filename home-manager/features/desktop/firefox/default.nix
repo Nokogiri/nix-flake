@@ -22,22 +22,21 @@
   programs.firefox = {
     enable = true;
     nativeMessagingHosts = [ pkgs.ff2mpv-go ];
-    profiles.nokogiri.extensions =
-      with config.nur.repos.rycee.firefox-addons; [
-        faststream
-        ff2mpv
-        firefox-color
-        ublock-origin
-        onetab
-        bitwarden
-        sidebery
-        newtab-adapter
-        sponsorblock
-        surfingkeys
-        tridactyl
-        torrent-control
-        enhancer-for-youtube
-      ];
+    profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [
+      faststream
+      ff2mpv
+      firefox-color
+      ublock-origin
+      onetab
+      bitwarden
+      sidebery
+      newtab-adapter
+      sponsorblock
+      surfingkeys
+      tridactyl
+      torrent-control
+      enhancer-for-youtube
+    ];
 
     profiles.nokogiri = {
       name = "nokogiri";
@@ -71,17 +70,16 @@
       };
     };
 
-    profiles.private.extensions =
-      with config.nur.repos.rycee.firefox-addons; [
-        ublock-origin
-        firefox-color
-        onetab
-        #surfingkeys
-        tridactyl
-        sidebery
-        sponsorblock
-        ff2mpv
-      ];
+    profiles.private.extensions = with config.nur.repos.rycee.firefox-addons; [
+      ublock-origin
+      firefox-color
+      onetab
+      #surfingkeys
+      tridactyl
+      sidebery
+      sponsorblock
+      ff2mpv
+    ];
     profiles.private = {
       name = "private";
       path = "private";

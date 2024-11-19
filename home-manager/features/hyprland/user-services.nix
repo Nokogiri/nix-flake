@@ -21,9 +21,7 @@ in
       };
       Service = {
         Type = "simple";
-        ExecStart = "${
-          inputs.iio-hyprland.packages.${pkgs.system}.default
-        }/bin/iio-hyprland";
+        ExecStart = "${inputs.iio-hyprland.packages.${pkgs.system}.default}/bin/iio-hyprland";
         Restart = "on-failure";
       };
       Install = {
