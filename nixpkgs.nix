@@ -2,7 +2,8 @@
 # This is useful to avoid using channels when using legacy nix commands
 let
   lock =
-    (builtins.fromJSON (builtins.readFile ./flake.lock)).nodes.nixpkgs.locked;
+    (builtins.fromJSON (builtins.readFile ./flake.lock))
+    .nodes.nixpkgs.locked;
 in
 import (fetchTarball {
   url = "https://github.com/nixos/nixpkgs/archive/${lock.rev}.tar.gz";
