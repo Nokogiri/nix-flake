@@ -30,15 +30,6 @@
       url = "git+https://github.com/wez/wezterm?dir=nix&submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #hyprland = {
-    #url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.45.1";
-    #};
-    #hyprland-contrib = {
-    #  url = "github:hyprwm/contrib";
-    #};
-    #iio-hyprland = {
-    #  url = "github:JeanSchoeller/iio-hyprland";
-    #};
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
