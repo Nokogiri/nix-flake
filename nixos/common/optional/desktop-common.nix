@@ -1,6 +1,8 @@
 { inputs, pkgs, ... }:
 {
-
+  #imports = [
+  #  inputs.hyprland.nixosModules.default
+  #];
   security.pam.services.swaylock.fprintAuth = true;
   security.pam.services.hyprlock = { };
 
@@ -51,7 +53,17 @@
       };
     };
   };
-
+  programs = {
+    hyprland = {
+      enable = true;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    };
+    iio-hyprland = {
+      enable = true;
+      package = inputs.iio-hyprland.packages.${pkgs.system}.default;
+    };
+  };
   qt = {
     enable = true;
     style = "kvantum";
@@ -75,12 +87,12 @@
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-wlr
+      #pkgs.xdg-desktop-portal-wlr
     ];
     xdgOpenUsePortal = false;
     config.common = {
       default = [
-        "wlr"
+        "hyprland"
         "gtk"
       ];
       "org.freedesktop.impl.portal.Settings" = [ "gtk" ];

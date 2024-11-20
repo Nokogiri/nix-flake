@@ -7,9 +7,7 @@ let
   cfg = config.wayland.windowManager.sway.config;
   image = "${
     (pkgs.fetchurl {
-      #url = "https://next.fishoeder.net/s/BJyXtyinBnDoJwT/download/DUSK%20So%20Below%201440p.png";
       url = "https://next.fishoeder.net/s/XobW8J2DiN7pAXo/download/dIbcnTB.png";
-      #hash = "sha256-yIHe+i7+rUYwJipXV9hAXsyFdPsO8FAIQ0cnAQbbRGA=";
       hash = "sha256-PYWWdCzHCJIUxNC7TDTN0t6NSRVB0DiUyfe5Ve/z5Dc=";
     })
   }";

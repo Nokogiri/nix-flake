@@ -16,7 +16,6 @@
     ./vscode.nix
     ./xdg
     ./ydotool.nix
-    ./wezterm.nix
     ./zathura.nix
   ];
 

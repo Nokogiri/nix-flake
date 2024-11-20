@@ -26,10 +26,19 @@
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
     };
-    wezterm = {
-      url = "git+https://github.com/wez/wezterm?dir=nix&submodules=1";
-      inputs.nixpkgs.follows = "nixpkgs";
+    hyprland = {
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.45.2";
     };
+    hyprland-contrib = {
+      url = "github:hyprwm/contrib";
+    };
+    iio-hyprland = {
+      url = "github:JeanSchoeller/iio-hyprland";
+    };
+    #wezterm = {
+    #  url = "git+https://github.com/wez/wezterm?dir=nix&submodules=1";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
