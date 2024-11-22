@@ -12,6 +12,7 @@
     google-chrome # GFN
 
     gzdoom
+    openjk
     vintagestory
 
     # emulation

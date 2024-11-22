@@ -2,7 +2,7 @@
 {
   sops.secrets.nextadmin = {
     sopsFile = ../../common/secrets.yaml;
-    owner = config.users.users.nobody.name; # config.services.mealie.user;
+    owner = config.users.users.nobody.name;
     group = config.users.users.nobody.group;
     mode = "0666";
   };
@@ -24,7 +24,6 @@
     https = true;
     package = pkgs.nextcloud30;
     database.createLocally = true;
-    #datadir = "/media/Vault0.1/nextcloud-store";
     configureRedis = true;
     maxUploadSize = "10G";
     phpOptions = {

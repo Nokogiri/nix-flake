@@ -21,5 +21,6 @@
     gimp
     krita
     mullvad-vpn
+    nextcloud-client
   ];
 }
