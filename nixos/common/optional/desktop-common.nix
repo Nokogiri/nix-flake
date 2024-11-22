@@ -1,8 +1,8 @@
 { inputs, pkgs, ... }:
 {
-  #imports = [
-  #  inputs.hyprland.nixosModules.default
-  #];
+  imports = [
+    inputs.hyprland.nixosModules.default
+  ];
   security.pam.services.swaylock.fprintAuth = true;
   security.pam.services.hyprlock = { };
 
