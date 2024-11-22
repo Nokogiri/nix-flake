@@ -7,7 +7,6 @@
       general = {
         renice = 10;
       };
-
       # Warning: GPU optimisations have the potential to damage hardware
       gpu = {
         apply_gpu_optimisations = "accept-responsibility";
@@ -37,9 +36,25 @@
       proton-ge-bin
       #steamtinkerlaunch
     ];
-    #extraPackages = with pkgs; [
-    #  gamemode
-    #];
+    extraPackages = with pkgs; [
+      xorg.libXcursor
+      xorg.libXi
+      xorg.libXinerama
+      xorg.libXScrnSaver
+      libpng
+      libvorbis
+      stdenv.cc.cc.lib
+      libkrb5
+      keyutils
+      mangohud
+      (writeShellScriptBin "launch-gamescope" ''
+        if [ -z "$WAYLAND_DISPLAY" ]; then
+          exec nice -n -11 -- gamescope "$@"
+        else
+          exec env LD_PRELOAD="" nice -n -11 -- gamescope -e "$@"
+        fi
+      '')
+    ];
   };
   programs.gamescope = {
     enable = true;
@@ -47,8 +62,8 @@
     args = [
       "-W 1920"
       "-H 1200"
-      "-w 1280"
-      "-h 800"
+      "-w 1472"
+      "-h 920"
       "-F fsr"
       "--fsr-sharpness 10"
       "-f"

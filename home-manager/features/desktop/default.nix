@@ -22,6 +22,9 @@
   home.packages = with pkgs; [
     libnotify
     xdg-utils
+    (writeShellScriptBin "launch-gamescope" ''
+      exec nice -n -11 -- gamescope "$@"
+    '')
   ];
 
   home.file.".icons/default/index.theme".text = ''

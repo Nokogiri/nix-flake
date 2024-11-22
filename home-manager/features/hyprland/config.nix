@@ -22,9 +22,12 @@
       binds = {
         workspace_back_and_forth = true;
       };
+      bindm = [
+        "SUPER,mouse:272,movewindow"
+        "SUPER,mouse:273,resizewindow"
+      ];
       bind = [
         "SUPER,Return,exec,${pkgs.foot}/bin/footclient"
-        #"SUPER,Return,exec,wezterm-gui start"
         "SUPER,w,exec,${pkgs.swaynotificationcenter}/bin/swaync-client -t"
         "SUPER,p,exec,pkill -9 rofi || ${pkgs.rofi-wayland}/bin/rofi -show drun -modes drun,filebrowser,keys,window"
         "SUPER,i,exec,cliphist list | ${pkgs.rofi-wayland}/bin/rofi -dmenu | cliphist decode | wl-copy"
@@ -212,7 +215,19 @@
           natural_scroll = false;
         };
       };
-
+      layerrule = [
+        "blur, gtk-layer-shell"
+        "blur, logout_dialog"
+        "blur, (rofi)"
+        "blur, (waybar)"
+        "blur, swaync-control-center"
+        "blur, swaync-notification-window"
+        "ignorezero, (rofi)"
+        "ignorezero, swaync-control-center"
+        "ignorezero, swaync-notification-window"
+        "ignorealpha 0.5, swaync-control-center"
+        "ignorealpha 0.5, swaync-notification-window"
+      ];
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
@@ -223,89 +238,32 @@
       monitor = "eDP-1,1920x1200@47.999001,auto,1";
       exec-once = [
         "${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all"
-        #"${pkgs.swaybg}/bin/swaybg (${pkgs.fetchurl {
-        #      url = "https://lemmy.ca/pictrs/image/b82e2b77-3910-4d7c-8df8-d2c486db1669.jpeg";
-        #      hash = "sha256-zLrWrMi3NSGLc686u8cDiJpJKIukBwA6pWygAT0NZmQ=";
-        #    }}) fill"
+        "${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"
+        "${pkgs.nextcloud-client}/bin/nextcloud"
+      ];
+      windowrulev2 = [
+        "workspace 2 silent,class:^(firefox)$"
+        # polkit
+        "size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$"
+        "center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$"
+        "float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$"
+        # heroic stuff
+        "float,class:^(electron)$,title:^(Select Executable)$"
+        "center,class:^(electron)$,title:^(Select Executable)$"
+        "size 60%,class:^(electron)$,title:^(Select Executable)$"
+        # mpv
+        "workspace 3 silent,class:^(mpv)$"
+        # steam
+        "workspace 6 silent,class:^(steam)$,title:^(Steam)$"
+        "workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$"
+        "pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$"
+        # pavucontrol
+        "float,class:^(pavucontrol)$"
+        "center,class:^(pavucontrol)$"
+        "size 66%,class:^(pavucontrol)$"
+        "float,title:^(Select EXE to Run)$"
+        "float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$"
       ];
     };
-    extraConfig = ''
-      # Startup
-      exec-once = ${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all
-      exec-once = ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store
-
-      # Mouse binding
-      bindm=SUPER,mouse:272,movewindow
-      bindm=SUPER,mouse:273,resizewindow
-
-
-      windowrulev2 = workspace 2 silent,class:^(firefox)$
-
-
-      # polkit
-      windowrulev2 = size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
-      windowrulev2 = center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$
-      windowrulev2 = float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$
-
-      # heroic stuff
-      windowrulev2 = float,class:^(electron)$,title:^(Select Executable)$
-      windowrulev2 = center,class:^(electron)$,title:^(Select Executable)$
-      windowrulev2 = size 60%,class:^(electron)$,title:^(Select Executable)$
-
-      windowrulev2 = center,class:^(xdg-desktop-portal-gtk)$title:^(Open With…)$
-      windowrulev2 = float,center,size=60%,title:^(.*Picture-in-Picture.*)$,class:^(firefox)$
-
-      # mpv
-      windowrulev2 = workspace 3 silent,class:^(mpv)$
-
-      # steam
-      windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam)$
-      windowrulev2 = workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$
-      windowrulev2 = pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$
-
-      # pavucontrol
-      windowrulev2 = float,class:^(pavucontrol)$
-      windowrulev2 = center,class:^(pavucontrol)$
-      windowrulev2 = size 66%,class:^(pavucontrol)$
-
-      windowrulev2 = float,title:^(Select EXE to Run)$
-
-      windowrulev2 = float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$
-
-      #windowrulev2 = forceinput,class:^(.gamescope-wrapped)$
-
-      windowrulev2 = nomaxsize,class:^(com.github.xournalpp.xournalpp)$
-      layerrule=blur, gtk-layer-shell
-      layerrule = blur, logout_dialog
-
-      layerrule = blur, class:^(swww)$
-      layerrule = blur, (rofi)
-      layerrule = blur, (waybar)
-
-      layerrule = blur, swaync-control-center
-      layerrule = blur, swaync-notification-window
-
-      # Tweaks to work with blur -----------------------------------
-
-      #layerrule = unset, (rofi)
-      #layerrule = ignorezero, (rofi)
-
-      #layerrule = unset, (swaync-control-center)
-      layerrule = ignorezero, swaync-control-center
-      layerrule = ignorezero, swaync-notification-window
-
-      layerrule = ignorealpha 0.5, swaync-control-center
-      layerrule = ignorealpha 0.5, swaync-notification-window
-
-      # Center Stuff
-      windowrulev2 = center,class:^(heroic)$,title:^(Exit)$
-      windowrulev2 = center,class:^(gimp-2.99)$,floating:1
-      windowrulev2 = center,class:^(file-*),title:^(Export Image as*),floating:1
-      windowrulev2 = center,title:^(Really Quit*),floating:1
-
-      # misc
-      #windowrulev2 = stayfocused, title:^(Steam)$, class:^(steam)$
-
-    '';
   };
 }
