@@ -10,7 +10,10 @@
         position = "top";
         height = 42;
 
-        modules-left = [ "clock" "custom/weather" ];
+        modules-left = [
+          "clock"
+          "custom/weather"
+        ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [
           "tray"
