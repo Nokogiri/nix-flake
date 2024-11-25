@@ -30,6 +30,9 @@
   programs.steam = {
     enable = true;
     extest.enable = true;
+    gamescopeSession = {
+      enable = true;
+    };
     protontricks.enable = true;
     remotePlay.openFirewall = true;
     extraPackages = with pkgs; [
@@ -52,6 +55,7 @@
       '')
     ];
   };
+
   programs.gamescope = {
     enable = true;
     capSysNice = false;

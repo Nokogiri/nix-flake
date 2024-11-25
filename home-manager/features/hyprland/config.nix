@@ -218,21 +218,27 @@
       layerrule = [
         "blur, gtk-layer-shell"
         "blur, logout_dialog"
+        # rofi
         "blur, (rofi)"
-        "blur, (waybar)"
-        "blur, swaync-control-center"
-        "blur, swaync-notification-window"
         "ignorezero, (rofi)"
+        "dimaround, (rofi)"
+        # waybar
+        "blur, (waybar)"
+        # swaync
+        "blur, swaync-control-center"
+        "dimaround, swaync-control-center"
         "ignorezero, swaync-control-center"
-        "ignorezero, swaync-notification-window"
         "ignorealpha 0.5, swaync-control-center"
+        # swaync-notification-window
+        "blur, swaync-notification-window"
+        "ignorezero, swaync-notification-window"
         "ignorealpha 0.5, swaync-notification-window"
       ];
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         font_family = " JetBrainsMono Nerd Font Propo";
-        render_unfocused_fps = "5";
+        render_unfocused_fps = "1";
         vfr = true;
       };
       monitor = "eDP-1,1920x1200@47.999001,auto,1";

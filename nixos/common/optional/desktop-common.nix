@@ -25,6 +25,7 @@
   fonts = {
     packages = with pkgs; [
       dejavu_fonts
+      intel-one-mono
       jetbrains-mono
       noto-fonts
       noto-fonts-emoji

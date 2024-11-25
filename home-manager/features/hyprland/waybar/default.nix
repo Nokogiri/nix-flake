@@ -3,14 +3,14 @@
   home.packages = [ pkgs.wttrbar ];
   programs.waybar = {
     enable = true;
-    style = ./style_nd.css;
+    style = ./style.css;
     settings = {
       mainBar = {
         layer = "top";
         position = "top";
         height = 42;
 
-        modules-left = [ "clock" ];
+        modules-left = [ "clock" "custom/weather" ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [
           "tray"
@@ -110,7 +110,7 @@
           format = "{}°C";
           tooltip = true;
           interval = 60;
-          exec = "${pkgs.wttrbar}/bin/wttrbar --hide-conditions";
+          exec = "${pkgs.wttrbar}/bin/wttrbar --date-format \"%m/%d\" --location Erfurt --hide-conditions --lang de";
           return-type = "json";
         };
       };
