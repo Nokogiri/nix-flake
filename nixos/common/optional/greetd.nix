@@ -1,7 +1,12 @@
 { pkgs, ... }:
 {
+  environment.systemPackages = [
+  (pkgs.writeShellScriptBin "Hyprlaunch" ''
+    exec systemd-cat --identifier=Hyprland Hyprland &> /dev/null
+  '')
+  ];
   programs.regreet = {
-    enable = true;
+    enable = false;
     settings = {
       background = {
         path = "${
@@ -32,5 +37,12 @@
   };
   services.greetd = {
     enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --asterisks --cmd Hyprlaunch ";
+      #\"systemd-cat --identifier=WindowManager Hyprland &> /dev/null\"";
+        user = "greeter";
+      };
+    };
   };
 }
