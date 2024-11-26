@@ -47,7 +47,6 @@
         "ALT,XF86AudioNext,exec,playerctld shift"
         "ALT,XF86AudioPrev,exec,playerctld unshift"
         "ALT,XF86AudioPlay,exec,systemctl --user restart playerctld"
-        "SUPER,XF86AudioPlay,exec,$TERMINAL $SHELL -ic lyrics"
         ",XF86AudioRaiseVolume,exec,${pkgs.swayosd}/bin/swayosd-client --output-volume raise"
         ",XF86AudioLowerVolume,exec,${pkgs.swayosd}/bin/swayosd-client --output-volume lower"
         ",XF86AudioMute,exec,${pkgs.swayosd}/bin/swayosd-client --output-volume mute-toggle"
