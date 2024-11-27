@@ -20,6 +20,7 @@
           "battery"
           "network"
           "pulseaudio"
+          "wireplumber"
         ];
         "group/misc" = {
           orientation = "inherit";
@@ -88,8 +89,8 @@
           tooltip-format = "{volume}% {icon} {desc}";
           ignored-sinks = [ "Ambience" ];
           format = "{volume}% {icon}";
-          format-bluetooth = "{icon}  {volume}%";
-          format-bluetooth-muted = "  ";
+          format-bluetooth = "{icon} {volume}%";
+          format-bluetooth-muted = " ";
           format-muted = " ";
           format-source = "{volume}%  ";
           format-source-muted = " ";

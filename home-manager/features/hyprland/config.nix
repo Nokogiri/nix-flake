@@ -223,6 +223,7 @@
         "dimaround, (rofi)"
         # waybar
         "blur, (waybar)"
+        "ignorezero, (waybar)"
         # swaync
         "blur, swaync-control-center"
         "dimaround, swaync-control-center"
