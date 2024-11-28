@@ -241,7 +241,7 @@
         render_unfocused_fps = "1";
         vfr = true;
       };
-      monitor = "eDP-1,1920x1200@47.999001,auto,1";
+      monitor = "eDP-1,1920x1200@60,auto,1";
       exec-once = [
         "${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all"
         "${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"

@@ -442,7 +442,7 @@
         "buttons-grid" = {
           "actions" = [
             {
-              "label" = " ";
+              "label" = "";
               "command" = "amixer set Master toggle";
             }
             {

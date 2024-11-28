@@ -33,7 +33,7 @@ in
       powerBar
       hidePodcasts
       volumePercentage
-      #fullAppDisplayMod
+      fullAppDisplayMod
     ];
   };
 }

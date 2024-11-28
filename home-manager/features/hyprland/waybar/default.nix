@@ -11,8 +11,8 @@
         height = 42;
 
         modules-left = [
-          "clock"
-          "custom/weather"
+         "custom/weather"
+         "clock"
         ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [
@@ -20,7 +20,6 @@
           "battery"
           "network"
           "pulseaudio"
-          "wireplumber"
         ];
         "group/misc" = {
           orientation = "inherit";
