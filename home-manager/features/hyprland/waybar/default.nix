@@ -85,22 +85,21 @@
         };
         "pulseaudio" = {
           scroll-step = 2.5;
-          tooltip-format = "{volume}% {icon} {desc}";
-          ignored-sinks = [ "Ambience" ];
-          format = "{volume}% {icon}";
-          format-bluetooth = "{icon} {volume}%";
-          format-bluetooth-muted = " ";
-          format-muted = " ";
+          tooltip-format = "{icon} {desc} {volume}%";
+          format = " {icon} ";
+          format-bluetooth = " {icon} ";
+          format-bluetooth-muted = " 󰟎 ";
+          format-muted = "  ";
           format-source = "{volume}%  ";
           format-source-muted = " ";
           format-icons = {
-            headphone = "  ";
-            hands-free = "  ";
-            headset = "  ";
-            phone = "  ";
-            portable = "  ";
-            car = "  ";
-            default = " 󰕾 ";
+            headphone = "󰋋";
+            hands-free = "";
+            headset = "󰋋";
+            phone = "";
+            portable = "";
+            car = "";
+            default = "󰕾";
           };
           on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
           tooltip = true;

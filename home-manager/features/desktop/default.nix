@@ -10,7 +10,7 @@
     ./obs-studio.nix
     ./rbw.nix
     ./rofi
-    ./swaync.nix
+    ./swaync
     ./swayosd.nix
     ./udisks.nix
     ./vscode.nix

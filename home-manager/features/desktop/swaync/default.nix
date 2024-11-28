@@ -252,8 +252,8 @@
 
       /* Volume */
       .widget-volume {
-        background: @background-sec;
-        color: @background;
+        background: @background-alt;
+        color: @foreground;
         padding: 4px;
         margin: 6px;
         border-radius: 10px;
@@ -442,7 +442,7 @@
         "buttons-grid" = {
           "actions" = [
             {
-              "label" = "";
+              "label" = "󰋋";
               "command" = "amixer set Master toggle";
             }
             {
@@ -450,7 +450,7 @@
               "command" = "amixer set Capture toggle";
             }
             {
-              "label" = "";
+              "label" = "󰖩";
               "command" = "nm-connection-editor";
             }
             {
