@@ -1,8 +1,8 @@
 { inputs, pkgs, ... }:
 {
-  imports = [
-    inputs.hyprland.nixosModules.default
-  ];
+  #imports = [
+  #  inputs.hyprland.nixosModules.default
+  #];
   security.pam.services.swaylock.fprintAuth = true;
   security.pam.services.hyprlock = { };
 
@@ -57,9 +57,8 @@
   programs = {
     hyprland = {
       enable = true;
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-      portalPackage =
-        inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      #package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      #portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
     iio-hyprland = {
       enable = true;

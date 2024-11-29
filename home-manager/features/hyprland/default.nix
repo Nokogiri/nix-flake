@@ -8,7 +8,7 @@
     ./user-services.nix
     ./waybar
     ../desktop/wayland.nix
-    inputs.hyprland.homeManagerModules.default
+    #inputs.hyprland.homeManagerModules.default
   ];
 
   nixpkgs.overlays = [
@@ -21,9 +21,7 @@
     #hyprshade
     grimblast
     hyprprop
-    iio-hyprland
     scratchpad
-    #wayfreeze
   ];
 
   programs.waybar = {
@@ -34,6 +32,7 @@
   };
 
   wayland.windowManager.hyprland = {
+    package = pkgs.hyprland;
     enable = true;
     xwayland = {
       enable = true;
