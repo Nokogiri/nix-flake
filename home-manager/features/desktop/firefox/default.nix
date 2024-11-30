@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   home.file.".mozilla/firefox/nokogiri/chrome" = {
     source = pkgs.fetchFromGitHub {
       owner = "KiKaraage";
@@ -21,7 +24,7 @@
 
   programs.firefox = {
     enable = true;
-    nativeMessagingHosts = [ pkgs.ff2mpv-go ];
+    nativeMessagingHosts = [pkgs.ff2mpv-go];
     profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [
       ff2mpv
       ublock-origin
@@ -38,7 +41,7 @@
     profiles.nokogiri = {
       name = "nokogiri";
       path = "nokogiri";
-      bookmarks = { };
+      bookmarks = {};
       id = 0;
       isDefault = true;
       settings = {
@@ -79,7 +82,7 @@
     profiles.private = {
       name = "private";
       path = "private";
-      bookmarks = { };
+      bookmarks = {};
       id = 1;
       settings = {
         "browser.startup.homepage" = "https://start.duckduckgo.com";

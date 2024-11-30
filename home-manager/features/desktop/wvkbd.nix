@@ -1,6 +1,5 @@
-{ pkgs, ... }:
-{
-  home.packages = with pkgs; [ wvkbd ];
+{pkgs, ...}: {
+  home.packages = with pkgs; [wvkbd];
   systemd.user.services.wvkbd = {
     Unit = {
       Description = "wvkbd";

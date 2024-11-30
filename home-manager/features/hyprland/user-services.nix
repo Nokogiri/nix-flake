@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }:
-let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   image = "${
     (pkgs.fetchurl {
       #url = "https://next.fishoeder.net/s/XobW8J2DiN7pAXo/download/dIbcnTB.png";
@@ -8,8 +11,7 @@ let
       hash = "sha256-kLDv0v4N9pQ4F6cXpFLTrJv90ehU0LI7sGJup+49kPM=";
     })
   }";
-in
-{
+in {
   systemd.user.services = {
     iio-hyprland = {
       Unit = {
@@ -21,7 +23,7 @@ in
         Restart = "on-failure";
       };
       Install = {
-        WantedBy = [ "hyprland-session.target" ];
+        WantedBy = ["hyprland-session.target"];
       };
     };
     swaybg = {
@@ -34,7 +36,7 @@ in
         Restart = "on-failure";
       };
       Install = {
-        WantedBy = [ "hyprland-session.target" ];
+        WantedBy = ["hyprland-session.target"];
       };
     };
     polkit-kde-authentication-agent-1 = {
@@ -47,12 +49,12 @@ in
         Restart = "on-failure";
       };
       Install = {
-        WantedBy = [ "hyprland-session.target" ];
+        WantedBy = ["hyprland-session.target"];
       };
     };
     wvkbd = {
       Install = {
-        WantedBy = [ "hyprland-session.target" ];
+        WantedBy = ["hyprland-session.target"];
       };
     };
   };

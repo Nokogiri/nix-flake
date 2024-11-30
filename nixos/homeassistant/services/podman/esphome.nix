@@ -8,7 +8,7 @@
         "/var/lib/volumes/esphome/cache:/cache"
         "/etc/localtime:/etc/localtime:ro"
       ];
-      extraOptions = [ "--network=host" ];
+      extraOptions = ["--network=host"];
     };
   };
 }

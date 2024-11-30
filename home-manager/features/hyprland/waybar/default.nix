@@ -1,6 +1,5 @@
-{ pkgs, ... }:
-{
-  home.packages = [ pkgs.wttrbar ];
+{pkgs, ...}: {
+  home.packages = [pkgs.wttrbar];
   programs.waybar = {
     enable = true;
     style = ./style.css;
@@ -11,10 +10,10 @@
         height = 42;
 
         modules-left = [
-         "custom/weather"
-         "clock"
+          "custom/weather"
+          "clock"
         ];
-        modules-center = [ "hyprland/workspaces" ];
+        modules-center = ["hyprland/workspaces"];
         modules-right = [
           "tray"
           "battery"

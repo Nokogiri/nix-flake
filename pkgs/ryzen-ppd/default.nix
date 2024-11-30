@@ -6,7 +6,6 @@
   ryzenadj,
   wrapGAppsHook,
 }:
-
 python312Packages.buildPythonApplication {
   pname = "ryzen-ppd";
   version = "0.5";
@@ -26,7 +25,7 @@ python312Packages.buildPythonApplication {
     python312Packages.dbus-next
     ryzenadj
   ];
-  buildInputs = [ ryzenadj ];
+  buildInputs = [ryzenadj];
   nativeBuildInputs = [
     ryzenadj
     wrapGAppsHook

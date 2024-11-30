@@ -1,5 +1,8 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  ...
+}: {
   home.packages = with pkgs; [
     (pkgs.writeShellScriptBin "udisksd" ''
       pathtoname() {
@@ -25,7 +28,7 @@
       Restart = "on-failure";
     };
     Install = {
-      WantedBy = [ "default.target" ];
+      WantedBy = ["default.target"];
     };
   };
 }

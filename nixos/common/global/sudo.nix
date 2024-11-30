@@ -1,20 +1,19 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   security = {
     sudo-rs = {
       enable = true;
       wheelNeedsPassword = false;
       extraRules = [
         {
-          users = [ "nokogiri" ];
+          users = ["nokogiri"];
           commands = [
             {
               command = ''${pkgs.linuxPackages.cpupower}/bin/cpupower ""'';
-              options = [ "NOPASSWD" ];
+              options = ["NOPASSWD"];
             }
             {
               command = ''${pkgs.profile-sync-daemon}/bin/psd-overlay-helper ""'';
-              options = [ "NOPASSWD" ];
+              options = ["NOPASSWD"];
             }
           ];
         }
@@ -25,13 +24,13 @@
       wheelNeedsPassword = true;
       extraRules = [
         {
-          groups = [ "wheel" ];
+          groups = ["wheel"];
           noPass = false;
           keepEnv = true;
           persist = true;
         }
         {
-          users = [ "nokogiri" ];
+          users = ["nokogiri"];
           noPass = false;
           keepEnv = true;
           persist = true;

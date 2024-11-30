@@ -5,8 +5,7 @@
   outputs,
   pkgs,
   ...
-}:
-{
+}: {
   imports = [
     inputs.hardware.nixosModules.common-cpu-intel
     inputs.hardware.nixosModules.common-pc-ssd
@@ -25,7 +24,6 @@
 
     ./services
     ./local
-
   ];
 
   nixpkgs = {

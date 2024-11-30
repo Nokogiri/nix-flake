@@ -1,5 +1,8 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  ...
+}: {
   sops.secrets.nextadmin = {
     sopsFile = ../../common/secrets.yaml;
     owner = config.users.users.nobody.name;
@@ -50,7 +53,6 @@
         "OC\\Preview\\XBitmap"
         "OC\\Preview\\HEIC"
       ];
-
     };
     config = {
       adminuser = "nokogiri";
@@ -81,7 +83,7 @@
     collabora = {
       image = "collabora/code";
       autoStart = true;
-      ports = [ "127.0.0.1:9980:9980" ];
+      ports = ["127.0.0.1:9980:9980"];
       environment = {
         domain = "paper.fishoeder.net";
         server_name = "paper.fishoeder.net";
@@ -132,10 +134,10 @@
       "~ ^/cool/(.*)/ws$" = {
         proxyPass = "http://127.0.0.1:9980";
         extraConfig = ''
-              proxy_set_header Upgrade $http_upgrade;
-              proxy_set_header Connection "Upgrade";
-              proxy_set_header Host $host;
-          	   proxy_read_timeout 36000s;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection "Upgrade";
+          proxy_set_header Host $host;
+          proxy_read_timeout 36000s;
         '';
       };
       # download, presentation, image upload and websocket
@@ -167,6 +169,6 @@
     listenAddress = "127.0.0.1:9000";
     consoleAddress = "127.0.0.1:9001";
     rootCredentialsFile = config.sops.secrets.minio.path;
-    dataDir = [ "/media/Vault0.1/MinIO" ];
+    dataDir = ["/media/Vault0.1/MinIO"];
   };
 }

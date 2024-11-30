@@ -4,7 +4,6 @@
   fetchFromGitHub,
   fetchgit,
 }:
-
 stdenv.mkDerivation {
   name = "dracula-plymouth";
   version = "2021-01-14";
@@ -38,7 +37,7 @@ stdenv.mkDerivation {
     description = "Dracula for Plymouth";
     homepage = "https://draculatheme.com/plymouth";
     license = licenses.mit;
-    maintainers = with maintainers; [ nokogiri ];
+    maintainers = with maintainers; [nokogiri];
     platforms = platforms.all;
   };
 }

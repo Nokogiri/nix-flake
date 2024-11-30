@@ -1,5 +1,8 @@
-{ inputs, pkgs, ... }:
 {
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     ./config.nix
     ./environment.nix
@@ -8,7 +11,6 @@
     ./user-services.nix
     ./waybar
     ../desktop/wayland.nix
-    #inputs.hyprland.homeManagerModules.default
   ];
 
   nixpkgs.overlays = [
@@ -18,7 +20,6 @@
   home.packages = with pkgs; [
     hyprpicker
     hyprpaper
-    #hyprshade
     grimblast
     hyprprop
     scratchpad

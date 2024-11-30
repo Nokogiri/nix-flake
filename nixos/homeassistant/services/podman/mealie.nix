@@ -1,17 +1,15 @@
-{ config, ... }:
-{
+{config, ...}: {
   sops.secrets.mealie_mail = {
     sopsFile = ../../../common/secrets.yaml;
     owner = config.users.users.nokogiri.name;
     group = config.users.users.nobody.group;
     mode = "0666";
-
   };
   virtualisation.oci-containers.containers = {
     mealie = {
       image = "ghcr.io/mealie-recipes/mealie"; # :v1.10.2";
       autoStart = true;
-      volumes = [ "/var/lib/pods/mealie/data:/app/data" ];
+      volumes = ["/var/lib/pods/mealie/data:/app/data"];
       environmentFiles = [
         #	config.sops.secrets.mealieCredentials.path
         config.sops.secrets.mealie_mail.path
@@ -34,7 +32,7 @@
         SMTP_FROM_NAME = "Mealie";
         SMTP_FROM_EMAIL = "mealie@fishoeder.net";
       };
-      ports = [ "10.200.200.1:9000:9000/tcp" ];
+      ports = ["10.200.200.1:9000:9000/tcp"];
     };
   };
 }

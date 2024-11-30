@@ -1,5 +1,8 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  ...
+}: {
   services.swaync = {
     enable = true;
     style = ''
@@ -21,10 +24,10 @@
       }
 
       /* Avoid 'annoying' backgroud */
-      .blank-window {  
-        background: transparent;  
+      .blank-window {
+        background: transparent;
       }
-        
+
       /* CONTROL CENTER ------------------------------------------------------------------------ */
 
       .control-center {
@@ -123,7 +126,7 @@
       .notification-group-close-all-button {
         background: transparent;
         color: @text;
-        margin: 4px; 
+        margin: 4px;
         border-radius: 10px;
         padding: 4px;
       }
@@ -131,7 +134,7 @@
       .notification-group-collapse-button:hover,
       .notification-group-close-all-button:hover {
         background: @hover;
-      }  
+      }
 
       /* WIDGETS --------------------------------------------------------------------------- */
 
@@ -227,7 +230,7 @@
         color: @text;
         border-radius: 10px;
       }
-       
+
       .widget-mpris button {
         color: alpha(@text, .6);
       }
@@ -239,12 +242,12 @@
       .widget-mpris-album-art {
         border-radius: 10px;
       }
-       
+
       .widget-mpris-title {
           font-weight: 700;
           font-size: 1rem;
       }
-       
+
       .widget-mpris-subtitle {
           font-weight: 500;
           font-size: 0.8rem;
@@ -461,7 +464,6 @@
               "label" = "󰏘";
               "command" = "nwg-look";
             }
-
           ];
         };
       };

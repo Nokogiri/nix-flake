@@ -1,20 +1,19 @@
-{ config, ... }:
-{
+{config, ...}: {
   #sops.defaultSopsFile = ../../common/secrets.yaml;
   sops.secrets = {
-    "wg/homeassistant" = { };
-    "psk_wg/showxating" = { };
-    "psk_wg/kipad" = { };
-    "psk_wg/kiphone" = { };
-    "psk_wg/mowteng" = { };
-    "psk_wg/dewalt" = { };
+    "wg/homeassistant" = {};
+    "psk_wg/showxating" = {};
+    "psk_wg/kipad" = {};
+    "psk_wg/kiphone" = {};
+    "psk_wg/mowteng" = {};
+    "psk_wg/dewalt" = {};
   };
 
   networking.nat.enable = true;
   networking.nat.externalInterface = "enp1s0f0";
-  networking.nat.internalInterfaces = [ "haos" ];
+  networking.nat.internalInterfaces = ["haos"];
   networking.firewall = {
-    allowedUDPPorts = [ 51871 ];
+    allowedUDPPorts = [51871];
   };
 
   networking.wireguard.interfaces = {

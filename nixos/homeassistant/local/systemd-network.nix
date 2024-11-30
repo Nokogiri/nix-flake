@@ -1,6 +1,5 @@
-{ config, ... }:
-{
-  imports = [ ../../common/optional/systemd-network.nix ];
+{config, ...}: {
+  imports = [../../common/optional/systemd-network.nix];
   sops.secrets."mullvad/sacred_turkey" = {
     owner = "systemd-network";
     mode = "0660";
@@ -35,7 +34,7 @@
     };
     networks = {
       "wired" = {
-        matchConfig.Name = [ "en*" ];
+        matchConfig.Name = ["en*"];
         DHCP = "yes";
         dhcpV4Config = {
           UseDomains = true;
@@ -54,7 +53,7 @@
           "10.72.6.234/32"
         ];
         DHCP = "no";
-        dns = [ "10.64.0.1" ];
+        dns = ["10.64.0.1"];
         gateway = [
           "fc00::1"
           "10.64.0.1"

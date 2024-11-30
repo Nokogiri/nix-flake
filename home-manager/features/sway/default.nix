@@ -2,8 +2,7 @@
   pkgs,
   lib,
   ...
-}:
-{
+}: {
   imports = [
     ./config.nix
     ./swaylock.nix
@@ -21,7 +20,7 @@
     XCURSOR_SIZE = "24";
     NIXOS_OZONE_WL = "1";
   };
-  home.packages = with pkgs; [ gdk-pixbuf ];
+  home.packages = with pkgs; [gdk-pixbuf];
   programs.waybar.systemd = {
     enable = true;
     target = "sway-session.target";

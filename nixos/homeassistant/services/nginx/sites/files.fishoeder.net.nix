@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+{config, ...}: {
   services.nginx = {
     virtualHosts."files.fishoeder.net" = {
       useACMEHost = "fishoeder.net";

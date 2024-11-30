@@ -3,12 +3,11 @@
   config,
   lib,
   ...
-}:
-{
+}: {
   services.nginx = {
     enable = true;
     virtualHosts."cache.fishoeder.net" = {
-      serverAliases = [ "cache" ];
+      serverAliases = ["cache"];
       useACMEHost = "fishoeder.net";
       forceSSL = true;
       locations."/".extraConfig = ''

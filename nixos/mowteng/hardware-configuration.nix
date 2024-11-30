@@ -3,9 +3,8 @@
   modulesPath,
   pkgs,
   ...
-}:
-{
-  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
+}: {
+  imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
   boot = {
     extraModprobeConfig = ''
@@ -45,7 +44,7 @@
       "cpufreq.default_governor=powersave"
     ];
     loader.efi.efiSysMountPoint = "/boot";
-    supportedFilesystems = [ "btrfs" ];
+    supportedFilesystems = ["btrfs"];
     tmp.cleanOnBoot = true;
   };
 

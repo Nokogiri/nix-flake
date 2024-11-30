@@ -1,10 +1,13 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  ...
+}: {
   services.avahi = {
     enable = true;
     ipv6 = true;
     ipv4 = true;
-    allowInterfaces = [ "wlan0" ];
+    allowInterfaces = ["wlan0"];
     hostName = "${config.networking.hostName}";
     extraServiceFiles = {
       ssh = "${pkgs.avahi}/etc/avahi/services/ssh.service";

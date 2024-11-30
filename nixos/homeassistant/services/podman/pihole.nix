@@ -1,5 +1,5 @@
 {
-  sops.secrets.pihole = { };
+  sops.secrets.pihole = {};
   virtualisation.oci-containers.containers = {
     pihole = {
       image = "pihole/pihole:latest";
@@ -12,7 +12,7 @@
       environment = {
         TZ = "Europe/Berlin";
       };
-      environmentFiles = [ /run/secrets/pihole ];
+      environmentFiles = [/run/secrets/pihole];
       ports = [
         "10.200.200.1:53:53/tcp"
         "10.200.200.1:53:53/udp"

@@ -28,9 +28,9 @@
         "sd_mod"
         "sdhci_pci"
       ];
-      kernelModules = [ "hid-apple" ];
+      kernelModules = ["hid-apple"];
     };
-    kernelModules = [ "kvm-intel" ];
+    kernelModules = ["kvm-intel"];
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "acpi_backlight=video"
@@ -53,7 +53,7 @@
       "sdhci.debug_quirks2=4"
       "mitigations=off"
     ];
-    supportedFilesystems = [ "btrfs" ];
+    supportedFilesystems = ["btrfs"];
   };
 
   fileSystems."/" = {
@@ -120,7 +120,7 @@
     ];
   };
   swapDevices = [
-    { device = "/dev/disk/by-uuid/0cd7afe0-c1e1-4d9f-8172-48f677434826"; }
+    {device = "/dev/disk/by-uuid/0cd7afe0-c1e1-4d9f-8172-48f677434826";}
   ];
 
   fileSystems."/boot/efi" = {

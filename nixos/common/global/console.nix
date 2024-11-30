@@ -1,10 +1,9 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   console = {
     useXkbConfig = true;
     earlySetup = true;
     font = "${pkgs.terminus_font}/share/consolefonts/ter-v20b.psf.gz";
-    packages = [ pkgs.terminus_font ];
+    packages = [pkgs.terminus_font];
     colors = [
       "000000"
       "ff5555"

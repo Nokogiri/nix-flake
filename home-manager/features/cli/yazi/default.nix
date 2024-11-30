@@ -1,5 +1,5 @@
 {
-  imports = [ ./plugins/default.nix ];
+  imports = [./plugins/default.nix];
   programs.yazi = {
     enable = true;
     settings = {
@@ -9,7 +9,6 @@
           desc = "Extract here with ouch";
           for = "unix";
         }
-
       ];
       plugin.prepend_previewers = [
         {

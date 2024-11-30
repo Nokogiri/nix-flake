@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+{config, ...}: {
   sops.secrets."wg_private/${config.networking.hostName}" = {
     sopsFile = ../../common/secrets.yaml;
     owner = config.users.users.systemd-network.name;
@@ -9,8 +8,8 @@
     owner = config.users.users.systemd-network.name;
   };
   networking.firewall = {
-    allowedUDPPorts = [ 51872 ];
-    trustedInterfaces = [ "wg0" ];
+    allowedUDPPorts = [51872];
+    trustedInterfaces = ["wg0"];
   };
   systemd.network.netdevs."90-wireguard" = {
     netdevConfig = {

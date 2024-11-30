@@ -1,5 +1,4 @@
-{ lib, ... }:
-{
+{lib, ...}: {
   virtualisation.oci-containers.backend = "podman";
   virtualisation.docker = {
     enable = false;

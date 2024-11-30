@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   hardware = {
     bluetooth.enable = true;
     bluetooth.package = pkgs.bluez5-experimental;

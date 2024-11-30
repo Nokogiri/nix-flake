@@ -1,6 +1,5 @@
-{ pkgs, ... }:
-{
-  home.packages = [ pkgs.ydotool ];
+{pkgs, ...}: {
+  home.packages = [pkgs.ydotool];
   systemd.user.services.ydotool = {
     Unit = {
       Description = "ydotool";

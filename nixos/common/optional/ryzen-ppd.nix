@@ -1,6 +1,5 @@
-{ pkgs, ... }:
-{
-  environment.systemPackages = with pkgs; [ ryzen-ppd ];
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [ryzen-ppd];
 
   #systemd.services.ryzen-ppd = {
   #  after = [ "dbus.service" ];

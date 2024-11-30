@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+{config, ...}: {
   imports = [
     #./sites/cache.fishoeder.net.nix
     ./sites/files.fishoeder.net.nix
@@ -27,11 +26,11 @@
     certs = {
       "fishoeder.net" = {
         domain = "fishoeder.net";
-        extraDomainNames = [ "*.fishoeder.net" ];
+        extraDomainNames = ["*.fishoeder.net"];
       };
       "gefjon.org" = {
         domain = "gefjon.org";
-        extraDomainNames = [ "*.gefjon.org" ];
+        extraDomainNames = ["*.gefjon.org"];
       };
     };
   };

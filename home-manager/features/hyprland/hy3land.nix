@@ -1,7 +1,10 @@
-{ inputs, pkgs, ... }:
 {
+  inputs,
+  pkgs,
+  ...
+}: {
   wayland.windowManager.hyprland = {
-    plugins = [ inputs.hy3.packages.x86_64-linux.hy3 ];
+    plugins = [inputs.hy3.packages.x86_64-linux.hy3];
     extraConfig = ''
       general {
         gaps_in=7
@@ -23,7 +26,7 @@
         workspace_swipe_distance = 130
         workspace_swipe_cancel_ratio = 0.5
         workspace_swipe_min_speed_to_force = 20
-        workspace_swipe_create_new = false 
+        workspace_swipe_create_new = false
       }
 
       decoration {

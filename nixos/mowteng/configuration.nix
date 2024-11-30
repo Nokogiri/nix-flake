@@ -6,8 +6,7 @@
   lib,
   pkgs,
   ...
-}:
-{
+}: {
   imports = [
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
@@ -37,12 +36,15 @@
   ];
 
   nixpkgs = {
-    overlays = [
-      outputs.overlays.additions
-      outputs.overlays.modifications
-    ];
+    #overlays = [
+    #  outputs.overlays.additions
+    #  outputs.overlays.modifications
+    #];
     config = {
-      allowUnfree = true;
+      #  allowUnfree = true;
+      permittedInsecurePackages = [
+        "dotnet-runtime-wrapped-7.0.20"
+      ];
     };
   };
 
@@ -105,7 +107,7 @@
     ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
   '';
 
-  systemd.tmpfiles.rules = [ "D /tmp/.X11-unix 1777 nokogiri root" ];
+  systemd.tmpfiles.rules = ["D /tmp/.X11-unix 1777 nokogiri root"];
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.05";
 }

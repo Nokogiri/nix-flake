@@ -33,9 +33,7 @@
   wrapGAppsHook3,
   wxGTK32,
   zarchive,
-}:
-
-let
+}: let
   # cemu doesn't build with imgui 1.90.2 or newer:
   # error: 'struct ImGuiIO' has no member named 'ImeWindowHandle'
   imgui' = imgui.overrideAttrs rec {
@@ -48,78 +46,76 @@ let
     };
   };
 in
-stdenv.mkDerivation (finalAttrs: {
-  pname = "cemu";
-  version = "2.3";
+  stdenv.mkDerivation (finalAttrs: {
+    pname = "cemu";
+    version = "2.3";
 
-  src = fetchFromGitHub {
-    owner = "cemu-project";
-    repo = "Cemu";
-    #rev = "v${finalAttrs.version}";
-    rev = "2.3";
-    hash = "sha256-bjt+2RzmG8iKcdyka4HsHM5NEzCwGah4s9eiywSHXbx=";
-  };
+    src = fetchFromGitHub {
+      owner = "cemu-project";
+      repo = "Cemu";
+      #rev = "v${finalAttrs.version}";
+      rev = "2.3";
+      hash = "sha256-bjt+2RzmG8iKcdyka4HsHM5NEzCwGah4s9eiywSHXbx=";
+    };
 
-  patches = [
-    # glslangTargets want SPIRV-Tools-opt to be defined:
-    # > The following imported targets are referenced, but are missing:
-    # > SPIRV-Tools-opt
-    ./0000-spirv-tools-opt-cmakelists.patch
-  ];
+    patches = [
+      # glslangTargets want SPIRV-Tools-opt to be defined:
+      # > The following imported targets are referenced, but are missing:
+      # > SPIRV-Tools-opt
+      ./0000-spirv-tools-opt-cmakelists.patch
+    ];
 
-  nativeBuildInputs = [
-    SDL2
-    addDriverRunpath
-    wrapGAppsHook3
-    cmake
-    nasm
-    ninja
-    pkg-config
-    wxGTK32
-    wayland-scanner
-  ];
+    nativeBuildInputs = [
+      SDL2
+      addDriverRunpath
+      wrapGAppsHook3
+      cmake
+      nasm
+      ninja
+      pkg-config
+      wxGTK32
+      wayland-scanner
+    ];
 
-  buildInputs = [
-    SDL2
-    boost
-    cubeb
-    curl
-    fmt_9
-    glm
-    glslang
-    gtk3
-    hidapi
-    imgui'
-    libpng
-    libusb1
-    libzip
-    libXrender
-    pugixml
-    rapidjson
-    vulkan-headers
-    wayland
-    wxGTK32
-    zarchive
-  ];
+    buildInputs = [
+      SDL2
+      boost
+      cubeb
+      curl
+      fmt_9
+      glm
+      glslang
+      gtk3
+      hidapi
+      imgui'
+      libpng
+      libusb1
+      libzip
+      libXrender
+      pugixml
+      rapidjson
+      vulkan-headers
+      wayland
+      wxGTK32
+      zarchive
+    ];
 
-  cmakeFlags = [
-    (lib.cmakeFeature "CMAKE_C_FLAGS_RELEASE" "-DNDEBUG")
-    (lib.cmakeFeature "CMAKE_CXX_FLAGS_RELEASE" "-DNDEBUG")
-    (lib.cmakeBool "ENABLE_VCPKG" false)
-    (lib.cmakeBool "ENABLE_FERAL_GAMEMODE" true)
+    cmakeFlags = [
+      (lib.cmakeFeature "CMAKE_C_FLAGS_RELEASE" "-DNDEBUG")
+      (lib.cmakeFeature "CMAKE_CXX_FLAGS_RELEASE" "-DNDEBUG")
+      (lib.cmakeBool "ENABLE_VCPKG" false)
+      (lib.cmakeBool "ENABLE_FERAL_GAMEMODE" true)
 
-    # PORTABLE: "All data created and maintained by Cemu will be in
-    # the directory where the executable file is located"
-    (lib.cmakeBool "PORTABLE" false)
-  ];
+      # PORTABLE: "All data created and maintained by Cemu will be in
+      # the directory where the executable file is located"
+      (lib.cmakeBool "PORTABLE" false)
+    ];
 
-  strictDeps = true;
+    strictDeps = true;
 
-  preConfigure =
-    let
+    preConfigure = let
       tag = lib.last (lib.splitString "-" finalAttrs.version);
-    in
-    ''
+    in ''
       rm -rf dependencies/imgui
       # cemu expects imgui source code, not just header files
       ln -s ${imgui'.src} dependencies/imgui
@@ -127,51 +123,49 @@ stdenv.mkDerivation (finalAttrs: {
       substituteInPlace dependencies/gamemode/lib/gamemode_client.h --replace-fail "libgamemode.so.0" "${gamemode.lib}/lib/libgamemode.so.0"
     '';
 
-  installPhase = ''
-    runHook preInstall
+    installPhase = ''
+      runHook preInstall
 
-    install -Dm755 ../bin/Cemu_release $out/bin/Cemu
-    ln -s $out/bin/Cemu $out/bin/cemu
+      install -Dm755 ../bin/Cemu_release $out/bin/Cemu
+      ln -s $out/bin/Cemu $out/bin/cemu
 
-    mkdir -p $out/share/applications
-    substitute ../dist/linux/info.cemu.Cemu.desktop $out/share/applications/info.cemu.Cemu.desktop \
-      --replace "Exec=Cemu" "Exec=$out/bin/Cemu"
+      mkdir -p $out/share/applications
+      substitute ../dist/linux/info.cemu.Cemu.desktop $out/share/applications/info.cemu.Cemu.desktop \
+        --replace "Exec=Cemu" "Exec=$out/bin/Cemu"
 
-    install -Dm644 ../dist/linux/info.cemu.Cemu.metainfo.xml -t $out/share/metainfo
-    install -Dm644 ../src/resource/logo_icon.png $out/share/icons/hicolor/128x128/apps/info.cemu.Cemu.png
+      install -Dm644 ../dist/linux/info.cemu.Cemu.metainfo.xml -t $out/share/metainfo
+      install -Dm644 ../src/resource/logo_icon.png $out/share/icons/hicolor/128x128/apps/info.cemu.Cemu.png
 
-    runHook postInstall
-  '';
+      runHook postInstall
+    '';
 
-  preFixup =
-    let
-      libs = [ vulkan-loader ] ++ cubeb.passthru.backendLibs;
-    in
-    ''
+    preFixup = let
+      libs = [vulkan-loader] ++ cubeb.passthru.backendLibs;
+    in ''
       gappsWrapperArgs+=(
         --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath libs}"
       )
     '';
 
-  passthru = {
-    updateScript = nix-update-script { };
-    tests = {
-      version = testers.testVersion {
-        package = finalAttrs.finalPackage;
+    passthru = {
+      updateScript = nix-update-script {};
+      tests = {
+        version = testers.testVersion {
+          package = finalAttrs.finalPackage;
+        };
       };
     };
-  };
 
-  meta = {
-    description = "Software to emulate Wii U games and applications on PC";
-    homepage = "https://cemu.info";
-    license = lib.licenses.mpl20;
-    mainProgram = "cemu";
-    maintainers = with lib.maintainers; [
-      zhaofengli
-      baduhai
-      AndersonTorres
-    ];
-    platforms = [ "x86_64-linux" ];
-  };
-})
+    meta = {
+      description = "Software to emulate Wii U games and applications on PC";
+      homepage = "https://cemu.info";
+      license = lib.licenses.mpl20;
+      mainProgram = "cemu";
+      maintainers = with lib.maintainers; [
+        zhaofengli
+        baduhai
+        AndersonTorres
+      ];
+      platforms = ["x86_64-linux"];
+    };
+  })

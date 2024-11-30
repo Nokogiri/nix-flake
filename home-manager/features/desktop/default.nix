@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
 {
-
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./colors.nix
     ./firefox
@@ -52,7 +54,7 @@
     enable = true;
     iconTheme = {
       name = "Papirus-Dark";
-      package = (pkgs.papirus-icon-theme.override { color = "black"; });
+      package = pkgs.papirus-icon-theme.override {color = "black";};
     };
     cursorTheme = {
       name = "Dracula-cursors";

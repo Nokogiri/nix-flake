@@ -4,11 +4,9 @@
   inputs,
   outputs,
   ...
-}:
-let
+}: let
   ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
-in
-{
+in {
   users.mutableUsers = true;
   users.users.nokogiri = {
     isNormalUser = true;
@@ -46,7 +44,7 @@ in
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExoigGlfblca2iJPTcyRc/bL5hqHuDlXmbBf/9PhVKZ nokogiri@frankenbook"
     ];
-    packages = [ pkgs.home-manager ];
+    packages = [pkgs.home-manager];
   };
   home-manager = {
     extraSpecialArgs = {

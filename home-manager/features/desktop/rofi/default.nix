@@ -1,9 +1,8 @@
-{ pkgs, ... }:
-{
-  home.packages = with pkgs; [ rofimoji ];
+{pkgs, ...}: {
+  home.packages = with pkgs; [rofimoji];
   programs.rofi = {
     package = pkgs.rofi-wayland;
-    plugins = [ pkgs.rofi-emoji-wayland ];
+    plugins = [pkgs.rofi-emoji-wayland];
     enable = true;
     extraConfig = {
       display-drun = "";

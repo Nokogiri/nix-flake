@@ -1,9 +1,8 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   services = {
     gnome-keyring = {
       enable = true;
-      components = [ "secrets" ];
+      components = ["secrets"];
     };
     gpg-agent = {
       enable = true;

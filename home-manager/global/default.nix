@@ -6,8 +6,7 @@
   lib,
   config,
   ...
-}:
-{
+}: {
   imports = [
     #./sops.nix
     ../features/cli

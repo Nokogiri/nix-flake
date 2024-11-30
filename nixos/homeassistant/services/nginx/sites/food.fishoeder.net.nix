@@ -1,8 +1,4 @@
-{
-  config,
-  ...
-}:
-{
+{config, ...}: {
   #services.phpfpm.pools.foodwiki = {
   #  user = "nokogiri";
   #  group = "users";

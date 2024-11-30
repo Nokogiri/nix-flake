@@ -3,14 +3,12 @@
   inputs,
   pkgs,
   ...
-}:
-{
+}: {
   sops.secrets.mealieCredentials = {
     sopsFile = ../../common/secrets.yaml;
     owner = config.users.users.nobody.name; # config.services.mealie.user;
     group = config.users.users.nobody.group;
     mode = "0666";
-
   };
   services.mealie = {
     package = inputs.nixpkgs-master.legacyPackages.x86_64-linux.mealie;

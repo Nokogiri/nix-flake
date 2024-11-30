@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+{config, ...}: {
   xdg.userDirs = {
     enable = true;
     desktop = "${config.home.homeDirectory}/Desktop";

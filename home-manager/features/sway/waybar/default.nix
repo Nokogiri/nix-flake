@@ -1,7 +1,10 @@
-{ pkgs, inputs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   xdg.configFile."waybar/colors.css".source = ./colors.css;
-  home.packages = [ pkgs.wttrbar ];
+  home.packages = [pkgs.wttrbar];
   programs.waybar = {
     enable = true;
     style = ./style.css;
@@ -11,8 +14,8 @@
         position = "top";
         height = 42;
 
-        modules-left = [ "sway/workspaces" ];
-        modules-center = [ "clock" ];
+        modules-left = ["sway/workspaces"];
+        modules-center = ["clock"];
         modules-right = [
           "tray"
           "battery"
@@ -27,7 +30,7 @@
           tooltip-format = "{title}";
           on-click = "activate";
           on-click-middle = "close";
-          ignore-list = [ "Alacritty" ];
+          ignore-list = ["Alacritty"];
           app_ids-mapping = {
             "firefoxdeveloperedition" = "firefox-developer-edition";
           };
@@ -89,7 +92,7 @@
         "pulseaudio" = {
           scroll-step = 2.5;
           tooltip-format = "{volume}% {icon} {desc}";
-          ignored-sinks = [ "Q35 EQ Ambience" ];
+          ignored-sinks = ["Q35 EQ Ambience"];
           format = "{volume}% {icon}";
           format-bluetooth = "{volume}%  ";
           format-bluetooth-muted = "  ";

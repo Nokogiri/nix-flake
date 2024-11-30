@@ -3,9 +3,8 @@
   lib,
   config,
   ...
-}:
-{
-  home.packages = [ pkgs.profile-sync-daemon ];
+}: {
+  home.packages = [pkgs.profile-sync-daemon];
 
   systemd.user = {
     services = {
@@ -23,7 +22,7 @@
           Environment = "LAUNCHED_BY_SYSTEMD=1";
         };
         Install = {
-          WantedBy = [ "default.target" ];
+          WantedBy = ["default.target"];
         };
       };
       psd-resync = {
@@ -39,7 +38,7 @@
           Environment = "LAUNCHED_BY_SYSTEMD=1";
         };
         Install = {
-          WantedBy = [ "default.target" ];
+          WantedBy = ["default.target"];
         };
       };
     };

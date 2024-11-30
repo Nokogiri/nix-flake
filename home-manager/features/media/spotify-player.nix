@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   home.packages = [
     pkgs.spotify-player
     (pkgs.writeShellScriptBin "Spoty_Player" ''

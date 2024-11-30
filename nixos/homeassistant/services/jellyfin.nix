@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   environment.systemPackages = [
     # pkgs.jellyfin-ffmpeg
     inputs.nixpkgs-master.legacyPackages.x86_64-linux.jellyfin-ffmpeg

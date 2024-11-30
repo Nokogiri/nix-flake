@@ -2,8 +2,7 @@
   config,
   pkgs,
   ...
-}:
-let
+}: let
   cfg = config.wayland.windowManager.sway.config;
   image = "${
     (pkgs.fetchurl {
@@ -11,8 +10,7 @@ let
       hash = "sha256-PYWWdCzHCJIUxNC7TDTN0t6NSRVB0DiUyfe5Ve/z5Dc=";
     })
   }";
-in
-{
+in {
   wayland.windowManager.sway = {
     enable = true;
     checkConfig = false;
@@ -25,7 +23,7 @@ in
       export XCURSOR_THEME=Dracula-cursors
       export QT_QPA_PLATFORM=wayland,xcb
       export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-      export NIXOS_OZONE_WL=1 
+      export NIXOS_OZONE_WL=1
       export MOZ_ENABLE_WAYLAND=1
     '';
     wrapperFeatures = {
@@ -35,41 +33,40 @@ in
     config = {
       assigns = {
         "1" = [
-          { app_id = "kitty"; }
-          { app_id = "org.wezfurlong.wezterm"; }
-          { app_id = "foot"; }
+          {app_id = "kitty";}
+          {app_id = "org.wezfurlong.wezterm";}
+          {app_id = "foot";}
         ];
         "2" = [
-          { app_id = "firefox"; }
-          { app_id = "chromium-browser"; }
-          { class = "Chromium-browser"; }
+          {app_id = "firefox";}
+          {app_id = "chromium-browser";}
+          {class = "Chromium-browser";}
         ];
-        "3" = [ { app_id = "mpv"; } ];
+        "3" = [{app_id = "mpv";}];
         "4" = [
-          { class = "Emacs"; }
-          { app_id = "emacs"; }
+          {class = "Emacs";}
+          {app_id = "emacs";}
         ];
         "5" = [
-          { app_id = "org.pwmt.zathura"; }
-          { app_id = "com.github.maoschanz.drawing"; }
+          {app_id = "org.pwmt.zathura";}
+          {app_id = "com.github.maoschanz.drawing";}
         ];
         "6" = [
-          { class = "steam"; }
-          { app_id = "heroic"; }
-          { app_id = "com.usebottles.bottles"; }
+          {class = "steam";}
+          {app_id = "heroic";}
+          {app_id = "com.usebottles.bottles";}
         ];
         "7" = [
-          { class = "Spotify"; }
-          { app_id = "spotify-qt"; }
-          { app_id = "dev.alextren.Spot"; }
+          {class = "Spotify";}
+          {app_id = "spotify-qt";}
+          {app_id = "dev.alextren.Spot";}
         ];
         "8" = [
-          { app_id = "transmission-qt"; }
-
+          {app_id = "transmission-qt";}
         ];
-        "9" = [ { class = "Com.github.johnfactotum.Foliate"; } ];
+        "9" = [{class = "Com.github.johnfactotum.Foliate";}];
       };
-      bars = [ ];
+      bars = [];
       colors = {
         focused = {
           background = "#bd93f9";
@@ -82,15 +79,15 @@ in
       floating = {
         border = 2;
         criteria = [
-          { app_id = "pavucontrol-qt"; }
-          { app_id = "mpv"; }
-          { app_id = "retroarch"; }
-          { app_id = ".blueman-manager-wrapped"; }
-          { app_id = "nm-connection-editor"; }
-          { app_id = "org.kde.polkit-kde-authentication-agent-1"; }
-          { app_id = "org.kde.kdeconnect-indicator"; }
-          { title = "File Operation Progress"; }
-          { class = "Ryujinx"; }
+          {app_id = "pavucontrol-qt";}
+          {app_id = "mpv";}
+          {app_id = "retroarch";}
+          {app_id = ".blueman-manager-wrapped";}
+          {app_id = "nm-connection-editor";}
+          {app_id = "org.kde.polkit-kde-authentication-agent-1";}
+          {app_id = "org.kde.kdeconnect-indicator";}
+          {title = "File Operation Progress";}
+          {class = "Ryujinx";}
         ];
         modifier = "Mod4";
       };
@@ -98,7 +95,7 @@ in
         followMouse = true;
       };
       fonts = {
-        names = [ " JetBrainsMono Nerd Font Propo" ];
+        names = [" JetBrainsMono Nerd Font Propo"];
         size = 11.0;
       };
       gaps = {
@@ -210,7 +207,7 @@ in
         "XF86AudioLowerVolume" = "exec ${pkgs.swayosd}/bin/swayosd-client --output-volume lower";
         "XF86AudioMute" = "exec ${pkgs.swayosd}/bin/swayosd-client --output-volume mute-toggle";
 
-        # powermenu 
+        # powermenu
         #"XF86PowerOff" = "exec pkill -9 wlogout || ${pkgs.wlogout}/bin/wlogout -p layer-shell";
         # grimshot
         "${cfg.modifier}+m" = "exec grimshot save output";
@@ -238,7 +235,7 @@ in
         };
       };
       startup = [
-        { command = "wl-paste --watch cliphist store"; }
+        {command = "wl-paste --watch cliphist store";}
         {
           command = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
         }
@@ -284,7 +281,7 @@ in
 
       #titlebar_border_thickness 0
 
-      ### SWAYFX 
+      ### SWAYFX
       corner_radius 10
       blur enable
       blur_passes 2

@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.wlogout = {
     enable = true;
     #layout = [
@@ -14,7 +13,7 @@
         background-image: none;
       }
       window {
-       background-color: rgba(40, 42, 54, 0.9); 
+       background-color: rgba(40, 42, 54, 0.9);
       }
       button {
         color: #F8F8F2;

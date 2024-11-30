@@ -1,10 +1,10 @@
-{ inputs, pkgs, ... }:
 {
-  #imports = [
-  #  inputs.hyprland.nixosModules.default
-  #];
+  inputs,
+  pkgs,
+  ...
+}: {
   security.pam.services.swaylock.fprintAuth = true;
-  security.pam.services.hyprlock = { };
+  security.pam.services.hyprlock = {};
 
   gtk.iconCache.enable = true;
 
@@ -14,7 +14,7 @@
 
   environment.systemPackages = with pkgs; [
     dracula-theme
-    (papirus-icon-theme.override { color = "black"; })
+    (papirus-icon-theme.override {color = "black";})
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     libsForQt5.qtstyleplugin-kvantum
@@ -32,13 +32,9 @@
       noto-fonts-cjk-sans
       material-symbols
       weather-icons
-      (nerdfonts.override {
-        fonts = [
-          "NerdFontsSymbolsOnly"
-          "IntelOneMono"
-          "JetBrainsMono"
-        ];
-      })
+      nerd-fonts.intone-mono
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.symbols-only
     ];
     enableDefaultPackages = true;
     fontDir.enable = true;
@@ -47,10 +43,10 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = [ "IntoneMono Nerd Font Propo" ];
-        sansSerif = [ "IntoneMono Nerd Font Propo" ];
-        monospace = [ "IntoneMono Nerd Font" ];
-        emoji = [ "Noto Color Emoji" ];
+        serif = ["IntoneMono Nerd Font Propo"];
+        sansSerif = ["IntoneMono Nerd Font Propo"];
+        monospace = ["IntoneMono Nerd Font"];
+        emoji = ["Noto Color Emoji"];
       };
     };
   };
@@ -76,9 +72,9 @@
   services = {
     dbus = {
       enable = true;
-      packages = [ pkgs.gcr ];
+      packages = [pkgs.gcr];
     };
-    flatpak.enable = false;
+    flatpak.enable = true;
     printing.enable = true;
     udisks2.enable = true;
     upower.enable = true;
@@ -96,7 +92,7 @@
         "hyprland"
         "gtk"
       ];
-      "org.freedesktop.impl.portal.Settings" = [ "gtk" ];
+      "org.freedesktop.impl.portal.Settings" = ["gtk"];
     };
   };
   environment.pathsToLink = [

@@ -3,7 +3,7 @@ let
     "firefox.desktop" # assume firefox provides this
   ];
   associations = {
-    "inode/directory" = [ "thunar.desktop" ];
+    "inode/directory" = ["thunar.desktop"];
     "text/html" = browser;
     "x-scheme-handler/http" = browser;
     "x-scheme-handler/https" = browser;
@@ -18,8 +18,7 @@ let
     "application/x-extension-xhtml" = browser;
     "application/x-extension-xht" = browser;
   };
-in
-{
+in {
   xdg.mime.enable = true;
   xdg.mimeApps.enable = true;
   xdg.mimeApps.associations.added = associations;

@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   systemd.user.services = {
     rot8 = {
       Unit = {
@@ -11,7 +10,7 @@
         Restart = "on-failure";
       };
       Install = {
-        WantedBy = [ "sway-session.target" ];
+        WantedBy = ["sway-session.target"];
       };
     };
     polkit-kde-authentication-agent-1 = {
@@ -24,7 +23,7 @@
         Restart = "on-failure";
       };
       Install = {
-        WantedBy = [ "sway-session.target" ];
+        WantedBy = ["sway-session.target"];
       };
     };
   };

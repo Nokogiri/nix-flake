@@ -1,14 +1,13 @@
-{ pkgs, ... }:
-{
-  environment.systemPackages = with pkgs; [ rclone ];
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [rclone];
   systemd.services = {
     rclone-nokogiri = {
       enable = true;
       description = "rclone: Remote FUSE filesystem for cloud storage config nokogiri";
-      documentation = [ "man:rclone(1)" ];
-      after = [ "network-online.target" ];
-      wants = [ "network-online.target" ];
-      wantedBy = [ "default.target" ];
+      documentation = ["man:rclone(1)"];
+      after = ["network-online.target"];
+      wants = ["network-online.target"];
+      wantedBy = ["default.target"];
       serviceConfig = {
         Type = "notify";
         User = "nokogiri";
@@ -27,17 +26,17 @@
                     nokogiri: /media/cloud/nokogiri
         '';
         ExecStop = "/run/wrappers/bin/fusermount -u /media/cloud/nokogiri";
-        Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
+        Environment = ["PATH=/run/wrappers/bin/:$PATH"];
       };
     };
 
     rclone-lyria = {
       enable = true;
       description = "rclone: Remote FUSE filesystem for cloud storage config lyria";
-      documentation = [ "man:rclone(1)" ];
-      after = [ "network-online.target" ];
-      wants = [ "network-online.target" ];
-      wantedBy = [ "default.target" ];
+      documentation = ["man:rclone(1)"];
+      after = ["network-online.target"];
+      wants = ["network-online.target"];
+      wantedBy = ["default.target"];
       serviceConfig = {
         Type = "notify";
         User = "nokogiri";
@@ -57,17 +56,17 @@
                     lyria:Media /media/cloud/Media/lyria
         '';
         ExecStop = "/run/wrappers/bin/fusermount -u /media/cloud/Media/lyria";
-        Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
+        Environment = ["PATH=/run/wrappers/bin/:$PATH"];
       };
     };
 
     rclone-guntheria = {
       enable = true;
       description = "rclone: Remote FUSE filesystem for cloud storage config guntheria";
-      documentation = [ "man:rclone(1)" ];
-      after = [ "network-online.target" ];
-      wants = [ "network-online.target" ];
-      wantedBy = [ "default.target" ];
+      documentation = ["man:rclone(1)"];
+      after = ["network-online.target"];
+      wants = ["network-online.target"];
+      wantedBy = ["default.target"];
       serviceConfig = {
         Type = "notify";
         User = "nokogiri";
@@ -87,17 +86,17 @@
                     guntheria:Media /media/cloud/Media/guntheria
         '';
         ExecStop = "/run/wrappers/bin/fusermount -u /media/cloud/Media/guntheria";
-        Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
+        Environment = ["PATH=/run/wrappers/bin/:$PATH"];
       };
     };
 
     rclone-markus = {
       enable = true;
       description = "rclone: Remote FUSE filesystem for cloud storage config markus";
-      documentation = [ "man:rclone(1)" ];
-      after = [ "network-online.target" ];
-      wants = [ "network-online.target" ];
-      wantedBy = [ "default.target" ];
+      documentation = ["man:rclone(1)"];
+      after = ["network-online.target"];
+      wants = ["network-online.target"];
+      wantedBy = ["default.target"];
       serviceConfig = {
         Type = "notify";
         User = "nokogiri";
@@ -117,16 +116,16 @@
                     markus:Media /media/cloud/Media/markus
         '';
         ExecStop = "/run/wrappers/bin/fusermount -u /media/cloud/Media/markus";
-        Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
+        Environment = ["PATH=/run/wrappers/bin/:$PATH"];
       };
     };
     rclone-kenny = {
       enable = true;
       description = "rclone: Remote FUSE filesystem for cloud storage config kenny";
-      documentation = [ "man:rclone(1)" ];
-      after = [ "network-online.target" ];
-      wants = [ "network-online.target" ];
-      wantedBy = [ "default.target" ];
+      documentation = ["man:rclone(1)"];
+      after = ["network-online.target"];
+      wants = ["network-online.target"];
+      wantedBy = ["default.target"];
       serviceConfig = {
         Type = "notify";
         User = "nokogiri";
@@ -146,7 +145,7 @@
                     kenny:Media /media/cloud/Media/kenny
         '';
         ExecStop = "/run/wrappers/bin/fusermount -u /media/cloud/Media/kenny";
-        Environment = [ "PATH=/run/wrappers/bin/:$PATH" ];
+        Environment = ["PATH=/run/wrappers/bin/:$PATH"];
       };
     };
     #rclone-hildi = {

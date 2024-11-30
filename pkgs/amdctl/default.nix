@@ -4,7 +4,6 @@
   cmake,
   fetchFromGitHub,
 }:
-
 stdenv.mkDerivation rec {
   pname = "amdctl";
   version = "v0.11";
@@ -15,7 +14,7 @@ stdenv.mkDerivation rec {
     sha256 = "2wBk/9aAD7ARMGbcVxk+CzEvUf8U4RS4ZwTCj8cHNNo=";
   };
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [cmake];
 
   installPhase = ''
     mkdir -p $out/bin
@@ -26,6 +25,6 @@ stdenv.mkDerivation rec {
     description = "Set P-State voltages and clock speeds on recent AMD CPUs on Linux.";
     homepage = "https://github.com/kevinlekiller/amdctl";
     platforms = platforms.linux;
-    maintainers = with maintainers; [ nokogiri ];
+    maintainers = with maintainers; [nokogiri];
   };
 }

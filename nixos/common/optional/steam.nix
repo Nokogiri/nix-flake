@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.gamemode = {
     enable = true;
     enableRenice = true;
@@ -16,11 +15,11 @@
 
       custom = {
         start = ''
-          ${pkgs.libnotify}/bin/notify-send 'GameMode started' 
+          ${pkgs.libnotify}/bin/notify-send 'GameMode started'
                           ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance
         '';
         end = ''
-          ${pkgs.libnotify}/bin/notify-send 'GameMode ended' 
+          ${pkgs.libnotify}/bin/notify-send 'GameMode ended'
                           ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced
         '';
       };

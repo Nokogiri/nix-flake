@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   xdg.configFile."fish/themes/Dracula Official.theme".source = (
     pkgs.fetchurl {
       url = "https://raw.githubusercontent.com/dracula/fish/refs/heads/master/themes/Dracula%20Official.theme";
@@ -8,7 +7,7 @@
   );
   programs.atuin.enableFishIntegration = true;
   programs.zoxide.enableFishIntegration = false;
-  home.packages = [ pkgs.any-nix-shell ];
+  home.packages = [pkgs.any-nix-shell];
   programs.fish = {
     enable = true;
     functions = {

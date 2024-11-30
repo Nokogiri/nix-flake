@@ -1,9 +1,8 @@
-{ config, ... }:
-{
+{config, ...}: {
   services.nginx = {
     enable = true;
     virtualHosts."mealie.fishoeder.net" = {
-      serverAliases = [ "mealie" ];
+      serverAliases = ["mealie"];
       useACMEHost = "fishoeder.net";
       forceSSL = true;
       locations."/".extraConfig = ''

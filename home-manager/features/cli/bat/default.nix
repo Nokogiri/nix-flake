@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   #xidg.configFile."bat/themes/Dracula.tmTheme".source =
   #  ./Dracula.tmTheme;
   xdg.configFile."bat/themes/Dracula.tmTheme".source = (

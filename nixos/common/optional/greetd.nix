@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   environment.systemPackages = [
     (pkgs.writeShellScriptBin "Hyprlaunch" ''
       exec systemd-cat --identifier=Hyprland Hyprland &> /dev/null

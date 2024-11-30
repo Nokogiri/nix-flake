@@ -4,7 +4,6 @@
   fetchFromGitHub,
   jdupes,
 }:
-
 stdenvNoCC.mkDerivation {
   pname = "dracula-icon-theme";
   version = "unstable-2024-05-26";
@@ -39,6 +38,6 @@ stdenvNoCC.mkDerivation {
     homepage = "https://github.com/m4thewz/dracula-icons";
     platforms = platforms.linux;
     license = licenses.gpl3Only;
-    maintainers = with maintainers; [ therealr5 ];
+    maintainers = with maintainers; [therealr5];
   };
 }

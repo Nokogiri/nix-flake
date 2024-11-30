@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   sops.secrets.vaultwarden = {
     sopsFile = ../../common/secrets.yaml;
   };

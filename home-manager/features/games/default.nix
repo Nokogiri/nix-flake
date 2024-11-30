@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
     ./mangohud
   ];
@@ -12,7 +11,7 @@
     google-chrome # GFN
 
     gzdoom
-    vintagestory
+    #vintagestory
 
     # emulation
     cemu

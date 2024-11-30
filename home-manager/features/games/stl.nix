@@ -1,6 +1,5 @@
-{ pkgs, ... }:
-{
-  home.packages = with pkgs; [ steamtinkerlaunch ];
+{pkgs, ...}: {
+  home.packages = with pkgs; [steamtinkerlaunch];
 
   xdg.dataFile."Steam/compatibilitytools.d/SteamTinkerLaunch/steamtinkerlaunch" = {
     enable = true;
