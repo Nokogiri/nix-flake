@@ -39,13 +39,13 @@ in {
         WantedBy = ["hyprland-session.target"];
       };
     };
-    polkit-kde-authentication-agent-1 = {
+    lxqt-policykit-agent = {
       Unit = {
         Description = "Auth Agent";
       };
       Service = {
         Type = "simple";
-        ExecStart = "${pkgs.kdePackages.polkit-kde-agent-1}/libexec/polkit-kde-authentication-agent-1";
+        ExecStart = "${pkgs.lxqt.lxqt-policykit}/bin/lxqt-policykit-agent";
         Restart = "on-failure";
       };
       Install = {

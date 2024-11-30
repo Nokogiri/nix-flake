@@ -16,6 +16,7 @@
     ../common/global
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
+    ../common/optional/podman.nix
     ../common/optional/greetd.nix
     ../common/optional/fprintd.nix
     ../common/optional/libvirt.nix
@@ -34,19 +35,6 @@
     ./network.nix
     ./smb.nix
   ];
-
-  nixpkgs = {
-    #overlays = [
-    #  outputs.overlays.additions
-    #  outputs.overlays.modifications
-    #];
-    config = {
-      #  allowUnfree = true;
-      permittedInsecurePackages = [
-        "dotnet-runtime-wrapped-7.0.20"
-      ];
-    };
-  };
 
   networking = {
     hostName = "mowteng";
@@ -89,7 +77,8 @@
     latitude = 50.9787;
     longitude = 11.03283;
   };
-
+  
+  security.polkit.enable = true;
   services.acpid.enable = true;
   services.acpid.logEvents = false;
 
