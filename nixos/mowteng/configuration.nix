@@ -2,7 +2,6 @@
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 {
   inputs,
-  outputs,
   lib,
   pkgs,
   ...
@@ -16,7 +15,6 @@
     ../common/global
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
-    ../common/optional/podman.nix
     ../common/optional/greetd.nix
     ../common/optional/fprintd.nix
     ../common/optional/libvirt.nix
@@ -46,6 +44,7 @@
     "vm.max_map_count" = 2147483642; # 524288;
   };
 
+  nixpkgs.config.permittedInsecurePackages = ["dotnet-runtime-7.0.20"];
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
   environment.systemPackages = with pkgs; [
@@ -77,7 +76,7 @@
     latitude = 50.9787;
     longitude = 11.03283;
   };
-  
+
   security.polkit.enable = true;
   services.acpid.enable = true;
   services.acpid.logEvents = false;

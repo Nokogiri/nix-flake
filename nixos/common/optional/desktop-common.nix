@@ -74,7 +74,7 @@
       enable = true;
       packages = [pkgs.gcr];
     };
-    flatpak.enable = true;
+    flatpak.enable = false;
     printing.enable = true;
     udisks2.enable = true;
     upower.enable = true;
