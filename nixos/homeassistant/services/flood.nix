@@ -21,11 +21,4 @@
       ExecStart = "${pkgs.qbittorrent-nox}/bin/qbittorrent-nox";
     };
   };
-  #services.rtorrent = {
-  #	enable = true;
-  #	openFirewall = true;
-  #	package = pkgs.jesec-rtorrent;
-  #	group = "flood";
-  #	user = "nokogiri";
-  #};
 }

@@ -53,8 +53,6 @@
   programs = {
     hyprland = {
       enable = true;
-      #package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-      #portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
     iio-hyprland = {
       enable = true;
@@ -66,6 +64,7 @@
     style = "kvantum";
     platformTheme = "qt5ct";
   };
+
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
 

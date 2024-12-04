@@ -1,14 +1,8 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = [
-     pkgs.jellyfin-ffmpeg
-    #inputs.nixpkgs-master.legacyPackages.x86_64-linux.jellyfin-ffmpeg
+    pkgs.jellyfin-ffmpeg
   ];
   services.jellyfin.enable = true;
-  #services.jellyfin.package = inputs.nixpkgs-master.legacyPackages.x86_64-linux.jellyfin;
   services.nginx = {
     virtualHosts."media.fishoeder.net" = {
       useACMEHost = "fishoeder.net";
