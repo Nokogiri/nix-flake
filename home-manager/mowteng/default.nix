@@ -12,8 +12,9 @@
     ../features/nvim
     #../features/sway
     ../features/hyprland
-    inputs.nur.nixosModules.nur
+    inputs.nur.modules.homeManager.default
   ];
+  nixpkgs.overlays = [inputs.nur.overlay];
   home.packages = with pkgs; [
     handlr-regex
     gimp

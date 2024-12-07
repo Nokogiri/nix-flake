@@ -9,6 +9,7 @@
   imports = [
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
+    inputs.nur.modules.nixos.default
 
     ./hardware-configuration.nix
 
@@ -78,6 +79,14 @@
   };
 
   security.polkit.enable = true;
+  security.pam.loginLimits = [
+    {
+      domain = "nokogiri";
+      item = "nice";
+      type = "-";
+      value = "-20";
+    }
+  ];
   services.acpid.enable = true;
   services.acpid.logEvents = false;
 

@@ -12,7 +12,7 @@
   ];
 
   services.udev.extraRules = ''
-    SUBSYSTEM=="power_supply",ATTR{online}=="0",RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set power-saver";
+    SUBSYSTEM=="power_supply",ATTR{online}=="0",RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set power-saver"
     SUBSYSTEM=="power_supply",ATTR{online}=="1",RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced"
   '';
 }

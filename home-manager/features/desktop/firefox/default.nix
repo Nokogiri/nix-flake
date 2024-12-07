@@ -25,7 +25,7 @@
   programs.firefox = {
     enable = true;
     nativeMessagingHosts = [pkgs.ff2mpv-go];
-    profiles.nokogiri.extensions = with config.nur.repos.rycee.firefox-addons; [
+    profiles.nokogiri.extensions = with pkgs.nur.repos.rycee.firefox-addons; [
       ff2mpv
       ublock-origin
       onetab
@@ -70,7 +70,7 @@
       };
     };
 
-    profiles.private.extensions = with config.nur.repos.rycee.firefox-addons; [
+    profiles.private.extensions = with pkgs.nur.repos.rycee.firefox-addons; [
       ublock-origin
       firefox-color
       onetab

@@ -9,7 +9,7 @@
     ./foot.nix
     ./gpg-agent.nix
     ./joplin-d.nix
-    ./obs-studio.nix
+    #./obs-studio.nix
     ./rbw.nix
     ./rofi
     ./swaync
@@ -24,6 +24,7 @@
   home.packages = with pkgs; [
     libnotify
     xdg-utils
+    udiskie
     (writeShellScriptBin "launch-gamescope" ''
       exec nice -n -11 -- gamescope "$@"
     '')

@@ -33,6 +33,9 @@
     iio-hyprland = {
       url = "github:JeanSchoeller/iio-hyprland";
     };
+    firefox-addons = {
+      url = "git+https://gitlab.com/rycee/nur-expressions?dir=pkgs/firefox-addons";
+    };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -104,7 +107,9 @@
         extraSpecialArgs = {
           inherit inputs outputs;
         };
-        modules = [./home-manager/mowteng];
+        modules = [
+          ./home-manager/mowteng
+        ];
       };
     };
 

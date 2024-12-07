@@ -245,6 +245,7 @@
         "${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all"
         "${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"
         "${pkgs.nextcloud-client}/bin/nextcloud"
+        "${pkgs.udiskie}/bin/udiskie --tray"
       ];
       windowrulev2 = [
         "workspace 2 silent,class:^(firefox)$"
