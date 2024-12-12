@@ -14,7 +14,7 @@
     ../features/hyprland
     inputs.nur.modules.homeManager.default
   ];
-  nixpkgs.overlays = [inputs.nur.overlay];
+  nixpkgs.overlays = [inputs.nur.overlays.default];
   home.packages = with pkgs; [
     handlr-regex
     gimp

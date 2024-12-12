@@ -17,15 +17,17 @@
     ../common/optional/ac-bat-ppd.nix
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
-    ../common/optional/greetd.nix
+    #../common/optional/greetd.nix
     ../common/optional/fprintd.nix
     ../common/optional/libvirt.nix
     ../common/optional/mullvad.nix
     ../common/optional/pipewire.nix
+    ../common/optional/podman.nix
     ../common/optional/quietboot.nix
     ../common/optional/sane.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
+    ../common/optional/uwsm.nix
     ../common/optional/zramswap.nix
 
     ../common/users/nokogiri.nix
@@ -51,6 +53,7 @@
   environment.systemPackages = with pkgs; [
     amdctl
     compsize
+    distrobox
   ];
 
   hardware.graphics = {

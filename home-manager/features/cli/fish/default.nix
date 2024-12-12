@@ -54,7 +54,7 @@
     };
     interactiveShellInit = ''
       fish_config theme choose Dracula\ Official
-      any-nix-shell fish --info-right | source
+      #any-nix-shell fish --info-right | source
       fzf_configure_bindings --history=\cr
     '';
   };
