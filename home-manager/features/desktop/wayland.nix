@@ -1,12 +1,9 @@
 {
   pkgs,
-  inputs,
   ...
 }: {
-  imports = [
-    #./gammastep.nix
-    ./wvkbd.nix
-  ];
+  #imports = [
+  #];
   home.packages = with pkgs; [
     cliphist
     swayimg

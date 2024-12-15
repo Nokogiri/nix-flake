@@ -20,6 +20,7 @@
   home.packages = with pkgs; [
     hyprpicker
     hyprpaper
+    hyprpolkitagent
     grimblast
     hyprprop
     scratchpad

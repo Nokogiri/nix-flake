@@ -56,6 +56,9 @@
       fish_config theme choose Dracula\ Official
       #any-nix-shell fish --info-right | source
       fzf_configure_bindings --history=\cr
+      if uwsm check may-start
+	      exec systemd-cat -t uwsm_start uwsm start -S default
+      end
     '';
   };
 }

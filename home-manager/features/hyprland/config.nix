@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}:{
   wayland.windowManager.hyprland = {
     settings = {
       animations = {
@@ -28,7 +28,7 @@
       bind = [
         "SUPER,Return,exec,${pkgs.foot}/bin/footclient"
         "SUPER,w,exec,${pkgs.swaynotificationcenter}/bin/swaync-client -t"
-        "SUPER,p,exec,pkill -9 rofi || ${pkgs.rofi-wayland}/bin/rofi -show drun -modes drun,filebrowser,keys,window"
+        "SUPER,p,exec,pkill -9 rofi > /dev/null 2>&1 || ${pkgs.rofi-wayland}/bin/rofi -run-command 'uwsm-app -- {cmd}' -show drun -modes drun,filebrowser,keys,window"
         "SUPER,i,exec,cliphist list | ${pkgs.rofi-wayland}/bin/rofi -dmenu | cliphist decode | wl-copy"
         ",XF86Tools,exec,pkill -USR1 waybar # profile button"
         ",Print,exec,grimblast --notify copy output"
@@ -236,17 +236,20 @@
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
-        font_family = " JetBrainsMono Nerd Font Propo";
-        render_unfocused_fps = "1";
+        font_family = "IntoneMono Nerd Font Propo";
+        render_unfocused_fps = "10";
         vfr = true;
       };
       monitor = "eDP-1,1920x1200@60,auto,1";
       exec-once = [
         "${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all"
-        "${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"
-        "${pkgs.nextcloud-client}/bin/nextcloud"
-        "${pkgs.udiskie}/bin/udiskie --tray"
-      ];
+        "uwsm app -- ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"
+        "uwsm app -- ${pkgs.nextcloud-client}/bin/nextcloud"
+        "uwsm app -- ${pkgs.wvkbd}/bin/wvkbd-mobintl -H 600 -L 420 --hidden"
+        "uwsm app -- ${inputs.iio-hyprland.packages.${pkgs.system}.default}/bin/iio-hyprland"
+        "uwsm app -- ${pkgs.udiskie}/bin/udiskie --tray"
+        "uwsm app -- ${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent"
+        ];
       windowrulev2 = [
         "workspace 2 silent,class:^(firefox)$"
         # polkit
@@ -265,9 +268,9 @@
         "workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$"
         "pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$"
         # pavucontrol
-        "float,class:^(pavucontrol)$"
-        "center,class:^(pavucontrol)$"
-        "size 66%,class:^(pavucontrol)$"
+        "float,title:^(Volume Control)$"
+        "center,class:^(Volume Control)$"
+        "size 66%,class:^(Volume Control)$"
         "float,title:^(Select EXE to Run)$"
         "float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$"
       ];

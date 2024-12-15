@@ -7,6 +7,7 @@
     ./colors.nix
     ./firefox
     ./foot.nix
+    ./fuzzel.nix
     ./gpg-agent.nix
     ./joplin-d.nix
     #./obs-studio.nix
@@ -14,7 +15,6 @@
     ./rofi
     ./swaync
     ./swayosd.nix
-    ./udisks.nix
     ./vscode.nix
     ./xdg
     ./ydotool.nix

@@ -14,6 +14,7 @@
 
   environment.systemPackages = with pkgs; [
     dracula-theme
+    hyprland
     (papirus-icon-theme.override {color = "black";})
     libsForQt5.qt5ct
     qt6Packages.qt6ct
@@ -51,9 +52,9 @@
     };
   };
   programs = {
-    hyprland = {
-      enable = true;
-    };
+  #  hyprland = {
+  #    enable = true;
+  #  };
     iio-hyprland = {
       enable = true;
       package = inputs.iio-hyprland.packages.${pkgs.system}.default;

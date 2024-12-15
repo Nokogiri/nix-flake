@@ -10,5 +10,5 @@
     logLevel = "ERR";
     plugins = lib.mkForce [];
   };
-  environment.systemPackages = [pkgs.networkmanagerapplet];
+  #environment.systemPackages = [pkgs.networkmanagerapplet];
 }

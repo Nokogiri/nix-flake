@@ -19,10 +19,10 @@
     ../common/optional/desktop-common.nix
     #../common/optional/greetd.nix
     ../common/optional/fprintd.nix
-    ../common/optional/libvirt.nix
+    #../common/optional/libvirt.nix
     ../common/optional/mullvad.nix
     ../common/optional/pipewire.nix
-    ../common/optional/podman.nix
+    #../common/optional/podman.nix
     ../common/optional/quietboot.nix
     ../common/optional/sane.nix
     ../common/optional/steam.nix
