@@ -52,9 +52,9 @@
     };
   };
   programs = {
-  #  hyprland = {
-  #    enable = true;
-  #  };
+    #  hyprland = {
+    #    enable = true;
+    #  };
     iio-hyprland = {
       enable = true;
       package = inputs.iio-hyprland.packages.${pkgs.system}.default;

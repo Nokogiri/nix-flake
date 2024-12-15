@@ -1,4 +1,8 @@
-{pkgs, inputs, ...}:{
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     settings = {
       animations = {
@@ -249,7 +253,7 @@
         "uwsm app -- ${inputs.iio-hyprland.packages.${pkgs.system}.default}/bin/iio-hyprland"
         "uwsm app -- ${pkgs.udiskie}/bin/udiskie --tray"
         "uwsm app -- ${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent"
-        ];
+      ];
       windowrulev2 = [
         "workspace 2 silent,class:^(firefox)$"
         # polkit
