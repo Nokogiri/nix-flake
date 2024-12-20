@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }: let
   image = "${
@@ -24,10 +23,5 @@ in {
         WantedBy = ["hyprland-session.target"];
       };
     };
-    #hyprpolkitagent = {
-    #  Install = {
-    #    WantedBy = ["hyprland-session.target"];
-    #  };
-    #};
   };
 }

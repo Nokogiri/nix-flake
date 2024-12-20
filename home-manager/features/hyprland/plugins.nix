@@ -1,6 +1,5 @@
 {
   inputs,
-  config,
   ...
 }: let
   hyprplugs = inputs.hyprplugs.packages."x86_64-linux";
