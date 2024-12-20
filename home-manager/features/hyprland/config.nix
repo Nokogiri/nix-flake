@@ -147,6 +147,7 @@
           render_power = "2";
           scale = "0.97";
         };
+        dim_around = "0.8";
         blur = {
           enabled = true;
           size = "5";
@@ -265,6 +266,9 @@
         "float,class:^(electron)$,title:^(Select Executable)$"
         "center,class:^(electron)$,title:^(Select Executable)$"
         "size 60%,class:^(electron)$,title:^(Select Executable)$"
+        "float,class:^(electron)$,title:^(Choose where you want to move)$"
+        "float,title:^(Select EXE to Run)$"
+
         # mpv
         "workspace 3 silent,class:^(mpv)$"
         # steam
@@ -275,7 +279,6 @@
         "float,title:^(Volume Control)$"
         "center,class:^(Volume Control)$"
         "size 66%,class:^(Volume Control)$"
-        "float,title:^(Select EXE to Run)$"
         "float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$"
       ];
     };

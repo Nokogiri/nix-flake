@@ -26,7 +26,7 @@
     xdg-utils
     udiskie
     (writeShellScriptBin "launch-gamescope" ''
-      exec nice -n -11 -- gamescope "$@"
+      exec env LD_PRELOAD="" nice -n -11 -- gamescope "$@"
     '')
   ];
 

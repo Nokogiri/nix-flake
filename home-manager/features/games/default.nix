@@ -8,11 +8,12 @@
   home.packages = with pkgs; [
     mangohud
     heroic
-    google-chrome # GFN
+    #google-chrome # GFN
 
     gzdoom
     #vintagestory
-
+    
+    #bottles
     # emulation
     cemu
     dolphin-emu-beta

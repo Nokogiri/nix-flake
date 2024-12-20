@@ -17,12 +17,9 @@
     ../common/optional/ac-bat-ppd.nix
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
-    #../common/optional/greetd.nix
     ../common/optional/fprintd.nix
-    #../common/optional/libvirt.nix
     ../common/optional/mullvad.nix
     ../common/optional/pipewire.nix
-    #../common/optional/podman.nix
     ../common/optional/quietboot.nix
     ../common/optional/sane.nix
     ../common/optional/steam.nix
@@ -47,13 +44,11 @@
     "vm.max_map_count" = 2147483642; # 524288;
   };
 
-  nixpkgs.config.permittedInsecurePackages = ["dotnet-runtime-7.0.20"];
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
   environment.systemPackages = with pkgs; [
     amdctl
     compsize
-    distrobox
   ];
 
   hardware.graphics = {
@@ -65,7 +60,7 @@
     cpuFreqGovernor = "powersave";
     cpufreq = {
       min = 400000;
-      max = 2500000;
+      max = 3000000;
     };
     powertop.enable = false;
   };
