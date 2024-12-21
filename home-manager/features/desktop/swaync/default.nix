@@ -377,8 +377,8 @@
       "positionX" = "right";
       "positionY" = "top";
       "cssPriority" = "user";
-      "control-center-width" = 380;
-      "control-center-height" = 860;
+      "control-center-width" = 400;
+      "control-center-height" = 1060;
       "control-center-margin-top" = 1;
       "control-center-margin-bottom" = 1;
       "control-center-margin-right" = 1;
@@ -431,7 +431,7 @@
           "text" = "Do not disturb";
         };
         "label" = {
-          "max-lines" = 1;
+          "max-lines" = 2;
           "text" = " ";
         };
         "mpris" = {
