@@ -33,7 +33,10 @@
     iio-hyprland = {
       url = "github:JeanSchoeller/iio-hyprland";
     };
-    #hyprland.url = "github:hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.46.1";
+    #hyprland.url = "github:hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.46.2";
+    hyprland-qtutils = {
+      url = "github:hyprwm/hyprland-qtutils";
+    };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";

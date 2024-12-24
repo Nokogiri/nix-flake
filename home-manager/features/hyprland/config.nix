@@ -268,7 +268,8 @@
         "size 60%,class:^(electron)$,title:^(Select Executable)$"
         "float,class:^(electron)$,title:^(Choose where you want to move)$"
         "float,title:^(Select EXE to Run)$"
-
+        # desktop-portal
+        "float,class:^(xdg-desktop-portal-gtk)$"
         # mpv
         "workspace 3 silent,class:^(mpv)$"
         # steam
