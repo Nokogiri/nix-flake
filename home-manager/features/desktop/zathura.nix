@@ -44,7 +44,7 @@
 
       recolor-lightcolor = "rgba(40,42,54,1)"; # Background
       recolor-darkcolor = "rgba(248,248,242,1)"; # Foreground
-      recolor = "true";
+      recolor = "false";
       #
     };
   };

@@ -6,19 +6,21 @@
   imports = [
     ./colors.nix
     ./firefox
-    ./foot.nix
-    ./fuzzel.nix
+    #./foot.nix
+    #./fuzzel.nix
     ./gpg-agent.nix
     ./joplin-d.nix
+    ./kitty.nix
     #./obs-studio.nix
     ./rbw.nix
     ./rofi
-    ./swaync
-    ./swayosd.nix
+    #./swaync
+    #./swayosd.nix
     ./vscode.nix
+    ./wezterm.nix
     ./xdg
-    ./ydotool.nix
-    ./zathura.nix
+    #./ydotool.nix
+    #./zathura.nix
   ];
 
   home.packages = with pkgs; [
@@ -37,11 +39,11 @@
     Inherits=${config.gtk.cursorTheme.name}
   '';
 
-  qt = {
-    enable = true;
-    style.name = "qt5ct-style";
-    platformTheme.name = "qtct";
-  };
+  #qt = {
+  #  enable = true;
+  #  style.name = "qt5ct-style";
+  #  platformTheme.name = "qtct";
+  #};
 
   home.pointerCursor = {
     package = pkgs.dracula-theme;
@@ -51,56 +53,55 @@
     x11.enable = true;
   };
   home.preferXdgDirectories = true;
-  gtk = {
-    enable = true;
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme.override {color = "black";};
-    };
-    cursorTheme = {
-      name = "Dracula-cursors";
-      package = pkgs.dracula-theme;
-    };
-    font = {
-      name = "IntoneMono Nerd Font Propo";
-      size = 11;
-    };
-    theme = {
-      name = "Dracula";
-      package = pkgs.dracula-theme;
-    };
-    gtk3 = {
-      extraConfig = {
-        gtk-recent-files-limit = 10;
-      };
-      extraCss = ''
-        .window-frame, .window-frame:backdrop {
-         box-shadow: 0 0 0 black;
-         border-style: none;
-         margin: 0;
-         border-radius: 0;
-        }
+  #gtk = {
+  #  enable = true;
+  #  iconTheme = {
+  #    name = "Papirus-Dark";
+  #    package = pkgs.papirus-icon-theme.override {color = "black";};
+  #  };
+  #  cursorTheme = {
+  #    name = "Dracula-cursors";
+  #    package = pkgs.dracula-theme;
+  #  };
+  #  font = {
+  #    name = "IntoneMono Nerd Font Propo";
+  #    size = 11;
+  #  };
+  #  theme = {
+  #    name = "Dracula";
+  #    package = pkgs.dracula-theme;
+  #  };
+  #  gtk3 = {
+  #    extraConfig = {
+  #      gtk-recent-files-limit = 10;
+  #    };
+  #    extraCss = ''
+  #      .window-frame, .window-frame:backdrop {
+  #       box-shadow: 0 0 0 black;
+  #       border-style: none;
+  #       margin: 0;
+  #       border-radius: 0;
+  #      }
 
-        .titlebar {
-         border-radius: 0;
-        }
+  #      .titlebar {
+  #       border-radius: 0;
+  #      }
 
-        .window-frame.csd.popup {
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
-        }
-
-        .header-bar {
-          background-image: none;
-          background-color: #ededed;
-          box-shadow: none;
-        }
-        /* You may want to use this if you do not like the double title.
-        GtkLabel.title {
-            opacity: 0;
-        }*/
-      '';
-    };
-  };
+  #      .window-frame.csd.popup {
+  #        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+  #      }
+  #      .header-bar {
+  #        background-image: none;
+  #        background-color: #ededed;
+  #        box-shadow: none;
+  #      }
+  #      /* You may want to use this if you do not like the double title.
+  #      GtkLabel.title {
+  #          opacity: 0;
+  #      }*/
+  #    '';
+  #  };
+  #};
 
   home.sessionVariables = {
     BROWSER = "${pkgs.firefox}/bin/firefox";

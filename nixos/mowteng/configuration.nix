@@ -50,6 +50,9 @@
   environment.systemPackages = with pkgs; [
     amdctl
     compsize
+    plasma-panel-colorizer
+    squeekboard
+    maliit-keyboard
   ];
 
   hardware.graphics = {
@@ -97,6 +100,10 @@
     powerKeyLongPress = "poweroff";
     lidSwitchDocked = "suspend";
   };
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  services.desktopManager.plasma6.enable = true;
+  services.fwupd.enable = true;
   services.power-profiles-daemon.enable = true;
   services.speechd.enable = lib.mkForce false;
   services.udev.extraRules = ''

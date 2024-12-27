@@ -57,7 +57,7 @@
         tab_bar_align = "left";
         tab_bar_style = "separator";
         tab_separator = " ";
-        tab_bar_min_tabs = 1;
+        tab_bar_min_tabs = 2;
         tab_switch_strategy = "previous";
         tab_fade = "0.25 0.5 0.75 1";
         #tab_separator = "";
@@ -109,7 +109,7 @@
         resize_draw_strategy = "scale";
 
         # Opacity settings
-        background_opacity = "0.55";
+        background_opacity = "0.75";
       };
       keybindings = {
         "kitty_mod+c" = "copy_to_clipboard";

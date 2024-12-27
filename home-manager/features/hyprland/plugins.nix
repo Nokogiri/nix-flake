@@ -1,7 +1,4 @@
-{
-  inputs,
-  ...
-}: let
+{inputs, ...}: let
   hyprplugs = inputs.hyprplugs.packages."x86_64-linux";
 in {
   home.packages = with hyprplugs; [hyprfocus];

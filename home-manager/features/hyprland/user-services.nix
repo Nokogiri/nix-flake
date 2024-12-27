@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: let
+{pkgs, ...}: let
   image = "${
     (pkgs.fetchurl {
       url = "https://next.fishoeder.net/s/wRsKNG93giFKExo/download/pexels-veeterzy-39811.jpg";

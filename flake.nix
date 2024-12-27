@@ -33,13 +33,23 @@
     iio-hyprland = {
       url = "github:JeanSchoeller/iio-hyprland";
     };
-    #hyprland.url = "github:hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.46.2";
+    hyprland.url = "github:hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.46.2";
+    wezterm = {
+      url = "github:wez/wezterm?dir=nix&submodules=1";
+    };
+    kwin-effects-forceblur = {
+      url = "github:taj-ny/kwin-effects-forceblur";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprland-qtutils = {
       url = "github:hyprwm/hyprland-qtutils";
     };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
     };
   };
 

@@ -30,7 +30,8 @@
         "SUPER,mouse:273,resizewindow"
       ];
       bind = [
-        "SUPER,Return,exec,${pkgs.foot}/bin/footclient"
+        #"SUPER,Return,exec,${pkgs.foot}/bin/footclient"
+        "SUPER,Return,exec,kitty"
         "SUPER,w,exec,${pkgs.swaynotificationcenter}/bin/swaync-client -t"
         "SUPER,p,exec,pkill -9 rofi > /dev/null 2>&1 || ${pkgs.rofi-wayland}/bin/rofi -run-command 'uwsm-app -- {cmd}' -show drun -modes drun,filebrowser,keys,window"
         "SUPER,i,exec,cliphist list | ${pkgs.rofi-wayland}/bin/rofi -dmenu | cliphist decode | wl-copy"
@@ -150,8 +151,8 @@
         dim_around = "0.8";
         blur = {
           enabled = true;
-          size = "5";
-          passes = "2";
+          size = "4";
+          passes = "3";
           ignore_opacity = true;
           new_optimizations = true;
         };
@@ -223,7 +224,7 @@
         "blur, logout_dialog"
         # rofi
         "blur, (rofi)"
-        "ignorezero, (rofi)"
+        #"ignorezero, (rofi)"
         "dimaround, (rofi)"
         # waybar
         "blur, (waybar)"

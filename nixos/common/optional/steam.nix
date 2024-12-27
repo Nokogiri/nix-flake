@@ -47,9 +47,9 @@
       mangohud
       (writeShellScriptBin "launch-gamescope" ''
         if [ -z "$WAYLAND_DISPLAY" ]; then
-          exec nice -n -11 -- gamescope "$@"
+          exec nice -n -10 -- gamescope "$@"
         else
-          exec env LD_PRELOAD="" nice -n -11 -- gamescope -e "$@"
+          exec env LD_PRELOAD="" nice -n -10 -- gamescope -e "$@"
         fi
       '')
     ];
