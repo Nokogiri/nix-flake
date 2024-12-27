@@ -14,7 +14,6 @@
 
   environment.systemPackages = with pkgs; [
     dracula-theme
-    #inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
     inputs.kwin-effects-forceblur.packages.${pkgs.system}.default
     (papirus-icon-theme.override {color = "black";})
     libsForQt5.qt5ct
@@ -27,6 +26,8 @@
 
   fonts = {
     packages = with pkgs; [
+      inputs.lightly.packages.${pkgs.system}.darkly-qt5
+      inputs.lightly.packages.${pkgs.system}.darkly-qt6
       dejavu_fonts
       intel-one-mono
       jetbrains-mono
@@ -53,24 +54,6 @@
       };
     };
   };
-  #programs = {
-  #hyprland = {
-  #  enable = true;
-  #  package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-  # make sure to also set the portal package, so that they are in sync
-  #portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  #};
-  #iio-hyprland = {
-  #  enable = true;
-  #  package = inputs.iio-hyprland.packages.${pkgs.system}.default;
-  #};
-  #};
-  #qt = {
-  #  enable = true;
-  #  style = "kvantum";
-  #  platformTheme = "qt5ct";
-  #};
-
   # better for steam proton games
   systemd.extraConfig = "DefaultLimitNOFILE=1048576";
 
@@ -85,21 +68,6 @@
     upower.enable = true;
   };
 
-  #xdg.portal = {
-  #  enable = true;
-  #  extraPortals = [
-  #    pkgs.xdg-desktop-portal-gtk
-  #pkgs.xdg-desktop-portal-wlr
-  #  ];
-  #  xdgOpenUsePortal = false;
-  #  config.common = {
-  #    default = [
-  #      "hyprland"
-  #      "gtk"
-  #    ];
-  #    "org.freedesktop.impl.portal.Settings" = ["gtk"];
-  #  };
-  #};
   environment.pathsToLink = [
     "/libexec"
     "/share/Kvantum"

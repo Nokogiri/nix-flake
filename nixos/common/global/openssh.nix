@@ -18,7 +18,7 @@
     ];
   };
 
-  security.pam.sshAgentAuth.enable = true;
+  security.pam.sshAgentAuth.enable = false;
   security.pam.sshAgentAuth.authorizedKeysFiles = [
     "/etc/ssh/authorized_keys.d/%u"
   ];
