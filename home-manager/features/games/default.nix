@@ -17,9 +17,9 @@
     # emulation
     cemu
     dolphin-emu-beta
-    lime3ds
+    #lime3ds
     pcsx2
     ppsspp
-    retroarchFull
+    #retroarchFull
   ];
 }
