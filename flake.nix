@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    #nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     stable.url = "github:nixos/nixpkgs/nixos-24.11";
 
@@ -27,13 +26,13 @@
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
     };
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
-    };
-    iio-hyprland = {
-      url = "github:JeanSchoeller/iio-hyprland";
-    };
-    hyprland.url = "github:hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.46.2";
+    #hyprland-contrib = {
+    #  url = "github:hyprwm/contrib";
+    #};
+    #iio-hyprland = {
+    #  url = "github:JeanSchoeller/iio-hyprland";
+    #};
+    #hyprland.url = "github:hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.46.2";
     wezterm = {
       url = "github:wez/wezterm?dir=nix&submodules=1";
     };
@@ -41,9 +40,9 @@
       url = "github:taj-ny/kwin-effects-forceblur";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland-qtutils = {
-      url = "github:hyprwm/hyprland-qtutils";
-    };
+    #hyprland-qtutils = {
+    #  url = "github:hyprwm/hyprland-qtutils";
+    #};
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";

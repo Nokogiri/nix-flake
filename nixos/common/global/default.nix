@@ -2,7 +2,6 @@
 {
   lib,
   inputs,
-  config,
   outputs,
   pkgs,
   ...
@@ -10,7 +9,6 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-index-database.nixosModules.nix-index
-    #nputs.lix-module.nixosModules.default
 
     ./applications.nix
     ./console.nix
@@ -26,7 +24,7 @@
     extraSpecialArgs = {
       inherit inputs;
     };
-    backupFileExtension = "rebuildys";
+    backupFileExtension = "rebuildyss";
   };
 
   documentation = {

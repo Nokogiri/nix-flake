@@ -25,7 +25,6 @@
     ../common/optional/sane.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
-    ../common/optional/uwsm.nix
     ../common/optional/zramswap.nix
 
     ../common/users/nokogiri.nix
