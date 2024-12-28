@@ -3,9 +3,6 @@
   pkgs,
   ...
 }: {
-  security.pam.services.swaylock.fprintAuth = true;
-  security.pam.services.hyprlock = {};
-
   gtk.iconCache.enable = true;
 
   programs = {
