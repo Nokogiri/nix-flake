@@ -88,15 +88,18 @@
   nixpkgs = {
     # You can add overlays here
     overlays = [
-      # Add overlays your own flake exports (from overlays and pkgs dir):
       outputs.overlays.additions
       outputs.overlays.modifications
-      #outputs.overlays.unstable-packages
     ];
     # Configure your nixpkgs instance
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
+      permittedInsecurePackages = [ # TODO Rider
+        "dotnet-sdk-7.0.410"
+        "dotnet-sdk-wrapped-7.0.410"
+        "dotnet-runtime-7.0.20"
+      ];
     };
   };
   nix = let

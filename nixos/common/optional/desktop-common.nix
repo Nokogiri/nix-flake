@@ -22,12 +22,13 @@
     libsForQt5.qtstyleplugin-kvantum
     qt6Packages.qtstyleplugin-kvantum
     kdePackages.qtstyleplugin-kvantum
+    vintagestory
+    inputs.lightly.packages.${pkgs.system}.darkly-qt5
+    inputs.lightly.packages.${pkgs.system}.darkly-qt6
   ];
 
   fonts = {
     packages = with pkgs; [
-      inputs.lightly.packages.${pkgs.system}.darkly-qt5
-      inputs.lightly.packages.${pkgs.system}.darkly-qt6
       dejavu_fonts
       intel-one-mono
       jetbrains-mono

@@ -10,10 +10,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #lix-module = {
-    #  url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.1-1.tar.gz";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
     hardware = {
       url = "github:nixos/nixos-hardware";
     };
@@ -26,13 +22,6 @@
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
     };
-    #hyprland-contrib = {
-    #  url = "github:hyprwm/contrib";
-    #};
-    #iio-hyprland = {
-    #  url = "github:JeanSchoeller/iio-hyprland";
-    #};
-    #hyprland.url = "github:hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.46.2";
     wezterm = {
       url = "github:wez/wezterm?dir=nix&submodules=1";
     };
@@ -40,9 +29,7 @@
       url = "github:taj-ny/kwin-effects-forceblur";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #hyprland-qtutils = {
-    #  url = "github:hyprwm/hyprland-qtutils";
-    #};
+    lightly.url = "github:Bali10050/Darkly";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
