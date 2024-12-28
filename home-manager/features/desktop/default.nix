@@ -13,6 +13,7 @@
     ./rbw.nix
     ./rofi
     ./vscode.nix
+    ./wezterm.nix
     ./xdg
   ];
 

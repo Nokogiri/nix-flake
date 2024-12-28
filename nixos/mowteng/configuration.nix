@@ -50,8 +50,6 @@
     amdctl
     compsize
     plasma-panel-colorizer
-    squeekboard
-    maliit-keyboard
   ];
 
   hardware.graphics = {
