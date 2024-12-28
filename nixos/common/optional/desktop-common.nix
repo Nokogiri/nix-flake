@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   ...
 }: {
@@ -11,17 +10,13 @@
 
   environment.systemPackages = with pkgs; [
     dracula-theme
-    inputs.kwin-effects-forceblur.packages.${pkgs.system}.default
     (papirus-icon-theme.override {color = "black";})
     libsForQt5.qt5ct
     qt6Packages.qt6ct
     kdePackages.sddm-kcm
     libsForQt5.qtstyleplugin-kvantum
     qt6Packages.qtstyleplugin-kvantum
-    kdePackages.qtstyleplugin-kvantum
     vintagestory
-    inputs.lightly.packages.${pkgs.system}.darkly-qt5
-    inputs.lightly.packages.${pkgs.system}.darkly-qt6
   ];
 
   fonts = {

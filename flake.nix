@@ -29,7 +29,18 @@
       url = "github:taj-ny/kwin-effects-forceblur";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lightly.url = "github:Bali10050/Darkly";
+    lightly = {
+      url = "github:Bali10050/Darkly";
+    };
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+    kwin-effects-startupfeedback-busy-cursor = {
+      url = "github:taj-ny/kwin-effects-startupfeedback-busy-cursor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -24,6 +24,7 @@
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
+    ../common/optional/sddm.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/zramswap.nix
@@ -50,7 +51,6 @@
   environment.systemPackages = with pkgs; [
     amdctl
     compsize
-    plasma-panel-colorizer
   ];
 
   hardware.graphics = {
@@ -100,10 +100,11 @@
   };
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
-  services.desktopManager.plasma6.enable = true;
-  services.fwupd.enable = true;
+
   services.power-profiles-daemon.enable = true;
+  
   services.speechd.enable = lib.mkForce false;
+  
   services.udev.extraRules = ''
     ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
   '';
