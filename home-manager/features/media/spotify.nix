@@ -7,15 +7,15 @@
 in {
   imports = [inputs.spicetify-nix.homeManagerModules.default];
 
-  xdg.desktopEntries = {
-    spotify = {
-      name = "Spotify";
-      genericName = "SpotifyWM";
-      exec = "spotify";
-      icon = "spotify";
-      terminal = false;
-    };
-  };
+  #xdg.desktopEntries = {
+  #  spotify = {
+  #    name = "Spotify";
+  #    genericName = "SpotifyWM";
+  #    exec = "spotify";
+  #    icon = "spotify";
+  #    terminal = false;
+  #  };
+  #};
   programs.spicetify = {
     windowManagerPatch = false;
     enable = true;

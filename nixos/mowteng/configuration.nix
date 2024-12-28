@@ -14,7 +14,6 @@
     ./hardware-configuration.nix
 
     ../common/global
-    ../common/optional/ac-bat-ppd.nix
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
     ../common/optional/fprintd.nix
