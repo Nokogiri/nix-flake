@@ -18,10 +18,13 @@
     inputs.kwin-effects-forceblur.packages.${pkgs.system}.default
     inputs.lightly.packages.${pkgs.system}.darkly-qt5
     inputs.lightly.packages.${pkgs.system}.darkly-qt6
-    kdePackages.qtstyleplugin-kvantum
-    klassy
+    #kdePackages.qtstyleplugin-kvantum
+    #klassy
+    kdePackages.breeze-gtk
     krohnkite
     kwin-effects-geometry-change
+    libsForQt5.breeze-gtk
+
     panel-system-info
     plasma-panel-colorizer
     plasma-window-title-applet

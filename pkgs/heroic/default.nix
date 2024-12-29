@@ -13,7 +13,6 @@
   nile,
   comet-gog,
 }:
-
 stdenv.mkDerivation (finalAttrs: {
   pname = "heroic-unwrapped";
   version = "2.15.2";
@@ -98,7 +97,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   passthru = {
     inherit (finalAttrs) pnpmDeps;
-    updateScript = nix-update-script { };
+    updateScript = nix-update-script {};
   };
 
   meta = with lib; {
@@ -106,12 +105,12 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher";
     changelog = "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases";
     license = licenses.gpl3Only;
-    maintainers = with maintainers; [ aidalgol ];
+    maintainers = with maintainers; [aidalgol];
     # Heroic may work on nix-darwin, but it needs a dedicated maintainer for the platform.
     # It may also work on other Linux targets, but all the game stores only
     # support x86 Linux, so it would require extra hacking to run games via QEMU
     # user emulation.  Upstream provide Linux builds only for x86_64.
-    platforms = [ "x86_64-linux" ];
+    platforms = ["x86_64-linux"];
     mainProgram = "heroic";
   };
 })
