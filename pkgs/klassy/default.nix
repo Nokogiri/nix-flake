@@ -13,7 +13,7 @@
 }:
 stdenv.mkDerivation rec {
   pname = "klassy";
-  version = "6.2.breeze6.2.1";
+  version = "6.2.breeze6.2.4";
 
   src = fetchFromGitHub {
     owner = "paulmcauley";
