@@ -101,9 +101,9 @@
   services.displayManager.sddm.wayland.enable = true;
 
   services.power-profiles-daemon.enable = true;
-  
+
   services.speechd.enable = lib.mkForce false;
-  
+
   services.udev.extraRules = ''
     ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
   '';

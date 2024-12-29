@@ -1,8 +1,7 @@
 {
   fetchFromGitHub,
-  stdenv
+  stdenv,
 }:
-
 stdenv.mkDerivation rec {
   pname = "plasma-window-title-applet";
   version = "0.5.5";

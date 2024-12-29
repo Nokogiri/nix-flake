@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }:{
-
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   services.desktopManager.plasma6.enable = true;
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
@@ -18,7 +21,7 @@
     kdePackages.qtstyleplugin-kvantum
     klassy
     krohnkite
-    kwin-effects-geometry-change 
+    kwin-effects-geometry-change
     panel-system-info
     plasma-panel-colorizer
     plasma-window-title-applet

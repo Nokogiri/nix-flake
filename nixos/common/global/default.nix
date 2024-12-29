@@ -95,7 +95,8 @@
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
-      permittedInsecurePackages = [ # TODO Rider
+      permittedInsecurePackages = [
+        # TODO Rider
         "dotnet-sdk-7.0.410"
         "dotnet-sdk-wrapped-7.0.410"
         "dotnet-runtime-7.0.20"

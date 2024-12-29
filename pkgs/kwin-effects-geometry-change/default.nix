@@ -1,9 +1,8 @@
 {
   fetchFromGitHub,
   lib,
-  stdenv
+  stdenv,
 }:
-
 stdenv.mkDerivation rec {
   pname = "kwin-effects-geometry-change";
   version = "1.3";
@@ -15,7 +14,7 @@ stdenv.mkDerivation rec {
     hash = "sha256-H3cslx6ceAJGXSa0+gNzmUINRoLeYODhGt4pSFfgNbQ=";
   };
 
-  patches = [ ./polonium-virtual-desktop-animation-fix.patch ];
+  patches = [./polonium-virtual-desktop-animation-fix.patch];
 
   dontBuild = true;
 

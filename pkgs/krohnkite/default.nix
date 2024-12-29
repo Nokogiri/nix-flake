@@ -3,9 +3,8 @@
   fetchFromGitHub,
   kdePackages,
   lib,
-  typescript
+  typescript,
 }:
-
 buildNpmPackage rec {
   pname = "krohnkite";
   version = "0.9.8.3";
@@ -22,7 +21,7 @@ buildNpmPackage rec {
     typescript
   ];
 
-  buildInputs = with kdePackages; [ kwin ];
+  buildInputs = with kdePackages; [kwin];
 
   dontWrapQtApps = true;
 

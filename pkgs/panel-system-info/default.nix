@@ -1,7 +1,4 @@
-{
-  python312Packages
-}:
-
+{python312Packages}:
 python312Packages.buildPythonApplication rec {
   pname = "panel-system-info";
   version = "1.0.0";
@@ -14,6 +11,6 @@ python312Packages.buildPythonApplication rec {
   };
 
   installPhase = ''
-  install -Dm755 ${./main.py} $out/bin/${pname}
+    install -Dm755 ${./main.py} $out/bin/${pname}
   '';
 }
