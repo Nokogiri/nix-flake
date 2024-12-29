@@ -4,6 +4,10 @@
   amdctl = pkgs.callPackage ./amdctl {};
   dracula-icon-theme = pkgs.callPackage ./dracula-icon-theme {};
   dracula-plymouth = pkgs.callPackage ./dracula-plymouth {};
+  heroic-unwrapped = pkgs.callPackage ./heroic {
+    electron = pkgs.electron_32;
+  };
+  heroic = pkgs.callPackage ./heroic/fhsenv.nix {};
   klassy = pkgs.kdePackages.callPackage ./klassy {};
   krohnkite = pkgs.callPackage ./krohnkite {};
   kwin-effects-geometry-change = pkgs.callPackage ./kwin-effects-geometry-change {};
