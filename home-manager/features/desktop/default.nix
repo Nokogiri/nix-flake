@@ -9,7 +9,7 @@
     ./gpg-agent.nix
     ./joplin-d.nix
     ./kitty.nix
-    ./obs-studio.nix
+    #./obs-studio.nix
     ./rbw.nix
     ./rofi
     ./vscode.nix
