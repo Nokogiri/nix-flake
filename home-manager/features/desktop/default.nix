@@ -43,22 +43,22 @@
   home.preferXdgDirectories = true;
   gtk = {
     enable = true;
-  #  iconTheme = {
-  #    name = "Papirus-Dark";
-  #    package = pkgs.papirus-icon-theme.override {color = "black";};
-  #  };
-  #  cursorTheme = {
-  #    name = "Dracula-cursors";
-  #    package = pkgs.dracula-theme;
-  #  };
-  #  font = {
-  #    name = "IntoneMono Nerd Font Propo";
-  #    size = 11;
-  # };
-  #  theme = {
-  #    name = "Dracula";
-   #   package = pkgs.dracula-theme;
-  #  };
+    #  iconTheme = {
+    #    name = "Papirus-Dark";
+    #    package = pkgs.papirus-icon-theme.override {color = "black";};
+    #  };
+    #  cursorTheme = {
+    #    name = "Dracula-cursors";
+    #    package = pkgs.dracula-theme;
+    #  };
+    #  font = {
+    #    name = "IntoneMono Nerd Font Propo";
+    #    size = 11;
+    # };
+    #  theme = {
+    #    name = "Dracula";
+    #   package = pkgs.dracula-theme;
+    #  };
     gtk3 = {
       extraConfig = {
         gtk-recent-files-limit = 10;
@@ -96,6 +96,7 @@
     DISABLE_QT5_COMPAT = "0";
     NO_AT_BRIDGE = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    NIXOS_OZONE_WL = "1";
   };
 
   systemd.user.sessionVariables = {

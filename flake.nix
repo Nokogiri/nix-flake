@@ -29,6 +29,9 @@
       url = "github:taj-ny/kwin-effects-forceblur";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    kwin-gestures = {
+      url = "github:taj-ny/kwin-gestures";
+    };
     lightly = {
       url = "github:Bali10050/Darkly";
     };
@@ -44,9 +47,6 @@
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
     };
   };
 
