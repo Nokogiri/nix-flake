@@ -19,7 +19,7 @@
     catppuccin-gtk
     catppuccin-kde
     catppuccin-sddm
-    catppuccin-papirus-folders
+    #catppuccin-papirus-folders
     inputs.kwin-effects-forceblur.packages.${pkgs.system}.default
     inputs.kwin-gestures.packages.${pkgs.system}.default
     inputs.lightly.packages.${pkgs.system}.darkly-qt5
