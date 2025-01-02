@@ -6,8 +6,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    dracula-theme
-    (papirus-icon-theme.override {color = "black";})
+    catppuccin
+    #(papirus-icon-theme.override {color = "black";})
     vintagestory
   ];
 

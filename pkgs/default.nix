@@ -2,8 +2,6 @@
 # You can build them using 'nix build .#example' or (legacy) 'nix-build -A example'
 {pkgs, ...}: {
   amdctl = pkgs.callPackage ./amdctl {};
-  dracula-icon-theme = pkgs.callPackage ./dracula-icon-theme {};
-  dracula-plymouth = pkgs.callPackage ./dracula-plymouth {};
   heroic-unwrapped = pkgs.callPackage ./heroic {
     electron = pkgs.electron_32;
   };

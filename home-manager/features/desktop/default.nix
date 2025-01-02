@@ -26,17 +26,10 @@
     wl-clipboard
   ];
 
-  home.file.".icons/default/index.theme".text = ''
-    [Icon Theme]
-    Name=Default
-    Comment=Default Cursor Theme
-    Inherits=${config.gtk.cursorTheme.name}
-  '';
-
   home.pointerCursor = {
-    package = pkgs.dracula-theme;
+    package = pkgs.kdePackages.breeze;
     gtk.enable = true;
-    name = "Dracula-cursors";
+    name = "breeze_cursors";
     size = 24;
     x11.enable = true;
   };
@@ -47,18 +40,18 @@
     #    name = "Papirus-Dark";
     #    package = pkgs.papirus-icon-theme.override {color = "black";};
     #  };
-    #  cursorTheme = {
-    #    name = "Dracula-cursors";
-    #    package = pkgs.dracula-theme;
-    #  };
-    #  font = {
-    #    name = "IntoneMono Nerd Font Propo";
-    #    size = 11;
-    # };
-    #  theme = {
-    #    name = "Dracula";
-    #   package = pkgs.dracula-theme;
-    #  };
+    cursorTheme = {
+      name = "breeze_cursors";
+      package = pkgs.kdePackages.breeze;
+    };
+    font = {
+      name = "IntoneMono Nerd Font Propo";
+      size = 11;
+    };
+    #theme = {
+    #  name = "Dracula";
+    #  package = pkgs.dracula-theme;
+    #};
     gtk3 = {
       extraConfig = {
         gtk-recent-files-limit = 10;

@@ -7,4 +7,4 @@ sudo cp -r /nix/config /tmp/nix-config
 sudo chown root:root -R /tmp/nix-config
 sudo rm -rf /tmp/nix-config/.git
 
-sudo nixos-rebuild switch --option substituters "$substituters" --flake /tmp/nix-config#$HOST --log-format internal-json -v |& nom --json
+sudo nixos-rebuild switch --flake /tmp/nix-config#$HOST --log-format internal-json -v |& nom --json

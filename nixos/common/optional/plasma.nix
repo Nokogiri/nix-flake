@@ -16,10 +16,19 @@
 
   environment.systemPackages = with pkgs; [
     albert
-    catppuccin-gtk
-    catppuccin-kde
+    (catppuccin-gtk.override {
+      variant = "frappe";
+      accents = ["mauve"];
+    })
+    (catppuccin-kde.override {
+      flavour = ["frappe"];
+      accents = ["mauve"];
+    })
+    (catppuccin-papirus-folders.override {
+      flavor = "frappe";
+      accent = "mauve";
+    })
     catppuccin-sddm
-    #catppuccin-papirus-folders
     inputs.kwin-effects-forceblur.packages.${pkgs.system}.default
     inputs.kwin-gestures.packages.${pkgs.system}.default
     inputs.lightly.packages.${pkgs.system}.darkly-qt5

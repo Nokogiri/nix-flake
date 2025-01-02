@@ -8,7 +8,7 @@
       #'';
       font = {
         name = "IntoneMono Nerd Font";
-        size = 12;
+        size = 12.5;
       };
       themeFile = "Dracula";
       settings = {
@@ -56,11 +56,10 @@
         tab_bar_margin_width = "2.0";
         tab_bar_align = "left";
         tab_bar_style = "separator";
-        tab_separator = " ";
+        tab_separator = "";
         tab_bar_min_tabs = 2;
         tab_switch_strategy = "previous";
         tab_fade = "0.25 0.5 0.75 1";
-        #tab_separator = "";
         tab_activity_symbol = "none";
 
         #tab_powerline_style = "angled";
@@ -72,14 +71,9 @@
         #  "{f'{title[:30]}…' if title.rindex(title[-1]) + 1 > 30 else (title.center(6) if (title.rindex(title[-1]) + 1) % 2 == 0 else title.center(5))}"'';
 
         # Misc settings
-        disable_ligatures = "always";
-        font_feature = "none";
-        #backgrund_blur = 16;
-        #symbol_map = "U+F000-U+F0FF Weather Icons";
+        #disable_ligatures = "always";
         adjust_line_height = 0;
         adjust_column_width = 0;
-        #repaint_delay = 8;
-        #input_delay = 3;
         sync_to_monitor = true;
         shell = ".";
         editor = ".";
@@ -106,7 +100,6 @@
         bell_border_color = "#ff5a00";
         inactive_text_alpha = 1;
         resize_debounce_time = "0.1";
-        resize_draw_strategy = "scale";
 
         # Opacity settings
         background_opacity = "0.75";
