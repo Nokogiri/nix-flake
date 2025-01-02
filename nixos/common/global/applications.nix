@@ -6,6 +6,7 @@
     gdu
     libarchive
     lm_sensors
+    nix-output-monitor
     ripgrep
   ];
 }

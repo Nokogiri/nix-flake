@@ -13,7 +13,6 @@
     ./rbw.nix
     ./rofi
     ./vscode.nix
-    ./wezterm.nix
     ./xdg
   ];
 
@@ -24,6 +23,7 @@
     (writeShellScriptBin "launch-gamescope" ''
       exec env LD_PRELOAD="" nice -n -11 -- gamescope "$@"
     '')
+    wl-clipboard
   ];
 
   home.file.".icons/default/index.theme".text = ''
