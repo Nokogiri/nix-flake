@@ -30,7 +30,7 @@
     })
     catppuccin-sddm
     inputs.kwin-effects-forceblur.packages.${pkgs.system}.default
-    inputs.kwin-gestures.packages.${pkgs.system}.default
+    #inputs.kwin-gestures.packages.${pkgs.system}.default
     inputs.lightly.packages.${pkgs.system}.darkly-qt5
     inputs.lightly.packages.${pkgs.system}.darkly-qt6
     krohnkite
