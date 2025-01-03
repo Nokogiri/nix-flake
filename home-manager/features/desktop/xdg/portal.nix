@@ -1,22 +1,17 @@
 {
-  pkgs,
-  inputs,
-  ...
-}: {
   xdg.portal = {
     enable = true;
     extraPortals = [
       #pkgs.xdg-desktop-portal-wlr
       #pkgs.xdg-desktop-portal-hyprland
       #inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal-gtk
+      #pkgs.xdg-desktop-portal-gtk
     ];
-    xdgOpenUsePortal = false;
+    xdgOpenUsePortal = true;
     config = {
       common = {
         default = [
-          "gtk"
-          "hyprland"
+          "kde"
         ];
       };
     };

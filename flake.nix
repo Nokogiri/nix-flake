@@ -22,15 +22,9 @@
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
     };
-    #wezterm = {
-    #  url = "github:wez/wezterm?dir=nix&submodules=1";
-    #};
     kwin-effects-forceblur = {
       url = "github:taj-ny/kwin-effects-forceblur";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    kwin-gestures = {
-      url = "github:taj-ny/kwin-gestures";
     };
     lightly = {
       url = "github:Bali10050/Darkly";
