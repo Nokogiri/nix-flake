@@ -6,8 +6,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    catppuccin
-    #(papirus-icon-theme.override {color = "black";})
     vintagestory
   ];
 

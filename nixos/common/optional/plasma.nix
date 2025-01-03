@@ -33,15 +33,9 @@
     inputs.kwin-gestures.packages.${pkgs.system}.default
     inputs.lightly.packages.${pkgs.system}.darkly-qt5
     inputs.lightly.packages.${pkgs.system}.darkly-qt6
-    #kdePackages.qtstyleplugin-kvantum
-    kde-rounded-corners
-    kdePackages.breeze-gtk
     krohnkite
     kwin-effects-geometry-change
     maliit-keyboard
-    libsForQt5.breeze-gtk
-    #libsForQt5.krunner-symbols
-    panel-system-info
     plasma-panel-colorizer
     plasma-window-title-applet
   ];

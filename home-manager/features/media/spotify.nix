@@ -7,19 +7,11 @@
 in {
   imports = [inputs.spicetify-nix.homeManagerModules.default];
 
-  #xdg.desktopEntries = {
-  #  spotify = {
-  #    name = "Spotify";
-  #    genericName = "SpotifyWM";
-  #    exec = "spotify";
-  #    icon = "spotify";
-  #    terminal = false;
-  #  };
-  #};
   programs.spicetify = {
     windowManagerPatch = false;
     enable = true;
-    theme = spicePkgs.themes.dracula;
+    theme = spicePkgs.themes.catppuccin;
+    colorScheme = "frappe";
     enabledCustomApps = with spicePkgs.apps; [
       lyricsPlus
       betterLibrary
