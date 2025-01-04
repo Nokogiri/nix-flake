@@ -5,14 +5,9 @@
     dconf.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    vintagestory
-  ];
-
   fonts = {
     packages = with pkgs; [
       dejavu_fonts
-      intel-one-mono
       jetbrains-mono
       noto-fonts
       noto-fonts-emoji
@@ -20,7 +15,6 @@
       noto-fonts-cjk-sans
       material-symbols
       weather-icons
-      nerd-fonts.intone-mono
       nerd-fonts.jetbrains-mono
       nerd-fonts.symbols-only
     ];
@@ -31,9 +25,9 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = ["IntoneMono Nerd Font Propo"];
-        sansSerif = ["IntoneMono Nerd Font Propo"];
-        monospace = ["IntoneMono Nerd Font"];
+        serif = ["JetBrains Mono Nerd Font"];
+        sansSerif = ["JetBrains Mono Nerd Font"];
+        monospace = ["JetBrains Mono Nerd Font"];
         emoji = ["Noto Color Emoji"];
       };
     };

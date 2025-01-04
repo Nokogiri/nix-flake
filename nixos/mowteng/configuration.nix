@@ -57,7 +57,9 @@
     enable32Bit = true;
   };
 
-  nixpkgs.overlays = [];
+  nixpkgs.overlays = [
+    inputs.nur.overlays.default
+  ];
   powerManagement = {
     cpuFreqGovernor = "powersave";
     cpufreq = {

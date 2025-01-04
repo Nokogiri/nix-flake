@@ -1,6 +1,5 @@
 {
   pkgs,
-  lib,
   ...
 }: {
   programs.mpv = {
@@ -73,18 +72,18 @@
     #];
   };
   #xdg.configFile."mpv/script-opts/uosc.conf".source = ./uosc.conf;
-  nixpkgs.overlays = [
-    (self: super: {
-      mpv = super.mpv.override {
-        scripts = [
-          #self.mpvScripts.modernx-zydezu
-          self.mpvScripts.uosc
-          self.mpvScripts.quality-menu
-          self.mpvScripts.sponsorblock
-          self.mpvScripts.thumbfast
-          self.mpvScripts.mpv-playlistmanager
-        ];
-      };
-    })
-  ];
+  #nixpkgs.overlays = [
+  #  (self: super: {
+  #    mpv = super.mpv.override {
+  #      scripts = [
+  #        #self.mpvScripts.modernx-zydezu
+  #        self.mpvScripts.uosc
+  #        self.mpvScripts.quality-menu
+  #        self.mpvScripts.sponsorblock
+  #        self.mpvScripts.thumbfast
+  #        self.mpvScripts.mpv-playlistmanager
+  #      ];
+  #    };
+  #  })
+  #];
 }

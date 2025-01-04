@@ -2,27 +2,14 @@
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
 {
   inputs,
-  outputs,
   lib,
   config,
   ...
 }: {
   imports = [
-    #./sops.nix
     ../features/cli
-    #inputs.sops-nix.homeManagerModules.sops
     inputs.nix-index-database.hmModules.nix-index
   ];
-  nixpkgs = {
-    overlays = [
-      outputs.overlays.modifications
-      outputs.overlays.additions
-    ];
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = _: true;
-    };
-  };
 
   home = {
     username = lib.mkDefault "nokogiri";

@@ -13,7 +13,7 @@
     ../features/plasma
     inputs.nur.modules.homeManager.default
   ];
-  nixpkgs.overlays = [inputs.nur.overlays.default];
+
   home.packages = with pkgs; [
     handlr-regex
     gimp
