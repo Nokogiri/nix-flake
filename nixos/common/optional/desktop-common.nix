@@ -8,6 +8,7 @@
   fonts = {
     packages = with pkgs; [
       dejavu_fonts
+      intel-one-mono
       jetbrains-mono
       noto-fonts
       noto-fonts-emoji
@@ -15,6 +16,7 @@
       noto-fonts-cjk-sans
       material-symbols
       weather-icons
+      nerd-fonts.intone-mono
       nerd-fonts.jetbrains-mono
       nerd-fonts.symbols-only
     ];
@@ -25,9 +27,9 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = ["JetBrains Mono Nerd Font"];
-        sansSerif = ["JetBrains Mono Nerd Font"];
-        monospace = ["JetBrains Mono Nerd Font"];
+        serif = ["IntoneMono Nerd Font Prop"];
+        sansSerif = ["IntoneMono Nerd Font Prop"];
+        monospace = ["IntoneMono Nerd Font Prop"];
         emoji = ["Noto Color Emoji"];
       };
     };

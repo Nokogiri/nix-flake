@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.file.".mozilla/firefox/nokogiri/chrome" = {
     source = pkgs.fetchFromGitHub {
       owner = "KiKaraage";

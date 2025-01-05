@@ -7,7 +7,6 @@
   ];
   home.packages = with pkgs; [
     jellyfin-media-player
-    pavucontrol
     playerctl
   ];
   services = {

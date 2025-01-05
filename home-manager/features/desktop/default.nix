@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./colors.nix
     ./firefox
@@ -11,7 +7,7 @@
     ./kitty.nix
     #./obs-studio.nix
     ./rbw.nix
-    ./rofi
+    #./rofi
     ./vscode.nix
     ./xdg
   ];
@@ -19,7 +15,7 @@
   home.packages = with pkgs; [
     libnotify
     xdg-utils
-    udiskie
+    #udiskie
     (writeShellScriptBin "launch-gamescope" ''
       exec env LD_PRELOAD="" nice -n -11 -- gamescope "$@"
     '')

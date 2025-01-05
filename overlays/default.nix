@@ -7,8 +7,5 @@
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
-    #hyprlock = inputs.hyprlock.packages.x86_64-linux.hyprlock;
-    #hypridle = inputs.hypridle.packages.x86_64-linux.hypridle;
-    # _7zz = inputs.stable.legacyPackages.x86_64-linux._7zz;
   };
 }

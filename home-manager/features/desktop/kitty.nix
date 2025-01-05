@@ -7,7 +7,7 @@
       #  include everforest-dark.conf
       #'';
       font = {
-        name = "JetBrainsMono Nerd Font";
+        name = "IntoneMono Nerd Font Prop";
         size = 12.5;
       };
       themeFile = "Dracula";

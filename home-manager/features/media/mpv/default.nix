@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.mpv = {
     enable = true;
     bindings = {
@@ -64,26 +61,12 @@
         ytdl_path = "${pkgs.yt-dlp}/bin/yt-dlp";
       };
     };
-    #scripts = with pkgs; [
-    #  mpvScripts.mpris
-    #  mpvScripts.uosc
-
-    #  mpvScripts.sponsorblock
-    #];
+    scripts = with pkgs; [
+      mpvScripts.mpris
+      mpvScripts.uosc
+      mpvScripts.quality-menu
+      mpvScripts.sponsorblock
+    ];
   };
   #xdg.configFile."mpv/script-opts/uosc.conf".source = ./uosc.conf;
-  #nixpkgs.overlays = [
-  #  (self: super: {
-  #    mpv = super.mpv.override {
-  #      scripts = [
-  #        #self.mpvScripts.modernx-zydezu
-  #        self.mpvScripts.uosc
-  #        self.mpvScripts.quality-menu
-  #        self.mpvScripts.sponsorblock
-  #        self.mpvScripts.thumbfast
-  #        self.mpvScripts.mpv-playlistmanager
-  #      ];
-  #    };
-  #  })
-  #];
 }
