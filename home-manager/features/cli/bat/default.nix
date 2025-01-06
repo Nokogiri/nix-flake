@@ -1,6 +1,4 @@
 {pkgs, ...}: {
-  #xidg.configFile."bat/themes/Dracula.tmTheme".source =
-  #  ./Dracula.tmTheme;
   xdg.configFile."bat/themes/Dracula.tmTheme".source = (
     pkgs.fetchurl {
       url = "https://raw.githubusercontent.com/dracula/sublime/refs/heads/master/Dracula.tmTheme";
@@ -11,7 +9,7 @@
     enable = true;
     config.theme = "Dracula";
     extraPackages = with pkgs.bat-extras; [
-      #batdiff
+      batdiff
       batman
       batgrep
       batwatch

@@ -1,20 +1,9 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     #neovide
     lua-language-server
     nixd
   ];
-
-  #xdg.configFile = {
-  #  nvim = {
-  #    onChange = "${pkgs.neovim}/bin/nvim --headless +q";
-  #    source = inputs.astronvim;
-  #  };
-  #};
 
   programs.neovim = {
     defaultEditor = true;

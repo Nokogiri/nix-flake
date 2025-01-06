@@ -1,8 +1,4 @@
-{
-  vscode-utils,
-  ...
-}:
-
+{vscode-utils, ...}:
 vscode-utils.buildVscodeMarketplaceExtension {
   mktplcRef = {
     name = "vscode-taskexplorer";

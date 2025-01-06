@@ -8,6 +8,7 @@
       ms-vscode.cmake-tools
       ms-vscode.cpptools
       bodil.file-browser
+      catppuccin.catppuccin-vsc
       #asvetliakov.vscode-neovim
       shd101wyy.markdown-preview-enhanced
     ];
@@ -37,6 +38,7 @@
       "terminal.integrated.smoothScrolling" = true;
       "workbench.iconTheme" = "material-icon-theme";
       "workbench.list.smoothScrolling" = true;
+      "workbench.colorTheme" = "Catppuccin Frappé";
     };
     package = pkgs.vscodium;
   };
