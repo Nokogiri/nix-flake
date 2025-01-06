@@ -27,9 +27,9 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = ["IntoneMono Nerd Font Prop"];
-        sansSerif = ["IntoneMono Nerd Font Prop"];
-        monospace = ["IntoneMono Nerd Font Prop"];
+        serif = ["JetBrainsMono Nerd Font Propo"];
+        sansSerif = ["JetBrainsMono Nerd Font Propo"];
+        monospace = ["JetBrainsMono Nerd Font Propo"];
         emoji = ["Noto Color Emoji"];
       };
     };
@@ -61,5 +61,6 @@
     NO_AT_BRIDGE = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     MOZ_USE_XINPUT2 = "1";
+    KWIN_DRM_DISABLE_TRIPLE_BUFFERING = "1";
   };
 }

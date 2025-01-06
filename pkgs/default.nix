@@ -2,10 +2,10 @@
 # You can build them using 'nix build .#example' or (legacy) 'nix-build -A example'
 {pkgs, ...}: {
   amdctl = pkgs.callPackage ./amdctl {};
-  heroic-unwrapped = pkgs.callPackage ./heroic {
-    electron = pkgs.electron_32;
-  };
-  heroic = pkgs.callPackage ./heroic/fhsenv.nix {};
+  #heroic-unwrapped = pkgs.callPackage ./heroic {
+  #  electron = pkgs.electron_32;
+  #};
+  #heroic = pkgs.callPackage ./heroic/fhsenv.nix {};
   klassy = pkgs.kdePackages.callPackage ./klassy {};
   krohnkite = pkgs.callPackage ./krohnkite {};
   kwin-effects-geometry-change = pkgs.callPackage ./kwin-effects-geometry-change {};

@@ -59,6 +59,7 @@
 
   nixpkgs.overlays = [
     inputs.nur.overlays.default
+    #inputs.gauntlet.overlays.default
   ];
   powerManagement = {
     cpuFreqGovernor = "powersave";

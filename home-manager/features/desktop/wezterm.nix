@@ -1,12 +1,11 @@
-{inputs, ...}: {
+{
   programs.wezterm = {
     enable = true;
-    package = inputs.wezterm.packages.x86_64-linux.default;
     extraConfig = ''
       return {
         font_size = 12.0 ,
         font = wezterm.font_with_fallback {
-          'IntoneMono Nerd Font',
+          'JetBrainsMono Nerd Font',
         },
         -- front_end = "WebGpu",
         color_scheme = 'Dracula (Official)',

@@ -43,6 +43,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
+    #gauntlet = {
+    #  url = "github:project-gauntlet/gauntlet";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     #wezterm = {
     #  url = "github:wez/wezterm?dir=nix&submodules=1";
     #};

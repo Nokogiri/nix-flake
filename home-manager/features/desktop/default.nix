@@ -2,20 +2,20 @@
   imports = [
     ./colors.nix
     ./firefox
+    #./gauntlet.nix
     ./gpg-agent.nix
     ./joplin-d.nix
     ./kitty.nix
     #./obs-studio.nix
     ./rbw.nix
-    #./rofi
     ./vscode.nix
+    ./wezterm.nix
     ./xdg
   ];
 
   home.packages = with pkgs; [
     libnotify
     xdg-utils
-    #udiskie
     (writeShellScriptBin "launch-gamescope" ''
       exec env LD_PRELOAD="" nice -n -11 -- gamescope "$@"
     '')
@@ -38,6 +38,7 @@
     NO_AT_BRIDGE = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     NIXOS_OZONE_WL = "1";
+    KWIN_DRM_DISABLE_TRIPLE_BUFFERING = "1";
   };
 
   systemd.user.sessionVariables = {
