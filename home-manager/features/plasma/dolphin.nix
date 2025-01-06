@@ -15,7 +15,7 @@
       VisibleRoles=CustomizedDetails,Details_text,Details_size,Details_modificationtime
 
       [Settings]
-      HiddenFilesShown=true
+      HiddenFilesShown=false
     '';
   };
   programs.plasma.configFile.dolphinrc = {

@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  imports = [ ./dolphin.nix ];
   gtk = {
     enable = true;
     cursorTheme = {
