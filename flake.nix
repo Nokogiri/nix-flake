@@ -43,6 +43,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
+    alejandra = {
+      url = "github:kamadorueda/alejandra/3.1.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     #gauntlet = {
     #  url = "github:project-gauntlet/gauntlet";
     #  inputs.nixpkgs.follows = "nixpkgs";

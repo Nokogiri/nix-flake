@@ -1,4 +1,11 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  home.packages = [
+    inputs.alejandra.defaultPackage.x86_64-linux
+  ];
   programs.vscode = {
     enable = true;
     extensions = with pkgs;
@@ -11,8 +18,10 @@
       catppuccin.catppuccin-vsc
       #asvetliakov.vscode-neovim
       shd101wyy.markdown-preview-enhanced
+      kamadorueda.alejandra
     ];
     userSettings = {
+      "cmake.showOptionsMovedNotification" = false;
       "editor.bracketPairColorization.enabled" = false;
       "editor.fontFamily" = "'JetBrains Mono'";
       "editor.lineHeight" = 1.5;
