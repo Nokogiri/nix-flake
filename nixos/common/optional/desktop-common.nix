@@ -27,9 +27,9 @@
       enable = true;
       antialias = true;
       defaultFonts = {
-        serif = ["JetBrainsMono Nerd Font Propo"];
-        sansSerif = ["JetBrainsMono Nerd Font Propo"];
-        monospace = ["JetBrainsMono Nerd Font Propo"];
+        serif = ["Intel One Mono"];
+        sansSerif = ["Intel One Mono"];
+        monospace = ["IntoneMono Nerd Font Mono"];
         emoji = ["Noto Color Emoji"];
       };
     };

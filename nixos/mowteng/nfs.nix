@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  #services.rpcbind.enable = true; # needed for NFS
   environment.systemPackages = [pkgs.nfs-utils];
   systemd.mounts = let
     commonMountOptions = {

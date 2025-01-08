@@ -32,9 +32,8 @@
     inputs.kwin-effects-forceblur.packages.${pkgs.system}.default
     inputs.lightly.packages.${pkgs.system}.darkly-qt5
     inputs.lightly.packages.${pkgs.system}.darkly-qt6
+    klassy
     krohnkite
     kwin-effects-geometry-change
-    plasma-panel-colorizer
-    plasma-window-title-applet
   ];
 }

@@ -22,8 +22,8 @@
     ];
     userSettings = {
       "cmake.showOptionsMovedNotification" = false;
-      "editor.bracketPairColorization.enabled" = false;
-      "editor.fontFamily" = "'JetBrains Mono'";
+      "editor.bracketPairColorization.enabled" = true;
+      "editor.fontFamily" = "'Intel One Mono'";
       "editor.lineHeight" = 1.5;
       "editor.smoothScrolling" = true;
       "editor.wordWrap" = "on";
@@ -35,13 +35,13 @@
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
       "nix.serverSettings".nixd.options = {
-        home.expr = "(builtins.getFlake \"/nix/config\").homeConfigurations.nixd.options";
+        home.expr = "(builtins.getFlake \"/nix/config\").homeConfigurations.\"nokogiri@mowteng\".options";
         nixos.expr = "(builtins.getFlake \"/nix/config\").nixosConfigurations.mowteng.options";
       };
       "terminal.integrated.cursorBlinking" = true;
       "terminal.integrated.cursorStyle" = "line";
       "terminal.integrated.cursorStyleInactive" = "none";
-      "terminal.integrated.fontFamily" = "'MesloLGS NF'";
+      "terminal.integrated.fontFamily" = "'IntoneMono Nerd Font Mono'";
       "terminal.integrated.fontSize" = 13;
       "terminal.integrated.lineHeight" = 1;
       "terminal.integrated.smoothScrolling" = true;

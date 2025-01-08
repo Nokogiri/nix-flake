@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   networking.networkmanager = {
     wifi.backend = "iwd";
     wifi.powersave = true;
@@ -10,5 +6,4 @@
     logLevel = "ERR";
     plugins = lib.mkForce [];
   };
-  #environment.systemPackages = [pkgs.networkmanagerapplet];
 }

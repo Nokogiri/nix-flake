@@ -7,7 +7,7 @@
       #  include everforest-dark.conf
       #'';
       font = {
-        name = "JetBrainsMono Nerd Font";
+        name = "IntoneMono Nerd Font Mono";
         size = 12.5;
       };
       themeFile = "Dracula";
@@ -23,6 +23,7 @@
         wheel_scroll_multiplier = 5;
         mouse_hide_wait = 3;
         enabled_layouts = "*";
+        confirm_os_window_close = 0;
 
         # Cursor settings
         cursor = "#00bcd4";

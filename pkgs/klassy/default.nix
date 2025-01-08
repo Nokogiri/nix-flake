@@ -13,7 +13,7 @@
 }:
 stdenv.mkDerivation rec {
   pname = "klassy";
-  version = "6.2.breeze6.2.4";
+  version = "6.2.breeze6.2.1";
 
   src = fetchFromGitHub {
     owner = "paulmcauley";
@@ -21,7 +21,9 @@ stdenv.mkDerivation rec {
     rev = version;
     hash = "sha256-tFqze3xN1XECY74Gj0nScis7DVNOZO4wcfeA7mNZT5M=";
   };
-
+  patches = [
+    ./project-version.patch
+  ];
   buildInputs = [
     frameworkintegration
     kcmutils

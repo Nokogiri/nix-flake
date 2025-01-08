@@ -54,14 +54,8 @@
     };
     interactiveShellInit = ''
       fish_config theme choose Dracula\ Official
-      #any-nix-shell fish --info-right | source
+      any-nix-shell fish --info-right | source
       fzf_configure_bindings --history=\cr
-      #if [ -z "$WAYLAND_DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ] then
-      if test (tty) = "/dev/tty1"
-        #if test (uwsm check may-start) -eq 0
-          exec systemd-cat -t uwsm_start uwsm start -S default
-        #end
-      end
     '';
   };
 }
