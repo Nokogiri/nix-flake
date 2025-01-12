@@ -1,4 +1,5 @@
 {
+  networking.firewall.enable = false;
   networking.firewall = {
     trustedInterfaces = [
       "calvin"
