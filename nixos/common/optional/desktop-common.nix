@@ -1,15 +1,25 @@
 {pkgs, ...}: {
-  gtk.iconCache.enable = true;
-
-  programs = {
-    dconf.enable = true;
+  environment = {
+    pathsToLink = [
+      "/libexec"
+      "/share/Kvantum"
+      "/share/themes"
+      "/share/icons"
+    ];
+    sessionVariables = {
+      BROWSER = "${pkgs.firefox}/bin/firefox";
+      DISABLE_QT5_COMPAT = "0";
+      NO_AT_BRIDGE = "1";
+      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+      MOZ_USE_XINPUT2 = "1";
+      KWIN_DRM_DISABLE_TRIPLE_BUFFERING = "1";
+    };
   };
 
   fonts = {
     packages = with pkgs; [
       dejavu_fonts
       intel-one-mono
-      jetbrains-mono
       noto-fonts
       noto-fonts-emoji
       noto-fonts-color-emoji
@@ -17,7 +27,6 @@
       material-symbols
       weather-icons
       nerd-fonts.intone-mono
-      nerd-fonts.jetbrains-mono
       nerd-fonts.symbols-only
     ];
     enableDefaultPackages = true;
@@ -25,42 +34,50 @@
     enableGhostscriptFonts = true;
     fontconfig = {
       enable = true;
-      antialias = true;
+      antialias = false;
       defaultFonts = {
         serif = ["Intel One Mono"];
         sansSerif = ["Intel One Mono"];
         monospace = ["IntoneMono Nerd Font Mono"];
         emoji = ["Noto Color Emoji"];
       };
+      hinting = {
+        style = "slight";
+      };
+      subpixel = {
+        lcdfilter = "none";
+        rgba = "rgb";
+      };
     };
   };
-  # better for steam proton games
-  systemd.extraConfig = "DefaultLimitNOFILE=1048576";
+
+  gtk.iconCache.enable = true;
+
+  programs = {
+    dconf.enable = true;
+  };
 
   services = {
+    avahi = {
+      enable = true;
+    };
     dbus = {
       enable = true;
+      implementation = "broker";
       packages = [pkgs.gcr];
     };
     flatpak.enable = true;
+    geoclue2.enable = true;
     printing.enable = true;
     udisks2.enable = true;
     upower.enable = true;
   };
 
-  environment.pathsToLink = [
-    "/libexec"
-    "/share/Kvantum"
-    "/share/themes"
-    "/share/icons"
-  ];
-
-  environment.sessionVariables = {
-    BROWSER = "${pkgs.firefox}/bin/firefox";
-    DISABLE_QT5_COMPAT = "0";
-    NO_AT_BRIDGE = "1";
-    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-    MOZ_USE_XINPUT2 = "1";
-    KWIN_DRM_DISABLE_TRIPLE_BUFFERING = "1";
+  systemd = {
+    extraConfig = "DefaultLimitNOFILE=1048576";
+    services = {
+      "getty@tty1".enable = false;
+      "autovt@tty1".enable = false;
+    };
   };
 }

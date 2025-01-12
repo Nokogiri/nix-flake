@@ -5,7 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     stable.url = "github:nixos/nixpkgs/nixos-24.11";
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,6 +24,9 @@
     kwin-effects-forceblur = {
       url = "github:taj-ny/kwin-effects-forceblur";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    kwin-gestures = {
+      url = "github:taj-ny/kwin-gestures";
     };
     lightly = {
       url = "github:Bali10050/Darkly";
@@ -47,13 +49,6 @@
       url = "github:kamadorueda/alejandra/3.1.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #gauntlet = {
-    #  url = "github:project-gauntlet/gauntlet";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #wezterm = {
-    #  url = "github:wez/wezterm?dir=nix&submodules=1";
-    #};
   };
 
   outputs = {

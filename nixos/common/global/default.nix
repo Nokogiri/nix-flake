@@ -9,6 +9,7 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-index-database.nixosModules.nix-index
+    #inputs.lix-module.nixosModules.default
 
     ./applications.nix
     ./console.nix
@@ -18,7 +19,6 @@
     ./sops.nix
     ./sudo.nix
   ];
-
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
@@ -139,7 +139,8 @@
     # Opinionated: disable channels
     channel.enable = false;
     registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
-    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+    #nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     gc = {
       automatic = lib.mkDefault false;
       dates = "monthly";

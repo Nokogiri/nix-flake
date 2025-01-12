@@ -55,5 +55,4 @@ in {
       nokogiri = import ../../../home-manager/${config.networking.hostName};
     };
   };
-  services.geoclue2.enable = true;
 }

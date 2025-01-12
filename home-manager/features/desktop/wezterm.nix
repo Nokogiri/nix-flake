@@ -5,7 +5,7 @@
       return {
         font_size = 12.0 ,
         font = wezterm.font_with_fallback {
-          'JetBrainsMono Nerd Font',
+          'IntoneMono Nerd Font Propo',
         },
         -- front_end = "WebGpu",
         color_scheme = 'Dracula (Official)',

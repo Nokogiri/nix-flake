@@ -15,10 +15,13 @@
   ];
 
   home.packages = with pkgs; [
+    inputs.kwin-gestures.packages.x86_64-linux.default
     handlr-regex
     gimp
     krita
+    lutris
     mullvad-vpn
     nextcloud-client
+    ladybird
   ];
 }

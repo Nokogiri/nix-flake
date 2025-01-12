@@ -17,6 +17,7 @@
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
     ../common/optional/fprintd.nix
+    #../common/optional/gnome.nix
     ../common/optional/mullvad.nix
     ../common/optional/pipewire.nix
     ../common/optional/plasma.nix
@@ -50,8 +51,10 @@
   environment.systemPackages = with pkgs; [
     amdctl
     compsize
+    #gnomeExtensions.appindicator
+    #gnomeExtensions.blur-my-shell
+    #gnomeExtensions.pop-shell
   ];
-
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -59,7 +62,6 @@
 
   nixpkgs.overlays = [
     inputs.nur.overlays.default
-    #inputs.gauntlet.overlays.default
   ];
   powerManagement = {
     cpuFreqGovernor = "powersave";
@@ -101,8 +103,6 @@
     powerKeyLongPress = "poweroff";
     lidSwitchDocked = "suspend";
   };
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
 
   services.power-profiles-daemon.enable = true;
 
@@ -112,7 +112,7 @@
     ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
   '';
 
-  systemd.tmpfiles.rules = ["D /tmp/.X11-unix 1777 nokogiri root"];
+  #systemd.tmpfiles.rules = ["D /tmp/.X11-unix 1777 nokogiri root"];
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.05";
 }

@@ -8,6 +8,7 @@
     #./obs-studio.nix
     ./rbw.nix
     ./vscode.nix
+    ./wezterm.nix
     ./xdg
   ];
 
