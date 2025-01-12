@@ -19,9 +19,7 @@
     handlr-regex
     gimp
     krita
-    lutris
     mullvad-vpn
     nextcloud-client
-    ladybird
   ];
 }

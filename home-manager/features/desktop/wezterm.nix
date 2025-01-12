@@ -7,10 +7,10 @@
         font = wezterm.font_with_fallback {
           'IntoneMono Nerd Font Propo',
         },
-        -- front_end = "WebGpu",
+        front_end = "WebGpu",
         color_scheme = 'Dracula (Official)',
         warn_about_missing_glyphs = false,
-        animation_fps = 30,
+        animation_fps = 12,
         enable_kitty_graphics = true,
         enable_wayland = true,
         default_cursor_style = "BlinkingUnderline",

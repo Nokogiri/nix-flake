@@ -4,7 +4,6 @@
     ./firefox
     ./gpg-agent.nix
     ./joplin-d.nix
-    ./kitty.nix
     #./obs-studio.nix
     ./rbw.nix
     ./vscode.nix
