@@ -1,6 +1,6 @@
 {
   imports = [
-    ./fail2ban.nix
+    #./fail2ban.nix
     ./flood.nix
     ./nextcloud.nix
     ./nginx
