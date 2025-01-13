@@ -1,5 +1,5 @@
 {
-  networking.firewall.enable = false;
+  networking.firewall.enable = true;
   networking.firewall = {
     trustedInterfaces = [
       "calvin"
@@ -18,6 +18,7 @@
       9443
       9091
       8765
+      10577
     ];
     allowedUDPPortRanges = [
       {
