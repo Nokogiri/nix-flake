@@ -9,7 +9,6 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.nix-index-database.nixosModules.nix-index
-    #inputs.lix-module.nixosModules.default
 
     ./applications.nix
     ./console.nix
@@ -22,7 +21,7 @@
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    sharedModules = [inputs.plasma-manager.homeManagerModules.plasma-manager];
+    #sharedModules = [inputs.plasma-manager.homeManagerModules.plasma-manager];
     extraSpecialArgs = {
       inherit inputs;
     };

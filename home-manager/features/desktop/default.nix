@@ -1,19 +1,98 @@
 {pkgs, ...}: {
   imports = [
+    ./cli.nix
     ./colors.nix
     ./firefox
     ./gpg-agent.nix
     ./joplin-d.nix
     #./obs-studio.nix
     ./rbw.nix
+    ./rofi
     ./vscode.nix
     ./wezterm.nix
     ./xdg
   ];
 
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      emoji = ["Noto Emoji"];
+    };
+  };
+
+  gtk = {
+    enable = true;
+    cursorTheme = {
+      name = "breeze_cursors";
+      package = pkgs.kdePackages.breeze;
+    };
+    font = {
+      name = "IntoneMono Nerd Font";
+      size = 11;
+    };
+    gtk3 = {
+      extraConfig = {
+        gtk-recent-files-limit = 10;
+      };
+      extraCss = ''
+        .window-frame, .window-frame:backdrop {
+         box-shadow: 0 0 0 black;
+         border-style: none;
+         margin: 0;
+         border-radius: 0;
+        }
+
+        .titlebar {
+         border-radius: 0;
+        }
+
+        .window-frame.csd.popup {
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+        }
+        .header-bar {
+          background-image: none;
+          background-color: #ededed;
+          box-shadow: none;
+        }
+        /* You may want to use this if you do not like the double title.
+        GtkLabel.title {
+            opacity: 0;
+        }*/
+      '';
+    };
+    theme = {
+      name = "catppuccin-frappe-mauve-standard";
+      package = pkgs.catppuccin-gtk.override {
+        variant = "frappe";
+        accents = ["mauve"];
+      };
+    };
+  };
+
   home.packages = with pkgs; [
+    (catppuccin-gtk.override {
+      variant = "frappe";
+      accents = ["mauve"];
+    })
+    #(catppuccin-kde.override {
+    #  flavour = ["frappe"];
+    #  accents = ["mauve"];
+    #})
+    (catppuccin-papirus-folders.override {
+      flavor = "frappe";
+      accent = "mauve";
+    })
+    (catppuccin.override {
+      variant = "frappe";
+      accent = "mauve";
+    })
     libnotify
     xdg-utils
+    kdePackages.qt6ct
+    kdePackages.qtstyleplugin-kvantum
+    libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.qt5ct
+    lightly-boehs
     (writeShellScriptBin "launch-gamescope" ''
       exec env LD_PRELOAD="" nice -n -11 -- gamescope "$@"
     '')

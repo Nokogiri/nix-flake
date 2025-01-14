@@ -3,7 +3,7 @@
 
 
 * {
-    font: " Hack Nerd Font Propo 12";
+    font: "IntoneMono Nerd Font 13";
     foreground: #f8f8f2;
     /*background-color: rgba(40, 42, 54, 90%);*/
     /*background-color: #282a36;*/

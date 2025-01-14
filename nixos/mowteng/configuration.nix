@@ -20,13 +20,14 @@
     #../common/optional/gnome.nix
     ../common/optional/mullvad.nix
     ../common/optional/pipewire.nix
-    ../common/optional/plasma.nix
+    #../common/optional/plasma.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
     ../common/optional/sddm.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
+    ../common/optional/uwsm.nix
     ../common/optional/zramswap.nix
 
     ../common/users/nokogiri.nix

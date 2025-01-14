@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   environment = {
     pathsToLink = [
       "/libexec"
@@ -20,9 +24,12 @@
     packages = with pkgs; [
       dejavu_fonts
       intel-one-mono
+      font-awesome
       noto-fonts
       noto-fonts-emoji
-      noto-fonts-color-emoji
+      #noto-fonts-color-emoji
+      #noto-fonts-emoji-blob-bin
+      noto-fonts-monochrome-emoji
       noto-fonts-cjk-sans
       material-symbols
       weather-icons
@@ -39,7 +46,7 @@
         serif = ["Intel One Mono"];
         sansSerif = ["Intel One Mono"];
         monospace = ["IntoneMono Nerd Font Mono"];
-        emoji = ["Noto Color Emoji"];
+        emoji = ["Noto Emoji"];
       };
       hinting = {
         style = "slight";
@@ -48,6 +55,7 @@
         lcdfilter = "none";
         rgba = "rgb";
       };
+      useEmbeddedBitmaps = true;
     };
   };
 
@@ -55,6 +63,12 @@
 
   programs = {
     dconf.enable = true;
+    hyprland = {
+      enable = true;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      withUWSM = true;
+    };
   };
 
   services = {

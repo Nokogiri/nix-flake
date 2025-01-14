@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./atuin.nix
     ./bat
@@ -35,18 +31,15 @@
     fastfetch
 
     # archive stuff
+    libarchive
     p7zip
     unzip
     unrar
     ouch
     # misc
-    pamixer
-    ponymix
-    pulsemixer
     sshfs-fuse
 
     trash-cli
-    pfetch
     bc # Calculator
     dfc # better df
     mediainfo
@@ -59,6 +52,5 @@
     ps_mem
     yazi
     nix-stray-roots
-    #ueberzugpp
   ];
 }
