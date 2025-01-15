@@ -11,7 +11,7 @@
       kb-secondary-paste = "Control+v,Insert";
       show-icons = true;
     };
-    theme = ./dracula.rasi;
+    #theme = ./dracula.rasi;
   };
 
   xdg.configFile."rofimoji.rc".text = ''

@@ -10,7 +10,7 @@
         name = "IntoneMono Nerd Font Mono";
         size = 12.5;
       };
-      themeFile = "Dracula";
+      #themeFile = "Dracula";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";

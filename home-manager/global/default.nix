@@ -8,6 +8,7 @@
 }: {
   imports = [
     ../features/cli
+    ./catppuccin.nix
     inputs.nix-index-database.hmModules.nix-index
   ];
 

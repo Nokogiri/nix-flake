@@ -73,18 +73,6 @@
   };
 
   home.packages = with pkgs; [
-    (catppuccin-gtk.override {
-      variant = "frappe";
-      accents = ["mauve"];
-    })
-    (catppuccin-papirus-folders.override {
-      flavor = "frappe";
-      accent = "mauve";
-    })
-    (catppuccin.override {
-      variant = "frappe";
-      accent = "mauve";
-    })
     cliphist
     libnotify
     xdg-utils
