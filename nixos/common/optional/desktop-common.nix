@@ -27,8 +27,6 @@
       font-awesome
       noto-fonts
       noto-fonts-emoji
-      #noto-fonts-color-emoji
-      #noto-fonts-emoji-blob-bin
       noto-fonts-monochrome-emoji
       noto-fonts-cjk-sans
       material-symbols

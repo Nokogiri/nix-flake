@@ -13,6 +13,7 @@
   ];
 
   nixpkgs.overlays = [
+    inputs.hyprland.overlays.default
     inputs.hyprland-contrib.overlays.default
     inputs.hyprland-qtutils.overlays.default
   ];
@@ -21,10 +22,11 @@
   with inputs.hyprland-contrib.packages.${pkgs.system}; [
     hyprpicker
     hyprpaper
-    hyprpolkitagent
+    inputs.hyprpolkitagent.packages.${pkgs.system}.hyprpolkitagent
     grimblast
     hyprprop
     scratchpad
+    kdePackages.qqc2-breeze-style
   ];
 
   programs.waybar = {

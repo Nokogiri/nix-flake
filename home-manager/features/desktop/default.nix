@@ -10,6 +10,7 @@
     ./rbw.nix
     ./rofi
     ./swaync
+    ./swayosd.nix
     ./vscode.nix
     ./wezterm.nix
     ./xdg

@@ -265,7 +265,7 @@
         "uwsm app -- ${pkgs.wvkbd}/bin/wvkbd-mobintl -H 600 -L 420 --hidden"
         "uwsm app -- ${inputs.iio-hyprland.packages.${pkgs.system}.default}/bin/iio-hyprland"
         "uwsm app -- ${pkgs.udiskie}/bin/udiskie --tray"
-        "uwsm app -- ${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent"
+        "uwsm app -- ${inputs.hyprpolkitagent.packages.${pkgs.system}.hyprpolkitagent}/libexec/hyprpolkitagent"
       ];
       windowrulev2 = [
         "workspace 2 silent,class:^(firefox)$"

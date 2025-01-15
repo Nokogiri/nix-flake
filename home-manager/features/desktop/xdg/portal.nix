@@ -8,7 +8,8 @@
     config = {
       common = {
         default = [
-          "kde"
+          "hyprland"
+          "gtk"
         ];
       };
     };

@@ -32,6 +32,10 @@
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
     };
+    hyprpolkitagent = {
+      url = "github:hyprwm/hyprpolkitagent";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     iio-hyprland = {
       url = "github:JeanSchoeller/iio-hyprland";
     };

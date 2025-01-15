@@ -1,6 +1,6 @@
 {
   imports = [
-    #./portal.nix
+    ./portal.nix
     ./mime.nix
     ./entries.nix
     ./user-dirs.nix
