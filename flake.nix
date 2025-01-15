@@ -21,15 +21,13 @@
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
     };
-    #kwin-effects-forceblur = {
-    #  url = "github:taj-ny/kwin-effects-forceblur";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
-    #kwin-gestures = {
-    #  url = "github:taj-ny/kwin-gestures";
-    #};
-    lightly = {
-      url = "github:Bali10050/Darkly";
+    hyprland = {
+      url = "github:hyprwm/Hyprland?submodules=1"; #"github:hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.46.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland"; # Prevents version mismatch.
     };
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
@@ -37,24 +35,10 @@
     iio-hyprland = {
       url = "github:JeanSchoeller/iio-hyprland";
     };
-    hyprland.url = "github:hyprwm/Hyprland?submodules=1"; #"github:hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.46.2";
-    hyprland-qtutils = {
-      url = "github:hyprwm/hyprland-qtutils";
-    };
-    #plasma-manager = {
-    #  url = "github:nix-community/plasma-manager";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #  inputs.home-manager.follows = "home-manager";
-    #};
-    #kwin-effects-startupfeedback-busy-cursor = {
-    #  url = "github:taj-ny/kwin-effects-startupfeedback-busy-cursor";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     catppuccin.url = "github:catppuccin/nix";
     alejandra = {
       url = "github:kamadorueda/alejandra/3.1.0";
