@@ -31,7 +31,7 @@
       ];
       bind = [
         #"SUPER,Return,exec,${pkgs.foot}/bin/footclient"
-        "SUPER,Return,exec,wezterm"
+        "SUPER,Return,exec,kitty"
         "SUPER,w,exec,${pkgs.swaynotificationcenter}/bin/swaync-client -t"
         "SUPER,p,exec,pkill -9 rofi > /dev/null 2>&1 || ${pkgs.rofi-wayland}/bin/rofi -show drun -modes drun,filebrowser,keys,window"
         "SUPER,i,exec,cliphist list | ${pkgs.rofi-wayland}/bin/rofi -dmenu | cliphist decode | wl-copy"
