@@ -4,7 +4,6 @@
     settings = {
       main = {
         font = "IntoneMono Nerd Font Propo:size=10";
-        icon-theme = "Dracula";
       };
       colors = {
         background = "282a36dd";

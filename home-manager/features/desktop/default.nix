@@ -12,7 +12,6 @@
     ./swaync
     ./swayosd.nix
     ./vscode.nix
-    ./wezterm.nix
     ./xdg
   ];
 
@@ -64,15 +63,19 @@
       '';
     };
     theme = {
-      name = "catppuccin-frappe-mauve-standard";
+      name = "catppuccin-macchiato-mauve-standard";
       package = pkgs.catppuccin-gtk.override {
-        variant = "frappe";
+        variant = "macchiato";
         accents = ["mauve"];
       };
     };
   };
 
   home.packages = with pkgs; [
+    (catppuccin.override {
+      variant = "frappe";
+      accent = "mauve";
+    })
     cliphist
     libnotify
     xdg-utils
@@ -102,9 +105,11 @@
     NO_AT_BRIDGE = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     NIXOS_OZONE_WL = "1";
-    KWIN_DRM_DISABLE_TRIPLE_BUFFERING = "1";
   };
-
+  qt.style = {
+    name = "kvantum";
+  };
+  qt.platformTheme.name = "kvantum";
   systemd.user.sessionVariables = {
     PATH = "/var/lib/flatpak/exports/bin:/run/wrappers/bin:/home/nokogiri/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin";
   };

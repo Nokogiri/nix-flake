@@ -69,6 +69,8 @@
     };
   };
 
+  security.pam.services.hyprlock = {};
+
   services = {
     avahi = {
       enable = true;

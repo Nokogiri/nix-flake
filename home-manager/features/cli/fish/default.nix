@@ -1,10 +1,4 @@
 {pkgs, ...}: {
-  xdg.configFile."fish/themes/Dracula Official.theme".source = (
-    pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/dracula/fish/refs/heads/master/themes/Dracula%20Official.theme";
-      hash = "sha256-nq/+FmOpioQcspqhxdBs8jCjXLgOG1hfxcZaJsRXFxU=";
-    }
-  );
   programs.atuin.enableFishIntegration = true;
   programs.zoxide.enableFishIntegration = false;
   home.packages = [pkgs.any-nix-shell];
@@ -53,7 +47,6 @@
       clear = "printf '\\033[2J\\033[3J\\033[1;1H'";
     };
     interactiveShellInit = ''
-      fish_config theme choose Dracula\ Official
       any-nix-shell fish --info-right | source
       fzf_configure_bindings --history=\cr
     '';

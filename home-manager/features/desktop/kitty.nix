@@ -1,16 +1,11 @@
 {
-  #xdg.configFile."kitty/theme.conf".source  = ./kitty_theme.conf;
   programs = {
     kitty = {
       enable = true;
-      #extraConfig = ''
-      #  include everforest-dark.conf
-      #'';
       font = {
         name = "IntoneMono Nerd Font Mono";
-        size = 12.5;
+        size = 12;
       };
-      #themeFile = "Dracula";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";

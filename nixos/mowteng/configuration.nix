@@ -17,10 +17,9 @@
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
     ../common/optional/fprintd.nix
-    #../common/optional/gnome.nix
+    #../common/optional/greetd.nix
     ../common/optional/mullvad.nix
     ../common/optional/pipewire.nix
-    #../common/optional/plasma.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix

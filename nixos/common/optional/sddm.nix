@@ -5,7 +5,7 @@
         flavor = "frappe";
         font = "IntoneMono Nerd Font";
         fontSize = "11";
-        background = "${../../../home-manager/features/desktop/wallpaper.png}";
+        background = "${../../../images/above.png}";
         loginBackground = true;
       }
     )

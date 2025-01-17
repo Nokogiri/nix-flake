@@ -6,9 +6,10 @@
   imports = [
     ./config.nix
     ./environment.nix
-    ./hyprlock.nix
     ./hypridle.nix
-    ./user-services.nix
+    ./hyprlock.nix
+    ./hyprpaper.nix
+    #./user-services.nix
     ./waybar
   ];
 
@@ -22,11 +23,13 @@
   with inputs.hyprland-contrib.packages.${pkgs.system}; [
     hyprpicker
     hyprpaper
+    imv
     inputs.hyprpolkitagent.packages.${pkgs.system}.hyprpolkitagent
+    kdePackages.qqc2-breeze-style
     grimblast
     hyprprop
     scratchpad
-    kdePackages.qqc2-breeze-style
+    swayimg
   ];
 
   programs.waybar = {
