@@ -393,11 +393,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1737197318,
-        "narHash": "sha256-dzG7PTu2TvBhrVbx5ouFGclQBgfrLobiMH1LWGKSR+I=",
+        "lastModified": 1737297571,
+        "narHash": "sha256-tLpVAiSeH6T6SxdTJyc/PYmVVtFYCffk2IUFv5xt4tg=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "f56153a9c1b0a00fac0932a95e0cfa5a4f6c681f",
+        "rev": "0dfcdbcedd3a14b5d43f8b2f9bc5fdcd8ed001fa",
         "type": "github"
       },
       "original": {
@@ -743,11 +743,11 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1737278054,
-        "narHash": "sha256-elWHaJ+jjvCPmIZN+CWwEBjCSlhVNFbP1NGP5yMgFT0=",
+        "lastModified": 1737298806,
+        "narHash": "sha256-FCLlGCkiSKZbCvnVcUZi5rHMgI4t80oBx8DI330Cr4A=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "40bbd31b63763c35de8b96981e6c67151b25b642",
+        "rev": "7d7c5731307426efcdc8e81f4220121347d13619",
         "type": "github"
       },
       "original": {
@@ -876,11 +876,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1737276344,
-        "narHash": "sha256-2MrKgUy0oXTC/fzUGj/wnfQQQ5AxHN1VCwhpD0fG4X0=",
+        "lastModified": 1737291670,
+        "narHash": "sha256-iA+SQO8w012sS6OW0knTpOc/UNh8Ca+/I2JC+NDpdlE=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "8366afca32fb63a928c16c0d8a437162a7898e22",
+        "rev": "3d5cfb5c3d2832ec39c6565707bf30f9e8e42560",
         "type": "github"
       },
       "original": {

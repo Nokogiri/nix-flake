@@ -1,4 +1,6 @@
 {
+  # https://github.com/crazygolem/dotfiles/blob/master/.config/kitty/tab_bar.py
+  xdg.configFile."kitty/tab_bar.py".source = ./kitty_tab_bar.py;
   programs = {
     kitty = {
       enable = true;
@@ -42,27 +44,29 @@
         enable_audio_bell = false;
         visual_bell_duration = 0;
         window_alert_on_bell = true;
-        bell_on_tab = false;
+        bell_on_tab = "󱐋";
         command_on_bell = "none";
 
         # Tab settings
         inactive_tab_background = "#282a36";
         tab_bar_edge = "bottom";
-        tab_bar_margin_height = "7.0 0.0";
-        tab_bar_margin_width = "2.0";
+        tab_bar_margin_height = "0.0 2.0";
+        #tab_bar_margin_width = "0.0 2.0";
         tab_bar_align = "left";
-        tab_bar_style = "separator";
-        #tab_separator = "";
+        tab_bar_style = "custom";
+        tab_separator = "rounded";
         tab_bar_min_tabs = 2;
         tab_switch_strategy = "previous";
         tab_fade = "0.25 0.5 0.75 1";
-        tab_activity_symbol = "none";
+        tab_activity_symbol = "";
 
         #tab_powerline_style = "angled";
         active_tab_font_style = "bold";
         inactive_tab_font_style = "normal";
-        tab_title_template = "{fmt.fg._5c6370}{fmt.bg.default}{fmt.fg._abb2bf}{fmt.bg._5c6370}{title[:15] + (title[15:] and '…')}{fmt.fg._5c6370}{fmt.bg.default}";
-        active_tab_title_template = "{fmt.fg._f0f0f0}{fmt.bg.default}{fmt.fg._282c34}{fmt.bg._f0f0f0}{fmt.noitalic}{title[:40] + (title[40:] and '…')}{fmt.fg._f0f0f0}{fmt.bg.default}";
+        tab_title_template = "|{bell_symbol or activity_symbol}| |{title}";
+        active_tab_title_template = "|{' ' if layout_name == 'stack' else ''}{bell_symbol}| |{title}";
+        #tab_title_template = "{fmt.fg._5c6370}{fmt.bg.default}{fmt.fg._abb2bf}{fmt.bg._5c6370}{title[:15] + (title[15:] and '…')}{fmt.fg._5c6370}{fmt.bg.default}";
+        #active_tab_title_template = "{fmt.fg._f0f0f0}{fmt.bg.default}{fmt.fg._282c34}{fmt.bg._f0f0f0}{fmt.noitalic}{title[:40] + (title[40:] and '…')}{fmt.fg._f0f0f0}{fmt.bg.default}";
         #tab_title_template = ''
         #  "{f'{title[:30]}…' if title.rindex(title[-1]) + 1 > 30 else (title.center(6) if (title.rindex(title[-1]) + 1) % 2 == 0 else title.center(5))}"'';
 
