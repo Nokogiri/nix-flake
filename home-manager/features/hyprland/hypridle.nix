@@ -19,16 +19,16 @@ in {
       general = {
         before_sleep_cmd = "${pkgs.systemd}/bin/loginctl lock-session";
         after_sleep_cmd = "${inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl dispatch dpms on";
-        lock_cmd = "pidof hyprlock || ${lib.getExe config.programs.hyprlock.package}";
+        lock_cmd = "${pkgs.procps}/bin/pidof hyprlock || ${lib.getExe config.programs.hyprlock.package}";
       };
-      listeners = [
+      listener = [
         {
-          timeout = 150; # 2.5min.
+          timeout = 150;
           on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl -s set 10"; # set monitor backlight to minimum, avoid 0 on OLED monitor.
           on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -r"; # monitor backlight restore.
         }
         {
-          timeout = 150; # 2.5min.
+          timeout = 150;
           on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl -sd rgb:kbd_backlight set 0"; # turn off keyboard backlight.
           on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -rd rgb:kbd_backlight"; # turn on keyboard backlight.
         }

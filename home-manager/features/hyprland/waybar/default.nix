@@ -15,6 +15,7 @@
         ];
         modules-center = ["hyprland/workspaces"];
         modules-right = [
+          "idle_inhibitor"
           "tray"
           "battery"
           "network"

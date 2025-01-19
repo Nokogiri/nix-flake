@@ -17,13 +17,13 @@
     ../common/optional/bluetooth.nix
     ../common/optional/desktop-common.nix
     ../common/optional/fprintd.nix
-    #../common/optional/greetd.nix
+    ../common/optional/greetd.nix
     ../common/optional/mullvad.nix
     ../common/optional/pipewire.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
-    ../common/optional/sddm.nix
+    #../common/optional/sddm.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
     ../common/optional/uwsm.nix
@@ -51,9 +51,6 @@
   environment.systemPackages = with pkgs; [
     amdctl
     compsize
-    #gnomeExtensions.appindicator
-    #gnomeExtensions.blur-my-shell
-    #gnomeExtensions.pop-shell
   ];
   hardware.graphics = {
     enable = true;

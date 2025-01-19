@@ -15,7 +15,5 @@
     cemu
     pcsx2
     ppsspp
-
-    goldberg-emu
   ];
 }

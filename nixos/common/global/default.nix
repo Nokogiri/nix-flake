@@ -130,7 +130,7 @@
         "auto-allocate-uids"
       ];
       warn-dirty = false;
-      keep-outputs = false;
+      keep-outputs = true;
       keep-derivations = true;
       cores = 8;
       max-jobs = 16;

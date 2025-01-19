@@ -14,5 +14,6 @@
   plasma-window-title-applet = pkgs.callPackage ./plasma-window-title-applet {};
   rofimoji = pkgs.callPackage ./rofimoji {};
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd {};
+  vintagestory = pkgs.callPackage ./vintagestory {};
   vscode-taskexplorer = pkgs.callPackage ./vscode-taskexplorer {};
 }

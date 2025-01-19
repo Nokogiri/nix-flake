@@ -52,7 +52,7 @@
         tab_bar_margin_width = "2.0";
         tab_bar_align = "left";
         tab_bar_style = "separator";
-        tab_separator = "";
+        #tab_separator = "";
         tab_bar_min_tabs = 2;
         tab_switch_strategy = "previous";
         tab_fade = "0.25 0.5 0.75 1";
