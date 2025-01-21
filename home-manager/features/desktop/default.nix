@@ -9,7 +9,7 @@
     #./obs-studio.nix
     ./rbw.nix
     ./rofi
-    ./swaync
+    #./swaync
     ./swayosd.nix
     ./vscode.nix
     ./xdg
