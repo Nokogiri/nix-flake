@@ -9,10 +9,10 @@
     mangohud
     heroic
 
-    gzdoom
+    #gzdoom
     vintagestory
 
-    cemu
+    #cemu
     pcsx2
     ppsspp
   ];

@@ -21,6 +21,7 @@
     ../common/optional/greetd.nix
     ../common/optional/mullvad.nix
     ../common/optional/pipewire.nix
+    ../common/optional/podman.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
@@ -107,9 +108,9 @@
   services.speechd.enable = lib.mkForce false;
 
   services.udev.extraRules = ''
-    ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
+      ENV{ID_FS_USAGE}=="filesystem|other|crypto", ENV{UDISKS_FILESYSTEM_SHARED}="1"
+    ACTION=="add", SUBSYSTEM=="serio", DRIVERS=="atkbd", ATTR{power/wakeup}="disabled"
   '';
-
   #systemd.tmpfiles.rules = ["D /tmp/.X11-unix 1777 nokogiri root"];
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.05";

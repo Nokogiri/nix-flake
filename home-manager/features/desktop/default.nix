@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./cli.nix
     ./colors.nix
@@ -9,7 +13,7 @@
     #./obs-studio.nix
     ./rbw.nix
     ./rofi
-    #./swaync
+    ./swaync
     ./swayosd.nix
     ./vscode.nix
     ./xdg
@@ -29,7 +33,7 @@
       package = pkgs.kdePackages.breeze;
     };
     font = {
-      name = "IntoneMono Nerd Font";
+      name = "JetBrainsMono Nerd Font";
       size = 11;
     };
     gtk3 = {
@@ -87,6 +91,7 @@
       exec env LD_PRELOAD="" nice -n -11 -- gamescope "$@"
     '')
     wl-clipboard
+    xfce.thunar
   ];
 
   home.pointerCursor = {

@@ -5,7 +5,8 @@
     kitty = {
       enable = true;
       font = {
-        name = "IntoneMono Nerd Font Mono";
+        #name = "IntoneMono Nerd Font Mono";
+        name = "JetBrainsMono Nerd Font";
         size = 12;
       };
       settings = {
@@ -49,7 +50,7 @@
 
         # Tab settings
         inactive_tab_background = "#282a36";
-        tab_bar_edge = "bottom";
+        tab_bar_edge = "top";
         tab_bar_margin_height = "0.0 2.0";
         #tab_bar_margin_width = "0.0 2.0";
         tab_bar_align = "left";

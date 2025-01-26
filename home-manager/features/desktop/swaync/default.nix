@@ -18,7 +18,7 @@
 
         all: unset;
         font-size: 14px;
-        font-family: "IntoneMono Nerd Font 11";
+        font-family: "JetBrainsMono Nerd Font 11";
         transition: 200ms;
 
       }

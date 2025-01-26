@@ -42,9 +42,12 @@
       libpng
       libvorbis
       stdenv.cc.cc.lib
+      SDL2
+      openal
       libkrb5
       keyutils
       mangohud
+      nss
       (writeShellScriptBin "launch-gamescope" ''
         if [ -z "$WAYLAND_DISPLAY" ]; then
           exec nice -n -10 -- gamescope "$@"

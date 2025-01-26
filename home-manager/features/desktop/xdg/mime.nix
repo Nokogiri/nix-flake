@@ -3,7 +3,7 @@ let
     "firefox.desktop" # assume firefox provides this
   ];
   associations = {
-    "inode/directory" = ["thunar.desktop"];
+    "inode/directory" = ["yazi.desktop"];
     "text/html" = browser;
     "x-scheme-handler/http" = browser;
     "x-scheme-handler/https" = browser;

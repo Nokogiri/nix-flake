@@ -24,7 +24,7 @@
     packages = with pkgs; [
       dejavu_fonts
       intel-one-mono
-      font-awesome
+      #font-awesome
       noto-fonts
       noto-fonts-emoji
       noto-fonts-monochrome-emoji
@@ -32,6 +32,7 @@
       material-symbols
       weather-icons
       nerd-fonts.intone-mono
+      nerd-fonts.jetbrains-mono
       nerd-fonts.symbols-only
     ];
     enableDefaultPackages = true;
@@ -41,9 +42,9 @@
       enable = true;
       antialias = false;
       defaultFonts = {
-        serif = ["Intel One Mono"];
-        sansSerif = ["Intel One Mono"];
-        monospace = ["IntoneMono Nerd Font Mono"];
+        serif = ["JetBrainsMono Nerd Font"];
+        sansSerif = ["JetBrainsMono Nerd Font"];
+        monospace = ["JetBrainsMono Nerd Font Mono"];
         emoji = ["Noto Emoji"];
       };
       hinting = {
@@ -75,6 +76,7 @@
     avahi = {
       enable = true;
     };
+    colord.enable = true;
     dbus = {
       enable = true;
       implementation = "broker";
@@ -82,6 +84,7 @@
     };
     flatpak.enable = true;
     geoclue2.enable = true;
+    gvfs.enable = true;
     printing.enable = true;
     udisks2.enable = true;
     upower.enable = true;
