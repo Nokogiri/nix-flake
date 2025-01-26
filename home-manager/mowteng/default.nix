@@ -18,6 +18,7 @@
   home.packages = with pkgs; [
     handlr-regex
     distrobox
+    gamehub
     gimp
     krita
     mullvad-vpn

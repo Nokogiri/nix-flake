@@ -8,11 +8,12 @@
   home.packages = with pkgs; [
     mangohud
     heroic
+    innoextract
 
-    #gzdoom
+    gzdoom
     vintagestory
 
-    #cemu
+    cemu
     pcsx2
     ppsspp
   ];
