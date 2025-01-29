@@ -42,8 +42,6 @@
       libpng
       libvorbis
       stdenv.cc.cc.lib
-      SDL2
-      openal
       libkrb5
       keyutils
       mangohud
@@ -69,6 +67,15 @@
       "-F fsr"
       "--fsr-sharpness 10"
       "-f"
+      "--xwayland-count"
+      "2"
+      "--default-touch-mode"
+      "4"
+      "--hide-cursor-delay"
+      "3000"
+      "--fade-out-duration"
+      "200"
+      "--steam"
     ];
   };
 }

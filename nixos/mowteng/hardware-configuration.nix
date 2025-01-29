@@ -34,8 +34,8 @@
       #"zenpower"
       "wireguard"
     ];
-    kernelPackages = pkgs.linuxKernel.packages.linux_6_13;
-    #kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+    #kernelPackages = pkgs.linuxKernel.packages.linux_6_13;
+    kernelPackages = pkgs.linuxKernel.packages.linux_zen;
 
     #kernelPackages = inputs.nixpkgs-master.legacyPackages.${pkgs.system}.linuxKernel.packages.linux_6_13;
     #kernelPackages = pkgs.linuxKernel.packages.linux_latest;

@@ -1,6 +1,6 @@
 {
   inputs,
-  pkgs,
+  #pkgs,
   ...
 }: {
   imports = [
@@ -15,13 +15,6 @@
     inputs.nur.modules.homeManager.default
   ];
 
-  home.packages = with pkgs; [
-    handlr-regex
-    distrobox
-    gamehub
-    gimp
-    krita
-    mullvad-vpn
-    nextcloud-client
-  ];
+  #home.packages = with pkgs; [
+  #];
 }

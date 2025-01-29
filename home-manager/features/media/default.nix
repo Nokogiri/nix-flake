@@ -6,7 +6,11 @@
     ./yt-dlp.nix
   ];
   home.packages = with pkgs; [
+    freetube
+    gimp
     jellyfin-media-player
+    koreader
+    krita
     playerctl
   ];
   services = {

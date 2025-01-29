@@ -23,7 +23,7 @@
   fonts = {
     packages = with pkgs; [
       dejavu_fonts
-      intel-one-mono
+      #intel-one-mono
       #font-awesome
       noto-fonts
       noto-fonts-emoji
@@ -31,7 +31,7 @@
       noto-fonts-cjk-sans
       material-symbols
       weather-icons
-      nerd-fonts.intone-mono
+      #nerd-fonts.intone-mono
       nerd-fonts.jetbrains-mono
       nerd-fonts.symbols-only
     ];
@@ -82,9 +82,9 @@
       implementation = "broker";
       packages = [pkgs.gcr];
     };
-    flatpak.enable = true;
+    flatpak.enable = false;
     geoclue2.enable = true;
-    gvfs.enable = true;
+    gvfs.enable = false;
     printing.enable = true;
     udisks2.enable = true;
     upower.enable = true;

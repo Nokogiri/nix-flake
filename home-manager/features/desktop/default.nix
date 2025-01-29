@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./cli.nix
     ./colors.nix
@@ -81,6 +77,7 @@
       accent = "mauve";
     })
     cliphist
+    handlr-regex
     libnotify
     xdg-utils
     kdePackages.qt6ct
@@ -90,6 +87,8 @@
     (writeShellScriptBin "launch-gamescope" ''
       exec env LD_PRELOAD="" nice -n -11 -- gamescope "$@"
     '')
+    mullvad-vpn
+    nextcloud-client
     wl-clipboard
     xfce.thunar
   ];
@@ -109,7 +108,7 @@
     DISABLE_QT5_COMPAT = "0";
     NO_AT_BRIDGE = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-    NIXOS_OZONE_WL = "1";
+    #NIXOS_OZONE_WL = "1";
   };
   qt.style = {
     name = "kvantum";

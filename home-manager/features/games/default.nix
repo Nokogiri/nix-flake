@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./mangohud
+    ./stl.nix
   ];
 
   home.sessionVariables.WINEDEBUG = "-all";
@@ -16,5 +17,14 @@
     cemu
     pcsx2
     ppsspp
+
+    #stl
+    wget
+    xdotool
+    xorg.xprop
+    xorg.xrandr
+    xorg.xwininfo
+    xxd
+    yad
   ];
 }

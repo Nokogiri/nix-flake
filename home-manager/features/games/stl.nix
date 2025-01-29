@@ -3,7 +3,7 @@
 
   xdg.dataFile."Steam/compatibilitytools.d/SteamTinkerLaunch/steamtinkerlaunch" = {
     enable = true;
-    source = "${pkgs.steamtinkerlaunch}/bin/.steamtinkerlaunch-wrapped";
+    source = "${pkgs.steamtinkerlaunch}/bin/steamtinkerlaunch";
   };
 
   xdg.dataFile."Steam/compatibilitytools.d/SteamTinkerLaunch/compatibilitytool.vdf" = {
