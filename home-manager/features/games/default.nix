@@ -17,7 +17,8 @@
     cemu
     pcsx2
     ppsspp
-
+    
+    gfn-electron
     #stl
     wget
     xdotool

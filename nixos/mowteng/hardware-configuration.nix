@@ -33,6 +33,8 @@
       "kvm-amd"
       #"zenpower"
       "wireguard"
+      "xone"
+      "xpadneo"
     ];
     #kernelPackages = pkgs.linuxKernel.packages.linux_6_13;
     kernelPackages = pkgs.linuxKernel.packages.linux_zen;

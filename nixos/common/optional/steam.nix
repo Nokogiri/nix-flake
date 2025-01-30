@@ -75,7 +75,6 @@
       "3000"
       "--fade-out-duration"
       "200"
-      "--steam"
     ];
   };
 }
