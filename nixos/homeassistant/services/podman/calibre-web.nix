@@ -22,16 +22,19 @@
         forceSSL = true;
         locations."/" = {
           proxyPass = "http://10.200.200.1:8083";
+	  proxyWebsockets = true;
           extraConfig =
-            "proxy_redirect off;"
-            + "proxy_set_header Range $http_range;"
+             "proxy_set_header Range $http_range;"
             + "proxy_set_header If-Range $http_if_range;"
             + "proxy_set_header X-Real-IP $remote_addr;"
             + "proxy_set_header Host $host;"
             + "proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;"
             + "proxy_set_header X-Forwarded-Protocol $scheme;"
-            + "proxy_http_version 1.1;"
             + "proxy_set_header Upgrade $http_upgrade;"
+ 	    + " proxy_hide_header 'x-frame-options';"
+            + "proxy_set_header X-Forwarded-Ssl on;"
+	    + "proxy_set_header X-Script-Name /calibre;"
+	    + ''add_header x-frame-options "allowall";'' 
             + ''proxy_set_header Connection "upgrade";'';
         };
       };
