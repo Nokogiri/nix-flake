@@ -15,8 +15,9 @@
       };
       ports = ["10.200.200.1:8083:8083/tcp"];
     };
+  };
     services.nginx = {
-      virtualHosts."books.fishoeder.net" = {
+      virtualHosts."cali.fishoeder.net" = {
         useACMEHost = "fishoeder.net";
         forceSSL = true;
         locations."/" = {
@@ -35,5 +36,4 @@
         };
       };
     };
-  };
 }
