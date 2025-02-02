@@ -171,7 +171,7 @@
       ];
 
       env = [
-        #"NIXOS_OZONE_WL,1"
+        "NIXOS_OZONE_WL,1"
         "XCURSOR_SIZE,24"
         "XCURSOR_THEME,breeze_cursors"
         "GTK_THEME,catppuccin-macchiato-mauve-standard"
@@ -180,7 +180,7 @@
         "XDG_SESSION_DESKTOP,Hyprland"
         "MOZ_DISABLE_RDD_SANDBOX,1"
         "MOZ_ENABLE_WAYLAND,1"
-        #"OZONE_PLATFORM,wayland"
+        "OZONE_PLATFORM,wayland"
         "QT_QPA_PLATFORM,wayland"
         "QT_QPA_PLATFORMTHEME,qt5ct" #env = QT_STYLE_OVERRIDE,kvantum
         #"QT_STYLE_OVERRIDE,qt5ct-style"

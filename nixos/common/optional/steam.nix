@@ -34,6 +34,10 @@
     };
     protontricks.enable = true;
     remotePlay.openFirewall = true;
+    extraCompatPackages = with pkgs; [
+      proton-ge-bin
+    ]
+    ;
     extraPackages = with pkgs; [
       xorg.libXcursor
       xorg.libXi
@@ -71,10 +75,10 @@
       "2"
       "--default-touch-mode"
       "4"
-      "--hide-cursor-delay"
-      "3000"
-      "--fade-out-duration"
-      "200"
+      #"--hide-cursor-delay"
+      #"3000"
+      #"--fade-out-duration"
+      #"200"
     ];
   };
 }

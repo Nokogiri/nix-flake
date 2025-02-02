@@ -11,6 +11,8 @@
     heroic
     innoextract
 
+    arx-libertatis
+    gemrb
     gzdoom
     vintagestory
 
@@ -19,6 +21,8 @@
     ppsspp
 
     gfn-electron
+
+    wineWow64Packages.waylandFull
     #stl
     wget
     xdotool

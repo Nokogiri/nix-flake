@@ -6,6 +6,7 @@
     ./yt-dlp.nix
   ];
   home.packages = with pkgs; [
+    calibre
     freetube
     gimp
     jellyfin-media-player
