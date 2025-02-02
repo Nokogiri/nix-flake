@@ -73,12 +73,12 @@
       "-f"
       "--xwayland-count"
       "2"
-      "--default-touch-mode"
-      "4"
-      #"--hide-cursor-delay"
-      #"3000"
-      #"--fade-out-duration"
-      #"200"
+      #"--default-touch-mode"
+      #"4"
+      "--hide-cursor-delay"
+      "3000"
+      "--fade-out-duration"
+      "200"
     ];
   };
 }
