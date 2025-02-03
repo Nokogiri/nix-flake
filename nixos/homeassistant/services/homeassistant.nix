@@ -37,6 +37,9 @@
       "ipp"
       "upnp"
       "mobile_app"
+      "jellyfin"
+      "homekit"
+      "homekit_controller"
     ];
     config.http.server_host = ["192.168.178.47" "127.0.0.1"];
   };
