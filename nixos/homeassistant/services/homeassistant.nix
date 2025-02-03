@@ -18,7 +18,7 @@
   services.home-assistant = {
     enable = true;
     #openFirewall = true;
-    config = null;
+    #config = null;
     extraComponents = [
       "androidtv"
       "androidtv_remote"
@@ -33,6 +33,7 @@
       "twinkly"
       "xiaomi_miio"
     ];
+    config.http.server_host = [ "192.168.178.47" "127.0.0.1" ];
   };
   services.nginx = {
     virtualHosts."haos.fishoeder.net" = {
