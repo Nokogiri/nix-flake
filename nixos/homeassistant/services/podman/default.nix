@@ -3,7 +3,7 @@
     ../../../common/optional/podman.nix
     ./calibre-web.nix
     ./esphome.nix
-    ./homeassistant.nix
+    #./homeassistant.nix
     ./mealie.nix
     ./pihole.nix
   ];
