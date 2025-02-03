@@ -2,7 +2,7 @@
   imports = [
     #./fail2ban.nix
     ./flood.nix
-    #./homeassistant.nix
+    ./homeassistant.nix
     ./nextcloud.nix
     ./nginx
     ./samba.nix
