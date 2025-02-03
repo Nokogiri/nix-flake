@@ -12,7 +12,6 @@
           "gtk"
         ];
         "org.freedesktop.impl.portal.FileChooser" = ["gtk"];
-
       };
     };
   };

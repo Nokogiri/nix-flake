@@ -4,6 +4,9 @@
   ...
 }: {
   wayland.windowManager.hyprland = {
+    plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
+    ];
     settings = {
       animations = {
         enabled = true;
@@ -57,7 +60,7 @@
         "SHIFT,XF86AudioMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle"
         ",XF86AudioMicMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle"
         "SUPERSHIFT,q,killactive"
-        "SUPERSHIFT,e,exit"
+        "SUPERSHIFT,e,exec,uwsm stop"
         "SUPER,s,togglesplit"
         "SUPER,f,fullscreen,1"
         "SUPERSHIFT,f,fullscreen,0"
@@ -134,6 +137,8 @@
         "SUPERSHIFT,7,movetoworkspacesilent,07"
         "SUPERSHIFT,8,movetoworkspacesilent,08"
         "SUPERSHIFT,9,movetoworkspacesilent,09"
+        ###
+        "SUPER,grave,hyprexpo:expo,toggle"
       ];
       decoration = {
         active_opacity = "1.0";
@@ -266,6 +271,19 @@
         "uwsm app -- ${pkgs.udiskie}/bin/udiskie --tray"
         "uwsm app -- ${inputs.hyprpolkitagent.packages.${pkgs.system}.hyprpolkitagent}/libexec/hyprpolkitagent"
       ];
+      plugin = {
+        hyprexpo = {
+          columns = 3;
+          gap_size = 5;
+          bg_col = "rgb(111111)";
+          workspace_method = "center current"; # [center/first] [workspace] e.g. first 1 or center m+1
+
+          enable_gesture = true; # laptop touchpad
+          gesture_fingers = 3; # 3 or 4
+          gesture_distance = 300; # how far is the "max"
+          gesture_positive = true; # positive = swipe down. Negative = swipe up.
+        };
+      };
       windowrulev2 = [
         "workspace 2 silent,class:^(firefox)$"
         # polkit

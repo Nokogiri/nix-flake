@@ -40,7 +40,7 @@
       url = "github:JeanSchoeller/iio-hyprland";
     };
     spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix";
+      url = "github:Gerg-L/spicetify-nix?ref=fb1d78cbac7ceafa01cd8ddddcc1315781852056";
       #url = "github:lasse-herzog/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
