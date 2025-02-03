@@ -17,6 +17,7 @@ let
     "application/xhtml+xml" = browser;
     "application/x-extension-xhtml" = browser;
     "application/x-extension-xht" = browser;
+    "application/zip" = "org.kde.ark.desktop";
   };
 in {
   xdg.mime.enable = true;

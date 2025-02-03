@@ -22,7 +22,7 @@
 
     gfn-electron
 
-    wineWow64Packages.waylandFull
+    #wineWowPackages.waylandFull
     #stl
     wget
     xdotool

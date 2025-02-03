@@ -80,6 +80,7 @@
     handlr-regex
     libnotify
     xdg-utils
+    kdePackages.ark
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum

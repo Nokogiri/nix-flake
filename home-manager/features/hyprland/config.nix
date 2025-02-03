@@ -274,10 +274,10 @@
         "float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$"
         "dimaround,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$"
         # heroic stuff
-        "float,class:^(electron)$,title:^(Select Executable)$"
-        "center,class:^(electron)$,title:^(Select Executable)$"
-        "size 60%,class:^(electron)$,title:^(Select Executable)$"
-        "float,class:^(electron)$,title:^(Choose where you want to move)$"
+        "float,class:^(xdg-desktop-portal-gtk)$"
+        "center,class:^(xdg-desktop-portal-gtk)$"
+        "size 60%,class:^(xdg-desktop-portal-gtk)$"
+        "float,class:^(xdg-desktop-portal-gtk)$,title:^(Choose where you want to move)$"
         "float,title:^(Select EXE to Run)$"
         # desktop-portal
         "float,class:^(xdg-desktop-portal-gtk)$"
