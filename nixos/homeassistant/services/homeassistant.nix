@@ -14,6 +14,7 @@
       "automation ui" = "!include automations.yaml";
       "scene ui" = "!include scenes.yaml";
       "script ui" = "!include scripts.yaml";
+      frontend.themes = "!include_dir_merge_named themes";
       lovelace.mode = "storage";
       http = {
         server_host = ["192.168.178.57" "127.0.0.1"];
