@@ -3,7 +3,18 @@
     enable = true;
     #openFirewall = true;
     config = {
-      http.server_host = ["192.168.178.57" "127.0.0.1"];
+      homeassistant = {
+        longitude = 11.03283;
+        latitude = 50.9787;
+        unit_system = "metric";
+        time_zone = "Europe/Berlin";
+      };
+      lovelace.mode = "storage";
+      http = {
+        server_host = ["192.168.178.57" "127.0.0.1"];
+        trusted_proxies = ["192.168.178.57" "127.0.0.1"];
+        use_x_forwarded_for = true;
+      };
       recorder.db_url = "postgresql://@/hass";
     };
     extraComponents = [
@@ -11,6 +22,7 @@
       "met"
       "esphome"
       "twinkly"
+      "isal"
       "yeelight"
       "fritz"
       "fritzbox"
@@ -28,7 +40,7 @@
       "homekit"
       "homekit_controller"
     ];
-    extraPackages = ps: with ps; [ psycopg2 ];
+    extraPackages = ps: with ps; [psycopg2 aiogithubapi];
   };
   services.nginx = {
     virtualHosts."haos.fishoeder.net" = {
