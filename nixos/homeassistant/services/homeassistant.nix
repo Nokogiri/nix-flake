@@ -10,6 +10,9 @@
         unit_system = "metric";
         time_zone = "Europe/Berlin";
         external_url = "https://haos.fishoeder.net";
+        "automation ui" = "!include automations.yaml";
+        "scene ui" = "!include scenes.yaml";
+        "script ui" = "!include scripts.yaml";
       };
       lovelace.mode = "storage";
       http = {
@@ -21,6 +24,8 @@
     };
     extraComponents = [
       "default_config"
+      "glances"
+      "hardware"
       "met"
       "esphome"
       "twinkly"
@@ -41,6 +46,8 @@
       "jellyfin"
       "homekit"
       "homekit_controller"
+      "zha"
+      "systemmonitor"
     ];
     extraPackages = ps: with ps; [psycopg2 aiogithubapi];
   };
