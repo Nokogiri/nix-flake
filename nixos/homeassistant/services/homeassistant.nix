@@ -3,6 +3,7 @@
     enable = true;
     #openFirewall = true;
     config = {
+      default_config = {};
       homeassistant = {
         country = "DE";
         longitude = 11.03283;
@@ -26,12 +27,14 @@
     extraComponents = [
       "default_config"
       "glances"
+      "apple_tv"
       "hardware"
       "met"
       "esphome"
       "twinkly"
       "isal"
       "yeelight"
+      "statistics"
       "fritz"
       "fritzbox"
       "androidtv"
