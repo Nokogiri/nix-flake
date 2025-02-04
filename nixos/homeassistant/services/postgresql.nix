@@ -6,10 +6,15 @@
     };
     ensureDatabases = [
       "nextcloud"
+      "hass"
     ];
     ensureUsers = [
       {
         name = "nextcloud";
+      }
+      {
+        name = "hass";
+        ensureDBOwnership = true;
       }
     ];
     authentication = pkgs.lib.mkOverride 10 ''

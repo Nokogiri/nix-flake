@@ -1,24 +1,11 @@
 {
-  #virtualisation.oci-containers.containers = {
-  #  homeassistant = {
-  #    image = "ghcr.io/home-assistant/home-assistant:stable";
-  #    autoStart = true;
-  #    volumes = [
-  #      "/var/lib/pods/homeassistant/config:/config"
-  #      "/etc/localtime:/etc/localtime:ro"
-  #    ];
-  #    environment = {
-  #      TZ = "Europe/Berlin";
-  #      PUID = "1000";
-  #      PGID = "1000";
-  #    };
-  #    extraOptions = ["--network=host"];
-  #  };
-  #};
   services.home-assistant = {
     enable = true;
     #openFirewall = true;
-    #config = null;
+    config = {
+      http.server_host = ["192.168.178.57" "127.0.0.1"];
+      recorder.db_url = "postgresql://@/hass";
+    };
     extraComponents = [
       "default_config"
       "met"
@@ -41,7 +28,7 @@
       "homekit"
       "homekit_controller"
     ];
-    config.http.server_host = ["192.168.178.57" "127.0.0.1"];
+    extraPackages = ps: with ps; [ psycopg2 ];
   };
   services.nginx = {
     virtualHosts."haos.fishoeder.net" = {
