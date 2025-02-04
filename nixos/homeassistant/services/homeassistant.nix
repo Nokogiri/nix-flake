@@ -10,10 +10,10 @@
         unit_system = "metric";
         time_zone = "Europe/Berlin";
         external_url = "https://haos.fishoeder.net";
-        "automation" = "!include automations.yaml";
-        "scene" = "!include scenes.yaml";
-        "script" = "!include scripts.yaml";
-      };
+              };
+      "automation ui" = "!include automations.yaml";
+      "scene ui" = "!include scenes.yaml";
+      "script ui" = "!include scripts.yaml";
       lovelace.mode = "storage";
       http = {
         server_host = ["192.168.178.57" "127.0.0.1"];
