@@ -4,10 +4,12 @@
     #openFirewall = true;
     config = {
       homeassistant = {
+        country = "DE";
         longitude = 11.03283;
         latitude = 50.9787;
         unit_system = "metric";
         time_zone = "Europe/Berlin";
+        external_url = "https://haos.fishoeder.net";
       };
       lovelace.mode = "storage";
       http = {
