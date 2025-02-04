@@ -49,6 +49,8 @@
       "homekit_controller"
       "zha"
       "systemmonitor"
+      "history"
+      "history_stats"
     ];
     extraPackages = ps: with ps; [psycopg2 aiogithubapi];
   };
