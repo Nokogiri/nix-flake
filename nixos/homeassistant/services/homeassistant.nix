@@ -1,7 +1,10 @@
 {
+  services.esphome = {
+    enable = true;
+    address = "192.168.178.57";
+  };
   services.home-assistant = {
     enable = true;
-    #openFirewall = true;
     config = {
       default_config = {};
       homeassistant = {
