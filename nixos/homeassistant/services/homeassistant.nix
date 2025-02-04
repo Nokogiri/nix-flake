@@ -41,7 +41,7 @@
       "homekit"
       "homekit_controller"
     ];
-    config.http.server_host = ["192.168.178.47" "127.0.0.1"];
+    config.http.server_host = ["192.168.178.57" "127.0.0.1"];
   };
   services.nginx = {
     virtualHosts."haos.fishoeder.net" = {
