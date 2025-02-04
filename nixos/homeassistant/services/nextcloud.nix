@@ -79,90 +79,90 @@
     useACMEHost = "fishoeder.net";
   };
 
-  virtualisation.oci-containers.containers = {
-    collabora = {
-      image = "collabora/code";
-      autoStart = true;
-      ports = ["127.0.0.1:9980:9980"];
-      environment = {
-        domain = "paper.fishoeder.net";
-        server_name = "paper.fishoeder.net";
-        dictionaries = "en_US";
-        aliasgroup1 = "https://next.fishoeder.net:443";
-        extra_params = "--o:ssl.enable=false --o:ssl.termination=true";
-      };
-      extraOptions = [
-        "--cap-add"
-        "MKNOD"
-      ];
-    };
-  };
+  #virtualisation.oci-containers.containers = {
+  #  collabora = {
+  #    image = "collabora/code";
+  #    autoStart = true;
+  #    ports = ["127.0.0.1:9980:9980"];
+  #    environment = {
+  #      domain = "paper.fishoeder.net";
+  #      server_name = "paper.fishoeder.net";
+  #      dictionaries = "en_US";
+  #      aliasgroup1 = "https://next.fishoeder.net:443";
+  #      extra_params = "--o:ssl.enable=false --o:ssl.termination=true";
+  #    };
+  #    extraOptions = [
+  #      "--cap-add"
+  #      "MKNOD"
+  #    ];
+  #  };
+  #};
 
-  services.nginx.virtualHosts."paper.fishoeder.net" = {
-    forceSSL = true;
-    useACMEHost = "fishoeder.net";
-    locations = {
-      "^~ /browser" = {
-        proxyPass = "http://127.0.0.1:9980";
-        extraConfig = ''
-          proxy_set_header Host $host;
-        '';
-      };
+  #services.nginx.virtualHosts."paper.fishoeder.net" = {
+  #  forceSSL = true;
+  #  useACMEHost = "fishoeder.net";
+  #  locations = {
+  #    "^~ /browser" = {
+  #      proxyPass = "http://127.0.0.1:9980";
+  #      extraConfig = ''
+  #        proxy_set_header Host $host;
+  #      '';
+  #    };
       # static files
-      "^~ /loleaflet" = {
-        proxyPass = "http://127.0.0.1:9980";
-        extraConfig = ''
-          proxy_set_header Host $host;
-        '';
-      };
+  #    "^~ /loleaflet" = {
+  #      proxyPass = "http://127.0.0.1:9980";
+  #      extraConfig = ''
+  #        proxy_set_header Host $host;
+  #      '';
+  #    };
       # WOPI discovery URL
-      "^~ /hosting/discovery" = {
-        proxyPass = "http://127.0.0.1:9980";
-        extraConfig = ''
-          proxy_set_header Host $host;
-        '';
-      };
+  #    "^~ /hosting/discovery" = {
+  #      proxyPass = "http://127.0.0.1:9980";
+  #      extraConfig = ''
+  #        proxy_set_header Host $host;
+  #      '';
+  #    };
 
       # Capabilities
-      "^~ /hosting/capabilities" = {
-        proxyPass = "http://127.0.0.1:9980";
-        extraConfig = ''
-          proxy_set_header Host $host;
-        '';
-      };
+  #    "^~ /hosting/capabilities" = {
+  #      proxyPass = "http://127.0.0.1:9980";
+  #      extraConfig = ''
+  #        proxy_set_header Host $host;
+  #      '';
+  #    };
 
-      "~ ^/cool/(.*)/ws$" = {
-        proxyPass = "http://127.0.0.1:9980";
-        extraConfig = ''
-          proxy_set_header Upgrade $http_upgrade;
-          proxy_set_header Connection "Upgrade";
-          proxy_set_header Host $host;
-          proxy_read_timeout 36000s;
-        '';
-      };
+  #    "~ ^/cool/(.*)/ws$" = {
+  #      proxyPass = "http://127.0.0.1:9980";
+  #      extraConfig = ''
+  #        proxy_set_header Upgrade $http_upgrade;
+  #        proxy_set_header Connection "Upgrade";
+  #        proxy_set_header Host $host;
+  #        proxy_read_timeout 36000s;
+  #      '';
+  #    };
       # download, presentation, image upload and websocket
-      "~ ^/(c|l)ool" = {
-        proxyPass = "http://127.0.0.1:9980";
-        extraConfig = ''
-          proxy_set_header Upgrade $http_upgrade;
-          proxy_set_header Connection "Upgrade";
-          proxy_set_header Host $host;
-          proxy_read_timeout 36000s;
-        '';
-      };
+  #    "~ ^/(c|l)ool" = {
+  #      proxyPass = "http://127.0.0.1:9980";
+  #      extraConfig = ''
+  #        proxy_set_header Upgrade $http_upgrade;
+  #        proxy_set_header Connection "Upgrade";
+  #        proxy_set_header Host $host;
+  #        proxy_read_timeout 36000s;
+  #      '';
+  #    };
 
       # Admin Console websocket
-      "^~ /cool/adminws" = {
-        proxyPass = "http://127.0.0.1:9980";
-        extraConfig = ''
-          proxy_set_header Upgrade $http_upgrade;
-          proxy_set_header Connection "Upgrade";
-          proxy_set_header Host $host;
-          proxy_read_timeout 36000s;
-        '';
-      };
-    };
-  };
+  #    "^~ /cool/adminws" = {
+  #      proxyPass = "http://127.0.0.1:9980";
+  #      extraConfig = ''
+  #        proxy_set_header Upgrade $http_upgrade;
+  #        proxy_set_header Connection "Upgrade";
+  #        proxy_set_header Host $host;
+  #        proxy_read_timeout 36000s;
+  #      '';
+  #    };
+  #  };
+  #};
 
   services.minio = {
     enable = true;

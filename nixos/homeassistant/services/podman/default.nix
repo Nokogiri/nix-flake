@@ -2,7 +2,7 @@
   imports = [
     ../../../common/optional/podman.nix
     ./calibre-web.nix
-    ./esphome.nix
+    #./esphome.nix
     #./homeassistant.nix
     ./mealie.nix
     ./pihole.nix
