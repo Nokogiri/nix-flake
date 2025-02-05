@@ -54,6 +54,7 @@
       "dlna_dmr"
       "scene"
       "dlna_dms"
+      "steam_online"
       "spotify"
       "sun"
       "ipp"
