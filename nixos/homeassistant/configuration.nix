@@ -14,6 +14,7 @@
     ../common/global
 
     ../common/optional/avahi.nix
+    ../common/optional/bluetooth.nix
     ../common/optional/grub-efi.nix
     ../common/optional/mbpfan.nix
     ../common/optional/mullvad.nix
