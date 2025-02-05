@@ -28,6 +28,11 @@
       recorder.db_url = "postgresql://@/hass";
     };
     extraComponents = [
+      "bluetooth"
+      "bluetooth_adapters"
+      "bluetooth_le_tracker"
+      "bluetooth_tracker"
+      "ista_ecotrend"
       "default_config"
       "glances"
       "apple_tv"
