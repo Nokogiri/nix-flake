@@ -28,6 +28,8 @@
       recorder.db_url = "postgresql://@/hass";
     };
     extraComponents = [
+      "emulated_hue"
+      "hue"
       "bluetooth"
       "bluetooth_adapters"
       "bluetooth_le_tracker"
