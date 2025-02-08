@@ -12,8 +12,10 @@
     innoextract
 
     arx-libertatis
+    eduke32
     gemrb
     gzdoom
+    uhexen2
     vintagestory
 
     cemu

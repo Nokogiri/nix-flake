@@ -14,7 +14,7 @@
         unit_system = "metric";
         time_zone = "Europe/Berlin";
         external_url = "https://haos.fishoeder.net";
-              };
+      };
       "automation ui" = "!include automations.yaml";
       "scene ui" = "!include scenes.yaml";
       "script ui" = "!include scripts.yaml";

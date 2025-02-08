@@ -140,11 +140,18 @@
         ###
         "SUPER,grave,hyprexpo:expo,toggle"
       ];
+      cursor = {
+        sync_gsettings_theme = true;
+        hide_on_key_press = true;
+        hide_on_touch = true;
+        inactive_timeout = "8";
+      };
       decoration = {
         active_opacity = "1.0";
         inactive_opacity = "0.8";
         fullscreen_opacity = "1.0";
         rounding = "10";
+        rounding_power = "4.0";
         shadow = {
           color = "rgba(0C0E13A6)";
           enabled = true;
@@ -174,7 +181,10 @@
           enabled = true;
         }
       ];
-
+      ecosystem = {
+        no_update_news = true;
+        no_donation_nag = true;
+      };
       env = [
         "NIXOS_OZONE_WL,1"
         "XCURSOR_SIZE,24"
@@ -188,7 +198,6 @@
         "OZONE_PLATFORM,wayland"
         "QT_QPA_PLATFORM,wayland"
         "QT_QPA_PLATFORMTHEME,qt5ct" #env = QT_STYLE_OVERRIDE,kvantum
-        #"QT_STYLE_OVERRIDE,qt5ct-style"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"

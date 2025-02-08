@@ -114,4 +114,6 @@
   #systemd.tmpfiles.rules = ["D /tmp/.X11-unix 1777 nokogiri root"];
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.05";
+
+  #virtualisation.waydroid.enable = true;
 }
