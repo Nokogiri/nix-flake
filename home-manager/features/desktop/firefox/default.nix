@@ -3,8 +3,8 @@
     source = pkgs.fetchFromGitHub {
       owner = "KiKaraage";
       repo = "ArcWTF";
-      rev = "bb6f2b7ef7e3d201e23d86bf8636e5d0ea4bd68b";
-      hash = "sha256-gyJiIVnyZOYVX6G3m4SSbsb7K9g4zKZWlrHphEIQwsY=";
+      rev = "d6e39f4e4fde3c5243ae4c2f6cc155cda6d48828";
+      hash = "sha256-n8FidqN9UWnhBRU5AlnfrMtq8XzRd19V/hmfmlHmcCg=";
     };
     recursive = true;
   };
@@ -12,8 +12,8 @@
     source = pkgs.fetchFromGitHub {
       owner = "KiKaraage";
       repo = "ArcWTF";
-      rev = "bb6f2b7ef7e3d201e23d86bf8636e5d0ea4bd68b";
-      hash = "sha256-gyJiIVnyZOYVX6G3m4SSbsb7K9g4zKZWlrHphEIQwsY=";
+      rev = "d6e39f4e4fde3c5243ae4c2f6cc155cda6d48828";
+      hash = "sha256-n8FidqN9UWnhBRU5AlnfrMtq8XzRd19V/hmfmlHmcCg=";
     };
     recursive = true;
   };
@@ -29,7 +29,8 @@
       sidebery
       newtab-adapter
       sponsorblock
-      surfingkeys
+      tridactyl
+      #surfingkeys
       torrent-control
       enhancer-for-youtube
     ];
