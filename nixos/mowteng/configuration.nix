@@ -101,7 +101,12 @@
     powerKey = "ignore";
     powerKeyLongPress = "poweroff";
     lidSwitchDocked = "suspend";
+
   };
+  systemd.sleep.extraConfig = ''
+    HibernateDelaySec=3600
+    AllowSuspendThenHibernate=yes
+  '';
 
   services.power-profiles-daemon.enable = true;
 

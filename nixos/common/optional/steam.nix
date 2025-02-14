@@ -63,17 +63,13 @@
     enable = true;
     capSysNice = false;
     args = [
-      "-W 1920"
-      "-H 1200"
-      "-w 1472"
-      "-h 920"
+      #"-W 1920"
+      #"-H 1200"
+      #"-w 1472"
+      #"-h 920"
       "-F fsr"
       "--fsr-sharpness 10"
       "-f"
-      "--xwayland-count"
-      "2"
-      #"--default-touch-mode"
-      #"4"
       "--hide-cursor-delay"
       "3000"
       "--fade-out-duration"

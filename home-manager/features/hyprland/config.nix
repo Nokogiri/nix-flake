@@ -27,6 +27,7 @@
       };
       binds = {
         workspace_back_and_forth = true;
+        movefocus_cycles_fullscreen = false;
       };
       bindm = [
         "SUPER,mouse:272,movewindow"
