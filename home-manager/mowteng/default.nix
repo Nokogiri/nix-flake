@@ -12,7 +12,7 @@
     ../features/nvim
     #../features/plasma
     ../features/hyprland
-    inputs.nur.modules.homeManager.default
+    #inputs.nur.modules.homeManager.default
   ];
 
   #home.packages = with pkgs; [

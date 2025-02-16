@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [rofimoji rofi-rbw-wayland];
+  home.packages = with pkgs; [rofimoji ];#rofi-rbw-wayland];
   programs.rofi = {
     package = pkgs.rofi-wayland;
     plugins = [pkgs.rofi-emoji-wayland];

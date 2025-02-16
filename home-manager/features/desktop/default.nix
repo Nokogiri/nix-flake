@@ -7,7 +7,7 @@
     ./joplin-d.nix
     ./kitty.nix
     #./obs-studio.nix
-    ./rbw.nix
+    #./rbw.nix
     ./rofi
     ./swaync
     ./swayosd.nix
@@ -83,8 +83,8 @@
     kdePackages.ark
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qt5ct
+    #libsForQt5.qtstyleplugin-kvantum
+    #libsForQt5.qt5ct
     (writeShellScriptBin "launch-gamescope" ''
       exec env LD_PRELOAD="" nice -n -11 -- gamescope "$@"
     '')
