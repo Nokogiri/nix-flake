@@ -61,6 +61,9 @@
 
   nixpkgs.overlays = [
     inputs.nur.overlays.default
+    inputs.hyprland.overlays.default
+    inputs.hyprland-contrib.overlays.default
+    #inputs.hyprland-qtutils.overlays.default
   ];
   powerManagement = {
     cpuFreqGovernor = "powersave";
@@ -100,11 +103,13 @@
     '';
     powerKey = "ignore";
     powerKeyLongPress = "poweroff";
-    lidSwitchDocked = "suspend";
+    lidSwitchDocked = "suspend-then-hibernate";
+    lidSwitch = "suspend-then-hibernate";
 
   };
-  systemd.sleep.extraConfig = ''
-    HibernateDelaySec=3600
+  systemd.sleep.extraConfig = #''
+   #HibernateDelaySec=3600 
+  ''
     AllowSuspendThenHibernate=yes
   '';
 

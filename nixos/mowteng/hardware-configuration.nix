@@ -14,7 +14,6 @@
     extraModulePackages = with config.boot.kernelPackages; [
       cpupower
       ryzen-smu
-      zenpower
     ];
     initrd = {
       availableKernelModules = [
@@ -30,7 +29,6 @@
     };
     kernelModules = [
       "kvm-amd"
-      "zenpower"
       "wireguard"
       "xone"
       "xpadneo"
