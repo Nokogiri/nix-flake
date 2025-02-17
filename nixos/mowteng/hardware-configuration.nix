@@ -39,7 +39,8 @@
       "amd_pstate=active"
       "mitigations=off"
       "cpufreq.default_governor=powersave"
-      "amdgpu.abmlevel=3"
+      "amdgpu.abmlevel=1"
+      "amdgpu.bapm=1"
       "amdgpu.deep_color=1"
     ];
     loader.efi.efiSysMountPoint = "/boot";

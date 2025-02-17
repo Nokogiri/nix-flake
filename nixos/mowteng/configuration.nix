@@ -60,10 +60,7 @@
   };
 
   nixpkgs.overlays = [
-    inputs.nur.overlays.default
-    inputs.hyprland.overlays.default
     inputs.hyprland-contrib.overlays.default
-    #inputs.hyprland-qtutils.overlays.default
   ];
   powerManagement = {
     cpuFreqGovernor = "powersave";

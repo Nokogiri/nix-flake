@@ -22,7 +22,7 @@
       url = "github:Mic92/nix-index-database";
     };
     hyprland = {
-      url = "github:hyprwm/Hyprland?submodules=1"; #"github:hyprwm/Hyprland?submodules=1&ref=refs/tags/v0.46.2";
+      url = "github:hyprwm/Hyprland?submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland-plugins = {
@@ -40,8 +40,7 @@
       url = "github:JeanSchoeller/iio-hyprland";
     };
     spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix?ref=fb1d78cbac7ceafa01cd8ddddcc1315781852056";
-      #url = "github:lasse-herzog/spicetify-nix";
+      url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";

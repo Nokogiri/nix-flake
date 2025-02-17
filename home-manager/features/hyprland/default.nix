@@ -8,7 +8,6 @@
     ./environment.nix
     ./hypridle.nix
     ./hyprlock.nix
-    #./hyprpaper.nix
     ./user-services.nix
     ./waybar
   ];
@@ -34,7 +33,7 @@
   };
 
   wayland.windowManager.hyprland = {
-    #package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     enable = true;
     xwayland = {
       enable = true;
