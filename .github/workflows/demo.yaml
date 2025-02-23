@@ -3,4 +3,4 @@ jobs:
   test:
     runs-on: 
     steps:
-      - run: nixos-rebuild --flake .#mowteng build
+      - run: sudo nixos-rebuild --flake .#mowteng build
