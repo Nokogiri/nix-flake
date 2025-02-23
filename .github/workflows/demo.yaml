@@ -1,6 +1,6 @@
 on: [push]
 jobs:
   test:
-    runs-on: 
+    runs-on: native
     steps:
-      - run: sudo nixos-rebuild --flake .#mowteng build
+      - run: nixos-rebuild --flake .#mowteng build
