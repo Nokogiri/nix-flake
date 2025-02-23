@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  #imports = [./plugins/default.nix];
   programs.yazi = {
     enable = true;
     settings = {

@@ -83,6 +83,7 @@
     xdg-utils
     ark
     gwenview
+    obsidian
     okular
     qt6ct
     qtstyleplugin-kvantum
