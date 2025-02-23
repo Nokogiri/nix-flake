@@ -18,7 +18,26 @@ in
     owner = config.services.forgejo.user;
     group = config.services.forgejo.group;
   };
-
+  sops.secrets.forgejo_runner.owner = "forgejo";
+  services.gitea-actions-runner = {
+    package = pkgs.forgejo-actions-runner;
+    instances.default = {
+      enable = true;
+      name = "monolith";
+      url = "https://forge.fishoeder.net";
+      # Obtaining the path to the runner token file may differ
+      # tokenFile should be in format TOKEN=<secret>, since it's EnvironmentFile for systemd
+      tokenFile = config.sops.secrets.forgejo_runner.path;
+      labels = [
+        "ubuntu-latest:docker://node:16-bullseye"
+        "ubuntu-22.04:docker://node:16-bullseye"
+        "ubuntu-20.04:docker://node:16-bullseye"
+        "ubuntu-18.04:docker://node:16-buster"     
+        ## optionally provide native execution on the host:
+        "native:host"
+      ];
+    };
+  };
   services.forgejo = {
     enable = true;
     package = pkgs.forgejo;
