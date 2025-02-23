@@ -7,6 +7,7 @@
     ensureDatabases = [
       "nextcloud"
       "hass"
+      "forgejo"
     ];
     ensureUsers = [
       {
@@ -14,6 +15,10 @@
       }
       {
         name = "hass";
+        ensureDBOwnership = true;
+      }
+      {
+        name = "forgejo";
         ensureDBOwnership = true;
       }
     ];

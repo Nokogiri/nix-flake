@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   services.flood = {
-    enable = true;
+    enable = false;
     openFirewall = true;
     host = "192.168.178.57";
   };

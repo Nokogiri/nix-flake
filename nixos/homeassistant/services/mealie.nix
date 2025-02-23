@@ -1,7 +1,6 @@
 {
   config,
   inputs,
-  pkgs,
   ...
 }: {
   sops.secrets.mealieCredentials = {
@@ -11,7 +10,6 @@
     mode = "0666";
   };
   services.mealie = {
-    package = inputs.nixpkgs-master.legacyPackages.x86_64-linux.mealie;
     enable = true;
     listenAddress = "127.0.0.1";
     credentialsFile = config.sops.secrets.mealieCredentials.path;
