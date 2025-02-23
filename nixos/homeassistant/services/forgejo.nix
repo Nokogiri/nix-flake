@@ -1,5 +1,12 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
+  cfg = config.services.forgejo;
+  srv = cfg.settings.server;
+in {
   sops.secrets.forgejo_mail = {
     sopsFile = ../../common/secrets.yaml;
     owner = config.services.forgejo.user;
@@ -20,8 +27,13 @@
       passwordFile = config.sops.secrets.forgejo_pg.path;
       createDatabase = false;
     };
+    lfs.enable = true;
     secrets.mailer.PASSWD = config.sops.secrets.forgejo_mail.path;
     settings = {
+      actions = {
+        ENABLED = true;
+        DEFAULT_ACTIONS_URL = "github";
+      };
       session = {
         COOKIE_SECURE = true;
         PROVIDER = "redis";
@@ -79,6 +91,16 @@
     };
   };
 
+  sops.secrets.forgejo_admin.owner = "forgejo";
+  systemd.services.forgejo.preStart = let
+    adminCmd = "${lib.getExe cfg.package} admin user";
+    pwd = config.sops.secrets.forgejo_admin;
+    user = "nokogiri"; # Note, Forgejo doesn't allow creation of an account named "admin"
+  in ''
+    ${adminCmd} create --admin --email "nokogiri@gefjon.org" --username ${user} --password "$(tr -d '\n' < ${pwd.path})" || true
+    ## uncomment this line to change an admin user which was already created
+    # ${adminCmd} change-password --username ${user} --password "$(tr -d '\n' < ${pwd.path})" || true
+  '';
   services.redis.servers."forgejo" = {
     enable = true;
     user = config.services.forgejo.user;
