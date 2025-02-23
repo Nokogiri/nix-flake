@@ -6,7 +6,8 @@
 }: let
   cfg = config.services.forgejo;
   srv = cfg.settings.server;
-in {
+in 
+{
   sops.secrets.forgejo_mail = {
     sopsFile = ../../common/secrets.yaml;
     owner = config.services.forgejo.user;
