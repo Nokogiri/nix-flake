@@ -51,7 +51,7 @@ in {
         PROTOCOL = "http+unix";
         ROOT_URL = "https://forge.fishoeder.net";
         STATIC_URL_PREFIX = "/_/static";
-        DISABLE_SSH = true;
+        DISABLE_SSH = false;
       };
       repository = {
         ENABLE_PUSH_CREATE_USER = true;
