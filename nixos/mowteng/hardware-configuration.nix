@@ -13,7 +13,9 @@
     '';
     extraModulePackages = with config.boot.kernelPackages; [
       cpupower
-      ryzen-smu
+      turbostat
+      xone
+      xpadneo
     ];
     initrd = {
       availableKernelModules = [
@@ -39,9 +41,12 @@
       "amd_pstate=active"
       "mitigations=off"
       "cpufreq.default_governor=powersave"
-      "amdgpu.abmlevel=1"
-      "amdgpu.bapm=1"
-      "amdgpu.deep_color=1"
+      "amdgpu.abmlevel=0"
+      "acpi_os_name=\"Microsoft Windows NT\""
+      "rtc_cmos.use_acpi_alarm=1"
+      #"pcie_aspm.policy=powersupersave"
+      "iomem=relaxed" 
+      "amdgpu.ppfeaturemask=0xffffffff"
     ];
     loader.efi.efiSysMountPoint = "/boot";
     supportedFilesystems = ["btrfs"];

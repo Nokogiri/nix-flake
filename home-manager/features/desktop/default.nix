@@ -7,7 +7,7 @@
     ./joplin-d.nix
     ./kitty.nix
     #./obs-studio.nix
-    #./rbw.nix
+    ./rbw.nix
     ./rofi
     ./swaync
     ./swayosd.nix
@@ -71,7 +71,8 @@
     };
   };
 
-  home.packages = with pkgs; [
+  home.packages = with pkgs;
+  with kdePackages; [
     (catppuccin.override {
       variant = "frappe";
       accent = "mauve";
@@ -80,11 +81,13 @@
     handlr-regex
     libnotify
     xdg-utils
-    kdePackages.ark
-    kdePackages.qt6ct
-    kdePackages.qtstyleplugin-kvantum
-    #libsForQt5.qtstyleplugin-kvantum
-    #libsForQt5.qt5ct
+    ark
+    gwenview
+    okular
+    qt6ct
+    qtstyleplugin-kvantum
+    libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.qt5ct
     (writeShellScriptBin "launch-gamescope" ''
       exec env LD_PRELOAD="" nice -n -11 -- gamescope "$@"
     '')

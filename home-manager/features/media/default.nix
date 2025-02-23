@@ -13,6 +13,7 @@
     koreader
     krita
     playerctl
+    tidal-hifi
   ];
   services = {
     playerctld.enable = true;
