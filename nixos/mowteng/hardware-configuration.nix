@@ -45,7 +45,7 @@
       "acpi_os_name=\"Microsoft Windows NT\""
       "rtc_cmos.use_acpi_alarm=1"
       #"pcie_aspm.policy=powersupersave"
-      "iomem=relaxed" 
+      "iomem=relaxed"
       "amdgpu.ppfeaturemask=0xffffffff"
     ];
     loader.efi.efiSysMountPoint = "/boot";

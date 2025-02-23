@@ -12,7 +12,6 @@
     ./waybar
   ];
 
-
   home.packages = with pkgs;
   with inputs.hyprland-contrib.packages.${pkgs.system}; [
     hyprpicker

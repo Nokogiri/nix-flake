@@ -4,34 +4,55 @@
     enable = true;
     settings = {
       manager = {
-        ratio = [ 1 3 3];
-        sort_by        = "alphabetical";
+        ratio = [1 3 3];
+        sort_by = "alphabetical";
         sort_sensitive = false;
-        sort_reverse 	 = false;
+        sort_reverse = false;
         sort_dir_first = true;
-        sort_translit  = false;
-        linemode       = "size";
-        show_hidden    = false;
-        show_symlink   = true;
-        scrolloff      = 5;
-        mouse_events   = [ "click" "scroll" ];
-        title_format   = "Yazi: {cwd}";
+        sort_translit = false;
+        linemode = "size";
+        show_hidden = false;
+        show_symlink = true;
+        scrolloff = 5;
+        mouse_events = ["click" "scroll"];
+        title_format = "Yazi: {cwd}";
       };
       opener = {
         edit = [
-        { run = "nvim \"$@\""; desc = "$EDITOR"; block = true; for = "unix"; }
+          {
+            run = "nvim \"$@\"";
+            desc = "$EDITOR";
+            block = true;
+            for = "unix";
+          }
         ];
         open = [
-        { run = "xdg-open \"$1\""; desc = "Open"; for = "linux"; }
+          {
+            run = "xdg-open \"$1\"";
+            desc = "Open";
+            for = "linux";
+          }
         ];
         reveal = [
-	      { run = "xdg-open \"$(dirname \"$1\")\""; desc = "Reveal"; for = "linux"; }
+          {
+            run = "xdg-open \"$(dirname \"$1\")\"";
+            desc = "Reveal";
+            for = "linux";
+          }
         ];
         extract = [
-      	{ run = "ya pub extract --list \"$@\""; desc = "Extract here"; for = "unix"; }
+          {
+            run = "ya pub extract --list \"$@\"";
+            desc = "Extract here";
+            for = "unix";
+          }
         ];
         play = [
-      	{ run = "mpv --force-window \"$@\""; orphan = true; for = "unix"; }
+          {
+            run = "mpv --force-window \"$@\"";
+            orphan = true;
+            for = "unix";
+          }
         ];
       };
       plugin.prepend_previewers = [

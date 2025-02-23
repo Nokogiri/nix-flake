@@ -2,13 +2,11 @@
   rustPlatform,
   fetchFromGitHub,
   lib,
-
   installShellFiles,
   stdenv,
   #Foundation,
   rust-jemalloc-sys,
 }:
-
 rustPlatform.buildRustPackage rec {
   pname = "yazi";
   version = "25.2.7";
@@ -27,8 +25,8 @@ rustPlatform.buildRustPackage rec {
   env.VERGEN_GIT_SHA = "Nixpkgs";
   env.VERGEN_BUILD_DATE = "2025-02-07";
 
-  nativeBuildInputs = [ installShellFiles ];
-  buildInputs = [ rust-jemalloc-sys ];# ++ lib.optionals stdenv.hostPlatform.isDarwin [ Foundation ];
+  nativeBuildInputs = [installShellFiles];
+  buildInputs = [rust-jemalloc-sys]; # ++ lib.optionals stdenv.hostPlatform.isDarwin [ Foundation ];
 
   postInstall = ''
     installShellCompletion --cmd yazi \

@@ -17,7 +17,7 @@
     gzdoom
     uhexen2
     vintagestory
-    
+
     portmod
     cemu
     pcsx2

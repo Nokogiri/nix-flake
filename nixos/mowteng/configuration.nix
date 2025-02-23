@@ -102,13 +102,13 @@
     powerKeyLongPress = "poweroff";
     lidSwitchDocked = "suspend-then-hibernate";
     lidSwitch = "suspend-then-hibernate";
-
   };
-  systemd.sleep.extraConfig = #''
-   #HibernateDelaySec=3600 
-  ''
-    AllowSuspendThenHibernate=yes
-  '';
+  systemd.sleep.extraConfig =
+    #''
+    #HibernateDelaySec=3600
+    ''
+      AllowSuspendThenHibernate=yes
+    '';
 
   services.power-profiles-daemon.enable = true;
 
