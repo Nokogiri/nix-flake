@@ -6,8 +6,7 @@
 }: let
   cfg = config.services.forgejo;
   srv = cfg.settings.server;
-in 
-{
+in {
   sops.secrets.forgejo_mail = {
     sopsFile = ../../common/secrets.yaml;
     owner = config.services.forgejo.user;
@@ -30,11 +29,11 @@ in
       tokenFile = config.sops.secrets.forgejo_runner.path;
       labels = [
         #"ubuntu-latest:docker://node:16-bullseye"
-	"ubuntu-latest:docker://catthehacker/ubuntu:act-latest"
-	"ubuntu-22.04:docker://catthehacker/ubuntu:act-22.04"
+        "ubuntu-latest:docker://catthehacker/ubuntu:act-latest"
+        "ubuntu-22.04:docker://catthehacker/ubuntu:act-22.04"
         #"ubuntu-22.04:docker://node:16-bullseye"
         #"ubuntu-20.04:docker://node:16-bullseye"
-        #"ubuntu-18.04:docker://node:16-buster"     
+        #"ubuntu-18.04:docker://node:16-buster"
         ## optionally provide native execution on the host:
         "native:host"
       ];
