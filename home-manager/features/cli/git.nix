@@ -26,7 +26,7 @@
         index.skipHash = false;
       };
       lfs = {
-        enable = false;
+        enable = true;
       };
       delta = {
         enable = true;

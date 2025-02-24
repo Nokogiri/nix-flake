@@ -3,5 +3,5 @@ jobs:
   test:
     runs-on: native
     steps:
-      - run: which nixos-rebuild
+      - run: ls -la
       #- run: nixos-rebuild --flake .#mowteng build

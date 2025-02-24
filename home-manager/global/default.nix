@@ -21,7 +21,10 @@
 
   programs = {
     home-manager.enable = true;
-    git.enable = true;
+    git = {
+      enable = true;
+      lfs.enable = true;
+    };
     gpg.enable = true;
   };
 
