@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   imports = [
     ./cli.nix
     ./colors.nix
@@ -73,7 +73,7 @@
 
   home.packages = with pkgs;
   with kdePackages; [
-    (catppuccin.override {
+    (inputs.nixpkgs-master.legacyPackages.x86_64-linux.catppuccin.override {
       variant = "frappe";
       accent = "mauve";
     })
