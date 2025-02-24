@@ -3,8 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs.follows = "nixos-cosmic/nixpkgs"; # NOTE: change "nixpkgs" to "nixpkgs-stable" to use stable NixOS release
-
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     stable.url = "github:nixos/nixpkgs/nixos-24.11";
     home-manager = {
@@ -50,7 +48,6 @@
       url = "github:kamadorueda/alejandra/3.1.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
   };
 
   outputs = {
