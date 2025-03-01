@@ -69,12 +69,13 @@
       withUWSM = true;
     };
   };
-
+  programs.system-config-printer.enable =true;
   security.pam.services.hyprlock = {};
 
   services = {
     avahi = {
       enable = true;
+      #domainName = "home.arpa";
     };
     colord.enable = true;
     dbus = {
@@ -85,7 +86,10 @@
     flatpak.enable = true;
     geoclue2.enable = true;
     gvfs.enable = false;
-    printing.enable = true;
+    printing = {
+      enable = true;
+    };
+    system-config-printer.enable = true;
     udisks2.enable = true;
     upower.enable = true;
   };
