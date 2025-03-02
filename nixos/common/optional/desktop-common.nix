@@ -75,7 +75,8 @@
   services = {
     avahi = {
       enable = true;
-      #domainName = "home.arpa";
+      nssmdns4 = true;
+      openFirewall = true;
     };
     colord.enable = true;
     dbus = {
@@ -88,6 +89,7 @@
     gvfs.enable = false;
     printing = {
       enable = true;
+      drivers = [ pkgs.cnijfilter2 ];
     };
     system-config-printer.enable = true;
     udisks2.enable = true;
