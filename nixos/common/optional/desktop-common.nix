@@ -69,7 +69,7 @@
       withUWSM = true;
     };
   };
-  programs.system-config-printer.enable =true;
+  programs.system-config-printer.enable = true;
   security.pam.services.hyprlock = {};
 
   services = {

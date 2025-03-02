@@ -2,8 +2,7 @@
   lib,
   config,
   ...
-}:
-{
+}: {
   boot = {
     blacklistedKernelModules = [
       "b43"
