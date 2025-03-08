@@ -142,7 +142,7 @@
   hardware = {
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     enableRedistributableFirmware = true;
-    bluetooth.enable = true;
+    bluetooth.enable = false;
   };
   # Set your system kind (needed for flakes)
   nixpkgs.hostPlatform = "x86_64-linux";
