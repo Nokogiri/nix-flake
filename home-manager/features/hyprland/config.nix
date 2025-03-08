@@ -4,9 +4,7 @@
   ...
 }: {
   wayland.windowManager.hyprland = {
-    plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-    ];
+    plugins = [ inputs.hy3.packages.${pkgs.system}.hy3 ];
     settings = {
       animations = {
         enabled = true;
@@ -79,36 +77,20 @@
         "SUPER,right,movefocus,r"
         "SUPER,up,movefocus,u"
         "SUPER,down,movefocus,d"
-        "SUPER,h,movefocus,l"
-        "SUPER,l,movefocus,r"
-        "SUPER,k,movefocus,u"
-        "SUPER,j,movefocus,d"
         "SUPERSHIFT,left,movewindow,l"
         "SUPERSHIFT,right,movewindow,r"
         "SUPERSHIFT,up,movewindow,u"
         "SUPERSHIFT,down,movewindow,d"
-        "SUPERSHIFT,h,movewindow,l"
-        "SUPERSHIFT,l,movewindow,r"
-        "SUPERSHIFT,k,movewindow,u"
-        "SUPERSHIFT,j,movewindow,d"
         "SUPERCONTROL,left,focusmonitor,l"
         "SUPERCONTROL,right,focusmonitor,r"
         "SUPERCONTROL,up,focusmonitor,u"
         "SUPERCONTROL,down,focusmonitor,d"
-        "SUPERCONTROL,h,focusmonitor,l"
-        "SUPERCONTROL,l,focusmonitor,r"
-        "SUPERCONTROL,k,focusmonitor,u"
-        "SUPERCONTROL,j,focusmonitor,d"
         "SUPERCONTROL,1,focusmonitor,eDP-1"
         "SUPERCONTROL,2,focusmonitor,DP-1"
         "SUPERCONTROLSHIFT,left,movewindow,mon:l"
         "SUPERCONTROLSHIFT,right,movewindow,mon:r"
         "SUPERCONTROLSHIFT,up,movewindow,mon:u"
         "SUPERCONTROLSHIFT,down,movewindow,mon:d"
-        "SUPERCONTROLSHIFT,h,movewindow,mon:l"
-        "SUPERCONTROLSHIFT,l,movewindow,mon:r"
-        "SUPERCONTROLSHIFT,k,movewindow,mon:u"
-        "SUPERCONTROLSHIFT,j,movewindow,mon:d"
         "SUPERCONTROLSHIFT,1,movewindow,mon:eDP-1"
         "SUPERCONTROLSHIFT,2,movewindow,mon:DP-2"
         "SUPERCONTROLSHIFT,3,movewindow,mon:DP-3"
@@ -116,10 +98,6 @@
         "SUPERALT,right,movecurrentworkspacetomonitor,r"
         "SUPERALT,up,movecurrentworkspacetomonitor,u"
         "SUPERALT,down,movecurrentworkspacetomonitor,d"
-        "SUPERALT,h,movecurrentworkspacetomonitor,l"
-        "SUPERALT,l,movecurrentworkspacetomonitor,r"
-        "SUPERALT,k,movecurrentworkspacetomonitor,u"
-        "SUPERALT,j,movecurrentworkspacetomonitor,d"
         "SUPER,u,togglespecialworkspace"
         "SUPERSHIFT,u,movetoworkspace,special"
         "SUPER,1,workspace,01"
@@ -141,7 +119,7 @@
         "SUPERSHIFT,8,movetoworkspacesilent,08"
         "SUPERSHIFT,9,movetoworkspacesilent,09"
         ###
-        "SUPER,grave,hyprexpo:expo,toggle"
+        #"SUPER,grave,hyprexpo:expo,toggle"
       ];
       cursor = {
         sync_gsettings_theme = true;
@@ -215,6 +193,7 @@
         "col.nogroup_border" = "rgba(282a36dd)";
         "col.nogroup_border_active" = "rgb(bd93f9) rgb(44475a) 90deg";
         no_border_on_floating = true;
+        layout = "hy3";
 
         # non-gradient alternative
         #col.active_border = rgb(bd93f9)
@@ -282,20 +261,8 @@
         "uwsm app -- ${inputs.iio-hyprland.packages.${pkgs.system}.default}/bin/iio-hyprland"
         "uwsm app -- ${pkgs.udiskie}/bin/udiskie --tray"
         "uwsm app -- ${inputs.hyprpolkitagent.packages.${pkgs.system}.hyprpolkitagent}/libexec/hyprpolkitagent"
+        "uwsm app -- ${inputs.pyprland.packages.${pkgs.system}.pyprland}"
       ];
-      plugin = {
-        hyprexpo = {
-          columns = 3;
-          gap_size = 5;
-          bg_col = "rgb(111111)";
-          workspace_method = "center current"; # [center/first] [workspace] e.g. first 1 or center m+1
-
-          enable_gesture = true; # laptop touchpad
-          gesture_fingers = 3; # 3 or 4
-          gesture_distance = 300; # how far is the "max"
-          gesture_positive = true; # positive = swipe down. Negative = swipe up.
-        };
-      };
       windowrulev2 = [
         "workspace 2 silent,class:^(firefox)$"
         # polkit

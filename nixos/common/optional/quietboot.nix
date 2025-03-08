@@ -1,7 +1,7 @@
 {
   boot = {
     plymouth = {
-      enable = false;
+      enable = true;
       theme = "breeze";
     };
     loader.timeout = 0;
@@ -12,8 +12,8 @@
       "rd.systemd.show_status=true"
       "rd.udev.log_level=3"
       "udev.log_priority=3"
-      #"quiet"
-      #"splash"
+      "quiet"
+      "splash"
     ];
     consoleLogLevel = 0;
     initrd.verbose = false;

@@ -25,7 +25,7 @@
     enable = true;
     hostName = "next.fishoeder.net";
     https = true;
-    package = pkgs.nextcloud30;
+    package = pkgs.nextcloud31;
     database.createLocally = true;
     configureRedis = true;
     maxUploadSize = "10G";

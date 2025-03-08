@@ -20,6 +20,7 @@
     kdePackages.qqc2-breeze-style
     grimblast
     hyprprop
+    inputs.pyprland.packages.${pkgs.system}.pyprland
     scratchpad
     swayimg
   ];
