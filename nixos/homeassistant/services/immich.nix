@@ -4,15 +4,15 @@
     accelerationDevices = null;
     mediaLocation = "/media/Vault0.1/Immich";
     port = 2283;
-    settings.server.externalDomain = "https://paper.fishoeder.net";
+    settings.server.externalDomain = "https://immich.fishoeder.net";
   };
 
-  services.nginx.virtualHosts."paper.fishoeder.net" = {
+  services.nginx.virtualHosts."immich.fishoeder.net" = {
     serverAliases = ["immich"];
     useACMEHost = "fishoeder.net";
     forceSSL = true;
     locations."/" = {
-      proxyPass = "http://[::1]:${toString config.services.immich.port}";
+      proxyPass = "http://[::1]:${toString config.services.immich-public-proxy.port}";
       proxyWebsockets = true;
       recommendedProxySettings = true;
       extraConfig = ''
@@ -25,7 +25,7 @@
   };
   services.immich-public-proxy = {
     enable = true;
-    immichUrl = "https://immich.fishoeder.net";
+    immichUrl = "http://localhost:2283";
   };
   users.users.immich.extraGroups = [ "video" "render" ];
 }
