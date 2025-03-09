@@ -1,8 +1,4 @@
-{
-  config,
-  inputs,
-  ...
-}: {
+{config, ...}: {
   sops.secrets.mealieCredentials = {
     sopsFile = ../../common/secrets.yaml;
     owner = config.users.users.nobody.name; # config.services.mealie.user;
@@ -18,7 +14,15 @@
       BASE_URL = "https://mealie.fishoeder.net";
       DB_ENGINE = "sqlite";
       THEME_DARK_PRIMARY = "#A92B53";
-      #THEME= "dark";
+      THEME_LIGHT_PRIMARY = "#A92B53";
+      MAX_WORKERS = "3";
+      WEB_CONCURRENCY = "1";
+      SMTP_USER = "nokogiri@gefjon.org";
+      SMTP_HOST = "smtp.gmail.com";
+      SMTP_PORT = "587";
+      SMTP_AUTH_STRATEGY = "TLS";
+      SMTP_FROM_NAME = "Mealie";
+      SMTP_FROM_EMAIL = "mealie@fishoeder.net";
     };
   };
 }

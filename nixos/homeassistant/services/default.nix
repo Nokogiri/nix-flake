@@ -4,6 +4,7 @@
     ./flood.nix
     ./forgejo.nix
     ./homeassistant.nix
+    ./mealie.nix
     ./nextcloud.nix
     ./nginx
     ./samba.nix
