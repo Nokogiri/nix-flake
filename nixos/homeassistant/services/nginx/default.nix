@@ -2,7 +2,7 @@
   imports = [
     ./sites/files.fishoeder.net.nix
     ./sites/home.fishoeder.net.nix
-    ./sites/mealie.fishoeder.net.nix
+    #./sites/mealie.fishoeder.net.nix
   ];
 
   sops.secrets.ovh_dns = {

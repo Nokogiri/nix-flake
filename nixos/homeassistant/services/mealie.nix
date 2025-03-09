@@ -38,4 +38,18 @@
       SMTP_FROM_EMAIL = "mealie@fishoeder.net";
     };
   };
+  services.nginx = {
+    enable = true;
+    virtualHosts."mealie.fishoeder.net" = {
+      serverAliases = ["mealie"];
+      useACMEHost = "fishoeder.net";
+      forceSSL = true;
+      locations."/".extraConfig = ''
+        set $upstream_app ${config.services.mealie.listenAddress};
+        set $upstream_port ${toString config.services.mealie.port};
+        set $upstream_proto http;
+        proxy_pass $upstream_proto://$upstream_app:$upstream_port;
+      '';
+    };
+  };
 }
