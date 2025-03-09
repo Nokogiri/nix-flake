@@ -23,6 +23,9 @@
       '';
     };
   };
-
+  services.immich-public-proxy = {
+    enable = true;
+    immichUrl = "https://immich.fishoeder.net";
+  };
   users.users.immich.extraGroups = [ "video" "render" ];
 }
