@@ -4,16 +4,17 @@
     package = pkgs.rofi-wayland;
     plugins = [pkgs.rofi-emoji-wayland];
     enable = true;
+    theme = ./theme.rasi;
     extraConfig = {
-      display-drun = "";
+    #  display-drun = "";
       modi = "drun,ssh,emoji";
       kb-primary-paste = "Control+V,Shift+Insert";
       kb-secondary-paste = "Control+v,Insert";
       show-icons = true;
+      };
     };
-  };
 
-  xdg.configFile."rofimoji.rc".text = ''
-    files all
-  '';
-}
+    xdg.configFile."rofimoji.rc".text = ''
+      files all
+    '';
+  }

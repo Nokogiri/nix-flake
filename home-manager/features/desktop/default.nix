@@ -7,6 +7,7 @@
     ./cli.nix
     ./colors.nix
     ./firefox
+    ./floorp
     ./gpg-agent.nix
     ./joplin-d.nix
     ./kitty.nix

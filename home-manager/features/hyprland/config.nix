@@ -45,15 +45,15 @@
         "ALT,Print,exec,grimblast --notify copy area"
         ",XF86MonBrightnessUp,exec,${pkgs.swayosd}/bin/swayosd-client --brightness raise"
         ",XF86MonBrightnessDown,exec,${pkgs.swayosd}/bin/swayosd-client --brightness lower"
-        "ALT,XF86AudioRaiseVolume,exec,playerctl next"
-        "ALT,XF86AudioLowerVolume,exec,playerctl previous"
-        ",XF86AudioNext,exec,playerctl next"
-        ",XF86AudioPrev,exec,playerctl previous"
-        ",XF86AudioPlay,exec,playerctl play-pause"
-        ",XF86AudioPause,exec,playerctl play-pause"
-        ",XF86AudioStop,exec,playerctl stop"
-        "ALT,XF86AudioNext,exec,playerctld shift"
-        "ALT,XF86AudioPrev,exec,playerctld unshift"
+        "ALT,XF86AudioRaiseVolume,exec,${pkgs.swayosd}/bin/swayosd-client --playerctl=next"
+        "ALT,XF86AudioLowerVolume,exec,${pkgs.swayosd}/bin/swayosd-client --playerctl=previous"
+        ",XF86AudioNext,exec,${pkgs.swayosd}/bin/swayosd-client --playerctl=next"
+        ",XF86AudioPrev,exec,${pkgs.swayosd}/bin/swayosd-client --playerctl=previous"
+        ",XF86AudioPlay,exec,${pkgs.swayosd}/bin/swayosd-client --playerctl=play-pause"
+        ",XF86AudioPause,exec,${pkgs.swayosd}/bin/swayosd-client --playerctl=play-pause"
+        ",XF86AudioStop,exec,${pkgs.swayosd}/bin/swayosd-client --playerctl=stop"
+        "ALT,XF86AudioNext,exec,${pkgs.swayosd}/bin/swayosd-client --playerctl=d shift"
+        "ALT,XF86AudioPrev,exec,${pkgs.swayosd}/bin/swayosd-client --playerctl=d unshift"
         "ALT,XF86AudioPlay,exec,systemctl --user restart playerctld"
         ",XF86AudioRaiseVolume,exec,${pkgs.swayosd}/bin/swayosd-client --output-volume raise"
         ",XF86AudioLowerVolume,exec,${pkgs.swayosd}/bin/swayosd-client --output-volume lower"
@@ -73,9 +73,12 @@
         "SUPER,g,togglegroup"
         "SUPER,apostrophe,changegroupactive,f"
         "SUPERSHIFT,apostrophe,changegroupactive,b"
+        #hy3
         "SUPER,t,hy3:makegroup,tab"
         "SUPER,h,hy3:makegroup,h"
         "SUPER,v,hy3:makegroup,v"
+        "SUPERSHIFT,t,hy3:changegroup,toggletab"
+        "SUPERSHIFT,w,hy3:changegroup,opposite"
         "SUPER,left,hy3:movefocus,l"
         "SUPER,right,hy3:movefocus,r"
         "SUPER,up,hy3:movefocus,u"
@@ -121,8 +124,6 @@
         "SUPERSHIFT,7,movetoworkspacesilent,07"
         "SUPERSHIFT,8,movetoworkspacesilent,08"
         "SUPERSHIFT,9,movetoworkspacesilent,09"
-        ###
-        #"SUPER,grave,hyprexpo:expo,toggle"
       ];
       cursor = {
         sync_gsettings_theme = true;
@@ -234,7 +235,10 @@
         # rofi
         "blur, (rofi)"
         #"ignorezero, (rofi)"
+        #"ignorealpha, (rofi)"
+        #"ignorezero, (rofi)"
         "dimaround, (rofi)"
+        "blur, (swayosd)"
         # waybar
         "blur, (waybar)"
         "ignorezero, (waybar)"
@@ -378,6 +382,8 @@
       };
       windowrulev2 = [
         "workspace 2 silent,class:^(firefox)$"
+        #rofi
+        "opacity 0.85 0.87, class:^(rofi)$"
         # polkit
         "size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$"
         "center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$"

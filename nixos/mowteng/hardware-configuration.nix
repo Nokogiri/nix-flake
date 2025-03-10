@@ -35,7 +35,8 @@
       "xone"
       "xpadneo"
     ];
-    kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+    #kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+    kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
 
     kernelParams = [
       "amd_pstate=active"
