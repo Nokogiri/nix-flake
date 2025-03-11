@@ -192,10 +192,10 @@
         gaps_in = "12";
         gaps_out = "16";
         border_size = "1";
-        "col.active_border" = "rgb(44475a) rgb(bd93f9) 90deg";
-        "col.inactive_border" = "rgba(44475aaa)";
-        "col.nogroup_border" = "rgba(282a36dd)";
-        "col.nogroup_border_active" = "rgb(bd93f9) rgb(44475a) 90deg";
+        #"col.active_border" = "rgb(44475a) rgb(bd93f9) 90deg";
+        #"col.inactive_border" = "rgba(44475aaa)";
+        #"col.nogroup_border" = "rgba(282a36dd)";
+        #"col.nogroup_border_active" = "rgb(bd93f9) rgb(44475a) 90deg";
         no_border_on_floating = true;
         layout = "hy3";
 
@@ -206,10 +206,10 @@
         #col.group_border_active = rgb(bd93f9)
 
         # darker alternative
-        #col.active_border = rgb(44475a) # or rgb(6272a4)
-        #col.inactive_border = rgb(282a36)
-        #col.group_border = rgb(282a36)
-        #col.group_border_active = rgb(44475a) # or rgb(6272a4)
+        "col.active_border" = "rgb(44475a)"; # or rgb(6272a4)
+        "col.inactive_border" = "rgb(282a36)";
+        "col.nogroup_border" = "rgb(282a36)";
+        "col.nogroup_border_active" = "rgb(44475a)"; # or rgb(6272a4)
       };
       gestures = {
         workspace_swipe = true;
@@ -294,7 +294,7 @@
           # tab group settings
           tabs = {
             # height of the tab bar
-            height = 22; # default: 22
+            height = 26; # default: 22
 
             # padding between the tab bar and its focused node
             padding = 6; # default: 6
@@ -334,8 +334,8 @@
             #col.focused.text = <color> # default: rgba(ffffffff)
 
             # inactive tab bar segment colors
-            #col.inactive = <color> # default: rgba(30303050)
-            #col.inactive.border = <color> # default: rgba(50505090)
+            "col.inactive" = "rgba(282a3666)"; # default: rgba(30303050)
+            "col.inactive.border" = "rgba(282a36bb)"; # default: rgba(50505090)
             #col.inactive.text = <color> # default: rgba(ffffffff)
 
             # urgent tab bar segment colors
