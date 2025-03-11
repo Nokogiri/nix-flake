@@ -318,14 +318,14 @@
             text_font = "Sans"; # default: Sans
 
             # height of the window title
-            text_height = 10; # default: 8
+            text_height = 11; # default: 8
 
             # left padding of the window title
             #text_padding = <int> # default: 3
 
             # active tab bar segment colors
-            #col.active = <color> # default: rgba(50a0e0ff)
-            #col.active.border = <color> # default: rgba(70b0c0ff)
+            "col.active" = "rgba(44475a66)"; # default: rgba(50a0e0ff)
+            "col.active.border" = "rgba(44475abb)"; # default: rgba(70b0c0ff)
             #col.active.text = <color> # default: rgba(ffffffff)
 
             # focused tab bar segment colors (focused node in unfocused container)

@@ -18,6 +18,7 @@ let
     "application/x-extension-xhtml" = browser;
     "application/x-extension-xht" = browser;
     "application/zip" = "org.kde.ark.desktop";
+    "x-scheme-handler/mpv" = "open-in-mpv.desktop";
   };
 in {
   xdg.mime.enable = true;

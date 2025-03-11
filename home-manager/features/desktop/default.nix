@@ -90,6 +90,7 @@
     gwenview
     obsidian
     okular
+    open-in-mpv
     qt6ct
     qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum

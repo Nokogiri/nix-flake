@@ -20,17 +20,14 @@
 
   programs.floorp = {
     enable = true;
-    nativeMessagingHosts = [pkgs.ff2mpv-go pkgs.open-in-mpv];
     profiles.nokogiri.extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
-      ff2mpv
+      iina-open-in-mpv
       ublock-origin
       onetab
       bitwarden
-      sidebery
       newtab-adapter
       sponsorblock
       tridactyl
-      #surfingkeys
       torrent-control
       enhancer-for-youtube
     ];
@@ -70,11 +67,11 @@
     profiles.private.extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
       ublock-origin
       firefox-color
+      iina-open-in-mpv
       onetab
       tridactyl
       sidebery
       sponsorblock
-      ff2mpv
     ];
     profiles.private = {
       name = "private";
