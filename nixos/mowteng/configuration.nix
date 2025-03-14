@@ -54,6 +54,7 @@
   environment.systemPackages = with pkgs; [
     amdctl
     compsize
+    ryzen-ppd
   ];
   hardware.graphics = {
     enable = true;

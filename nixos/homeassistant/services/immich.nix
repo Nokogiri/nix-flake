@@ -1,4 +1,4 @@
-{ config, ... }:{
+{config, ...}: {
   services.immich = {
     enable = true;
     accelerationDevices = null;
@@ -44,5 +44,5 @@
     enable = true;
     immichUrl = "http://192.168.178.57:2283";
   };
-  users.users.immich.extraGroups = [ "video" "render" ];
+  users.users.immich.extraGroups = ["video" "render"];
 }

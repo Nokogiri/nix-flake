@@ -1,22 +1,4 @@
 {pkgs, ...}: {
-  #home.file.".floorp/nokogiri/chrome" = {
-  #  source = pkgs.fetchFromGitHub {
-  #    owner = "KiKaraage";
-  #    repo = "ArcWTF";
-  #    rev = "d6e39f4e4fde3c5243ae4c2f6cc155cda6d48828";
-  #    hash = "sha256-n8FidqN9UWnhBRU5AlnfrMtq8XzRd19V/hmfmlHmcCg=";
-  #  };
-  #  recursive = true;
-  #};
-  #home.file.".floorp/private/chrome" = {
-  #  source = pkgs.fetchFromGitHub {
-  #    owner = "KiKaraage";
-  #    repo = "ArcWTF";
-  #    rev = "d6e39f4e4fde3c5243ae4c2f6cc155cda6d48828";
-  #    hash = "sha256-n8FidqN9UWnhBRU5AlnfrMtq8XzRd19V/hmfmlHmcCg=";
-  #  };
-  #  recursive = true;
-  #};
 
   programs.floorp = {
     enable = true;
@@ -27,6 +9,7 @@
       bitwarden
       newtab-adapter
       sponsorblock
+      tree-style-tab
       tridactyl
       torrent-control
       enhancer-for-youtube
@@ -60,7 +43,6 @@
         "mousewheel.default.delta_multiplier_y" = 275;
         "privacy.trackingprotection.enabled" = true;
         "svg.context-properties.content.enabled" = true;
-        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
     };
 
@@ -69,8 +51,8 @@
       firefox-color
       iina-open-in-mpv
       onetab
+      tree-style-tab
       tridactyl
-      sidebery
       sponsorblock
     ];
     profiles.private = {

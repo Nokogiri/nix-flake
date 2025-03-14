@@ -37,6 +37,10 @@
       url = "github:hyprland-community/pyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprchroma = {
+      url = "github:alexhulbert/Hyprchroma";
+      inputs.hyprland.follows = "hyprland";
+    };
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
     };

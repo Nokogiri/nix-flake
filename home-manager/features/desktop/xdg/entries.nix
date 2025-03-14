@@ -14,6 +14,5 @@
       terminal = false;
       type = "Application";
     };
-
   };
 }

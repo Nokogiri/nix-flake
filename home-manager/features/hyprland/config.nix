@@ -4,7 +4,7 @@
   ...
 }: {
   wayland.windowManager.hyprland = {
-    plugins = [inputs.hy3.packages.${pkgs.system}.hy3];
+    plugins = [inputs.hy3.packages.${pkgs.system}.hy3];# inputs.hyprchroma.packages.${pkgs.system}.Hypr-DarkWindow];
     settings = {
       animations = {
         enabled = true;
@@ -191,7 +191,7 @@
       general = {
         gaps_in = "12";
         gaps_out = "16";
-        border_size = "1";
+        border_size = "0";
         #"col.active_border" = "rgb(44475a) rgb(bd93f9) 90deg";
         #"col.inactive_border" = "rgba(44475aaa)";
         #"col.nogroup_border" = "rgba(282a36dd)";
@@ -200,16 +200,16 @@
         layout = "hy3";
 
         # non-gradient alternative
-        #col.active_border = rgb(bd93f9)
-        #col.inactive_border = rgba(44475aaa)
-        #col.group_border = rgba(282a36dd)
-        #col.group_border_active = rgb(bd93f9)
+        "col.active_border" = "rgba(bd93f966)";
+        "col.inactive_border" = "rgba(44475a66)";
+        "col.nogroup_border" = "rgba(282a36dd)";
+        "col.nogroup_border_active" = "rgba(bd93f966)";
 
         # darker alternative
-        "col.active_border" = "rgb(44475a)"; # or rgb(6272a4)
-        "col.inactive_border" = "rgb(282a36)";
-        "col.nogroup_border" = "rgb(282a36)";
-        "col.nogroup_border_active" = "rgb(44475a)"; # or rgb(6272a4)
+        #"col.active_border" = "rgba(6272a466)"; # or rgb(6272a4)
+        #"col.inactive_border" = "rgba(282a3666)";
+        #"col.nogroup_border" = "rgba(282a3666)";
+        #"col.nogroup_border_active" = "rgba(6272a466)"; # or rgb(6272a4)
       };
       gestures = {
         workspace_swipe = true;
@@ -247,10 +247,10 @@
         "dimaround, swaync-control-center"
         "ignorezero, swaync-control-center"
         "ignorealpha 0.5, swaync-control-center"
-        # swaync-notification-window
-        "blur, swaync-notification-window"
-        "ignorezero, swaync-notification-window"
-        "ignorealpha 0.5, swaync-notification-window"
+        # swayosd
+        "blur, swayosd"
+        "ignorezero, swayosd"
+        "ignorealpha 0.5, swayosd"
       ];
       misc = {
         disable_hyprland_logo = true;
@@ -303,10 +303,10 @@
             from_top = false; # default: false
 
             # radius of tab bar corners
-            radius = 8; # default: 6
+            radius = 10; # default: 6
 
             # tab bar border width
-            border_width = 2; # default: 2
+            border_width = 0; # default: 2
 
             # render the window title on the bar
             render_text = true; # default: true
@@ -324,8 +324,8 @@
             #text_padding = <int> # default: 3
 
             # active tab bar segment colors
-            "col.active" = "rgba(44475a66)"; # default: rgba(50a0e0ff)
-            "col.active.border" = "rgba(44475abb)"; # default: rgba(70b0c0ff)
+            "col.active" = "rgba(bd93f966)"; # default: rgba(50a0e0ff)
+            "col.active.border" = "rgba(bd93f966)"; # default: rgba(70b0c0ff)
             #col.active.text = <color> # default: rgba(ffffffff)
 
             # focused tab bar segment colors (focused node in unfocused container)
@@ -335,7 +335,7 @@
 
             # inactive tab bar segment colors
             "col.inactive" = "rgba(282a3666)"; # default: rgba(30303050)
-            "col.inactive.border" = "rgba(282a36bb)"; # default: rgba(50505090)
+            "col.inactive.border" = "rgba(282a3666)"; # default: rgba(50505090)
             #col.inactive.text = <color> # default: rgba(ffffffff)
 
             # urgent tab bar segment colors
@@ -349,7 +349,7 @@
 
             # opacity multiplier for tabs
             # Applies to blur as well as the given colors.
-            opacity = 0.9; # default: 1.0
+            opacity = 1.0; # default: 1.0
           };
 
           # autotiling settings

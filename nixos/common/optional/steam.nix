@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.gamemode = {
     enable = true;
     enableRenice = true;
@@ -17,10 +21,15 @@
         start = ''
           ${pkgs.libnotify}/bin/notify-send 'GameMode started'
                           ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance
+                                                      ${(pkgs.writeShellScript "ppd.sh" ''
+            /run/wrappers/bin/sudo ${pkgs.ryzen-ppd}/bin/ryzen-ppd &
+          '')} 
+
         '';
         end = ''
           ${pkgs.libnotify}/bin/notify-send 'GameMode ended'
                           ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set balanced
+                                                      /run/wrappers/bin/sudo ${pkgs.procps}/bin/pkill -9 ryzen-ppd
         '';
       };
     };
@@ -59,6 +68,11 @@
     ];
   };
 
+  environment.systemPackages = with pkgs; [
+    (writeShellScriptBin "ppd.sh" ''
+      sudo ${pkgs.ryzen-ppd}/bin/ryzen-ppd &
+    '')
+  ];
   programs.gamescope = {
     enable = true;
     capSysNice = false;
