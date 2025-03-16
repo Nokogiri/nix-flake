@@ -7,7 +7,7 @@
       font = {
         #name = "IntoneMono Nerd Font Mono";
         name = "JetBrainsMono Nerd Font";
-        size = 12;
+        size = 11;
       };
       settings = {
         # General settings

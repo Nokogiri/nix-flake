@@ -4,7 +4,7 @@
   ...
 }: {
   wayland.windowManager.hyprland = {
-    plugins = [inputs.hy3.packages.${pkgs.system}.hy3];# inputs.hyprchroma.packages.${pkgs.system}.Hypr-DarkWindow];
+    plugins = [inputs.hy3.packages.${pkgs.system}.hy3]; # inputs.hyprchroma.packages.${pkgs.system}.Hypr-DarkWindow];
     settings = {
       animations = {
         enabled = true;
@@ -247,6 +247,10 @@
         "dimaround, swaync-control-center"
         "ignorezero, swaync-control-center"
         "ignorealpha 0.5, swaync-control-center"
+        # swaync-noty
+        "blur, swaync-notification-window"
+        "ignorezero, swaync-notification-window"
+        "ignorealpha 0.5, swaync-notification-window"
         # swayosd
         "blur, swayosd"
         "ignorezero, swayosd"

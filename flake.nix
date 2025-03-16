@@ -5,22 +5,15 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-master.url = "github:nixos/nixpkgs/master";
     stable.url = "github:nixos/nixpkgs/nixos-24.11";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hardware = {
-      url = "github:nixos/nixos-hardware";
-    };
-    sops-nix = {
-      url = "github:mic92/sops-nix";
-    };
-    nur = {
-      url = "github:nix-community/NUR";
-    };
-    nix-index-database = {
-      url = "github:Mic92/nix-index-database";
-    };
+    hardware.url = "github:nixos/nixos-hardware";
+    sops-nix.url = "github:mic92/sops-nix";
+    nur.url = "github:nix-community/NUR";
+    nix-index-database.url = "github:Mic92/nix-index-database";
     hyprland = {
       url = "github:hyprwm/Hyprland?submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,21 +34,18 @@
       url = "github:alexhulbert/Hyprchroma";
       inputs.hyprland.follows = "hyprland";
     };
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
-    };
     hyprpolkitagent = {
       url = "github:hyprwm/hyprpolkitagent";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    iio-hyprland = {
-      url = "github:JeanSchoeller/iio-hyprland";
     };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland-contrib.url = "github:hyprwm/contrib";
+    iio-hyprland.url = "github:JeanSchoeller/iio-hyprland";
     catppuccin.url = "github:catppuccin/nix";
+    iwmenu.url = "github:e-tho/iwmenu";
     alejandra = {
       url = "github:kamadorueda/alejandra/3.1.0";
       inputs.nixpkgs.follows = "nixpkgs";

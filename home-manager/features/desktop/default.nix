@@ -6,7 +6,7 @@
   imports = [
     ./cli.nix
     ./colors.nix
-    ./firefox
+    #./firefox
     ./floorp
     ./gpg-agent.nix
     ./joplin-d.nix
@@ -35,7 +35,7 @@
     };
     font = {
       name = "JetBrainsMono Nerd Font";
-      size = 11;
+      size = 10;
     };
     gtk3 = {
       extraConfig = {
@@ -82,7 +82,9 @@
       variant = "frappe";
       accent = "mauve";
     })
+    inputs.iwmenu.packages.${pkgs.system}.default
     cliphist
+    dracula-theme
     handlr-regex
     libnotify
     xdg-utils

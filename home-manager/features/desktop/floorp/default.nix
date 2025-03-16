@@ -1,7 +1,7 @@
 {pkgs, ...}: {
-
   programs.floorp = {
     enable = true;
+    nativeMessagingHosts = [pkgs.tridactyl-native];
     profiles.nokogiri.extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
       iina-open-in-mpv
       ublock-origin
@@ -34,6 +34,7 @@
         "browser.tabs.tabmanager.enabled" = false;
         "browser.topsites.blockedSponsors" = ''["amazon"]'';
         "dom.security.https_only_mode" = false;
+        "extensions.autoDisableScopes" = 0;
         "general.smoothScroll.msdPhysics.enabled" = false;
         "gfx.webrender.all" = true;
         "identity.fxaccounts.enabled" = true;

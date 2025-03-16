@@ -20,7 +20,7 @@
     ../common/optional/fprintd.nix
     ../common/optional/greetd.nix
     ../common/optional/mullvad.nix
-    #../common/optional/opengamepadui.nix
+    ../common/optional/opengamepadui.nix
     ../common/optional/pipewire.nix
     ../common/optional/podman.nix
     ../common/optional/quietboot.nix
@@ -28,7 +28,7 @@
     ../common/optional/sane.nix
     ../common/optional/steam.nix
     ../common/optional/systemd-boot.nix
-    #../common/optional/systemd-network.nix
+    ../common/optional/systemd-network.nix
     ../common/optional/uwsm.nix
     ../common/optional/zramswap.nix
 
@@ -52,6 +52,7 @@
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
 
   environment.systemPackages = with pkgs; [
+    inputs.iwmenu.packages.${pkgs.system}.default
     amdctl
     compsize
     ryzen-ppd

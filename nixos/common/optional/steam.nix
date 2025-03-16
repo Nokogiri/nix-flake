@@ -23,7 +23,7 @@
                           ${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance
                                                       ${(pkgs.writeShellScript "ppd.sh" ''
             /run/wrappers/bin/sudo ${pkgs.ryzen-ppd}/bin/ryzen-ppd &
-          '')} 
+          '')}
 
         '';
         end = ''
