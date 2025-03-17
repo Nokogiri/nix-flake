@@ -81,8 +81,9 @@
 
   services.minio = {
     enable = true;
-    listenAddress = "127.0.0.1:9000";
-    consoleAddress = "127.0.0.1:9001";
+    browser = true;
+    listenAddress = ":9000";
+    consoleAddress = ":9001";
     rootCredentialsFile = config.sops.secrets.minio.path;
     dataDir = ["/media/Vault0.1/MinIO"];
   };
