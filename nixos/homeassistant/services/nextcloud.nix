@@ -9,12 +9,6 @@
     group = config.users.users.nobody.group;
     mode = "0666";
   };
-  sops.secrets.minio = {
-    sopsFile = ../../common/secrets.yaml;
-    owner = config.users.users.nobody.name;
-    group = config.users.users.nobody.group;
-    mode = "0666";
-  };
   sops.secrets.minio_nc = {
     sopsFile = ../../common/secrets.yaml;
     owner = config.users.users.nobody.name;
@@ -77,14 +71,5 @@
   services.nginx.virtualHosts.${config.services.nextcloud.hostName} = {
     forceSSL = true;
     useACMEHost = "fishoeder.net";
-  };
-
-  services.minio = {
-    enable = true;
-    browser = true;
-    listenAddress = ":9000";
-    consoleAddress = ":9001";
-    rootCredentialsFile = config.sops.secrets.minio.path;
-    dataDir = ["/media/Vault0.1/MinIO"];
   };
 }

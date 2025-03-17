@@ -6,6 +6,7 @@
     ./homeassistant.nix
     ./immich.nix
     ./mealie.nix
+    ./minio.nix
     ./nextcloud.nix
     ./nginx
     ./samba.nix
