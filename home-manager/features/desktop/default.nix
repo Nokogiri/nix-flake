@@ -68,11 +68,13 @@
       '';
     };
     theme = {
-      name = "catppuccin-macchiato-mauve-standard";
-      package = pkgs.catppuccin-gtk.override {
-        variant = "macchiato";
-        accents = ["mauve"];
-      };
+      name = "Dracula";
+      package = pkgs.dracula-theme;
+      #name = "catppuccin-macchiato-mauve-standard";
+      #package = pkgs.catppuccin-gtk.override {
+      #  variant = "macchiato";
+      #  accents = ["mauve"];
+      #};
     };
   };
 
