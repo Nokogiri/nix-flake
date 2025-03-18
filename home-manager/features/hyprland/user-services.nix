@@ -5,7 +5,7 @@
   #    hash = "sha256-kLDv0v4N9pQ4F6cXpFLTrJv90ehU0LI7sGJup+49kPM=";
   #  })
   #}";
-  image = "${../../../images/above.png}";
+  image = "${../../../images/adventure.png}";
 in {
   systemd.user.services = {
     swaybg = {
