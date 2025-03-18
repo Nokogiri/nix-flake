@@ -77,10 +77,14 @@
       #};
     };
   };
-
+  
+  xdg.configFile."gtk-4.0" = {
+    source = "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0";
+    recursive = true;
+  };
   home.packages = with pkgs;
   with kdePackages; [
-    (inputs.nixpkgs-master.legacyPackages.x86_64-linux.catppuccin.override {
+    (catppuccin.override {
       variant = "frappe";
       accent = "mauve";
     })
