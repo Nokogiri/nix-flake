@@ -9,6 +9,7 @@
         name = "JetBrainsMono Nerd Font";
         size = 11;
       };
+      themeFile = "Dracula";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";

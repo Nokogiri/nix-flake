@@ -386,6 +386,7 @@
       };
       windowrulev2 = [
         "workspace 2 silent,class:^(firefox)$"
+        "workspace 2 silent,class:^(floorp)$"
         #rofi
         "opacity 0.85 0.87, class:^(rofi)$"
         # polkit
