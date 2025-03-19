@@ -129,7 +129,7 @@
         sync_gsettings_theme = true;
         hide_on_key_press = true;
         hide_on_touch = true;
-        inactive_timeout = "8";
+        inactive_timeout = "0";
       };
       decoration = {
         active_opacity = "1.0";
@@ -174,7 +174,7 @@
         "NIXOS_OZONE_WL,1"
         "XCURSOR_SIZE,24"
         "XCURSOR_THEME,breeze_cursors"
-        "GTK_THEME,Dracula"
+        "GTK_THEME,catppuccin-macchiato-mauve-standard"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"

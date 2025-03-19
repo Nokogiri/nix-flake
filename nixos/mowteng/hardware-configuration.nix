@@ -36,7 +36,7 @@
       "xpadneo"
     ];
     #kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-    kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+    kernelPackages = pkgs.linuxKernel.packages.linux_6_12;
     kernelParams = [
       "amd_pstate=active"
       "mitigations=off"

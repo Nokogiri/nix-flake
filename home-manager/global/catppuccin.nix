@@ -6,7 +6,7 @@
     flavor = "macchiato";
     enable = true;
     gtk.icon.enable = true;
-    kitty.enable = false;
+    kitty.enable = true;
     kvantum = {
       flavor = "macchiato";
       accent = "mauve";

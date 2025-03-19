@@ -68,20 +68,14 @@
       '';
     };
     theme = {
-      name = "Dracula";
-      package = pkgs.dracula-theme;
-      #name = "catppuccin-macchiato-mauve-standard";
-      #package = pkgs.catppuccin-gtk.override {
-      #  variant = "macchiato";
-      #  accents = ["mauve"];
-      #};
+      name = "catppuccin-macchiato-mauve-standard";
+      package = pkgs.catppuccin-gtk.override {
+        variant = "macchiato";
+        accents = ["mauve"];
+      };
     };
   };
   
-  xdg.configFile."gtk-4.0" = {
-    source = "${pkgs.dracula-theme}/share/themes/Dracula/gtk-4.0";
-    recursive = true;
-  };
   home.packages = with pkgs;
   with kdePackages; [
     (catppuccin.override {
@@ -90,11 +84,11 @@
     })
     inputs.iwmenu.packages.${pkgs.system}.default
     cliphist
-    dracula-theme
     handlr-regex
     libnotify
     xdg-utils
     ark
+    extest
     gwenview
     obsidian
     okular
@@ -127,7 +121,6 @@
     DISABLE_QT5_COMPAT = "0";
     NO_AT_BRIDGE = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-    #NIXOS_OZONE_WL = "1";
   };
   qt.style = {
     name = "kvantum";

@@ -8,7 +8,8 @@
     ./environment.nix
     ./hypridle.nix
     ./hyprlock.nix
-    ./user-services.nix
+    ./hyprpaper.nix
+    #./user-services.nix
     ./waybar
   ];
 

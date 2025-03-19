@@ -1,11 +1,5 @@
 {pkgs, ...}: let
-  #image = "${
-  #  (pkgs.fetchurl {
-  #    url = "https://next.fishoeder.net/s/wRsKNG93giFKExo/download/pexels-veeterzy-39811.jpg";
-  #    hash = "sha256-kLDv0v4N9pQ4F6cXpFLTrJv90ehU0LI7sGJup+49kPM=";
-  #  })
-  #}";
-  image = "${../../../images/adventure.png}";
+  image = "${../../../images/tori.png}";
 in {
   systemd.user.services = {
     swaybg = {
