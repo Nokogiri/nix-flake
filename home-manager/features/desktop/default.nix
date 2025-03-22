@@ -93,6 +93,8 @@
     obsidian
     okular
     open-in-mpv
+    pandoc
+    texliveTeTeX
     qt6ct
     qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum
