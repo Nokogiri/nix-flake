@@ -21,6 +21,7 @@
       flavor = "macchiato";
       enable = false;
     };
+    swaync.enable = false;
     waybar.mode = "createLink";
   };
 }

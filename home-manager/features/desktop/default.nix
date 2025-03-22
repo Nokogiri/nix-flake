@@ -75,7 +75,7 @@
       };
     };
   };
-  
+
   home.packages = with pkgs;
   with kdePackages; [
     (catppuccin.override {

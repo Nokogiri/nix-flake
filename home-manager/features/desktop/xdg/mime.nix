@@ -1,6 +1,6 @@
 let
   browser = [
-    "firefox.desktop" # assume firefox provides this
+    "floorp.desktop" # assume firefox provides this
   ];
   associations = {
     "inode/directory" = ["yazi.desktop"];

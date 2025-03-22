@@ -14,7 +14,7 @@
         vscode-taskexplorer
         jnoortheen.nix-ide
         bodil.file-browser
-        catppuccin.catppuccin-vsc
+        #catppuccin.catppuccin-vsc
         shd101wyy.markdown-preview-enhanced
         kamadorueda.alejandra
       ];
@@ -46,7 +46,6 @@
         "terminal.integrated.smoothScrolling" = true;
         "workbench.iconTheme" = "material-icon-theme";
         "workbench.list.smoothScrolling" = true;
-        "workbench.colorTheme" = "Catppuccin Frappé";
       };
     };
     #package = pkgs.vscodium;

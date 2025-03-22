@@ -59,7 +59,7 @@
       keyutils
       mangohud
       nss
-        (writeShellScript "preex" ''
+      (writeShellScript "preex" ''
         exec env LD_PRELOAD="${pkgs.extest}/lib/libextest.so" "$@"
       '')
       (writeShellScriptBin "launch-gamescope" ''
@@ -77,9 +77,8 @@
       sudo ${pkgs.ryzen-ppd}/bin/ryzen-ppd &
     '')
     (writeShellScriptBin "preex" ''
-        exec env LD_PRELOAD="${pkgs.extest}/lib/libextest.so" "$@"
-      '')
-
+      exec env LD_PRELOAD="${pkgs.extest}/lib/libextest.so" "$@"
+    '')
   ];
   programs.gamescope = {
     enable = true;

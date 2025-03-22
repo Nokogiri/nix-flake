@@ -22,6 +22,8 @@
 
   fonts = {
     packages = with pkgs; [
+      atkinson-hyperlegible-next
+      atkinson-hyperlegible-mono
       dejavu_fonts
       intel-one-mono
       #font-awesome

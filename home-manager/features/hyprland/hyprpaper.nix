@@ -1,11 +1,13 @@
-  let 
-    img0 = "${../../../images/pink.jxl}";
-    img1 = "${../../../images/tori.jxl}";
-    img2 = "${../../../images/adventure.jxl}";
-    img3 = "${../../../images/sunset.jxl}";
-    img4 = "${../../../images/scandinavia.jxl}";
-  in
 {
+  pkgs,
+  inputs,
+  ...
+}: let
+  img0 = "${../../../images/pink.jxl}";
+  img1 = "${../../../images/tori.jxl}";
+  img2 = "${../../../images/adventure.jxl}";
+  img3 = "${../../../images/scandinavia.jxl}";
+in {
   services.hyprpaper = {
     enable = true;
     settings = {
@@ -13,7 +15,10 @@
       splash = false;
 
       preload = [
-        img0 img1 img2 img3 img4
+        img0
+        img1
+        img2
+        img3
       ];
 
       wallpaper = [
@@ -21,4 +26,18 @@
       ];
     };
   };
+  home.packages = [
+    (pkgs.writeShellScriptBin "img0" ''
+      ${inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl hyprpaper wallpaper eDP-1,${img0}
+    '')
+    (pkgs.writeShellScriptBin "img1" ''
+      ${inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl hyprpaper wallpaper eDP-1,${img1}
+    '')
+    (pkgs.writeShellScriptBin "img2" ''
+      ${inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl hyprpaper wallpaper eDP-1,${img2}
+    '')
+    (pkgs.writeShellScriptBin "img3" ''
+      ${inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl hyprpaper wallpaper eDP-1,${img3}
+    '')
+  ];
 }
