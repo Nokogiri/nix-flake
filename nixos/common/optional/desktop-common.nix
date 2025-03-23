@@ -22,18 +22,14 @@
 
   fonts = {
     packages = with pkgs; [
-      atkinson-hyperlegible-next
-      atkinson-hyperlegible-mono
       dejavu_fonts
-      intel-one-mono
-      #font-awesome
       noto-fonts
       noto-fonts-emoji
       noto-fonts-monochrome-emoji
       noto-fonts-cjk-sans
       material-symbols
       weather-icons
-      nerd-fonts.intone-mono
+      nerd-fonts.fantasque-sans-mono
       nerd-fonts.jetbrains-mono
       nerd-fonts.symbols-only
     ];

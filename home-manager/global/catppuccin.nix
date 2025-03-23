@@ -3,7 +3,7 @@
     inputs.catppuccin.homeManagerModules.catppuccin
   ];
   catppuccin = {
-    flavor = "macchiato";
+    flavor = "frappe";
     enable = true;
     gtk.icon.enable = true;
     kitty.enable = true;
