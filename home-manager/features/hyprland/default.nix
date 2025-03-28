@@ -10,6 +10,7 @@
     ./hyprlock.nix
     ./hyprpaper.nix
     #./user-services.nix
+    ./wlogout.nix
     ./waybar
   ];
 

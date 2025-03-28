@@ -11,11 +11,11 @@
     heroic
     innoextract
 
-    arx-libertatis
-    eduke32
-    gemrb
-    gzdoom
-    uhexen2
+    #arx-libertatis
+    #eduke32
+    #gemrb
+    #gzdoom
+    #uhexen2
     vintagestory
 
     portmod
@@ -23,7 +23,7 @@
     pcsx2
     ppsspp
 
-    gfn-electron
+    #gfn-electron
 
     #wineWowPackages.waylandFull
     #stl

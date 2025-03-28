@@ -189,8 +189,8 @@
         "_JAVA_AWT_WM_NONREPARENTING,1"
       ];
       general = {
-        gaps_in = "12";
-        gaps_out = "16";
+        gaps_in = "6";
+        gaps_out = "8";
         border_size = "0";
         #"col.active_border" = "rgb(44475a) rgb(bd93f9) 90deg";
         #"col.inactive_border" = "rgba(44475aaa)";
@@ -272,7 +272,7 @@
         "uwsm app -- ${inputs.iio-hyprland.packages.${pkgs.system}.default}/bin/iio-hyprland"
         "uwsm app -- ${pkgs.udiskie}/bin/udiskie --tray"
         "uwsm app -- ${inputs.hyprpolkitagent.packages.${pkgs.system}.hyprpolkitagent}/libexec/hyprpolkitagent"
-        "uwsm app -- ${inputs.pyprland.packages.${pkgs.system}.pyprland}"
+        "uwsm app -- ${inputs.pyprland.packages.${pkgs.system}.pyprland}/bin/pypr"
       ];
       plugin = {
         hy3 = {
@@ -413,6 +413,10 @@
         "center,class:^(Volume Control)$"
         "size 66%,class:^(Volume Control)$"
         "float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$"
+        # print dialog
+        "float,title:^(Print)$"
+        "center,title:^(Print)$"
+        "size 50%,title:^(Print)$"
       ];
     };
   };

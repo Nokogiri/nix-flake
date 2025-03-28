@@ -23,5 +23,14 @@
     };
     swaync.enable = false;
     waybar.mode = "createLink";
+    wlogout = {
+      iconStyle = "wlogout";
+      extraStyle = ''
+      button {
+        border-radius: 2px;
+      }
+      '';
+      enable = true;
+    };
   };
 }
