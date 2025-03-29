@@ -6,12 +6,9 @@
   imports = [
     ./cli.nix
     ./colors.nix
-    #./firefox
     ./floorp
     ./gpg-agent.nix
-    ./joplin-d.nix
     ./kitty.nix
-    #./obs-studio.nix
     ./rbw.nix
     ./rofi
     ./swaync

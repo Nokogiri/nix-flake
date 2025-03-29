@@ -8,7 +8,7 @@
     gtk.icon.enable = true;
     kitty.enable = true;
     kvantum = {
-      flavor = "macchiato";
+      flavor = "frappe";
       accent = "mauve";
       enable = true;
       apply = true;
@@ -18,7 +18,7 @@
       set -g @catppuccin_window_status_style "rounded"
     '';
     rofi = {
-      flavor = "macchiato";
+      flavor = "frappe";
       enable = false;
     };
     swaync.enable = false;
@@ -26,9 +26,9 @@
     wlogout = {
       iconStyle = "wlogout";
       extraStyle = ''
-      button {
-        border-radius: 2px;
-      }
+        button {
+          border-radius: 2px;
+        }
       '';
       enable = true;
     };

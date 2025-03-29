@@ -14,7 +14,6 @@
         text = "Reboot";
         keybind = "e";
       }
-
     ];
   };
 }

@@ -11,6 +11,7 @@
     inputs.nix-index-database.nixosModules.nix-index
 
     ./applications.nix
+    ./catppuccin.nix
     ./console.nix
     ./fish.nix
     ./locale.nix

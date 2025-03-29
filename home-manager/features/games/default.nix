@@ -16,9 +16,9 @@
     #gemrb
     #gzdoom
     #uhexen2
-    vintagestory
+    #vintagestory
 
-    portmod
+    #portmod
     cemu
     pcsx2
     ppsspp
