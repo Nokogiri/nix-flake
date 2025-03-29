@@ -127,17 +127,14 @@ in {
     user = config.services.forgejo.user;
   };
   services.nginx = {
-    #upstreams = {
-    #  servers = { "forgejo" = "unix:${config.services.forgejo.settings.server.HTTP_ADDR}"; };
-    #};
     virtualHosts = {
       "forge.fishoeder.net" = {
         forceSSL = true;
         useACMEHost = "fishoeder.net";
         extraConfig = "client_max_body_size 512M;";
-        #locations."/_/static/assets/" = {
-        #  alias = "${config.services.forgejo.package.data}/public/assets/";
-        #};
+        locations."/_/static/assets/" = {
+          alias = "${config.services.forgejo.package.data}/public/assets/";
+        };
         locations."/" = {
           proxyPass = "http://unix:/${config.services.forgejo.settings.server.HTTP_ADDR}";
           extraConfig =

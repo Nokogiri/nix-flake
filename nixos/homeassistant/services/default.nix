@@ -2,7 +2,7 @@
   imports = [
     #./fail2ban.nix
     ./flood.nix
-    ./forgejo.nix
+    #./forgejo.nix
     ./homeassistant.nix
     ./immich.nix
     ./mealie.nix
