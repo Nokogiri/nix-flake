@@ -6,7 +6,10 @@
     cache.enable = true;
     enable = true;
     flavor = "frappe";
-    forgejo.flavor = "frappe";
+    forgejo = {
+      enable = true;
+      flavor = "frappe";
+    };
     tty.flavor = "frappe";
   };
 }
