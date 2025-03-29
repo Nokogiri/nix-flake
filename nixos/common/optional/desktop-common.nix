@@ -29,7 +29,7 @@
       noto-fonts-cjk-sans
       material-symbols
       weather-icons
-      nerd-fonts.fantasque-sans-mono
+      nerd-fonts.im-writing
       nerd-fonts.jetbrains-mono
       nerd-fonts.symbols-only
     ];

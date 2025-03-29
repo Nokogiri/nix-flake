@@ -9,8 +9,7 @@
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpaper.nix
-    #./user-services.nix
-    ./wlogout.nix
+    ./wlogout
     ./waybar
   ];
 

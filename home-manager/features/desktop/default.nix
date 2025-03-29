@@ -15,6 +15,7 @@
     ./swayosd.nix
     ./vscode.nix
     ./xdg
+    ./zed-editor.nix
   ];
 
   fonts.fontconfig = {

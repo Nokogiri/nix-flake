@@ -24,13 +24,13 @@
     swaync.enable = false;
     waybar.mode = "createLink";
     wlogout = {
-      iconStyle = "wlogout";
+      iconStyle = "wleave";
       extraStyle = ''
         button {
           border-radius: 2px;
         }
       '';
-      enable = true;
+      enable = false;
     };
   };
 }

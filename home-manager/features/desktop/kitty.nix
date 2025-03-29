@@ -5,13 +5,9 @@
     kitty = {
       enable = true;
       font = {
-        #name = "IntoneMono Nerd Font";
         name = "JetBrainsMono Nerd Font";
-        #name = "CaskaydiaCove Nerd Font";
-        #name = "VictorMono Nerd Font";
         size = 11;
       };
-      #themeFile = "Dracula";
       settings = {
         # General settings
         kitty_mod = "ctrl+shift";
