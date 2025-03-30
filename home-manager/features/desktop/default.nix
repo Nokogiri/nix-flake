@@ -13,7 +13,6 @@
     ./rofi
     ./swaync
     ./swayosd.nix
-    ./vscode.nix
     ./xdg
     ./zathura.nix
     ./zed-editor.nix
@@ -25,7 +24,6 @@
       emoji = ["Noto Emoji"];
     };
   };
-
   gtk = {
     enable = true;
     cursorTheme = {

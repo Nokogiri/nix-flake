@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./mangohud
-    ./stl.nix
   ];
 
   home.sessionVariables.WINEDEBUG = "-all";

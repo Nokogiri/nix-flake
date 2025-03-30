@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   home.packages = [
+    pkgs.alejandra
     pkgs.nil
+    pkgs.nixd
   ];
 
   programs.zed-editor = {
@@ -16,10 +18,10 @@
       features = {
         copilot = false;
       };
+
       telemetry = {
         metrics = false;
       };
-
       buffer_font_family = "JetBrainsMono Nerd Font Mono";
       ui_font_family = "JetBrainsMono Nerd Font Propo";
       icon_theme = "Catppuccin Macchiato";
@@ -30,16 +32,24 @@
       languages = {
         Nix = {
           language_servers = [
-            "nil"
-            "!nixd"
+            "nixd"
+            "!nil"
           ];
+          formatter = {
+            external = {
+              command = "alejandra";
+              arguments = ["--quiet" "--"];
+            };
+          };
         };
       };
       assistant.enabled = false;
       lsp = {
-        nil = {
-          initialization_options = {
-            formatting.command = ["alejandra"];
+        nixd = {
+          settings = {
+            diagnostic = {
+              suppress = ["sema-extra-with"];
+            };
           };
         };
         nix = {
