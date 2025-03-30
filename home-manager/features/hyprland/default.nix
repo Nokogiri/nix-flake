@@ -9,7 +9,6 @@
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpaper.nix
-    ./wlogout
     ./waybar
   ];
 

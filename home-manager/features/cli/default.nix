@@ -8,7 +8,6 @@
     ./fzf.nix
     ./git.nix
     ./gpg-agent.nix
-    ./micro
     ./ssh.nix
     ./starship.nix
     ./tmux.nix

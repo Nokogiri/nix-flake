@@ -1,4 +1,4 @@
-{ pkgs, ... }:{
+{pkgs, ...}: {
   programs.wlogout = {
     enable = true;
     package = pkgs.wleave;
@@ -17,14 +17,14 @@
       }
     ];
     style = ''
-    @import url("${./mauve.css}");
+      @import url("${./mauve.css}");
 
-    #logout {
-      background-image: url("${../../../../images/wleave/logout.png}");
-    }
-    #reboot {
-      background-image: url("${../../../../images/wleave/reboot.png}");
-    }
+      #logout {
+        background-image: url("${./icons/logout.png}");
+      }
+      #reboot {
+        background-image: url("${./icons/restart.png}");
+      }
     '';
   };
 }

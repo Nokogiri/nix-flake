@@ -26,6 +26,7 @@
   mantle: #1e2030;
   crust: #181926;
 
+  font: "JetBrainsMono Nerd Font Propo 18";
   selected-active-foreground:  @background;
   lightfg:                     @text;
   separatorcolor:              @foreground;
@@ -114,7 +115,7 @@ element-icon {
 window {
     padding:          5;
     background-color: #24273aaa; 
-    width:    750px;
+    width:    18em;
     border:           0;
     border-radius: 16px;
 }
@@ -138,6 +139,7 @@ listview {
     spacing:      2px ;
     fixed-height: 1;
     layout: vertical;
+    lines:  12;
     border:       0px 0px 0px 0px ;
 }
 scrollbar {

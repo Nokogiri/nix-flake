@@ -61,7 +61,14 @@
         "SHIFT,XF86AudioMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle"
         ",XF86AudioMicMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle"
         "SUPERSHIFT,q,killactive"
-        "SUPERSHIFT,e,exec,uwsm stop"
+        #"SUPERSHIFT,e,exec,uwsm stop"
+        ",XF86PowerOff,exec,${(pkgs.writeShellScriptBin "power-menu" ''          ${pkgs.rofi-wayland}/bin/rofi \
+                  -modi p:${pkgs.rofi-power-menu}/bin/rofi-power-menu \
+                  -show p \
+                  -theme-str 'window {width: 10em;} listview {lines: 6;}' \
+                  -font "JetBrainsMono Nerd Font 20" \
+                  -display-p PowerMenu
+        '')}/bin/power-menu"
         "SUPER,s,togglesplit"
         "SUPER,f,fullscreen,1"
         "SUPERSHIFT,f,fullscreen,0"

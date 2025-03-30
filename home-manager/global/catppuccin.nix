@@ -3,12 +3,12 @@
     inputs.catppuccin.homeManagerModules.catppuccin
   ];
   catppuccin = {
-    flavor = "frappe";
+    flavor = "macchiato";
     enable = true;
     gtk.icon.enable = true;
     kitty.enable = true;
     kvantum = {
-      flavor = "frappe";
+      flavor = "macchiato";
       accent = "mauve";
       enable = true;
       apply = true;
@@ -18,7 +18,7 @@
       set -g @catppuccin_window_status_style "rounded"
     '';
     rofi = {
-      flavor = "frappe";
+      flavor = "macchiato";
       enable = false;
     };
     swaync.enable = false;
@@ -32,5 +32,6 @@
       '';
       enable = false;
     };
+    zed.enable = false;
   };
 }

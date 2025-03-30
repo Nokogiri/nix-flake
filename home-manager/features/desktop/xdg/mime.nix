@@ -11,7 +11,7 @@ let
     "x-scheme-handler/chrome" = browser;
     "x-scheme-handler/about" = browser;
     "x-scheme-handler/unknown" = browser;
-    "application/pdf" = "org.kde.okular.desktop";
+    "application/pdf" = "org.pwmt.zathura.desktop";
     "application/x-extension-htm" = browser;
     "application/x-extension-html" = browser;
     "application/x-extension-shtml" = browser;

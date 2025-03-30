@@ -5,11 +5,11 @@
   catppuccin = {
     cache.enable = true;
     enable = true;
-    flavor = "frappe";
+    flavor = "macchiato";
     forgejo = {
       enable = true;
-      flavor = "frappe";
+      flavor = "macchiato";
     };
-    tty.flavor = "frappe";
+    tty.flavor = "macchiato";
   };
 }

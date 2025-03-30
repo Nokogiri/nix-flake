@@ -15,6 +15,7 @@
     ./swayosd.nix
     ./vscode.nix
     ./xdg
+    ./zathura.nix
     ./zed-editor.nix
   ];
 
@@ -77,7 +78,7 @@
   home.packages = with pkgs;
   with kdePackages; [
     (catppuccin.override {
-      variant = "frappe";
+      variant = "macchiato";
       accent = "mauve";
     })
     inputs.iwmenu.packages.${pkgs.system}.default
@@ -89,10 +90,9 @@
     extest
     gwenview
     obsidian
-    okular
     open-in-mpv
     pandoc
-    texliveTeTeX
+    texliveBasic
     qt6ct
     qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum
