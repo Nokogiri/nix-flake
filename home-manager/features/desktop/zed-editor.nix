@@ -17,8 +17,11 @@
     userSettings = {
       features = {
         copilot = false;
+        inline_completion_provider = "none";
       };
-
+      collaboration_panel = {
+        button = false;
+      };
       telemetry = {
         metrics = false;
       };
@@ -43,7 +46,10 @@
           };
         };
       };
-      assistant.enabled = false;
+      assistant = {
+        enabled = false;
+        button = false;
+      };
       lsp = {
         nixd = {
           settings = {
