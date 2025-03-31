@@ -10,7 +10,6 @@
         height = 42;
 
         modules-left = [
-          "custom/weather"
           "clock"
         ];
         modules-center = ["hyprland/workspaces"];

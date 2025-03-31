@@ -1,14 +1,19 @@
-{inputs, ...}: {
+{
+  inputs,
+  lib,
+  ...
+}: {
   imports = [
-    inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.catppuccin.homeModules.catppuccin
   ];
   catppuccin = {
-    flavor = "macchiato";
+    flavor = "mocha";
+    accent = "teal";
     enable = true;
     gtk.icon.enable = true;
     kitty.enable = true;
     kvantum = {
-      flavor = "macchiato";
+      flavor = "mocha";
       accent = "mauve";
       enable = true;
       apply = true;
@@ -18,7 +23,7 @@
       set -g @catppuccin_window_status_style "rounded"
     '';
     rofi = {
-      flavor = "macchiato";
+      flavor = "mocha";
       enable = false;
     };
     swaync.enable = false;

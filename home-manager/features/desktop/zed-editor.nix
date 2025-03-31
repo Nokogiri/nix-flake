@@ -29,8 +29,8 @@
       ui_font_family = "JetBrainsMono Nerd Font Propo";
       icon_theme = "Catppuccin Macchiato";
       theme = {
-        dark = "Catppuccin Macchiato (Blur)";
-        light = "Catppuccin Macchiato (Blur)";
+        dark = "Catppuccin Mocha (Blur)";
+        light = "Catppuccin Mocha (Blur)";
       };
       languages = {
         Nix = {

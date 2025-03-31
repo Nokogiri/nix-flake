@@ -181,7 +181,7 @@
         "NIXOS_OZONE_WL,1"
         "XCURSOR_SIZE,24"
         "XCURSOR_THEME,breeze_cursors"
-        "GTK_THEME,catppuccin-macchiato-mauve-standard"
+        "GTK_THEME,catppuccin-mocha-mauve-standard"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"

@@ -11,7 +11,7 @@ in {
     windowManagerPatch = false;
     enable = true;
     theme = spicePkgs.themes.catppuccin;
-    colorScheme = "macchiato";
+    colorScheme = "mocha";
     enabledCustomApps = with spicePkgs.apps; [
       lyricsPlus
       betterLibrary

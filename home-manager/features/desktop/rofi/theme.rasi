@@ -26,7 +26,7 @@
   mantle: #1e2030;
   crust: #181926;
 
-  font: "JetBrainsMono Nerd Font Propo 18";
+  font: "JetBrainsMono Nerd Font Propo 16";
   selected-active-foreground:  @background;
   lightfg:                     @text;
   separatorcolor:              @foreground;
@@ -114,7 +114,7 @@ element-icon {
 }
 window {
     padding:          5;
-    background-color: #24273aaa; 
+    background-color: #24273aaa;
     width:    18em;
     border:           0;
     border-radius: 16px;

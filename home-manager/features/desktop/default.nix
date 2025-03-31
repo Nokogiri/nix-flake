@@ -31,7 +31,7 @@
       package = pkgs.kdePackages.breeze;
     };
     font = {
-      name = "JetBrainsMono Nerd Font";
+      name = "JetBrainsMono Nerd Font Propo";
       size = 10;
     };
     gtk3 = {
@@ -65,9 +65,9 @@
       '';
     };
     theme = {
-      name = "catppuccin-macchiato-mauve-standard";
+      name = "catppuccin-mocha-mauve-standard";
       package = pkgs.catppuccin-gtk.override {
-        variant = "macchiato";
+        variant = "mocha";
         accents = ["mauve"];
       };
     };
@@ -76,7 +76,7 @@
   home.packages = with pkgs;
   with kdePackages; [
     (catppuccin.override {
-      variant = "macchiato";
+      variant = "mocha";
       accent = "mauve";
     })
     inputs.iwmenu.packages.${pkgs.system}.default
