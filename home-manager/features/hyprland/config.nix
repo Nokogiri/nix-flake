@@ -137,6 +137,7 @@
         hide_on_key_press = true;
         hide_on_touch = true;
         inactive_timeout = "0";
+        warp_back_after_non_mouse_input = true;
       };
       decoration = {
         active_opacity = "1.0";

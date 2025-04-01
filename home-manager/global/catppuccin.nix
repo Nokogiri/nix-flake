@@ -1,8 +1,4 @@
-{
-  inputs,
-  lib,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.catppuccin.homeModules.catppuccin
   ];
@@ -28,15 +24,6 @@
     };
     swaync.enable = false;
     waybar.mode = "createLink";
-    wlogout = {
-      iconStyle = "wleave";
-      extraStyle = ''
-        button {
-          border-radius: 2px;
-        }
-      '';
-      enable = false;
-    };
-    zed.enable = false;
+    zed.enable = true;
   };
 }

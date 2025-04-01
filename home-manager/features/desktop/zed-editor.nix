@@ -7,12 +7,10 @@
 
   programs.zed-editor = {
     enable = true;
+    package = pkgs.zed-editor-fhs;
     extensions = [
       "nix"
-      "catppuccin"
-      "catppuccin-blur"
-      "catppuccin-blur-plus"
-      "catppuccin-icons"
+      "make"
     ];
     userSettings = {
       features = {
@@ -27,11 +25,6 @@
       };
       buffer_font_family = "JetBrainsMono Nerd Font Mono";
       ui_font_family = "JetBrainsMono Nerd Font Propo";
-      icon_theme = "Catppuccin Macchiato";
-      theme = {
-        dark = "Catppuccin Mocha (Blur)";
-        light = "Catppuccin Mocha (Blur)";
-      };
       languages = {
         Nix = {
           language_servers = [
