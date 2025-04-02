@@ -10,15 +10,15 @@
         height = 42;
 
         modules-left = [
-          "clock"
+          "hyprland/workspaces"
         ];
-        modules-center = ["hyprland/workspaces"];
+        modules-center = ["hyprland/window"];
         modules-right = [
-          "idle_inhibitor"
           "tray"
           "battery"
           "network"
           "pulseaudio"
+          "clock"
         ];
         "group/misc" = {
           orientation = "inherit";
@@ -36,11 +36,23 @@
           format = "{icon}";
           on-click = "activate";
           format-icons = {
+            "1" = "";
+            "2" = "";
+            "3" = "";
+            "4" = "";
+            "5" = "";
             focused = "";
             default = "";
             persistant = "◌";
             empty = "◌";
           };
+        };
+        "hyprland/window" = {
+          format = "👉 {}";
+          rewrite = ''
+            "(.*) — Ablaze Floorp": "🌎 $1"
+            "(.*) - fish": "> [$1]"
+          '';
         };
         "clock" = {
           format = "{:%H:%M}";
