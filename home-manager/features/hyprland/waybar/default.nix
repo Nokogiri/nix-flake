@@ -7,7 +7,7 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 42;
+        height = 40;
 
         modules-left = [
           "hyprland/workspaces"
@@ -49,9 +49,9 @@
           };
         };
         "hyprland/window" = {
-          format = "👉 {}";
+          format = " {}";
           rewrite = ''
-            "(.*) — Ablaze Floorp": "🌎 $1"
+            "(.*) — Ablaze Floorp": " $1"
             "(.*) - fish": "> [$1]"
           '';
         };
@@ -70,9 +70,9 @@
             warning = 35;
             critical = 20;
           };
-          format-charging = "{capacity}% {icon} 󱐌";
-          format-full = "{capacity}% {icon}";
-          format-discharging = "{capacity}% {icon}";
+          format-charging = "{icon} 󱐌";
+          format-full = "{icon}";
+          format-discharging = "{icon}";
           format-icons = [
             "󰁺"
             "󰁻"
