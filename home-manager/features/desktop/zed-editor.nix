@@ -12,7 +12,6 @@
     extensions = [
       "nix"
       "make"
-      "unicode"
     ];
     userSettings = {
       #features = {

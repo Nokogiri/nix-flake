@@ -3,7 +3,7 @@
 * {
     font-family: "JetBrainsMono Nerd Font Propo";
     font-weight: normal;
-    font-size: 15px;
+    font-size: 16px;
     min-height: 0;
     /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
     /*font-size: 100%;*/
@@ -15,18 +15,22 @@
 window#waybar {
     transition-property: background-color;
     transition-duration: 0.5s;
-    background: transparent;
+    background: @background;
     border-radius: 10px;
-    /*margin: 2px;*/
-    /*padding: 2px;*/
+    margin-top: 0px;
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-#waybar.empty #window {
-    background: none;
+window#waybar.empty #window {
+    background: transparent;
+    background-color: transparent;
 }
 
 /* This section can be use if you want to separate waybar modules */
@@ -35,23 +39,16 @@ window#waybar.hidden {
 .modules-right {
     background: @background;
     border: 1.2px solid @background;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-right: 4px;
-    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 1px;
+    padding-left: 1px;
     border-radius: 10px;
-    margin-top: 8px;
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-bottom: 0px;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
 }
-
-/*.modules-left, .modules-right {
-	padding-top: 6px;
-	padding-bottom: 6px;
-  padding-right: 4px;
-	padding-left: 4px;
-} */
 
 #backlight,
 #backlight-slider,
@@ -75,15 +72,6 @@ window#waybar.hidden {
 #window,
 #wireplumber,
 #workspaces,
-#custom-backlight,
-#custom-cycle_wall,
-#custom-keybinds,
-#custom-keyboard,
-#custom-light_dark,
-#custom-lock,
-#custom-menu,
-#custom-power_vertical,
-#custom-power,
 #custom-swaync,
 #custom-updater,
 #custom-weather,
@@ -293,30 +281,5 @@ window#waybar.hidden {
 #pulseaudio-slider trough {
     min-width: 80px;
     min-height: 5px;
-    border-radius: 5px;
-}
-
-#pulseaudio-slider highlight {
-    min-height: 10px;
-    border-radius: 5px;
-}
-
-#backlight-slider slider {
-    min-width: 0px;
-    min-height: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-}
-
-#backlight-slider trough {
-    min-width: 80px;
-    min-height: 10px;
-    border-radius: 5px;
-}
-
-#backlight-slider highlight {
-    min-width: 10px;
     border-radius: 5px;
 }

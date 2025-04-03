@@ -8,7 +8,9 @@
         layer = "top";
         position = "top";
         height = 40;
-
+        margin-top = 8;
+        margin-left = 8;
+        margin-right = 8;
         modules-left = [
           "hyprland/workspaces"
         ];
@@ -41,7 +43,7 @@
             "3" = "";
             "4" = "";
             "5" = "";
-            "6" = "";
+            "6" = "󰮡";
             focused = "";
             default = "";
             persistant = "◌";
@@ -49,11 +51,16 @@
           };
         };
         "hyprland/window" = {
-          format = " {}";
-          rewrite = ''
-            "(.*) — Ablaze Floorp": " $1"
-            "(.*) - fish": "> [$1]"
-          '';
+          max-length = 50;
+          offscreen-css = true;
+          offscreen-css-text = "(inactive)";
+          format = "{}";
+          rewrite = {
+            "(.*) — Ablaze Floorp" = " $1";
+            "(.*) ~" = "> [$1]";
+            "Steam" = " Steam";
+            "Heroic Games Launcher" = "󰮡 Heroic Games";
+          };
         };
         "clock" = {
           format = "{:%H:%M}";
@@ -70,9 +77,9 @@
             warning = 35;
             critical = 20;
           };
-          format-charging = "{icon} 󱐌";
-          format-full = "{icon}";
-          format-discharging = "{icon}";
+          format-charging = " {icon} 󱐌 ";
+          format-full = " {icon} ";
+          format-discharging = " {icon} ";
           format-icons = [
             "󰁺"
             "󰁻"
