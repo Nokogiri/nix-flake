@@ -1,7 +1,7 @@
 [
   {
     "label": "build mowteng",
-    "command": "/nix/config/.zed/bin/build.sh mowteng",
+    "command": "./.zed/bin/build.sh mowteng",
     "shell": "system",
     // Whether to show the task line in the output of the spawned task, defaults to `true`.
     "show_summary": true,
@@ -10,7 +10,7 @@
   },
   {
     "label": "build homeassistant",
-    "command": "/nix/config/.zed/bin/build.sh mowteng",
+    "command": "./.zed/bin/build.sh mowteng",
     "shell": "system",
     // Whether to show the task line in the output of the spawned task, defaults to `true`.
     "show_summary": true,
@@ -19,7 +19,7 @@
   },
   {
     "label": "Switch (current)",
-    "command": "/nix/config/switch.sh",
+    "command": "./switch.sh",
     "shell": "system",
     // Whether to show the task line in the output of the spawned task, defaults to `true`.
     "show_summary": true,
