@@ -10,7 +10,7 @@
   },
   {
     "label": "build homeassistant",
-    "command": "./.zed/bin/build.sh mowteng",
+    "command": "./.zed/bin/build.sh homeassistant",
     "shell": "system",
     // Whether to show the task line in the output of the spawned task, defaults to `true`.
     "show_summary": true,

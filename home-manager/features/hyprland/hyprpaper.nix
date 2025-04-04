@@ -9,9 +9,6 @@ in {
 
       preload = [
         img0
-        #img1
-        #img2
-        #img3
       ];
 
       wallpaper = [

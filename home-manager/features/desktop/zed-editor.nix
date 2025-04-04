@@ -43,13 +43,11 @@
       assistant = {
         enabled = true;
         version = "2";
-        default_open_ai_model = null;
+        button = true;
         default_model = {
           provider = "zed.dev";
-          model = "claude-3-5-sonnet-latest";
+          model = "claude-3-5-sonnet";
         };
-
-        button = false;
       };
       hour_format = "hour24";
       auto_update = false;

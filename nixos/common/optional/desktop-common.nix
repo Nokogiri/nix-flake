@@ -11,7 +11,7 @@
       "/share/icons"
     ];
     sessionVariables = {
-      BROWSER = "${pkgs.firefox}/bin/firefox";
+      BROWSER = "${pkgs.floorp}/bin/floorp";
       DISABLE_QT5_COMPAT = "0";
       NO_AT_BRIDGE = "1";
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";

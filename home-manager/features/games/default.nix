@@ -14,7 +14,6 @@
     #eduke32
     #gemrb
     #gzdoom
-    #uhexen2
     #vintagestory
 
     #portmod

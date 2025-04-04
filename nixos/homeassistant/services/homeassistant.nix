@@ -1,8 +1,8 @@
 {
-  services.esphome = {
-    enable = true;
-    address = "192.168.178.57";
-  };
+  #services.esphome = {
+  #  enable = true;
+  #  address = "192.168.178.57";
+  #};
   services.home-assistant = {
     enable = true;
     config = {
