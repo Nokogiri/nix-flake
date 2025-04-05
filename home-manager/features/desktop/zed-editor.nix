@@ -14,10 +14,6 @@
       "make"
     ];
     userSettings = {
-      #features = {
-      #  copilot = false;
-      #  edit_prediction_provider = "none";
-      #};
       collaboration_panel = {
         button = false;
       };
@@ -41,7 +37,7 @@
         };
       };
       assistant = {
-        enabled = true;
+        enabled = false;
         version = "2";
         button = true;
         default_model = {
