@@ -46,7 +46,7 @@
         button = true;
         default_model = {
           provider = "zed.dev";
-          model = "claude-3-5-sonnet";
+          model = "claude-3-7-sonnet";
         };
       };
       hour_format = "hour24";
