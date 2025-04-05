@@ -37,12 +37,12 @@
         };
       };
       assistant = {
-        enabled = false;
+        enabled = true;
         version = "2";
         button = true;
         default_model = {
-          provider = "zed.dev";
-          model = "claude-3-7-sonnet";
+          provider = "Zed";
+          model = "claude-3-7-sonnet-latest";
         };
       };
       hour_format = "hour24";
