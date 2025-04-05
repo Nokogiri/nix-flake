@@ -9,6 +9,12 @@
     "show_output": true
   },
   {
+    "label": "boot mowteng",
+    "command": "./boot.sh mowteng",
+    "show_summary": true,
+    "show_output": true
+  },
+  {
     "label": "build homeassistant",
     "command": "./.zed/bin/build.sh homeassistant",
     "shell": "system",
