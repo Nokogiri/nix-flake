@@ -4,7 +4,7 @@
   ...
 }: {
   wayland.windowManager.hyprland = {
-    plugins = [inputs.hy3.packages.${pkgs.system}.hy3]; # inputs.hyprchroma.packages.${pkgs.system}.Hypr-DarkWindow];
+    #lugins = [inputs.hy3.packages.${pkgs.system}.hy3]; # inputs.hyprchroma.packages.${pkgs.system}.Hypr-DarkWindow];
     settings = {
       animations = {
         enabled = true;
