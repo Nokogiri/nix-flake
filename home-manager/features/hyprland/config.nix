@@ -227,6 +227,12 @@
         workspace_swipe_min_speed_to_force = "20";
         workspace_swipe_create_new = false;
       };
+      group = {
+        groupbar = {
+          font_size = 14;
+          rounding = 10;
+        };
+      };
       input = {
         kb_layout = "us,de";
         kb_variant = "altgr-intl,";
