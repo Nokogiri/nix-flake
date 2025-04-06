@@ -41,7 +41,7 @@
         version = "2";
         button = true;
         default_model = {
-          provider = "Zed";
+          provider = "zed.dev";
           model = "claude-3-7-sonnet-latest";
         };
       };
