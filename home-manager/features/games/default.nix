@@ -25,6 +25,7 @@
 
     #wineWowPackages.waylandFull
     #stl
+    bottles
     wget
     xdotool
     xorg.xprop
