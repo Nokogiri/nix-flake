@@ -13,6 +13,7 @@
     ./rofi
     ./swaync
     ./swayosd.nix
+    ./thunderbird.nix
     ./xdg
     ./zathura.nix
     ./zed-editor.nix
