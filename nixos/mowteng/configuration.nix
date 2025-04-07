@@ -85,6 +85,14 @@
     longitude = 11.03283;
   };
 
+  programs.opengamepadui = {
+    enable = true;
+    powerstation.enable = true;
+    extraPackages = with pkgs; [
+      gamescope
+    ];
+    inputplumber.enable = true;
+  };
   security.polkit.enable = true;
   security.pam.loginLimits = [
     {
