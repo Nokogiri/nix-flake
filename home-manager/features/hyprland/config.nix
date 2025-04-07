@@ -292,6 +292,7 @@
       windowrulev2 = [
         "workspace 2 silent,class:^(firefox)$"
         "workspace 2 silent,class:^(floorp)$"
+        "workspace 3 silent,class:^( dev.zed.Zed)$"
         #rofi
         "opacity 0.85 0.87, class:^(rofi)$"
         # polkit
