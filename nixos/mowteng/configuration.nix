@@ -20,9 +20,7 @@
     ../common/optional/fprintd.nix
     ../common/optional/greetd.nix
     ../common/optional/mullvad.nix
-    #../common/optional/opengamepadui.nix
     ../common/optional/pipewire.nix
-    #../common/optional/podman.nix
     ../common/optional/quietboot.nix
     ../common/optional/ryzen-ppd.nix
     ../common/optional/sane.nix
@@ -85,14 +83,6 @@
     longitude = 11.03283;
   };
 
-  programs.opengamepadui = {
-    enable = true;
-    powerstation.enable = true;
-    extraPackages = with pkgs; [
-      gamescope
-    ];
-    inputplumber.enable = true;
-  };
   security.polkit.enable = true;
   security.pam.loginLimits = [
     {
