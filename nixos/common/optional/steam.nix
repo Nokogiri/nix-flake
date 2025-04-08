@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }: {
   programs.gamemode = {
@@ -42,9 +41,9 @@
     };
     protontricks.enable = true;
     remotePlay.openFirewall = true;
-    extraCompatPackages = with pkgs; [
-      proton-ge-bin
-    ];
+    #extraCompatPackages = with pkgs; [
+    #  proton-ge-bin
+    #];
     extraPackages = with pkgs; [
       xorg.libXcursor
       xorg.libXi
