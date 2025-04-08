@@ -29,7 +29,7 @@
   },
   {
     "label": "Switch (current)",
-    "command": "./switch.sh",
+    "command": ".zed/bin/switch.sh",
     "shell": "system",
     "show_summary": true,
     "show_output": true
