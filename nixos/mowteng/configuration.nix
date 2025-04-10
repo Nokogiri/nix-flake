@@ -10,7 +10,7 @@
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
     inputs.nur.modules.nixos.default
-
+    inputs.nixos-cosmic.nixosModules.default
     ./hardware-configuration.nix
 
     ../common/global
@@ -111,6 +111,10 @@
       AllowSuspendThenHibernate=yes
     '';
 
+  #services.desktopManager.cosmic.enable = true;
+  #services.displayManager.cosmic-greeter.enable = true;
+  #systemd.services.monitord.wantedBy = ["multi-user.target"];
+  #environment.sessionVariables.COSMIC_DATA_CONTROL_ENABLED = 1;
   services.power-profiles-daemon.enable = true;
 
   services.speechd.enable = lib.mkForce false;
