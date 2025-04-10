@@ -6,5 +6,4 @@
   portmod = pkgs.callPackage ./portmod {};
   rofimoji = pkgs.callPackage ./rofimoji {};
   ryzen-ppd = pkgs.callPackage ./ryzen-ppd {};
-  steam = pkgs.callPackage ./steam {};
 }
