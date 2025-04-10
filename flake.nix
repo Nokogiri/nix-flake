@@ -49,6 +49,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     vigiland.url = "github:jappie3/vigiland";
+    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
   };
 
   outputs = {
