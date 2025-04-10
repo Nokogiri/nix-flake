@@ -80,12 +80,6 @@
         "SUPER,g,togglegroup"
         "SUPER,apostrophe,changegroupactive,f"
         "SUPERSHIFT,apostrophe,changegroupactive,b"
-        #hy3
-        #"SUPER,t,hy3:makegroup,tab"
-        #"SUPER,h,hy3:makegroup,h"
-        #"SUPER,v,hy3:makegroup,v"
-        #"SUPERSHIFT,t,hy3:changegroup,toggletab"
-        #"SUPERSHIFT,w,hy3:changegroup,opposite"
         "SUPER,left,movefocus,l"
         "SUPER,right,movefocus,r"
         "SUPER,up,movefocus,u"
