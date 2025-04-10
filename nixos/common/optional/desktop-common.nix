@@ -82,7 +82,7 @@
       implementation = "broker";
       packages = [pkgs.gcr];
     };
-    #flatpak.enable = true;
+    flatpak.enable = true;
     geoclue2.enable = true;
     gvfs.enable = false;
     printing = {
