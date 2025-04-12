@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   programs.gamemode = {
     enable = true;
     enableRenice = true;
@@ -69,7 +73,7 @@
 
   environment.systemPackages = with pkgs; [
     (writeShellScriptBin "ppd.sh" ''
-      sudo ${pkgs.ryzen-ppd}/bin/ryzen-ppd &
+      sudo ${lib.getExe pkgs.ryzen-ppd} &
     '')
     (writeShellScriptBin "preex" ''
       exec env LD_PRELOAD="${pkgs.extest}/lib/libextest.so" "$@"
