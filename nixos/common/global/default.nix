@@ -1,4 +1,3 @@
-# This file (and the global directory) holds config that i use on all hosts
 {
   lib,
   inputs,
@@ -22,7 +21,6 @@
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    #sharedModules = [inputs.plasma-manager.homeManagerModules.plasma-manager];
     extraSpecialArgs = {
       inherit inputs;
     };
@@ -98,7 +96,6 @@
       # Disable if you don't want unfree packages
       allowUnfree = true;
       permittedInsecurePackages = [
-        # TODO Rider
         "dotnet-sdk-7.0.410"
         "dotnet-sdk-wrapped-7.0.410"
         "dotnet-runtime-7.0.20"
@@ -111,7 +108,6 @@
     settings = {
       substituters = [
         "https://nix-community.cachix.org"
-        #"https://cache.lix.systems"
         "https://cache.garnix.io"
         "https://hyprland.cachix.org"
         "https://quasigod.cachix.org"
@@ -119,7 +115,6 @@
       ];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-        #"cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
         "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
         "quasigod.cachix.org-1:z+auA/0uS8vy6DDtUZhRQagZvVdl5WYnE/7lveoM3Do="
@@ -146,22 +141,13 @@
     # Opinionated: disable channels
     channel.enable = false;
     registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
-    #nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     gc = {
       automatic = lib.mkDefault false;
       dates = "monthly";
     };
-
-    # This will add each flake input as a registry
-    # To make nix3 commands consistent with your flake
-    #registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
-    # This will additionally add your inputs to the system's legacy channels
-    # Making legacy nix commands consistent as well, awesome!
-    #nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
   };
 
-  #programs.zsh.enable = true;
   programs = {
     fuse.userAllowOther = true;
     git.enable = true;
@@ -170,6 +156,4 @@
     nix-index.enableBashIntegration = false;
   };
   hardware.enableRedistributableFirmware = true;
-
-  # Increase open file limit for sudoers
 }
