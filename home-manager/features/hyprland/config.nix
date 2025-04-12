@@ -276,12 +276,12 @@
       exec-once = [
         "${pkgs.dbus}/bin/dbus-update-activation-environment --systemd --all"
         "uwsm app -- ${pkgs.wl-clipboard}/bin/wl-paste --watch cliphist store"
-        "uwsm app -- ${pkgs.nextcloud-client}/bin/nextcloud"
-        "uwsm app -- ${pkgs.wvkbd}/bin/wvkbd-mobintl -H 600 -L 420 --hidden"
-        "uwsm app -- ${inputs.iio-hyprland.packages.${pkgs.system}.default}/bin/iio-hyprland"
+        "uwsm app -- ${lib.getExe pkgs.nextcloud-client}"
+        "uwsm app -- ${lib.getExe pkgs.wvkbd} -H 600 -L 420 --hidden"
+        "uwsm app -- ${lib.getExe inputs.iio-hyprland.packages.${pkgs.system}.default}"
         "uwsm app -- ${pkgs.udiskie}/bin/udiskie --tray"
-        "uwsm app -- ${inputs.hyprpolkitagent.packages.${pkgs.system}.hyprpolkitagent}/libexec/hyprpolkitagent"
-        "uwsm app -- ${inputs.pyprland.packages.${pkgs.system}.pyprland}/bin/pypr"
+        "uwsm app -- ${lib.getExe inputs.hyprpolkitagent.packages.${pkgs.system}.hyprpolkitagent}"
+        "uwsm app -- ${lib.getExe inputs.pyprland.packages.${pkgs.system}.pyprland}"
       ];
 
       windowrulev2 = [
