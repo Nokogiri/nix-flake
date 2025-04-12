@@ -41,5 +41,6 @@ python312Packages.buildPythonApplication {
     description = "CHANGE";
     homepage = "https://github.com/CHANGE/ryzen-ppd";
     license = licenses.gpl3;
+    mainProgram = "ryzen-ppd";
   };
 }
