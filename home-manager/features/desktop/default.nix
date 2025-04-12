@@ -86,8 +86,6 @@
     libnotify
     xdg-utils
     ark
-    extest
-    gwenview
     obsidian
     open-in-mpv
     pandoc
