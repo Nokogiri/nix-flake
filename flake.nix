@@ -16,21 +16,9 @@
       url = "github:hyprwm/Hyprland?submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland"; # Prevents version mismatch.
-    };
-    hy3 = {
-      url = "github:outfoxxed/hy3";
-      inputs.hyprland.follows = "hyprland";
-    };
     pyprland = {
       url = "github:hyprland-community/pyprland";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprchroma = {
-      url = "github:alexhulbert/Hyprchroma";
-      inputs.hyprland.follows = "hyprland";
     };
     hyprpolkitagent = {
       url = "github:hyprwm/hyprpolkitagent";
@@ -49,7 +37,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     vigiland.url = "github:jappie3/vigiland";
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
   };
 
   outputs = {
