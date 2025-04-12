@@ -1,5 +1,3 @@
-# This is your system's configuration file.
-# Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 {
   inputs,
   lib,
@@ -10,7 +8,6 @@
     inputs.hardware.nixosModules.common-cpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
     inputs.nur.modules.nixos.default
-    inputs.nixos-cosmic.nixosModules.default
     ./hardware-configuration.nix
 
     ../common/global
@@ -43,8 +40,7 @@
   };
 
   boot.kernel.sysctl = {
-    # maximum possible
-    "vm.max_map_count" = 2147483642; # 524288;
+    "vm.max_map_count" = 2147483642;
   };
 
   environment.variables.AMD_VULKAN_ICD = lib.mkDefault "RADV";
@@ -58,8 +54,6 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    #extraPackages = [pkgs.amdvlk];
-    #extraPackages32 = [pkgs.driversi686Linux.amdvlk];
   };
 
   nixpkgs.overlays = [

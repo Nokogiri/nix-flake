@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   hardware = {
     bluetooth.enable = true;
     bluetooth.package = pkgs.bluez5-experimental;
@@ -28,6 +32,6 @@
 
   systemd.services.bluetooth.serviceConfig.ExecStart = [
     ""
-    "${pkgs.bluez}/libexec/bluetooth/bluetoothd --experimental"
+    "${lib.getBin pkgs.bluez}/libexec/bluetooth/bluetoothd --experimental"
   ];
 }
