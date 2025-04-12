@@ -5,7 +5,6 @@
   ...
 }: {
   wayland.windowManager.hyprland = {
-    #lugins = [inputs.hy3.packages.${pkgs.system}.hy3]; # inputs.hyprchroma.packages.${pkgs.system}.Hypr-DarkWindow];
     settings = {
       animations = {
         enabled = true;
@@ -33,7 +32,6 @@
         "SUPER,mouse:273,resizewindow"
       ];
       bind = [
-        #"SUPER,Return,exec,${pkgs.foot}/bin/footclient"
         "SUPER,Return,exec,kitty"
         "SUPER,w,exec,${lib.getBin pkgs.swaynotificationcenter}/bin/swaync-client -t"
         "SUPER,p,exec,pkill -9 rofi > /dev/null 2>&1 || ${lib.getBin pkgs.rofi-wayland}/bin/rofi -show drun -modes drun,filebrowser,keys,window"
