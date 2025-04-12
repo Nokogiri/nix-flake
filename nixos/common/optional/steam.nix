@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.gamemode = {
     enable = true;
     enableRenice = true;
@@ -51,6 +48,7 @@
       xorg.libXScrnSaver
       libpng
       libvorbis
+      libpulseaudio
       stdenv.cc.cc.lib
       libkrb5
       keyutils
@@ -81,8 +79,8 @@
     enable = true;
     capSysNice = false;
     args = [
-      #"-W 1920"
-      #"-H 1200"
+      "-W 1920"
+      "-H 1200"
       #"-w 1472"
       #"-h 920"
       "-F fsr"
