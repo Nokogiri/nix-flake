@@ -3,13 +3,9 @@
     inputs.catppuccin.nixosModules.catppuccin
   ];
   catppuccin = {
-    cache.enable = true;
+    cache.enable = false;
     enable = true;
     flavor = "mocha";
-    forgejo = {
-      enable = true;
-      flavor = "mocha";
-    };
     tty.flavor = "mocha";
   };
 }
