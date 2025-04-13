@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./mangohud
+    ./stl.nix
   ];
 
   home.sessionVariables.WINEDEBUG = "-all";
@@ -9,12 +10,16 @@
     mangohud
     heroic
     innoextract
-
+    #
     #arx-libertatis
     #eduke32
     #gemrb
     #gzdoom
-    #vintagestory
+    summoning-pixel-dungeon
+    shattered-pixel-dungeon
+    shorter-pixel-dungeon
+    experienced-pixel-dungeon
+    vintagestory
 
     #portmod
     cemu
