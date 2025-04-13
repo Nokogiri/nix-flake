@@ -35,14 +35,14 @@
       "xone"
       "xpadneo"
     ];
-    #kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-    kernelPackages = pkgs.linuxKernel.packages.linux_6_13;
+    kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+    #kernelPackages = pkgs.linuxKernel.packages.linux_6_13;
     kernelParams = [
       "amd_pstate=active"
       "mitigations=off"
       "cpufreq.default_governor=powersave"
       "amdgpu.abmlevel=0"
-      "acpi_os_name=\"Microsoft Windows NT\""
+      #"acpi_os_name=\"Microsoft Windows NT\""
       "rtc_cmos.use_acpi_alarm=1"
       #"pcie_aspm.policy=powersupersave"
       "iomem=relaxed"
