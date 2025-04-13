@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.yazi = {
     enable = true;
     settings = {
@@ -41,7 +41,8 @@
         ];
         extract = [
           {
-            run = "ya pub extract --list \"$@\"";
+            #run = "ya pub extract --list \"$@\"";
+            run = "ouch -q -y decompress \"$@\"";
             desc = "Extract here";
             for = "unix";
           }
@@ -54,40 +55,40 @@
           }
         ];
       };
-      plugin.prepend_previewers = [
-        {
-          mime = "application/*zip";
-          run = "ouch";
-        }
-        {
-          mime = "application/x-tar";
-          run = "ouch";
-        }
-        {
-          mime = "application/x-bzip2";
-          run = "ouch";
-        }
-        {
-          mime = "application/x-7z-compressed";
-          run = "ouch";
-        }
-        {
-          mime = "application/x-rar";
-          run = "ouch";
-        }
-        {
-          mime = "application/x-xz";
-          run = "ouch";
-        }
-      ];
+      #plugin.prepend_previewers = [
+      #  {
+      #    mime = "application/*zip";
+      #    run = "ouch";
+      #  }
+      #  {
+      #    mime = "application/x-tar";
+      #    run = "ouch";
+      #  }
+      #  {
+      #    mime = "application/x-bzip2";
+      #    run = "ouch";
+      #  }
+      #  {
+      #    mime = "application/x-7z-compressed";
+      #    run = "ouch";
+      #  }
+      #  {
+      #    mime = "application/x-rar";
+      #    run = "ouch";
+      #  }
+      #  {
+      #    mime = "application/x-xz";
+      #    run = "ouch";
+      #  }
+      #];
     };
-    plugins = {
-      ouch = pkgs.fetchFromGitHub {
-        owner = "ndtoan96";
-        repo = "ouch.yazi";
-        rev = "v0.4.1";
-        hash = "sha256-oUEUGgeVbljQICB43v9DeEM3XWMAKt3Ll11IcLCS/PA=";
-      };
-    };
+    #plugins = {
+    #  ouch = pkgs.fetchFromGitHub {
+    #    owner = "ndtoan96";
+    #    repo = "ouch.yazi";
+    #    rev = "v0.4.1";
+    #    hash = "sha256-oUEUGgeVbljQICB43v9DeEM3XWMAKt3Ll11IcLCS/PA=";
+    #  };
+    #};
   };
 }
