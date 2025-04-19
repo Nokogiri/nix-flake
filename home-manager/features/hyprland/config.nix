@@ -302,7 +302,7 @@
         # desktop-portal
         "float,class:^(xdg-desktop-portal-gtk)$"
         # mpv
-        "workspace 3 silent,class:^(mpv)$"
+        "workspace 7 silent,class:^(mpv)$"
         # steam
         "workspace 6 silent,class:^(steam)$,title:^(Steam)$"
         "workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$"
