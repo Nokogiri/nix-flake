@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./mangohud
-    ./stl.nix
   ];
 
   home.sessionVariables.WINEDEBUG = "-all";
@@ -10,7 +9,7 @@
     mangohud
     heroic
     innoextract
-    #
+
     arx-libertatis
     eduke32
     gemrb
@@ -21,7 +20,7 @@
     experienced-pixel-dungeon
     vintagestory
 
-    Tportmod
+    portmod
     cemu
     pcsx2
     ppsspp
@@ -30,13 +29,13 @@
 
     #wineWowPackages.waylandFull
     #stl
-    bottles
-    wget
-    xdotool
-    xorg.xprop
-    xorg.xrandr
-    xorg.xwininfo
-    xxd
-    yad
+    #bottles
+    #wget
+    #xdotool
+    #xorg.xprop
+    #xorg.xrandr
+    #xorg.xwininfo
+    #xxd
+    #yad
   ];
 }
