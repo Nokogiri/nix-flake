@@ -42,6 +42,9 @@
     };
     protontricks.enable = true;
     remotePlay.openFirewall = true;
+    extraCompatPackages = with pkgs; [
+      steamtinkerlaunch
+    ];
     extraPackages = with pkgs; [
       xorg.libXcursor
       xorg.libXi
