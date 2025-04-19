@@ -11,17 +11,17 @@
     heroic
     innoextract
     #
-    #arx-libertatis
-    #eduke32
-    #gemrb
-    #gzdoom
+    arx-libertatis
+    eduke32
+    gemrb
+    gzdoom
     summoning-pixel-dungeon
     shattered-pixel-dungeon
     shorter-pixel-dungeon
     experienced-pixel-dungeon
     vintagestory
 
-    #portmod
+    Tportmod
     cemu
     pcsx2
     ppsspp
