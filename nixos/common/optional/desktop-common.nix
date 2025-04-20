@@ -30,6 +30,7 @@
       material-symbols
       weather-icons
       nerd-fonts.im-writing
+      nerd-fonts.intone-mono
       nerd-fonts.jetbrains-mono
       nerd-fonts.symbols-only
     ];
