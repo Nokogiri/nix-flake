@@ -80,26 +80,26 @@
       variant = "mocha";
       accent = "mauve";
     })
-    inputs.iwmenu.packages.${pkgs.system}.default
     cliphist
     handlr-regex
-    libnotify
-    xdg-utils
-    ark
-    obsidian
-    open-in-mpv
-    pandoc
-    texliveBasic
-    qt6ct
-    qtstyleplugin-kvantum
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qt5ct
+    inputs.iwmenu.packages.${pkgs.system}.default
     (writeShellScriptBin "launch-gamescope" ''
       exec env LD_PRELOAD="" nice -n -11 -- gamescope "$@"
     '')
+    libnotify
+    libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.qt5ct
     mullvad-vpn
     nextcloud-client
+    obsidian
+    open-in-mpv
+    pandoc
+    qt6ct
+    qtstyleplugin-kvantum
+    texliveBasic
+    vesktop
     wl-clipboard
+    xdg-utils
     xfce.thunar
   ];
 
