@@ -7,12 +7,15 @@
     min-height: 0;
     padding: 2px;
 }
-
+@import "/home/nokogiri/.config/waybar/catppuccin.css";
 @import "/home/nokogiri/.config/colors.css";
+
 window#waybar {
     transition-property: background-color;
     transition-duration: 0.5s;
-    background: @background;
+
+    background: @background-darker;
+
     border-radius: 10px;
     margin-top: 0px;
     padding-top: 1px;
@@ -34,7 +37,7 @@ window#waybar.empty #window {
 .modules-left,
 .modules-center,
 .modules-right {
-    background: @background;
+    background: @surface1;
     border: 1.2px solid @background;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -45,6 +48,10 @@ window#waybar.empty #window {
     margin-left: 2px;
     margin-right: 2px;
     margin-bottom: 2px;
+}
+
+.modules-center.empty {
+    background: transparent;
 }
 
 #backlight,
@@ -156,6 +163,9 @@ window#waybar.empty #window {
     color: @color2;
 }
 
+#window.empty {
+    background: transparent;
+}
 #workspaces button {
     box-shadow: none;
     text-shadow: none;
