@@ -14,7 +14,7 @@
         modules-left = [
           "hyprland/workspaces"
         ];
-        modules-center = ["hyprland/window"];
+        modules-center = [];
         modules-right = [
           "tray"
           "battery"
@@ -41,10 +41,11 @@
             "1" = "";
             "2" = "";
             "3" = "";
-            "4" = "";
+            "4" = "";
             "5" = "";
             "6" = "󰮡";
             "7" = "";
+            "8" = "";
             focused = "";
             default = "";
             persistant = "◌";

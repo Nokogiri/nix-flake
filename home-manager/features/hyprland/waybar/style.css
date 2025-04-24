@@ -14,7 +14,7 @@ window#waybar {
     transition-property: background-color;
     transition-duration: 0.5s;
 
-    background: @background-darker;
+    background: transparent;
 
     border-radius: 10px;
     margin-top: 0px;
@@ -34,8 +34,11 @@ window#waybar.empty #window {
 }
 
 /* This section can be use if you want to separate waybar modules */
+.modules-center {
+    background: transparent;
+}
+
 .modules-left,
-.modules-center,
 .modules-right {
     background: @surface1;
     border: 1.2px solid @background;
