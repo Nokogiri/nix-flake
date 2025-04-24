@@ -98,6 +98,7 @@
     qtstyleplugin-kvantum
     texliveBasic
     vesktop
+    webcord
     wl-clipboard
     xdg-utils
     xfce.thunar
