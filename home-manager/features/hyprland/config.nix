@@ -286,33 +286,31 @@
         "workspace 2 silent,class:^(firefox)$"
         "workspace 2 silent,class:^(floorp)$"
         "workspace 3 silent,class:^(dev.zed.Zed)$"
-        #rofi
+        "workspace 5 silent,initialTitle:^(GNU Image Manipulation Program)$"
+        "workspace 7 silent,class:^(mpv)$"
+        "workspace 6 silent,class:^(steam)$,title:^(Steam)$"
+        "workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$"
+
         "opacity 0.85 0.87, class:^(rofi)$"
-        # polkit
+
         "size 80%,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$"
         "center,class:^(org.kde.polkit-kde-authentication-agent-1)$title:^(Authentication Required — PolicyKit1 KDE Agent)$"
         "float,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$"
         "dimaround,class:^(org.kde.polkit-kde-authentication-agent-1)$,title:^(Authentication Required — PolicyKit1 KDE Agent)$"
-        # heroic stuff
+
         "float,class:^(xdg-desktop-portal-gtk)$"
         "center,class:^(xdg-desktop-portal-gtk)$"
         "size 60%,class:^(xdg-desktop-portal-gtk)$"
         "float,class:^(xdg-desktop-portal-gtk)$,title:^(Choose where you want to move)$"
         "float,title:^(Select EXE to Run)$"
-        # desktop-portal
-        "float,class:^(xdg-desktop-portal-gtk)$"
-        # mpv
-        "workspace 7 silent,class:^(mpv)$"
-        # steam
-        "workspace 6 silent,class:^(steam)$,title:^(Steam)$"
-        "workspace 6 silent,class:^(steam)$,title:^(Steam Big Picture Mode)$"
+
         "pseudo,class:^(steam)$,title:^(Steam Big Picture Mode)$"
-        # pavucontrol
+
         "float,title:^(Volume Control)$"
         "center,class:^(Volume Control)$"
         "size 66%,class:^(Volume Control)$"
         "float,opaque,noblur,class:^(Xdg-desktop-portal-gtk)$,title:^(Install Files)$"
-        # print dialog
+
         "float,title:^(Print)$"
         "center,title:^(Print)$"
         "size 50%,title:^(Print)$"
