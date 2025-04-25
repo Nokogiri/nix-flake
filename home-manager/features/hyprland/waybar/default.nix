@@ -14,7 +14,9 @@
         modules-left = [
           "hyprland/workspaces"
         ];
-        modules-center = [];
+        modules-center = [
+          "wlr/taskbar"
+        ];
         modules-right = [
           "tray"
           "battery"
@@ -33,6 +35,9 @@
             "network"
             "tray"
           ];
+        };
+        "wlr/taskbar" = {
+          on-click = "activate";
         };
         "hyprland/workspaces" = {
           format = "{icon}";
