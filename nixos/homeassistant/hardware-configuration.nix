@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   boot = {
@@ -26,7 +27,7 @@
       kernelModules = ["hid-apple"];
     };
     kernelModules = ["kvm-intel"];
-    #kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_6_6;
     kernelParams = [
       "acpi_backlight=video"
       "intremap=off"
