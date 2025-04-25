@@ -10,7 +10,6 @@
     heroic
     innoextract
 
-    arx-libertatis
     eduke32
     gemrb
     gzdoom
@@ -24,18 +23,5 @@
     cemu
     pcsx2
     ppsspp
-
-    #gfn-electron
-
-    #wineWowPackages.waylandFull
-    #stl
-    #bottles
-    #wget
-    #xdotool
-    #xorg.xprop
-    #xorg.xrandr
-    #xorg.xwininfo
-    #xxd
-    #yad
   ];
 }
