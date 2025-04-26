@@ -33,13 +33,12 @@ window#waybar.empty #window {
     background-color: transparent;
 }
 
-/* This section can be use if you want to separate waybar modules
+/* This section can be use if you want to separate waybar modules*/
 .modules-center {
     background: transparent;
-}*/
+}
 
 .modules-left,
-.modules-center,
 .modules-right {
     background: @surface1;
     border: none; /*border: 1.2px solid @surface0;*/
