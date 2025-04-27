@@ -1,5 +1,5 @@
 let
-  img0 = "${../../../images/range.webp}";
+  img0 = "${../../../images/spiderman.webp}";
 in {
   services.hyprpaper = {
     enable = true;
