@@ -190,15 +190,14 @@
         "_JAVA_AWT_WM_NONREPARENTING,1"
       ];
       general = {
-        gaps_in = "6";
-        gaps_out = "8";
+        gaps_in = "10";
+        gaps_out = "12";
         border_size = "0";
         #"col.active_border" = "rgb(44475a) rgb(bd93f9) 90deg";
         #"col.inactive_border" = "rgba(44475aaa)";
         #"col.nogroup_border" = "rgba(282a36dd)";
         #"col.nogroup_border_active" = "rgb(bd93f9) rgb(44475a) 90deg";
         no_border_on_floating = true;
-        layout = "hy3";
 
         # non-gradient alternative
         "col.active_border" = "rgba(bd93f966)";
@@ -224,6 +223,8 @@
         groupbar = {
           font_size = 14;
           rounding = 10;
+
+          indicator_height = 2;
         };
       };
       input = {

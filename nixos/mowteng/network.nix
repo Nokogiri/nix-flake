@@ -3,7 +3,6 @@
     wifi.backend = "iwd";
     wifi.powersave = true;
     enable = false;
-    #dns = "systemd-resolved";
     logLevel = "ERR";
     plugins = lib.mkForce [];
   };

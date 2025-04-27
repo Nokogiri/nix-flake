@@ -10,6 +10,7 @@
     heroic
     innoextract
 
+    dhewm3
     eduke32
     gemrb
     gzdoom
