@@ -136,21 +136,23 @@
         active_opacity = "1.0";
         inactive_opacity = "0.8";
         fullscreen_opacity = "1.0";
-        rounding = "10";
+        rounding = "14";
         rounding_power = "4.0";
         shadow = {
           color = "rgba(0C0E13A6)";
           enabled = true;
-          range = "16";
-          offset = "2 2";
-          render_power = "2";
+          range = "20";
+          offset = "4 4";
+          render_power = "3";
           scale = "0.97";
         };
-        dim_around = "0.8";
+        dim_around = "0.5";
         blur = {
           enabled = true;
-          size = "4";
-          passes = "3";
+          noise = "0.0301";
+          size = "6";
+          passes = "1";
+          popups = true;
           ignore_opacity = true;
           new_optimizations = true;
         };
@@ -190,8 +192,8 @@
         "_JAVA_AWT_WM_NONREPARENTING,1"
       ];
       general = {
-        gaps_in = "10";
-        gaps_out = "12";
+        gaps_in = "6";
+        gaps_out = "12 8 12 8";
         border_size = "0";
         #"col.active_border" = "rgb(44475a) rgb(bd93f9) 90deg";
         #"col.inactive_border" = "rgba(44475aaa)";

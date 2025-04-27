@@ -5,12 +5,13 @@
     style = ./style.css;
     settings = {
       mainBar = {
-        layer = "top";
+        #layer = "top";
         position = "top";
         height = 40;
-        margin-top = 8;
+        margin-top = 0;
         margin-left = 8;
         margin-right = 8;
+        mode = "dock";
         modules-left = [
           "hyprland/workspaces"
         ];
