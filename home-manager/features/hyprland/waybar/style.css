@@ -16,7 +16,7 @@ window#waybar {
 
     /*background: transparent;*/
     /*background: #1e1e2e;*/
-    background: rgba(30, 30, 46, 0.3);
+    background: rgba(30, 30, 46, 0.5);
     border-radius: 0px 0px 14px 14px;
     margin-top: 0px;
     padding-top: 0px;
@@ -52,10 +52,6 @@ window#waybar.empty #window {
     margin-left: 2px;
     margin-right: 2px;
     margin-bottom: 1px;
-}
-
-.modules-center.empty {
-    background: transparent;
 }
 
 #backlight,
@@ -222,34 +218,6 @@ window#waybar.empty #window {
     padding-right: 2px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-}
-
-#custom-cava_mviz {
-    color: @color1;
-}
-
-#custom-menu {
-    color: @color6;
-}
-
-#custom-power {
-    color: @color6;
-}
-
-#custom-updater {
-    color: @color6;
-}
-
-#custom-light_dark {
-    color: @color1;
-}
-
-#custom-weather {
-    color: @color6;
-}
-
-#custom-lock {
-    color: @color6;
 }
 
 #pulseaudio {
