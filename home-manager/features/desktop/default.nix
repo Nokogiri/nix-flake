@@ -6,12 +6,13 @@
   imports = [
     ./cli.nix
     ./colors.nix
+    ./dunst.nix
     ./floorp
     ./gpg-agent.nix
     ./kitty.nix
     ./rbw.nix
     ./rofi
-    ./swaync
+    #./swaync
     ./swayosd.nix
     ./thunderbird.nix
     ./xdg
