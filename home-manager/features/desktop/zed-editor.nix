@@ -47,6 +47,9 @@
       };
       hour_format = "hour24";
       auto_update = false;
+      edit_predictions = {
+        mode = "subtle";
+      };
       lsp = {
         nixd = {
           settings = {
