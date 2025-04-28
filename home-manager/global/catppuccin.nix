@@ -6,6 +6,7 @@
     flavor = "mocha";
     accent = "teal";
     enable = true;
+    dunst.enable = false;
     gtk.icon.enable = true;
     kitty.enable = true;
     kvantum = {
