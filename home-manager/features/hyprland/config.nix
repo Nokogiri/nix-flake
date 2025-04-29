@@ -265,6 +265,10 @@
         "blur, swayosd"
         "ignorezero, swayosd"
         "ignorealpha 0.5, swayosd"
+        # dunst
+        "blur, notifications"
+        "ignorezero, notifications"
+        "ignorealpha 0.5, notifications"
       ];
       misc = {
         disable_hyprland_logo = true;
