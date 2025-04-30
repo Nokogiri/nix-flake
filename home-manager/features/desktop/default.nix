@@ -7,6 +7,7 @@
     ./cli.nix
     ./colors.nix
     ./dunst.nix
+    ./eww
     ./floorp
     ./gpg-agent.nix
     ./kitty.nix
