@@ -12,7 +12,6 @@
     ./kitty.nix
     ./rbw.nix
     ./rofi
-    #./swaync
     ./swayosd.nix
     ./thunderbird.nix
     ./xdg

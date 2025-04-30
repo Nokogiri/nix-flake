@@ -10,9 +10,6 @@
     heroic
     innoextract
 
-    dhewm3
-    eduke32
-    gemrb
     gzdoom
     summoning-pixel-dungeon
     shattered-pixel-dungeon
