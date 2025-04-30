@@ -9,6 +9,33 @@
     "show_output": true
   },
   {
+    "label": "build homeassistant",
+    "command": ".zed/bin/build.sh homeassistant",
+    "shell": "system",
+    // Whether to show the task line in the output of the spawned task, defaults to `true`.
+    "show_summary": true,
+    // Whether to show the command line in the output of the spawned task, defaults to `true`.
+    "show_output": true
+  },
+  {
+    "label": "test mowteng",
+    "command": ".zed/bin/test.sh mowteng",
+    "shell": "system",
+    // Whether to show the task line in the output of the spawned task, defaults to `true`.
+    "show_summary": true,
+    // Whether to show the command line in the output of the spawned task, defaults to `true`.
+    "show_output": true
+  },
+  {
+    "label": "test homeassistant",
+    "command": ".zed/bin/test.sh homeassistant",
+    "shell": "system",
+    // Whether to show the task line in the output of the spawned task, defaults to `true`.
+    "show_summary": true,
+    // Whether to show the command line in the output of the spawned task, defaults to `true`.
+    "show_output": true
+  },
+  {
     "label": "boot mowteng",
     "command": ".zed/bin/boot.sh mowteng",
     "show_summary": true,
