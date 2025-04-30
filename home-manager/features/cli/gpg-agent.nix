@@ -6,7 +6,7 @@
   services = {
     gpg-agent = {
       enable = true;
-      pinentryPackage = lib.mkDefault pkgs.pinentry-curses;
+      pinentry.package = lib.mkDefault pkgs.pinentry-curses;
       enableSshSupport = false;
       enableZshIntegration = false;
       defaultCacheTtl = 60480000;
