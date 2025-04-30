@@ -12,6 +12,7 @@
     extensions = [
       "nix"
       "make"
+      "scss"
     ];
     userSettings = {
       collaboration_panel = {
