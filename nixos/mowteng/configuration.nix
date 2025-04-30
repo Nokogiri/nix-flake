@@ -6,6 +6,7 @@
 }: {
   imports = [
     inputs.hardware.nixosModules.common-cpu-amd
+    inputs.hardware.nixosModules.common-gpu-amd
     inputs.hardware.nixosModules.common-pc-ssd
     inputs.nur.modules.nixos.default
     ./hardware-configuration.nix
@@ -48,10 +49,10 @@
 
   environment.systemPackages = with pkgs; [
     inputs.iwmenu.packages.${pkgs.system}.default
-    amdctl
     compsize
     ryzen-ppd
   ];
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
