@@ -95,6 +95,7 @@
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
+      allowBroken = true;
       permittedInsecurePackages = [
         "dotnet-sdk-7.0.410"
         "dotnet-sdk-wrapped-7.0.410"

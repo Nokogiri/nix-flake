@@ -1,4 +1,9 @@
-{config, ...}: {
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}: {
   sops.secrets.mealie_mail = {
     sopsFile = ../../common/secrets.yaml;
     owner = config.users.users.nobody.name; # config.services.mealie.user;
@@ -7,6 +12,7 @@
   };
   services.mealie = {
     enable = true;
+    package = inputs.stable.legacyPackages.${pkgs.system}.mealie;
     listenAddress = "127.0.0.1";
     port = 9099;
     credentialsFile = config.sops.secrets.mealie_mail.path;
